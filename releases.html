@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quips Release Notes - See what's new in the latest version of Quips. New features, improvements, and updates.">
+    <title>What's New - Quips</title>
+
+    <link rel="icon" type="image/png" href="images/app-icon.png">
+    <link rel="apple-touch-icon" href="images/app-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .releases-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: calc(64px + 3rem) 1.5rem 4rem;
+        }
+        .releases-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .releases-intro {
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            transition: color 150ms ease;
+        }
+        .back-link:hover {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+        .release {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .release:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .release-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .release-version {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .release-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-latest {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-dark) 100%);
+            color: white;
+        }
+        .release-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .release-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        .release-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+        }
+        .feature-list li strong {
+            color: var(--text-primary);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-dark) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            color: white;
+        }
+        .highlight-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .highlight-box p {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .highlight-box .feature-list li::before {
+            background: white;
+        }
+        .highlight-box .feature-list li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .highlight-box .feature-list li strong {
+            color: white;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images/app-icon.png" alt="Quips" class="logo-icon">
+                <span class="logo-text">Quips</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="index.html#download" class="btn btn-primary">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="releases-content">
+        <a href="index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Home
+        </a>
+
+        <h1>What's New</h1>
+        <p class="releases-intro">See what we've been working on to make Quips even better.</p>
+
+        <div class="highlight-box">
+            <h2>Collections Are Here!</h2>
+            <p>Our biggest update yet brings a whole new way to organize your quotes. Create custom collections to keep your inspiration perfectly organized.</p>
+            <ul class="feature-list">
+                <li><strong>Create up to 10 collections</strong> to organize quotes your way</li>
+                <li><strong>Quick assign</strong> quotes to collections from anywhere</li>
+                <li><strong>Filter by collection</strong> to focus on what matters</li>
+            </ul>
+        </div>
+
+        <!-- Version 1.3 - Collections -->
+        <article class="release">
+            <div class="release-header">
+                <span class="release-version">Version 1.3</span>
+                <span class="release-badge badge-latest">Latest</span>
+                <span class="release-date">December 2025</span>
+            </div>
+            <h3 class="release-title">Collections</h3>
+            <p class="release-description">
+                Organize your quotes like never before. Create custom collections to group quotes by theme, mood, or any way you like.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Custom Collections</strong> &mdash; Create personalized collections like "Inspiration," "Work Wisdom," or "Daily Motivation"</li>
+                <li><strong>Easy Organization</strong> &mdash; Assign quotes to collections when creating or editing</li>
+                <li><strong>Quick Filtering</strong> &mdash; Tap the collection dropdown to view quotes from a specific collection</li>
+                <li><strong>Premium Feature</strong> &mdash; Create up to 10 collections with a premium subscription</li>
+            </ul>
+        </article>
+
+        <!-- Version 1.2 - Siri & Share Extension -->
+        <article class="release">
+            <div class="release-header">
+                <span class="release-version">Version 1.2</span>
+                <span class="release-date">November 2025</span>
+            </div>
+            <h3 class="release-title">Siri Shortcuts & Share Extension</h3>
+            <p class="release-description">
+                Save quotes faster than ever. Capture inspiration from anywhere on your device and use Siri to manage your quotes hands-free.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Share Extension</strong> &mdash; Save quotes directly from Safari, Notes, Books, and any app that shares text</li>
+                <li><strong>Siri Integration</strong> &mdash; Say "Add a quote to Quips" or "Get a random quote from Quips"</li>
+                <li><strong>Shortcuts Support</strong> &mdash; Build automations with Quips in the Shortcuts app</li>
+                <li><strong>Seamless Sync</strong> &mdash; Your premium status syncs instantly across all your devices</li>
+            </ul>
+        </article>
+
+        <!-- Version 1.1 - Beautiful Sharing -->
+        <article class="release">
+            <div class="release-header">
+                <span class="release-version">Version 1.1</span>
+                <span class="release-date">November 2025</span>
+            </div>
+            <h3 class="release-title">Beautiful Sharing & Widgets</h3>
+            <p class="release-description">
+                Share your favorite quotes as stunning images. Plus, see daily inspiration right on your home screen with our new widgets.
+            </p>
+            <ul class="feature-list">
+                <li><strong>4 Sharing Styles</strong> &mdash; Choose from Minimal, Bold, Classic, or Text when sharing quotes</li>
+                <li><strong>Swipe to Share</strong> &mdash; Quickly share any quote with a simple swipe gesture</li>
+                <li><strong>Home Screen Widgets</strong> &mdash; Add a widget to see a random favorite quote throughout the day</li>
+                <li><strong>Full VoiceOver Support</strong> &mdash; Improved accessibility for all users</li>
+            </ul>
+        </article>
+
+        <!-- Version 1.0.5 - Import/Export -->
+        <article class="release">
+            <div class="release-header">
+                <span class="release-version">Version 1.0.5</span>
+                <span class="release-date">November 2025</span>
+            </div>
+            <h3 class="release-title">Import & Export</h3>
+            <p class="release-description">
+                Take your quotes anywhere. Export your collection for backup or import quotes from other sources.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Export Your Quotes</strong> &mdash; Save your entire collection as a file you can keep forever</li>
+                <li><strong>Import Quotes</strong> &mdash; Bring in quotes from backups or other sources</li>
+                <li><strong>Recently Deleted</strong> &mdash; Accidentally delete a quote? Recover it within 30 days</li>
+            </ul>
+        </article>
+
+        <!-- Version 1.0 - Launch -->
+        <article class="release">
+            <div class="release-header">
+                <span class="release-version">Version 1.0</span>
+                <span class="release-date">October 2025</span>
+            </div>
+            <h3 class="release-title">Hello, World!</h3>
+            <p class="release-description">
+                We're thrilled to introduce Quips &mdash; your new home for saving and organizing the quotes that inspire you.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Save Unlimited Quotes</strong> &mdash; Capture every moment of inspiration (premium) or start with 25 free</li>
+                <li><strong>Organize with Tags</strong> &mdash; Add tags to find quotes quickly</li>
+                <li><strong>Track Authors</strong> &mdash; Keep track of who said what</li>
+                <li><strong>Mark Favorites</strong> &mdash; Heart the quotes you love most</li>
+                <li><strong>Search Everything</strong> &mdash; Find any quote in seconds</li>
+                <li><strong>iCloud Sync</strong> &mdash; Your quotes on all your devices, automatically</li>
+                <li><strong>Light & Dark Mode</strong> &mdash; Beautiful in any lighting</li>
+                <li><strong>Custom App Icons</strong> &mdash; Personalize your home screen (premium)</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="images/app-icon.png" alt="Quips" class="footer-icon">
+                <span class="footer-name">Quips</span>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html">Support</a>
+                <a href="releases.html">What's New</a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Tweeting Birds. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
