@@ -137,6 +137,14 @@
         });
     }
 
+    // ===== Copyright Year =====
+    function updateCopyrightYear() {
+        const yearSpan = document.getElementById('copyright-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    }
+
     // ===== Initialize =====
     function init() {
         // Theme
@@ -153,6 +161,7 @@
         initSmoothScroll();
         initScrollAnimations();
         initHeaderScroll();
+        updateCopyrightYear();
     }
 
     // Run when DOM is ready
