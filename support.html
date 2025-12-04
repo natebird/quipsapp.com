@@ -135,6 +135,14 @@
             color: var(--accent-primary);
             text-decoration: none;
         }
+        .loading-text, .error-text {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 2rem;
+        }
+        .error-text {
+            color: #dc3545;
+        }
     </style>
 </head>
 <body class="light-theme">
@@ -180,327 +188,9 @@
 
         <section class="faq-section">
             <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-category">
-                <h3>Getting Started</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I add a new quote?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Tap the + button in the bottom right corner of the main screen. Enter your quote text, add an author (optional), and tap Save. You can also add tags, a source, notes, and assign the quote to a collection.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I favorite a quote?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Tap the heart icon on any quote card to add it to your favorites. You can view all your favorite quotes by tapping the heart icon in the top navigation bar.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I search for quotes?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Use the search bar at the bottom of the main screen. You can search by quote text, author name, tags, or any other content in your quotes.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Organization</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I create collections?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Tap the collection dropdown at the top of the screen (shows "All Quotes" by default) and select "Manage Collections." From there you can create new collections like "Inspiration," "Personal," or any category you want.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I add tags to quotes?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            When creating or editing a quote, you'll see a Tags field. Tap it to add existing tags or create new ones. Tags help you categorize and find quotes quickly. You can manage all your tags in Settings > Tags.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I manage authors?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Go to Settings > Authors to view, edit, or delete authors. When you add a quote with a new author name, they're automatically added to your authors list. You can also merge duplicate authors from this screen.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Sharing & Widgets</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I share a quote as an image?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Tap on a quote to open the detail view, then tap the share icon. Choose from 4 beautiful styles: Minimal, Bold, Classic, or Text. Preview your quote image, then tap "Share Quote" to send it via Messages, social media, or save it to your photos.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I add a widget to my home screen?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Long-press on your home screen and tap the + button in the top corner. Search for "Quips" and choose your widget size. The widget displays a random quote from your favorites, refreshing throughout the day. You can also configure widgets in Settings > Widgets.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Siri & Shortcuts</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I use Siri to add a quote?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Just ask Siri! Try saying: "Add a quote to Quips," "Save a quote in Quips," "Create a quote with Quips," or "Add a new quote to Quips." Siri will guide you through entering your quote.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I get a random quote with Siri?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Ask Siri: "Get a random quote from Quips," "Show me a quote from Quips," "Give me inspiration from Quips," or simply "Random quote from Quips." Siri will display a random quote from your collection.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I search for quotes using Siri?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Say: "Search quotes in Quips," "Find a quote in Quips," or "Search Quips for quotes." Siri will prompt you for a search term and show matching results.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I view my favorites with Siri?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Ask Siri: "Show my favorite quotes from Quips," "Get my favorites from Quips," or "Show favorites in Quips." Your favorited quotes will be displayed.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Where can I find Quips shortcuts?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Open the Shortcuts app on your device and look for Quips under App Shortcuts. You can add these to your home screen, use them in automations, or customize them to fit your workflow.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Customization</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I change the app theme?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Go to Settings > App Theme to customize colors and appearance. You can choose between light mode, dark mode, or automatic (follows your system setting). Premium subscribers get access to additional theme colors.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I change the app icon?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes! Go to Settings > App Icon to choose from a variety of icon designs. This is a premium feature available to subscribers.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Data & Backup</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I backup my quotes?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Your quotes are automatically backed up to iCloud if you have iCloud enabled for Quips. You can also manually export your quotes by going to Settings > Import/Export. This creates a file you can save or share.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I import quotes from another device?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            If you're signed into the same iCloud account, your quotes will sync automatically. Otherwise, go to Settings > Import/Export on your old device to export, then import the file on your new device.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        I accidentally deleted a quote. Can I recover it?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes! Go to Settings > Recently Deleted. Deleted quotes are kept for 30 days before being permanently removed. Tap on any quote to restore it.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3>Subscription</h3>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What's included in the premium subscription?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Premium includes: unlimited quotes (free is limited to 25), all theme colors and favorite icons, custom app icons, and access to all future premium features. Choose monthly ($0.99/month) or annual ($8.99/year) billing.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I cancel my subscription?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Go to Settings > Subscription, or open the Settings app on your device > [Your Name] > Subscriptions > Quips. From there you can cancel auto-renewal. You'll continue to have access until the end of your current billing period.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I get a refund?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> to request a refund for any App Store purchase.
-                        </div>
-                    </div>
-                </div>
+            <div id="faq-container">
+                <!-- FAQs will be loaded dynamically from faqs.json -->
+                <p class="loading-text">Loading FAQs...</p>
             </div>
         </section>
 
@@ -529,23 +219,81 @@
 
     <script src="js/main.js"></script>
     <script>
-        // FAQ accordion functionality
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const isOpen = item.classList.contains('open');
+        // Fetch and render FAQs from JSON
+        async function loadFAQs() {
+            try {
+                const response = await fetch('faqs.json');
+                const data = await response.json();
+                renderFAQs(data);
+            } catch (error) {
+                console.error('Error loading FAQs:', error);
+                document.getElementById('faq-container').innerHTML =
+                    '<p class="error-text">Unable to load FAQs. Please try refreshing the page.</p>';
+            }
+        }
 
-                // Close all other items
-                document.querySelectorAll('.faq-item.open').forEach(openItem => {
-                    if (openItem !== item) {
-                        openItem.classList.remove('open');
-                    }
+        function renderFAQs(data) {
+            const container = document.getElementById('faq-container');
+            const chevronSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+
+            let html = '';
+
+            data.sections.forEach(section => {
+                html += `<div class="faq-category">`;
+                html += `<h3>${escapeHtml(section.title)}</h3>`;
+
+                section.faqs.forEach(faq => {
+                    html += `
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                ${escapeHtml(faq.question)}
+                                ${chevronSvg}
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    ${escapeHtml(faq.answer)}
+                                </div>
+                            </div>
+                        </div>
+                    `;
                 });
 
-                // Toggle current item
-                item.classList.toggle('open', !isOpen);
+                html += `</div>`;
             });
-        });
+
+            container.innerHTML = html;
+
+            // Attach event listeners to the newly created FAQ items
+            initFAQAccordion();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function initFAQAccordion() {
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = button.parentElement;
+                    const isOpen = item.classList.contains('open');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                        if (openItem !== item) {
+                            openItem.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('open', !isOpen);
+                });
+            });
+        }
+
+        // Load FAQs when the page loads
+        document.addEventListener('DOMContentLoaded', loadFAQs);
     </script>
 </body>
 </html>

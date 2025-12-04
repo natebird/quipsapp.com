@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-12-04",
+  "sections": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "faqs": [
+        {
+          "id": "add-quote",
+          "question": "How do I add a new quote?",
+          "answer": "Tap the + button in the bottom right corner of the main screen. Enter your quote text, add an author (optional), and tap Save. You can also add tags, a source, notes, and assign the quote to a collection."
+        },
+        {
+          "id": "favorite-quote",
+          "question": "How do I favorite a quote?",
+          "answer": "Tap the heart icon on any quote card to add it to your favorites. You can view all your favorite quotes by tapping the heart icon in the top navigation bar."
+        },
+        {
+          "id": "search-quotes",
+          "question": "How do I search for quotes?",
+          "answer": "Use the search bar at the bottom of the main screen. You can search by quote text, author name, tags, or any other content in your quotes."
+        }
+      ]
+    },
+    {
+      "id": "organization",
+      "title": "Organization",
+      "faqs": [
+        {
+          "id": "create-collections",
+          "question": "How do I create collections?",
+          "answer": "Tap the collection dropdown at the top of the screen (shows \"All Quotes\" by default) and select \"Manage Collections.\" From there you can create new collections like \"Inspiration,\" \"Personal,\" or any category you want."
+        },
+        {
+          "id": "add-tags",
+          "question": "How do I add tags to quotes?",
+          "answer": "When creating or editing a quote, you'll see a Tags field. Tap it to add existing tags or create new ones. Tags help you categorize and find quotes quickly. You can manage all your tags in Settings > Tags."
+        },
+        {
+          "id": "manage-authors",
+          "question": "How do I manage authors?",
+          "answer": "Go to Settings > Authors to view, edit, or delete authors. When you add a quote with a new author name, they're automatically added to your authors list. You can also merge duplicate authors from this screen."
+        }
+      ]
+    },
+    {
+      "id": "sharing",
+      "title": "Sharing & Widgets",
+      "faqs": [
+        {
+          "id": "share-image",
+          "question": "How do I share a quote as an image?",
+          "answer": "Tap on a quote to open the detail view, then tap the share icon. Choose from 4 beautiful styles: Minimal, Bold, Classic, or Text. Preview your quote image, then tap \"Share Quote\" to send it via Messages, social media, or save it to your photos."
+        },
+        {
+          "id": "add-widget",
+          "question": "How do I add a widget to my home screen?",
+          "answer": "Long-press on your home screen and tap the + button in the top corner. Search for \"Quips\" and choose your widget size. The widget displays a random quote from your favorites, refreshing throughout the day. You can also configure widgets in Settings > Widgets."
+        }
+      ]
+    },
+    {
+      "id": "siri",
+      "title": "Siri & Shortcuts",
+      "faqs": [
+        {
+          "id": "siri-add",
+          "question": "How do I use Siri to add a quote?",
+          "answer": "Just ask Siri! Try saying: \"Add a quote to Quips,\" \"Save a quote in Quips,\" \"Create a quote with Quips,\" or \"Add a new quote to Quips.\" Siri will guide you through entering your quote."
+        },
+        {
+          "id": "siri-random",
+          "question": "How do I get a random quote with Siri?",
+          "answer": "Ask Siri: \"Get a random quote from Quips,\" \"Show me a quote from Quips,\" \"Give me inspiration from Quips,\" or simply \"Random quote from Quips.\" Siri will display a random quote from your collection."
+        },
+        {
+          "id": "siri-search",
+          "question": "How do I search for quotes using Siri?",
+          "answer": "Say: \"Search quotes in Quips,\" \"Find a quote in Quips,\" or \"Search Quips for quotes.\" Siri will prompt you for a search term and show matching results."
+        },
+        {
+          "id": "siri-favorites",
+          "question": "How do I view my favorites with Siri?",
+          "answer": "Ask Siri: \"Show my favorite quotes from Quips,\" \"Get my favorites from Quips,\" or \"Show favorites in Quips.\" Your favorited quotes will be displayed."
+        },
+        {
+          "id": "shortcuts",
+          "question": "Where can I find Quips shortcuts?",
+          "answer": "Open the Shortcuts app on your device and look for Quips under App Shortcuts. You can add these to your home screen, use them in automations, or customize them to fit your workflow."
+        }
+      ]
+    },
+    {
+      "id": "customization",
+      "title": "Customization",
+      "faqs": [
+        {
+          "id": "change-theme",
+          "question": "How do I change the app theme?",
+          "answer": "Go to Settings > App Theme to customize colors and appearance. You can choose between light mode, dark mode, or automatic (follows your system setting). Premium subscribers get access to additional theme colors."
+        },
+        {
+          "id": "change-icon",
+          "question": "Can I change the app icon?",
+          "answer": "Yes! Go to Settings > App Icon to choose from a variety of icon designs. This is a premium feature available to subscribers."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data & Backup",
+      "faqs": [
+        {
+          "id": "backup",
+          "question": "How do I backup my quotes?",
+          "answer": "Your quotes are automatically backed up to iCloud if you have iCloud enabled for Quips. You can also manually export your quotes by going to Settings > Import/Export. This creates a file you can save or share."
+        },
+        {
+          "id": "import",
+          "question": "How do I import quotes from another device?",
+          "answer": "If you're signed into the same iCloud account, your quotes will sync automatically. Otherwise, go to Settings > Import/Export on your old device to export, then import the file on your new device."
+        },
+        {
+          "id": "recover-deleted",
+          "question": "I accidentally deleted a quote. Can I recover it?",
+          "answer": "Yes! Go to Settings > Recently Deleted. Deleted quotes are kept for 30 days before being permanently removed. Tap on any quote to restore it."
+        }
+      ]
+    },
+    {
+      "id": "subscription",
+      "title": "Subscription",
+      "faqs": [
+        {
+          "id": "premium-features",
+          "question": "What's included in the premium subscription?",
+          "answer": "Premium includes: unlimited quotes (free is limited to 25), all theme colors and favorite icons, custom app icons, and access to all future premium features. Choose monthly ($0.99/month), annual ($8.99/year), or lifetime ($99.99)."
+        },
+        {
+          "id": "cancel-subscription",
+          "question": "How do I cancel my subscription?",
+          "answer": "Go to Settings > Subscription, or open the Settings app on your device > [Your Name] > Subscriptions > Quips. From there you can cancel auto-renewal. You'll continue to have access until the end of your current billing period."
+        },
+        {
+          "id": "refund",
+          "question": "Can I get a refund?",
+          "answer": "Refunds are handled by Apple. Visit reportaproblem.apple.com to request a refund for any App Store purchase."
+        }
+      ]
+    }
+  ]
+}
