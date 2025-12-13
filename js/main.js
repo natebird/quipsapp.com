@@ -137,6 +137,41 @@
         });
     }
 
+    // ===== Navigation Menu =====
+    function initNavMenu() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navDropdown = document.getElementById('navDropdown');
+
+        if (!menuToggle || !navDropdown) return;
+
+        // Toggle menu on button click
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = menuToggle.classList.contains('open');
+            menuToggle.classList.toggle('open');
+            navDropdown.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', !isOpen);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navDropdown.contains(e.target)) {
+                menuToggle.classList.remove('open');
+                navDropdown.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuToggle.classList.contains('open')) {
+                menuToggle.classList.remove('open');
+                navDropdown.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // ===== Copyright Year =====
     function updateCopyrightYear() {
         const yearSpan = document.getElementById('copyright-year');
@@ -158,6 +193,7 @@
         }
 
         // Other features
+        initNavMenu();
         initSmoothScroll();
         initScrollAnimations();
         initHeaderScroll();

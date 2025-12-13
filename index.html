@@ -35,22 +35,43 @@
                 <span class="logo-text">Quips</span>
             </a>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
+                <div class="nav-menu-container">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown" id="navDropdown">
+                        <a href="collections.html" class="nav-dropdown-item">Collections</a>
+                        <a href="support.html" class="nav-dropdown-item">Support</a>
+                        <a href="releases.html" class="nav-dropdown-item">What's New</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
+                            <span class="theme-label-light">Dark Mode</span>
+                            <span class="theme-label-dark">Light Mode</span>
+                            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 <a href="#download" class="btn btn-primary">Download</a>
             </div>
         </nav>
@@ -96,8 +117,20 @@
                             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Collections</h3>
-                    <p class="feature-description">Organize quotes into custom collections like Inspiration, Personal, or any category you create.</p>
+                    <h3 class="feature-title">Private Collections</h3>
+                    <p class="feature-description">Create personal collections to organize your quotes. Synced privately via iCloud across all your devices.</p>
+                </div>
+
+                <div class="feature-card" style="--card-color: #66BB6A">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Public Collections</h3>
+                    <p class="feature-description">Browse curated quote collections on topics like Stoicism, creativity, and literature. Add them to your library for daily inspiration.</p>
                 </div>
 
                 <div class="feature-card" style="--card-color: #AB47BC">
@@ -112,17 +145,6 @@
                     <p class="feature-description">Share quotes as stunning images with 4 beautiful styles: Minimal, Bold, Classic, or Text.</p>
                 </div>
 
-                <div class="feature-card" style="--card-color: #26C6DA">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Light & Dark Mode</h3>
-                    <p class="feature-description">Switch seamlessly between light and dark themes to match your preference or time of day.</p>
-                </div>
-
                 <div class="feature-card" style="--card-color: #FFA726">
                     <div class="feature-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -130,8 +152,8 @@
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Easy to Add</h3>
-                    <p class="feature-description">Add new quotes in seconds with the floating action button. Capture inspiration the moment it strikes.</p>
+                    <h3 class="feature-title">Add From Anywhere</h3>
+                    <p class="feature-description">Save quotes using Siri, Shortcuts, or the Share Sheet from any app. Capture inspiration wherever you find it.</p>
                 </div>
 
                 <div class="feature-card" style="--card-color: #00D7D0">
@@ -200,9 +222,7 @@
             </div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms</a>
-                <a href="support.html">Support</a>
-                <a href="releases.html">What's New</a>
+                <a href="terms.html">Terms & Conditions</a>
             </div>
             <p class="footer-copyright">&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.</p>
         </div>

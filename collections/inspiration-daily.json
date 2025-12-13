@@ -1,0 +1,60 @@
+{
+  "id": "inspiration-daily",
+  "name": "Daily Inspiration",
+  "description": "Start your day with motivational quotes from visionary leaders and thinkers.",
+  "author": "Quips Editorial",
+  "colorName": "gold",
+  "iconName": "sunrise.fill",
+  "category": "Inspiration",
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "quotes": [
+    {
+      "id": "di-001",
+      "content": "The only way to do great work is to love what you do.",
+      "authorName": "Steve Jobs",
+      "source": "Stanford Commencement Speech, 2005"
+    },
+    {
+      "id": "di-002",
+      "content": "In the middle of difficulty lies opportunity.",
+      "authorName": "Albert Einstein",
+      "source": null
+    },
+    {
+      "id": "di-003",
+      "content": "Believe you can and you're halfway there.",
+      "authorName": "Theodore Roosevelt",
+      "source": null
+    },
+    {
+      "id": "di-004",
+      "content": "The future belongs to those who believe in the beauty of their dreams.",
+      "authorName": "Eleanor Roosevelt",
+      "source": null
+    },
+    {
+      "id": "di-005",
+      "content": "It does not matter how slowly you go as long as you do not stop.",
+      "authorName": "Confucius",
+      "source": null
+    },
+    {
+      "id": "di-006",
+      "content": "Everything you've ever wanted is on the other side of fear.",
+      "authorName": "George Addair",
+      "source": null
+    },
+    {
+      "id": "di-007",
+      "content": "The only impossible journey is the one you never begin.",
+      "authorName": "Tony Robbins",
+      "source": null
+    },
+    {
+      "id": "di-008",
+      "content": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+      "authorName": "Ralph Waldo Emerson",
+      "source": null
+    }
+  ]
+}

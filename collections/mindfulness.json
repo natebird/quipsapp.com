@@ -1,0 +1,60 @@
+{
+  "id": "mindfulness",
+  "name": "Mindfulness & Peace",
+  "description": "Calming quotes about presence, meditation, and inner peace.",
+  "author": "Quips Editorial",
+  "colorName": "mint",
+  "iconName": "leaf.fill",
+  "category": "Wellness",
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "quotes": [
+    {
+      "id": "mp-001",
+      "content": "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
+      "authorName": "Thich Nhat Hanh",
+      "source": null
+    },
+    {
+      "id": "mp-002",
+      "content": "Peace comes from within. Do not seek it without.",
+      "authorName": "Buddha",
+      "source": null
+    },
+    {
+      "id": "mp-003",
+      "content": "The mind is everything. What you think you become.",
+      "authorName": "Buddha",
+      "source": null
+    },
+    {
+      "id": "mp-004",
+      "content": "In today's rush, we all think too much, seek too much, want too much, and forget about the joy of just being.",
+      "authorName": "Eckhart Tolle",
+      "source": null
+    },
+    {
+      "id": "mp-005",
+      "content": "Almost everything will work again if you unplug it for a few minutes, including you.",
+      "authorName": "Anne Lamott",
+      "source": null
+    },
+    {
+      "id": "mp-006",
+      "content": "Feelings come and go like clouds in a windy sky. Conscious breathing is my anchor.",
+      "authorName": "Thich Nhat Hanh",
+      "source": null
+    },
+    {
+      "id": "mp-007",
+      "content": "The greatest weapon against stress is our ability to choose one thought over another.",
+      "authorName": "William James",
+      "source": null
+    },
+    {
+      "id": "mp-008",
+      "content": "Quiet the mind, and the soul will speak.",
+      "authorName": "Ma Jaya Sati Bhagavati",
+      "source": null
+    }
+  ]
+}

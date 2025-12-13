@@ -1,0 +1,60 @@
+{
+  "id": "literary-classics",
+  "name": "Literary Classics",
+  "description": "Memorable lines from the greatest works of literature throughout history.",
+  "author": "Quips Editorial",
+  "colorName": "brown",
+  "iconName": "book.fill",
+  "category": "Literature",
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "quotes": [
+    {
+      "id": "lc-001",
+      "content": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      "authorName": "Jane Austen",
+      "source": "Pride and Prejudice"
+    },
+    {
+      "id": "lc-002",
+      "content": "All happy families are alike; each unhappy family is unhappy in its own way.",
+      "authorName": "Leo Tolstoy",
+      "source": "Anna Karenina"
+    },
+    {
+      "id": "lc-003",
+      "content": "It was the best of times, it was the worst of times.",
+      "authorName": "Charles Dickens",
+      "source": "A Tale of Two Cities"
+    },
+    {
+      "id": "lc-004",
+      "content": "So we beat on, boats against the current, borne back ceaselessly into the past.",
+      "authorName": "F. Scott Fitzgerald",
+      "source": "The Great Gatsby"
+    },
+    {
+      "id": "lc-005",
+      "content": "All we have to decide is what to do with the time that is given us.",
+      "authorName": "J.R.R. Tolkien",
+      "source": "The Fellowship of the Ring"
+    },
+    {
+      "id": "lc-006",
+      "content": "It is not our abilities that show what we truly are. It is our choices.",
+      "authorName": "J.K. Rowling",
+      "source": "Harry Potter and the Chamber of Secrets"
+    },
+    {
+      "id": "lc-007",
+      "content": "Whatever our souls are made of, his and mine are the same.",
+      "authorName": "Emily Brontë",
+      "source": "Wuthering Heights"
+    },
+    {
+      "id": "lc-008",
+      "content": "To be, or not to be: that is the question.",
+      "authorName": "William Shakespeare",
+      "source": "Hamlet"
+    }
+  ]
+}

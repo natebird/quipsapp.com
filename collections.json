@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "collections": [
+    {
+      "id": "inspiration-daily",
+      "name": "Daily Inspiration",
+      "description": "Start your day with motivational quotes from visionary leaders and thinkers.",
+      "author": "Quips Editorial",
+      "quoteCount": 50,
+      "previewQuotes": [
+        "The only way to do great work is to love what you do.",
+        "In the middle of difficulty lies opportunity."
+      ],
+      "colorName": "gold",
+      "iconName": "sunrise.fill",
+      "category": "Inspiration"
+    },
+    {
+      "id": "stoic-wisdom",
+      "name": "Stoic Wisdom",
+      "description": "Timeless philosophy from Marcus Aurelius, Seneca, and Epictetus to guide your life.",
+      "author": "Quips Editorial",
+      "quoteCount": 40,
+      "previewQuotes": [
+        "You have power over your mind - not outside events. Realize this, and you will find strength.",
+        "We suffer more often in imagination than in reality."
+      ],
+      "colorName": "navyBlue",
+      "iconName": "building.columns.fill",
+      "category": "Philosophy"
+    },
+    {
+      "id": "creative-minds",
+      "name": "Creative Minds",
+      "description": "Insights on creativity and innovation from artists, writers, and inventors.",
+      "author": "Quips Editorial",
+      "quoteCount": 35,
+      "previewQuotes": [
+        "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
+        "Every child is an artist. The problem is how to remain an artist once we grow up."
+      ],
+      "colorName": "purple",
+      "iconName": "paintbrush.fill",
+      "category": "Creativity"
+    },
+    {
+      "id": "tech-visionaries",
+      "name": "Tech Visionaries",
+      "description": "Words of wisdom from the pioneers who shaped our digital world.",
+      "author": "Quips Editorial",
+      "quoteCount": 30,
+      "previewQuotes": [
+        "The best way to predict the future is to invent it.",
+        "The people who are crazy enough to think they can change the world are the ones who do."
+      ],
+      "colorName": "primaryBlue",
+      "iconName": "cpu.fill",
+      "category": "Technology"
+    },
+    {
+      "id": "literary-classics",
+      "name": "Literary Classics",
+      "description": "Memorable lines from the greatest works of literature throughout history.",
+      "author": "Quips Editorial",
+      "quoteCount": 45,
+      "previewQuotes": [
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+        "All happy families are alike; each unhappy family is unhappy in its own way."
+      ],
+      "colorName": "brown",
+      "iconName": "book.fill",
+      "category": "Literature"
+    },
+    {
+      "id": "mindfulness",
+      "name": "Mindfulness & Peace",
+      "description": "Calming quotes about presence, meditation, and inner peace.",
+      "author": "Quips Editorial",
+      "quoteCount": 30,
+      "previewQuotes": [
+        "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
+        "Peace comes from within. Do not seek it without."
+      ],
+      "colorName": "mint",
+      "iconName": "leaf.fill",
+      "category": "Wellness"
+    }
+  ]
+}

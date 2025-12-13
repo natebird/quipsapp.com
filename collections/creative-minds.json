@@ -1,0 +1,60 @@
+{
+  "id": "creative-minds",
+  "name": "Creative Minds",
+  "description": "Insights on creativity and innovation from artists, writers, and inventors.",
+  "author": "Quips Editorial",
+  "colorName": "purple",
+  "iconName": "paintbrush.fill",
+  "category": "Creativity",
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "quotes": [
+    {
+      "id": "cm-001",
+      "content": "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
+      "authorName": "Albert Einstein",
+      "source": "Saturday Evening Post, 1929"
+    },
+    {
+      "id": "cm-002",
+      "content": "Every child is an artist. The problem is how to remain an artist once we grow up.",
+      "authorName": "Pablo Picasso",
+      "source": null
+    },
+    {
+      "id": "cm-003",
+      "content": "Creativity takes courage.",
+      "authorName": "Henri Matisse",
+      "source": null
+    },
+    {
+      "id": "cm-004",
+      "content": "The chief enemy of creativity is good sense.",
+      "authorName": "Pablo Picasso",
+      "source": null
+    },
+    {
+      "id": "cm-005",
+      "content": "You can't use up creativity. The more you use, the more you have.",
+      "authorName": "Maya Angelou",
+      "source": null
+    },
+    {
+      "id": "cm-006",
+      "content": "To be creative means to be in love with life.",
+      "authorName": "Osho",
+      "source": null
+    },
+    {
+      "id": "cm-007",
+      "content": "The desire to create is one of the deepest yearnings of the human soul.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": null
+    },
+    {
+      "id": "cm-008",
+      "content": "Imagination is the beginning of creation.",
+      "authorName": "George Bernard Shaw",
+      "source": null
+    }
+  ]
+}
