@@ -1,6 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3EDDD5"/>
+      <stop offset="100%" style="stop-color:#1FB8B0"/>
+    </linearGradient>
+    <linearGradient id="quoteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#A7F3F0"/>
+    </linearGradient>
+  </defs>
   <!-- Squircle background -->
-  <rect x="2" y="2" width="28" height="28" rx="8" ry="8" fill="#00D7D0"/>
-  <!-- Q letter -->
-  <text x="16" y="23" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">Q</text>
+  <rect x="1" y="1" width="30" height="30" rx="7" ry="7" fill="url(#bgGrad)"/>
+  <!-- Left quote mark (larger, stylized) -->
+  <path d="M6 22 L6 14 C6 10 9 7 13 7 L14 7 L14 10 L13 10 C11 10 9 11.5 9 14 L9 15 L14 15 L14 22 Z" fill="url(#quoteGrad)"/>
+  <!-- Right quote mark (larger, stylized) -->
+  <path d="M17 22 L17 14 C17 10 20 7 24 7 L25 7 L25 10 L24 10 C22 10 20 11.5 20 14 L20 15 L25 15 L25 22 Z" fill="url(#quoteGrad)"/>
 </svg>
