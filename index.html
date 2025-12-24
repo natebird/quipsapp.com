@@ -22,7 +22,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -50,6 +50,7 @@
                     </button>
                     <div class="nav-dropdown" id="navDropdown">
                         <a href="collections.html" class="nav-dropdown-item">Collections</a>
+                        <a href="course.html" class="nav-dropdown-item">Email Course</a>
                         <a href="support.html" class="nav-dropdown-item">Support</a>
                         <a href="releases.html" class="nav-dropdown-item">What's New</a>
                         <div class="nav-dropdown-divider"></div>
@@ -202,6 +203,47 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-body">
+                    <div class="newsletter-content">
+                        <h4>The Quote Unquote Newsletter</h4>
+                        <blockquote>Quotes deserve more than a screenshot. Get one quote each week, unpacked—the context, the meaning, and why it's worth holding onto.</blockquote>
+                    </div>
+                    <form class="newsletter-form" action="https://assets.mailerlite.com/jsonp/1995826/forms/174542333353657562/subscribe" method="post" target="_blank">
+                        <div class="newsletter-form-row">
+                            <input type="email" name="fields[email]" placeholder="Email" autocomplete="email" required>
+                            <button type="submit" class="btn btn-primary newsletter-submit">Subscribe</button>
+                            <button type="button" class="btn btn-primary newsletter-loading" disabled style="display: none;">
+                                <span class="newsletter-spinner"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                </div>
+                <div class="newsletter-success" style="display: none;">
+                    <h4>Thank you!</h4>
+                    <p>You have successfully subscribed to the Quote Unquote newsletter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Promo Section -->
+    <section class="course-promo" id="course">
+        <div class="container">
+            <div class="course-promo-content">
+                <h2>Learn the Art of Quote Collecting</h2>
+                <p>Most saved quotes are forgotten. In this free 7-day email course, you'll learn how to capture, organize, and actually use the quotes that matter—from books, podcasts, and the people you love.</p>
+                <a href="course.html" class="btn btn-primary">Start the Free Course</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta" id="download">
         <div class="container cta-content">
@@ -231,5 +273,6 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" defer></script>
 </body>
 </html>
