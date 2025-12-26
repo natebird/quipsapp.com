@@ -1,0 +1,327 @@
+{
+  "id": "fantasy-worlds",
+  "name": "Fantasy Worlds",
+  "description": "Epic quotes from beloved fantasy books, films, and TV adaptations.",
+  "author": "Quips Editorial",
+  "colorName": "forestGreen",
+  "iconName": "flame.fill",
+  "category": "Literature",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "fantasy-001",
+      "content": "Not all those who wander are lost.",
+      "authorName": "J.R.R. Tolkien",
+      "source": "The Fellowship of the Ring (1954)",
+      "quoteDate": "1954-07-29",
+      "verificationStatus": "verified",
+      "notes": "From the poem about Aragorn. Often quoted independently as a travel or life philosophy motto."
+    },
+    {
+      "id": "fantasy-002",
+      "content": "All we have to decide is what to do with the time that is given us.",
+      "authorName": "Gandalf",
+      "source": "The Fellowship of the Ring (1954)",
+      "quoteDate": "1954-07-29",
+      "verificationStatus": "verified",
+      "notes": "Gandalf's advice to Frodo in Moria. One of Tolkien's most quoted philosophical passages."
+    },
+    {
+      "id": "fantasy-003",
+      "content": "Even the smallest person can change the course of the future.",
+      "authorName": "Galadriel",
+      "source": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+      "quoteDate": "2001-12-19",
+      "verificationStatus": "verified",
+      "notes": "Film addition by Fran Walsh and Philippa Boyens. Cate Blanchett's delivery made it iconic."
+    },
+    {
+      "id": "fantasy-004",
+      "content": "You shall not pass!",
+      "authorName": "Gandalf (Ian McKellen)",
+      "source": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+      "quoteDate": "2001-12-19",
+      "verificationStatus": "verified",
+      "notes": "Gandalf confronting the Balrog. In the book it's 'You cannot pass!' The film version became more famous."
+    },
+    {
+      "id": "fantasy-005",
+      "content": "My precious.",
+      "authorName": "Gollum (Andy Serkis)",
+      "source": "The Lord of the Rings: The Two Towers (2002)",
+      "quoteDate": "2002-12-18",
+      "verificationStatus": "verified",
+      "notes": "Gollum's obsessive phrase for the Ring. Serkis' motion-capture performance revolutionized the technology."
+    },
+    {
+      "id": "fantasy-006",
+      "content": "A wizard is never late. He arrives precisely when he means to.",
+      "authorName": "Gandalf (Ian McKellen)",
+      "source": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+      "quoteDate": "2001-12-19",
+      "verificationStatus": "verified",
+      "notes": "Gandalf's response to Frodo about his timing. Sets up Gandalf's enigmatic character."
+    },
+    {
+      "id": "fantasy-007",
+      "content": "There is only one Lord of the Ring.",
+      "authorName": "Gandalf (Ian McKellen)",
+      "source": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+      "quoteDate": "2001-12-19",
+      "verificationStatus": "verified",
+      "notes": "Gandalf rejecting Saruman's offer of alliance. Establishes the Ring's singular corrupting power."
+    },
+    {
+      "id": "fantasy-008",
+      "content": "Winter is coming.",
+      "authorName": "House Stark motto",
+      "source": "Game of Thrones (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Stark family words warning of coming hardship. Became one of TV's most recognized phrases."
+    },
+    {
+      "id": "fantasy-009",
+      "content": "When you play the game of thrones, you win or you die.",
+      "authorName": "Cersei Lannister (Lena Headey)",
+      "source": "Game of Thrones, S1E7 (2011)",
+      "quoteDate": "2011-05-29",
+      "verificationStatus": "verified",
+      "notes": "Cersei warning Ned Stark about the stakes of power. Defines the show's brutal political world."
+    },
+    {
+      "id": "fantasy-010",
+      "content": "A Lannister always pays his debts.",
+      "authorName": "Tyrion Lannister (Peter Dinklage)",
+      "source": "Game of Thrones (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Lannister family saying. Used for both financial reliability and threats of revenge."
+    },
+    {
+      "id": "fantasy-011",
+      "content": "The night is dark and full of terrors.",
+      "authorName": "Melisandre (Carice van Houten)",
+      "source": "Game of Thrones (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Red Priestess prayer to R'hllor, the Lord of Light. Became the show's ominous catchphrase."
+    },
+    {
+      "id": "fantasy-012",
+      "content": "Valar morghulis. All men must die.",
+      "authorName": "Jaqen H'ghar (Tom Wlaschiha)",
+      "source": "Game of Thrones (2012)",
+      "quoteDate": "2012-04-01",
+      "verificationStatus": "verified",
+      "notes": "High Valyrian greeting of the Faceless Men. Response: 'Valar dohaeris' (All men must serve)."
+    },
+    {
+      "id": "fantasy-013",
+      "content": "I drink and I know things.",
+      "authorName": "Tyrion Lannister (Peter Dinklage)",
+      "source": "Game of Thrones, S6E2 (2016)",
+      "quoteDate": "2016-05-01",
+      "verificationStatus": "verified",
+      "notes": "Tyrion's self-deprecating job description. Became one of the show's most merchandised quotes."
+    },
+    {
+      "id": "fantasy-014",
+      "content": "Chaos isn't a pit. Chaos is a ladder.",
+      "authorName": "Petyr Baelish (Aidan Gillen)",
+      "source": "Game of Thrones, S3E6 (2013)",
+      "quoteDate": "2013-05-05",
+      "verificationStatus": "verified",
+      "notes": "Littlefinger revealing his philosophy of exploiting instability. Defines his scheming character."
+    },
+    {
+      "id": "fantasy-015",
+      "content": "Hold the door!",
+      "authorName": "Hodor (Kristian Nairn)",
+      "source": "Game of Thrones, S6E5 (2016)",
+      "quoteDate": "2016-05-22",
+      "verificationStatus": "verified",
+      "notes": "Revealed origin of Hodor's name. The episode's tragic twist shocked and devastated viewers."
+    },
+    {
+      "id": "fantasy-016",
+      "content": "You know nothing, Jon Snow.",
+      "authorName": "Ygritte (Rose Leslie)",
+      "source": "Game of Thrones (2012)",
+      "quoteDate": "2012-04-01",
+      "verificationStatus": "verified",
+      "notes": "Ygritte's recurring phrase to Jon. Became a pop culture catchphrase and meme."
+    },
+    {
+      "id": "fantasy-017",
+      "content": "Fear cuts deeper than swords.",
+      "authorName": "Syrio Forel",
+      "source": "A Game of Thrones by George R.R. Martin (1996)",
+      "quoteDate": "1996-08-01",
+      "verificationStatus": "verified",
+      "notes": "Arya's sword instructor's wisdom. Part of her internal mantra for survival."
+    },
+    {
+      "id": "fantasy-018",
+      "content": "The man who passes the sentence should swing the sword.",
+      "authorName": "Ned Stark (Sean Bean)",
+      "source": "Game of Thrones, S1E1 (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Ned's lesson to Bran about justice and responsibility. Establishes Stark honor."
+    },
+    {
+      "id": "fantasy-019",
+      "content": "I am the blood of the dragon.",
+      "authorName": "Daenerys Targaryen (Emilia Clarke)",
+      "source": "Game of Thrones (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Daenerys asserting her Targaryen heritage. Foreshadows her growing power and eventual transformation."
+    },
+    {
+      "id": "fantasy-020",
+      "content": "Dracarys!",
+      "authorName": "Daenerys Targaryen (Emilia Clarke)",
+      "source": "Game of Thrones, S3E4 (2013)",
+      "quoteDate": "2013-04-21",
+      "verificationStatus": "verified",
+      "notes": "High Valyrian command meaning 'dragonfire.' Daenerys' first devastating use of her dragons."
+    },
+    {
+      "id": "fantasy-021",
+      "content": "The Wheel weaves as the Wheel wills.",
+      "authorName": "Moiraine Damodred",
+      "source": "The Wheel of Time by Robert Jordan (1990)",
+      "quoteDate": "1990-01-15",
+      "verificationStatus": "verified",
+      "notes": "Central philosophy of the series about fate and destiny. The Pattern cannot be changed."
+    },
+    {
+      "id": "fantasy-022",
+      "content": "Duty is heavier than a mountain, death lighter than a feather.",
+      "authorName": "Lan Mandragoran",
+      "source": "The Wheel of Time by Robert Jordan (1990)",
+      "quoteDate": "1990-01-15",
+      "verificationStatus": "verified",
+      "notes": "Borderlander saying that Lan lives by. Reflects the warrior culture's sense of honor."
+    },
+    {
+      "id": "fantasy-023",
+      "content": "The only way to live is to die.",
+      "authorName": "Kelsier",
+      "source": "Mistborn by Brandon Sanderson (2006)",
+      "quoteDate": "2006-07-17",
+      "verificationStatus": "verified",
+      "notes": "Kelsier's paradoxical wisdom about giving everything for a cause. His philosophy shapes the rebellion."
+    },
+    {
+      "id": "fantasy-024",
+      "content": "Strength before weakness. Journey before destination.",
+      "authorName": "The First Ideal",
+      "source": "The Stormlight Archive by Brandon Sanderson (2010)",
+      "quoteDate": "2010-08-31",
+      "verificationStatus": "verified",
+      "notes": "Core oath of the Knights Radiant. 'Life before death' precedes these lines in the full oath."
+    },
+    {
+      "id": "fantasy-025",
+      "content": "I will protect those who cannot protect themselves.",
+      "authorName": "The Second Ideal of the Windrunners",
+      "source": "The Stormlight Archive by Brandon Sanderson (2010)",
+      "quoteDate": "2010-08-31",
+      "verificationStatus": "verified",
+      "notes": "Kaladin's oath that unlocks greater power. Each order has different Ideals."
+    },
+    {
+      "id": "fantasy-026",
+      "content": "Words are pale shadows of forgotten names.",
+      "authorName": "Kvothe",
+      "source": "The Name of the Wind by Patrick Rothfuss (2007)",
+      "quoteDate": "2007-03-27",
+      "verificationStatus": "verified",
+      "notes": "Kvothe's philosophy about the power of true names. Central to the magic system."
+    },
+    {
+      "id": "fantasy-027",
+      "content": "It's the questions we can't answer that teach us the most.",
+      "authorName": "Kvothe",
+      "source": "The Name of the Wind by Patrick Rothfuss (2007)",
+      "quoteDate": "2007-03-27",
+      "verificationStatus": "verified",
+      "notes": "Kvothe reflecting on learning and wisdom. Fits his scholar-musician-adventurer character."
+    },
+    {
+      "id": "fantasy-028",
+      "content": "A reader lives a thousand lives before he dies.",
+      "authorName": "Jojen Reed",
+      "source": "A Dance with Dragons by George R.R. Martin (2011)",
+      "quoteDate": "2011-07-12",
+      "verificationStatus": "verified",
+      "notes": "Jojen's observation about the power of reading and stories. Meta-commentary on fiction."
+    },
+    {
+      "id": "fantasy-029",
+      "content": "There's some good in this world, Mr. Frodo, and it's worth fighting for.",
+      "authorName": "Samwise Gamgee (Sean Astin)",
+      "source": "The Lord of the Rings: The Two Towers (2002)",
+      "quoteDate": "2002-12-18",
+      "verificationStatus": "verified",
+      "notes": "Sam's hopeful speech at Osgiliath. Film addition that crystallizes the trilogy's themes."
+    },
+    {
+      "id": "fantasy-030",
+      "content": "I can't carry it for you, but I can carry you.",
+      "authorName": "Samwise Gamgee (Sean Astin)",
+      "source": "The Lord of the Rings: The Return of the King (2003)",
+      "quoteDate": "2003-12-17",
+      "verificationStatus": "verified",
+      "notes": "Sam carrying Frodo up Mount Doom. Represents friendship and loyalty at their purest."
+    },
+    {
+      "id": "fantasy-031",
+      "content": "One does not simply walk into Mordor.",
+      "authorName": "Boromir (Sean Bean)",
+      "source": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+      "quoteDate": "2001-12-19",
+      "verificationStatus": "verified",
+      "notes": "Boromir explaining Mordor's dangers at the Council of Elrond. Became one of the internet's earliest memes."
+    },
+    {
+      "id": "fantasy-032",
+      "content": "What is dead may never die.",
+      "authorName": "Iron Islands saying",
+      "source": "Game of Thrones (2012)",
+      "quoteDate": "2012-04-01",
+      "verificationStatus": "verified",
+      "notes": "Ironborn religious phrase about the Drowned God. 'But rises again, harder and stronger.'"
+    },
+    {
+      "id": "fantasy-033",
+      "content": "The things I do for love.",
+      "authorName": "Jaime Lannister (Nikolaj Coster-Waldau)",
+      "source": "Game of Thrones, S1E1 (2011)",
+      "quoteDate": "2011-04-17",
+      "verificationStatus": "verified",
+      "notes": "Jaime before pushing Bran from the tower. Introduces his morally complex character."
+    },
+    {
+      "id": "fantasy-034",
+      "content": "It is our choices that show what we truly are, far more than our abilities.",
+      "authorName": "Albus Dumbledore",
+      "source": "Harry Potter and the Chamber of Secrets by J.K. Rowling (1998)",
+      "quoteDate": "1998-07-02",
+      "verificationStatus": "verified",
+      "notes": "Dumbledore's wisdom to Harry about character and identity. Central theme of the series."
+    },
+    {
+      "id": "fantasy-035",
+      "content": "After all this time? Always.",
+      "authorName": "Severus Snape",
+      "source": "Harry Potter and the Deathly Hallows by J.K. Rowling (2007)",
+      "quoteDate": "2007-07-21",
+      "verificationStatus": "verified",
+      "notes": "Snape's revelation about his love for Lily Potter. The series' most emotional twist."
+    }
+  ]
+}

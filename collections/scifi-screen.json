@@ -1,0 +1,372 @@
+{
+  "id": "scifi-screen",
+  "name": "Sci-Fi Screen",
+  "description": "Memorable quotes from science fiction movies and television that shaped our imagination.",
+  "author": "Quips Editorial",
+  "colorName": "cyan",
+  "iconName": "sparkles",
+  "category": "Movies",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "scifi-001",
+      "content": "May the Force be with you.",
+      "authorName": "Obi-Wan Kenobi (Alec Guinness)",
+      "source": "Star Wars: A New Hope (1977)",
+      "quoteDate": "1977-05-25",
+      "verificationStatus": "verified",
+      "notes": "The franchise's signature blessing. First spoken by General Dodonna, but Obi-Wan made it iconic."
+    },
+    {
+      "id": "scifi-002",
+      "content": "Do. Or do not. There is no try.",
+      "authorName": "Yoda (Frank Oz)",
+      "source": "Star Wars: The Empire Strikes Back (1980)",
+      "quoteDate": "1980-05-21",
+      "verificationStatus": "verified",
+      "notes": "Yoda's lesson to Luke about commitment. Frank Oz's puppetry brought the character to life."
+    },
+    {
+      "id": "scifi-003",
+      "content": "I am your father.",
+      "authorName": "Darth Vader (James Earl Jones)",
+      "source": "Star Wars: The Empire Strikes Back (1980)",
+      "quoteDate": "1980-05-21",
+      "verificationStatus": "verified",
+      "notes": "Cinema's greatest twist. Often misquoted as 'Luke, I am your father.' Kept secret even from most cast."
+    },
+    {
+      "id": "scifi-004",
+      "content": "The Force will be with you. Always.",
+      "authorName": "Obi-Wan Kenobi (Alec Guinness)",
+      "source": "Star Wars: A New Hope (1977)",
+      "quoteDate": "1977-05-25",
+      "verificationStatus": "verified",
+      "notes": "Obi-Wan's parting message to Luke before the Death Star assault. A promise fulfilled across the saga."
+    },
+    {
+      "id": "scifi-005",
+      "content": "I've got a bad feeling about this.",
+      "authorName": "Han Solo (Harrison Ford)",
+      "source": "Star Wars: A New Hope (1977)",
+      "quoteDate": "1977-05-25",
+      "verificationStatus": "verified",
+      "notes": "Running joke in the franchise. Every Star Wars film contains a variation of this line."
+    },
+    {
+      "id": "scifi-006",
+      "content": "Never tell me the odds.",
+      "authorName": "Han Solo (Harrison Ford)",
+      "source": "Star Wars: The Empire Strikes Back (1980)",
+      "quoteDate": "1980-05-21",
+      "verificationStatus": "verified",
+      "notes": "Han dismissing C-3PO's probability calculations. Defines Han's reckless confidence."
+    },
+    {
+      "id": "scifi-007",
+      "content": "This is the way.",
+      "authorName": "The Mandalorian (Pedro Pascal)",
+      "source": "The Mandalorian (2019)",
+      "quoteDate": "2019-11-12",
+      "verificationStatus": "verified",
+      "notes": "Mandalorian creed response. Became a cultural catchphrase from the Disney+ series."
+    },
+    {
+      "id": "scifi-008",
+      "content": "Live long and prosper.",
+      "authorName": "Spock (Leonard Nimoy)",
+      "source": "Star Trek (1966)",
+      "quoteDate": "1966-09-08",
+      "verificationStatus": "verified",
+      "notes": "Vulcan greeting with the split-finger salute. Nimoy based the gesture on a Jewish blessing."
+    },
+    {
+      "id": "scifi-009",
+      "content": "Space: the final frontier.",
+      "authorName": "Captain Kirk (William Shatner)",
+      "source": "Star Trek (1966)",
+      "quoteDate": "1966-09-08",
+      "verificationStatus": "verified",
+      "notes": "Opening narration of the original series. Became Trek's mission statement for 50+ years."
+    },
+    {
+      "id": "scifi-010",
+      "content": "Beam me up, Scotty.",
+      "authorName": "Captain Kirk",
+      "source": "Star Trek (attributed)",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Never actually said in this exact form. A cultural condensation of various transport requests."
+    },
+    {
+      "id": "scifi-011",
+      "content": "The needs of the many outweigh the needs of the few.",
+      "authorName": "Spock (Leonard Nimoy)",
+      "source": "Star Trek II: The Wrath of Khan (1982)",
+      "quoteDate": "1982-06-04",
+      "verificationStatus": "verified",
+      "notes": "Spock's logical justification for his sacrifice. Kirk later reverses it in Search for Spock."
+    },
+    {
+      "id": "scifi-012",
+      "content": "Resistance is futile.",
+      "authorName": "The Borg",
+      "source": "Star Trek: The Next Generation (1989)",
+      "quoteDate": "1989",
+      "verificationStatus": "verified",
+      "notes": "Borg collective's warning. First appeared in 'Q Who.' Became shorthand for overwhelming conformity."
+    },
+    {
+      "id": "scifi-013",
+      "content": "Make it so.",
+      "authorName": "Captain Picard (Patrick Stewart)",
+      "source": "Star Trek: The Next Generation (1987)",
+      "quoteDate": "1987-09-28",
+      "verificationStatus": "verified",
+      "notes": "Picard's command phrase. Stewart's Shakespearean delivery gave it gravitas."
+    },
+    {
+      "id": "scifi-014",
+      "content": "I'll be back.",
+      "authorName": "The Terminator (Arnold Schwarzenegger)",
+      "source": "The Terminator (1984)",
+      "quoteDate": "1984-10-26",
+      "verificationStatus": "verified",
+      "notes": "Became Schwarzenegger's signature line. Used in many of his subsequent films."
+    },
+    {
+      "id": "scifi-015",
+      "content": "Come with me if you want to live.",
+      "authorName": "Kyle Reese (Michael Biehn)",
+      "source": "The Terminator (1984)",
+      "quoteDate": "1984-10-26",
+      "verificationStatus": "verified",
+      "notes": "Kyle's first words to Sarah. Later said by different characters in sequels."
+    },
+    {
+      "id": "scifi-016",
+      "content": "I've seen things you people wouldn't believe.",
+      "authorName": "Roy Batty (Rutger Hauer)",
+      "source": "Blade Runner (1982)",
+      "quoteDate": "1982-06-25",
+      "verificationStatus": "verified",
+      "notes": "Beginning of Roy's 'tears in rain' monologue. Hauer partly improvised the speech."
+    },
+    {
+      "id": "scifi-017",
+      "content": "All those moments will be lost in time, like tears in rain.",
+      "authorName": "Roy Batty (Rutger Hauer)",
+      "source": "Blade Runner (1982)",
+      "quoteDate": "1982-06-25",
+      "verificationStatus": "verified",
+      "notes": "Final line of Roy's death soliloquy. Hauer added 'like tears in rain' himself."
+    },
+    {
+      "id": "scifi-018",
+      "content": "Fear is the mind-killer.",
+      "authorName": "Paul Atreides (Timothee Chalamet)",
+      "source": "Dune (2021)",
+      "quoteDate": "2021-10-22",
+      "verificationStatus": "verified",
+      "notes": "From the Bene Gesserit Litany Against Fear. Originally from Frank Herbert's 1965 novel."
+    },
+    {
+      "id": "scifi-019",
+      "content": "The spice must flow.",
+      "authorName": "Baron Harkonnen",
+      "source": "Dune (1984)",
+      "quoteDate": "1984-12-14",
+      "verificationStatus": "verified",
+      "notes": "Emphasizes spice's economic importance. David Lynch's film version popularized this phrasing."
+    },
+    {
+      "id": "scifi-020",
+      "content": "He who controls the spice controls the universe.",
+      "authorName": "Baron Harkonnen",
+      "source": "Dune by Frank Herbert (1965)",
+      "quoteDate": "1965",
+      "verificationStatus": "verified",
+      "notes": "Encapsulates the novel's political themes. Spice as metaphor for oil is often discussed."
+    },
+    {
+      "id": "scifi-021",
+      "content": "In space, no one can hear you scream.",
+      "authorName": "Tagline",
+      "source": "Alien (1979)",
+      "quoteDate": "1979-05-25",
+      "verificationStatus": "verified",
+      "notes": "Marketing tagline that became iconic. Captures the isolation horror of the film."
+    },
+    {
+      "id": "scifi-022",
+      "content": "Game over, man! Game over!",
+      "authorName": "Private Hudson (Bill Paxton)",
+      "source": "Aliens (1986)",
+      "quoteDate": "1986-07-18",
+      "verificationStatus": "verified",
+      "notes": "Hudson's panicked outburst. Paxton's delivery made it quotable for generations."
+    },
+    {
+      "id": "scifi-023",
+      "content": "Get away from her, you bitch!",
+      "authorName": "Ellen Ripley (Sigourney Weaver)",
+      "source": "Aliens (1986)",
+      "quoteDate": "1986-07-18",
+      "verificationStatus": "verified",
+      "notes": "Ripley protecting Newt from the Queen. One of cinema's great action hero moments."
+    },
+    {
+      "id": "scifi-024",
+      "content": "Welcome to the real world.",
+      "authorName": "Morpheus (Laurence Fishburne)",
+      "source": "The Matrix (1999)",
+      "quoteDate": "1999-03-31",
+      "verificationStatus": "verified",
+      "notes": "Morpheus showing Neo the truth. The red pill/blue pill choice became cultural shorthand."
+    },
+    {
+      "id": "scifi-025",
+      "content": "There is no spoon.",
+      "authorName": "Spoon Boy",
+      "source": "The Matrix (1999)",
+      "quoteDate": "1999-03-31",
+      "verificationStatus": "verified",
+      "notes": "Lesson about bending reality. Represents understanding that the Matrix isn't real."
+    },
+    {
+      "id": "scifi-026",
+      "content": "I know kung fu.",
+      "authorName": "Neo (Keanu Reeves)",
+      "source": "The Matrix (1999)",
+      "quoteDate": "1999-03-31",
+      "verificationStatus": "verified",
+      "notes": "Neo after his first training upload. Reeves' amazed delivery became iconic."
+    },
+    {
+      "id": "scifi-027",
+      "content": "What is real? How do you define real?",
+      "authorName": "Morpheus (Laurence Fishburne)",
+      "source": "The Matrix (1999)",
+      "quoteDate": "1999-03-31",
+      "verificationStatus": "verified",
+      "notes": "Morpheus questioning perception. Introduced philosophical concepts to mainstream audiences."
+    },
+    {
+      "id": "scifi-028",
+      "content": "Roads? Where we're going, we don't need roads.",
+      "authorName": "Doc Brown (Christopher Lloyd)",
+      "source": "Back to the Future (1985)",
+      "quoteDate": "1985-07-03",
+      "verificationStatus": "verified",
+      "notes": "Doc's closing line before the DeLorean flies. Sets up the sequel's promise."
+    },
+    {
+      "id": "scifi-029",
+      "content": "Great Scott!",
+      "authorName": "Doc Brown (Christopher Lloyd)",
+      "source": "Back to the Future (1985)",
+      "quoteDate": "1985-07-03",
+      "verificationStatus": "verified",
+      "notes": "Doc's exclamation of surprise. Lloyd's eccentric delivery defined the character."
+    },
+    {
+      "id": "scifi-030",
+      "content": "E.T. phone home.",
+      "authorName": "E.T.",
+      "source": "E.T. the Extra-Terrestrial (1982)",
+      "quoteDate": "1982-06-11",
+      "verificationStatus": "verified",
+      "notes": "E.T.'s request to contact his species. Spielberg's film became a cultural phenomenon."
+    },
+    {
+      "id": "scifi-031",
+      "content": "Life, uh, finds a way.",
+      "authorName": "Dr. Ian Malcolm (Jeff Goldblum)",
+      "source": "Jurassic Park (1993)",
+      "quoteDate": "1993-06-11",
+      "verificationStatus": "verified",
+      "notes": "Malcolm's chaos theory observation. Goldblum's unique delivery made it memorable."
+    },
+    {
+      "id": "scifi-032",
+      "content": "Clever girl.",
+      "authorName": "Robert Muldoon (Bob Peck)",
+      "source": "Jurassic Park (1993)",
+      "quoteDate": "1993-06-11",
+      "verificationStatus": "verified",
+      "notes": "Muldoon's last words, realizing the raptor's trap. Perfect blend of respect and doom."
+    },
+    {
+      "id": "scifi-033",
+      "content": "Hold onto your butts.",
+      "authorName": "Ray Arnold (Samuel L. Jackson)",
+      "source": "Jurassic Park (1993)",
+      "quoteDate": "1993-06-11",
+      "verificationStatus": "verified",
+      "notes": "Arnold before rebooting the park systems. One of Jackson's most quotable lines."
+    },
+    {
+      "id": "scifi-034",
+      "content": "So say we all.",
+      "authorName": "Commander Adama (Edward James Olmos)",
+      "source": "Battlestar Galactica (2004)",
+      "quoteDate": "2004-10-18",
+      "verificationStatus": "verified",
+      "notes": "Colonial affirmation of unity. The 2004 series reinvented sci-fi television."
+    },
+    {
+      "id": "scifi-035",
+      "content": "I aim to misbehave.",
+      "authorName": "Malcolm Reynolds (Nathan Fillion)",
+      "source": "Serenity (2005)",
+      "quoteDate": "2005-09-30",
+      "verificationStatus": "verified",
+      "notes": "Mal's defiant declaration. Firefly fans made it a rallying cry for the cancelled series."
+    },
+    {
+      "id": "scifi-036",
+      "content": "Shiny. Let's be bad guys.",
+      "authorName": "Jayne Cobb (Adam Baldwin)",
+      "source": "Serenity (2005)",
+      "quoteDate": "2005-09-30",
+      "verificationStatus": "verified",
+      "notes": "Jayne's enthusiastic agreement to a job. 'Shiny' became part of Firefly fan vocabulary."
+    },
+    {
+      "id": "scifi-037",
+      "content": "I can't lie to you about your chances, but you have my sympathies.",
+      "authorName": "Ash (Ian Holm)",
+      "source": "Alien (1979)",
+      "quoteDate": "1979-05-25",
+      "verificationStatus": "verified",
+      "notes": "Ash's chilling final assessment. Reveals the android's true lack of humanity."
+    },
+    {
+      "id": "scifi-038",
+      "content": "Klaatu barada nikto.",
+      "authorName": "Klaatu (Michael Rennie)",
+      "source": "The Day the Earth Stood Still (1951)",
+      "quoteDate": "1951-09-28",
+      "verificationStatus": "verified",
+      "notes": "Command to stop Gort. Referenced in Army of Darkness and many other films."
+    },
+    {
+      "id": "scifi-039",
+      "content": "Open the pod bay doors, HAL.",
+      "authorName": "Dave Bowman (Keir Dullea)",
+      "source": "2001: A Space Odyssey (1968)",
+      "quoteDate": "1968-04-02",
+      "verificationStatus": "verified",
+      "notes": "Dave's request to the malfunctioning AI. Kubrick's film set the standard for sci-fi cinema."
+    },
+    {
+      "id": "scifi-040",
+      "content": "I'm sorry, Dave. I'm afraid I can't do that.",
+      "authorName": "HAL 9000 (Douglas Rain)",
+      "source": "2001: A Space Odyssey (1968)",
+      "quoteDate": "1968-04-02",
+      "verificationStatus": "verified",
+      "notes": "HAL's polite refusal became template for sinister AI. Rain's calm voice made it chilling."
+    }
+  ]
+}

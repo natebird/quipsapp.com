@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-01-15T12:00:00Z",
+  "lastUpdated": "2025-12-25T12:00:00Z",
   "collections": [
     {
       "id": "inspiration-daily",
       "name": "Daily Inspiration",
       "description": "Start your day with motivational quotes from visionary leaders and thinkers.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "The only way to do great work is to love what you do.",
         "In the middle of difficulty lies opportunity."
@@ -15,14 +15,14 @@
       "colorName": "gold",
       "iconName": "sunrise.fill",
       "category": "Inspiration",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
     },
     {
       "id": "stoic-wisdom",
       "name": "Stoic Wisdom",
       "description": "Timeless philosophy from Marcus Aurelius, Seneca, and Epictetus to guide your life.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "You have power over your mind - not outside events. Realize this, and you will find strength.",
         "We suffer more often in imagination than in reality."
@@ -30,14 +30,14 @@
       "colorName": "navyBlue",
       "iconName": "building.columns.fill",
       "category": "Philosophy",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
     },
     {
       "id": "creative-minds",
       "name": "Creative Minds",
       "description": "Insights on creativity and innovation from artists, writers, and inventors.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
         "Every child is an artist. The problem is how to remain an artist once we grow up."
@@ -45,14 +45,14 @@
       "colorName": "purple",
       "iconName": "paintbrush.fill",
       "category": "Creativity",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
     },
     {
       "id": "tech-visionaries",
       "name": "Tech Visionaries",
       "description": "Words of wisdom from the pioneers who shaped our digital world.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "The best way to predict the future is to invent it.",
         "The people who are crazy enough to think they can change the world are the ones who do."
@@ -60,14 +60,14 @@
       "colorName": "primaryBlue",
       "iconName": "cpu.fill",
       "category": "Technology",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
     },
     {
       "id": "literary-classics",
       "name": "Literary Classics",
       "description": "Memorable lines from the greatest works of literature throughout history.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
         "All happy families are alike; each unhappy family is unhappy in its own way."
@@ -75,14 +75,14 @@
       "colorName": "brown",
       "iconName": "book.fill",
       "category": "Literature",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
     },
     {
       "id": "mindfulness",
       "name": "Mindfulness & Peace",
       "description": "Calming quotes about presence, meditation, and inner peace.",
       "author": "Quips Editorial",
-      "quoteCount": 8,
+      "quoteCount": 30,
       "previewQuotes": [
         "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
         "Peace comes from within. Do not seek it without."
@@ -90,7 +90,112 @@
       "colorName": "mint",
       "iconName": "leaf.fill",
       "category": "Wellness",
-      "lastUpdated": "2025-01-15T12:00:00Z"
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "marvel-movies",
+      "name": "Marvel Movies",
+      "description": "Iconic lines from Marvel superhero films spanning the MCU, X-Men, Spider-Man, and more.",
+      "author": "Quips Editorial",
+      "quoteCount": 40,
+      "previewQuotes": [
+        "I am Iron Man.",
+        "With great power comes great responsibility."
+      ],
+      "colorName": "red",
+      "iconName": "bolt.fill",
+      "category": "Movies",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "dc-comics",
+      "name": "DC Comics & Films",
+      "description": "Legendary quotes from Batman, Superman, Wonder Woman, and the DC universe across comics and film.",
+      "author": "Quips Editorial",
+      "quoteCount": 35,
+      "previewQuotes": [
+        "Why so serious?",
+        "I'm Batman."
+      ],
+      "colorName": "navyBlue",
+      "iconName": "shield.fill",
+      "category": "Movies",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "disney-animated",
+      "name": "Disney Animated",
+      "description": "Magical quotes from Disney's animated classics, from the golden age to modern masterpieces.",
+      "author": "Quips Editorial",
+      "quoteCount": 40,
+      "previewQuotes": [
+        "Hakuna Matata! It means no worries for the rest of your days.",
+        "To infinity and beyond!"
+      ],
+      "colorName": "magenta",
+      "iconName": "wand.and.stars",
+      "category": "Movies",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "seinfeld",
+      "name": "Seinfeld",
+      "description": "Iconic quotes and catchphrases from the show about nothing that became everything.",
+      "author": "Quips Editorial",
+      "quoteCount": 25,
+      "previewQuotes": [
+        "No soup for you!",
+        "Serenity now!"
+      ],
+      "colorName": "orange",
+      "iconName": "tv.fill",
+      "category": "Television",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "fantasy-worlds",
+      "name": "Fantasy Worlds",
+      "description": "Epic quotes from beloved fantasy books, films, and TV adaptations.",
+      "author": "Quips Editorial",
+      "quoteCount": 35,
+      "previewQuotes": [
+        "Not all those who wander are lost.",
+        "Winter is coming."
+      ],
+      "colorName": "forestGreen",
+      "iconName": "flame.fill",
+      "category": "Literature",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "western-movies",
+      "name": "Western Movies",
+      "description": "Legendary quotes from the Wild West, featuring outlaws, heroes, and frontier justice.",
+      "author": "Quips Editorial",
+      "quoteCount": 30,
+      "previewQuotes": [
+        "Go ahead, make my day.",
+        "I'm your huckleberry."
+      ],
+      "colorName": "brown",
+      "iconName": "sun.dust.fill",
+      "category": "Movies",
+      "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "scifi-screen",
+      "name": "Sci-Fi Screen",
+      "description": "Memorable quotes from science fiction movies and television that shaped our imagination.",
+      "author": "Quips Editorial",
+      "quoteCount": 40,
+      "previewQuotes": [
+        "May the Force be with you.",
+        "Live long and prosper."
+      ],
+      "colorName": "cyan",
+      "iconName": "sparkles",
+      "category": "Movies",
+      "lastUpdated": "2025-12-25T12:00:00Z"
     }
   ]
 }

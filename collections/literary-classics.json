@@ -6,55 +6,268 @@
   "colorName": "brown",
   "iconName": "book.fill",
   "category": "Literature",
-  "lastUpdated": "2025-01-15T12:00:00Z",
+  "lastUpdated": "2025-12-26T12:00:00Z",
   "quotes": [
     {
       "id": "lc-001",
       "content": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
       "authorName": "Jane Austen",
-      "source": "Pride and Prejudice"
+      "source": "Pride and Prejudice, Chapter 1 (1813)",
+      "quoteDate": "1813-01-28",
+      "verificationStatus": "verified",
+      "notes": "Opening line of the novel. One of the most famous first lines in English literature, establishing the novel's ironic tone."
     },
     {
       "id": "lc-002",
       "content": "All happy families are alike; each unhappy family is unhappy in its own way.",
       "authorName": "Leo Tolstoy",
-      "source": "Anna Karenina"
+      "source": "Anna Karenina, Part 1, Chapter 1 (1877)",
+      "quoteDate": "1877",
+      "verificationStatus": "verified",
+      "notes": "Opening line of the novel. Known as the 'Anna Karenina principle' in fields from evolutionary biology to business."
     },
     {
       "id": "lc-003",
       "content": "It was the best of times, it was the worst of times.",
       "authorName": "Charles Dickens",
-      "source": "A Tale of Two Cities"
+      "source": "A Tale of Two Cities, Book 1, Chapter 1 (1859)",
+      "quoteDate": "1859",
+      "verificationStatus": "verified",
+      "notes": "Opening line of the novel set during the French Revolution. The full first sentence continues for 119 words."
     },
     {
       "id": "lc-004",
       "content": "So we beat on, boats against the current, borne back ceaselessly into the past.",
       "authorName": "F. Scott Fitzgerald",
-      "source": "The Great Gatsby"
+      "source": "The Great Gatsby, final line (1925)",
+      "quoteDate": "1925-04-10",
+      "verificationStatus": "verified",
+      "notes": "The novel's famous closing line. Encapsulates the theme of pursuing an unattainable dream."
     },
     {
       "id": "lc-005",
       "content": "All we have to decide is what to do with the time that is given us.",
       "authorName": "J.R.R. Tolkien",
-      "source": "The Fellowship of the Ring"
+      "source": "The Fellowship of the Ring, Book 1, Chapter 2 (1954)",
+      "quoteDate": "1954",
+      "verificationStatus": "verified",
+      "notes": "Gandalf's words to Frodo in Moria. One of the most quoted passages from The Lord of the Rings."
     },
     {
       "id": "lc-006",
-      "content": "It is not our abilities that show what we truly are. It is our choices.",
+      "content": "It is our choices, Harry, that show what we truly are, far more than our abilities.",
       "authorName": "J.K. Rowling",
-      "source": "Harry Potter and the Chamber of Secrets"
+      "source": "Harry Potter and the Chamber of Secrets, Chapter 18 (1998)",
+      "quoteDate": "1998",
+      "verificationStatus": "verified",
+      "notes": "Dumbledore's words to Harry in the Chamber of Secrets. A central theme of the Harry Potter series."
     },
     {
       "id": "lc-007",
       "content": "Whatever our souls are made of, his and mine are the same.",
       "authorName": "Emily Brontë",
-      "source": "Wuthering Heights"
+      "source": "Wuthering Heights, Chapter 9 (1847)",
+      "quoteDate": "1847",
+      "verificationStatus": "verified",
+      "notes": "Catherine Earnshaw speaking about Heathcliff. Expresses the intense, almost supernatural connection between them."
     },
     {
       "id": "lc-008",
       "content": "To be, or not to be: that is the question.",
       "authorName": "William Shakespeare",
-      "source": "Hamlet"
+      "source": "Hamlet, Act 3, Scene 1 (c. 1600)",
+      "quoteDate": "c. 1600",
+      "verificationStatus": "verified",
+      "notes": "Beginning of Hamlet's famous soliloquy on existence. Perhaps the most famous line in English literature."
+    },
+    {
+      "id": "lc-009",
+      "content": "Call me Ishmael.",
+      "authorName": "Herman Melville",
+      "source": "Moby-Dick, Chapter 1 (1851)",
+      "quoteDate": "1851",
+      "verificationStatus": "verified",
+      "notes": "Opening line of the novel. One of literature's most recognizable first lines, establishing the narrator's identity."
+    },
+    {
+      "id": "lc-010",
+      "content": "It was a bright cold day in April, and the clocks were striking thirteen.",
+      "authorName": "George Orwell",
+      "source": "Nineteen Eighty-Four, Part 1, Chapter 1 (1949)",
+      "quoteDate": "1949-06-08",
+      "verificationStatus": "verified",
+      "notes": "Opening line immediately signals a world where things are not as they should be. The 13-hour clock suggests totalitarian control."
+    },
+    {
+      "id": "lc-011",
+      "content": "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.",
+      "authorName": "F. Scott Fitzgerald",
+      "source": "The Great Gatsby, Chapter 1 (1925)",
+      "quoteDate": "1925-04-10",
+      "verificationStatus": "verified",
+      "notes": "Opening line introducing Nick Carraway as narrator. Sets up the novel's themes of judgment and moral complexity."
+    },
+    {
+      "id": "lc-012",
+      "content": "All animals are equal, but some animals are more equal than others.",
+      "authorName": "George Orwell",
+      "source": "Animal Farm, Chapter 10 (1945)",
+      "quoteDate": "1945",
+      "verificationStatus": "verified",
+      "notes": "The pigs' final corruption of the original Seven Commandments. A satirical critique of Soviet communism."
+    },
+    {
+      "id": "lc-013",
+      "content": "It is nothing to die; it is frightful not to live.",
+      "authorName": "Victor Hugo",
+      "source": "Les Misérables, Part 5, Book 9 (1862)",
+      "quoteDate": "1862",
+      "verificationStatus": "verified",
+      "notes": "From Jean Valjean's reflections near the novel's end. Expresses the theme of redemption through living fully."
+    },
+    {
+      "id": "lc-014",
+      "content": "There is no greater agony than bearing an untold story inside you.",
+      "authorName": "Maya Angelou",
+      "source": "I Know Why the Caged Bird Sings (1969)",
+      "quoteDate": "1969",
+      "verificationStatus": "verified",
+      "notes": "From Angelou's autobiography about her childhood. Reflects the importance of voice and storytelling in healing."
+    },
+    {
+      "id": "lc-015",
+      "content": "One must imagine Sisyphus happy.",
+      "authorName": "Albert Camus",
+      "source": "The Myth of Sisyphus, final line (1942)",
+      "quoteDate": "1942",
+      "verificationStatus": "verified",
+      "notes": "Concluding line of Camus' philosophical essay. Suggests finding meaning in struggle despite absurdity."
+    },
+    {
+      "id": "lc-016",
+      "content": "I took a deep breath and listened to the old brag of my heart: I am, I am, I am.",
+      "authorName": "Sylvia Plath",
+      "source": "The Bell Jar, Chapter 20 (1963)",
+      "quoteDate": "1963",
+      "verificationStatus": "verified",
+      "notes": "Esther Greenwood's moment of reconnection with life. Represents recovery and the persistence of being."
+    },
+    {
+      "id": "lc-017",
+      "content": "In spite of everything, I still believe that people are really good at heart.",
+      "authorName": "Anne Frank",
+      "source": "The Diary of a Young Girl (July 15, 1944)",
+      "quoteDate": "1944-07-15",
+      "verificationStatus": "verified",
+      "notes": "Written while hiding from the Nazis. Remarkable optimism given her circumstances; she died in Bergen-Belsen."
+    },
+    {
+      "id": "lc-018",
+      "content": "Not all those who wander are lost.",
+      "authorName": "J.R.R. Tolkien",
+      "source": "The Fellowship of the Ring, Book 1, Chapter 10 (1954)",
+      "quoteDate": "1954",
+      "verificationStatus": "verified",
+      "notes": "From the poem 'All that is gold does not glitter' about Aragorn. Often quoted independently of the novel."
+    },
+    {
+      "id": "lc-019",
+      "content": "Beware; for I am fearless, and therefore powerful.",
+      "authorName": "Mary Shelley",
+      "source": "Frankenstein, Chapter 20 (1818)",
+      "quoteDate": "1818",
+      "verificationStatus": "verified",
+      "notes": "The creature's words to Victor Frankenstein. Warns of the danger of creating something one cannot control."
+    },
+    {
+      "id": "lc-020",
+      "content": "Who controls the past controls the future. Who controls the present controls the past.",
+      "authorName": "George Orwell",
+      "source": "Nineteen Eighty-Four, Part 1, Chapter 3 (1949)",
+      "quoteDate": "1949-06-08",
+      "verificationStatus": "verified",
+      "notes": "Party slogan in the novel. Describes how totalitarian regimes manipulate historical truth."
+    },
+    {
+      "id": "lc-021",
+      "content": "The only way out of the labyrinth of suffering is to forgive.",
+      "authorName": "John Green",
+      "source": "Looking for Alaska, Part 2 (2005)",
+      "quoteDate": "2005",
+      "verificationStatus": "verified",
+      "notes": "Central theme of the novel. The labyrinth question is taken from Gabriel García Márquez's 'The General in His Labyrinth.'"
+    },
+    {
+      "id": "lc-022",
+      "content": "Tomorrow is another day.",
+      "authorName": "Margaret Mitchell",
+      "source": "Gone with the Wind, final line (1936)",
+      "quoteDate": "1936",
+      "verificationStatus": "verified",
+      "notes": "Scarlett O'Hara's famous closing declaration. Represents resilience and hope despite loss."
+    },
+    {
+      "id": "lc-023",
+      "content": "We are all in the gutter, but some of us are looking at the stars.",
+      "authorName": "Oscar Wilde",
+      "source": "Lady Windermere's Fan, Act 3 (1892)",
+      "quoteDate": "1892",
+      "verificationStatus": "verified",
+      "notes": "Lord Darlington's line in the play. One of Wilde's most quoted aphorisms about aspiration despite circumstances."
+    },
+    {
+      "id": "lc-024",
+      "content": "There is nothing either good or bad, but thinking makes it so.",
+      "authorName": "William Shakespeare",
+      "source": "Hamlet, Act 2, Scene 2 (c. 1600)",
+      "quoteDate": "c. 1600",
+      "verificationStatus": "verified",
+      "notes": "Hamlet to Rosencrantz and Guildenstern. An early expression of cognitive philosophy about perception and reality."
+    },
+    {
+      "id": "lc-025",
+      "content": "Brave New World.",
+      "authorName": "William Shakespeare (via Aldous Huxley)",
+      "source": "The Tempest, Act 5, Scene 1 (c. 1610)",
+      "quoteDate": "c. 1610",
+      "verificationStatus": "verified",
+      "notes": "Miranda's line 'O brave new world, that has such people in't!' Huxley used it ironically as his 1932 novel title."
+    },
+    {
+      "id": "lc-026",
+      "content": "Reader, I married him.",
+      "authorName": "Charlotte Brontë",
+      "source": "Jane Eyre, Chapter 38 (1847)",
+      "quoteDate": "1847",
+      "verificationStatus": "verified",
+      "notes": "Jane's direct address to the reader announcing her marriage to Rochester. Iconic for its simple directness."
+    },
+    {
+      "id": "lc-027",
+      "content": "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.",
+      "authorName": "Steve Kloves (screenplay)",
+      "source": "Harry Potter and the Prisoner of Azkaban, film adaptation (2004)",
+      "quoteDate": "2004",
+      "verificationStatus": "verified",
+      "notes": "Dumbledore's line from the film script by Steve Kloves, not the original novel. Widely attributed to J.K. Rowling but originated in the screenplay."
+    },
+    {
+      "id": "lc-028",
+      "content": "The past is never dead. It's not even past.",
+      "authorName": "William Faulkner",
+      "source": "Requiem for a Nun, Act 1, Scene 3 (1951)",
+      "quoteDate": "1951",
+      "verificationStatus": "verified",
+      "notes": "Gavin Stevens' line. Reflects Faulkner's recurring theme of history's persistent influence on the present."
+    },
+    {
+      "id": "lc-029",
+      "content": "There is always some madness in love. But there is also always some reason in madness.",
+      "authorName": "Friedrich Nietzsche",
+      "source": "Thus Spoke Zarathustra, Part 1 (1883)",
+      "quoteDate": "1883",
+      "verificationStatus": "verified",
+      "notes": "From Zarathustra's discourses. Explores the irrational nature of love while acknowledging its internal logic."
     }
   ]
 }

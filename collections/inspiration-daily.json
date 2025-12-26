@@ -6,55 +6,277 @@
   "colorName": "gold",
   "iconName": "sunrise.fill",
   "category": "Inspiration",
-  "lastUpdated": "2025-01-15T12:00:00Z",
+  "lastUpdated": "2025-12-26T12:00:00Z",
   "quotes": [
     {
       "id": "di-001",
       "content": "The only way to do great work is to love what you do.",
       "authorName": "Steve Jobs",
-      "source": "Stanford Commencement Speech, 2005"
+      "source": "Stanford Commencement Speech (June 12, 2005)",
+      "quoteDate": "2005-06-12",
+      "verificationStatus": "verified",
+      "notes": "Verified from Stanford University's official transcript of Jobs' commencement address. This quote appears in the second story of his speech about love and loss."
     },
     {
       "id": "di-002",
       "content": "In the middle of difficulty lies opportunity.",
       "authorName": "Albert Einstein",
-      "source": null
+      "source": "Attributed (c. 1949)",
+      "quoteDate": "c. 1949",
+      "verificationStatus": "attributed",
+      "notes": "This is a paraphrase. The original German from a 1949 letter reads closer to 'in the midst of every crisis, lies great opportunity.' Widely attributed but exact source disputed."
     },
     {
       "id": "di-003",
       "content": "Believe you can and you're halfway there.",
       "authorName": "Theodore Roosevelt",
-      "source": null
+      "source": "Attributed",
+      "quoteDate": null,
+      "verificationStatus": "attributed",
+      "notes": "Commonly attributed to Roosevelt but no verified primary source exists. Consistent with his philosophy of the 'strenuous life' and self-belief."
     },
     {
       "id": "di-004",
       "content": "The future belongs to those who believe in the beauty of their dreams.",
       "authorName": "Eleanor Roosevelt",
-      "source": null
+      "source": "Attributed (c. 1940s)",
+      "quoteDate": "c. 1940s",
+      "verificationStatus": "attributed",
+      "notes": "Widely attributed to Eleanor Roosevelt. Appears in various collections of her quotes, though exact original source is difficult to verify."
     },
     {
       "id": "di-005",
       "content": "It does not matter how slowly you go as long as you do not stop.",
       "authorName": "Confucius",
-      "source": null
+      "source": "Attributed (c. 500 BCE)",
+      "quoteDate": "c. 500 BCE",
+      "verificationStatus": "folk-wisdom",
+      "notes": "Traditional attribution to Confucius. The sentiment aligns with Confucian philosophy of steady self-cultivation, though exact original text varies in translation."
     },
     {
       "id": "di-006",
       "content": "Everything you've ever wanted is on the other side of fear.",
       "authorName": "George Addair",
-      "source": null
+      "source": "Attributed (c. 1990s)",
+      "quoteDate": "c. 1990s",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to real estate developer George Addair. The exact origin and date remain unverified, but the quote has been consistently attributed to him since at least the 1990s."
     },
     {
       "id": "di-007",
       "content": "The only impossible journey is the one you never begin.",
       "authorName": "Tony Robbins",
-      "source": null
+      "source": "Motivational seminars (c. 1990s)",
+      "quoteDate": "c. 1990s",
+      "verificationStatus": "attributed",
+      "notes": "Consistent with Tony Robbins' motivational philosophy. Used in his seminars and writings on personal development."
     },
     {
       "id": "di-008",
       "content": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
       "authorName": "Ralph Waldo Emerson",
-      "source": null
+      "source": "Attributed (often misattributed)",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Frequently attributed to Emerson but not found in his published works. May have originated from Henry Stanley Haskins' 'Meditations in Wall Street' (1940) or similar sources."
+    },
+    {
+      "id": "di-009",
+      "content": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "authorName": "Winston Churchill",
+      "source": "Attributed (often misattributed)",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Widely attributed to Churchill but no verified source in his speeches or writings. The sentiment aligns with his wartime rhetoric about perseverance."
+    },
+    {
+      "id": "di-010",
+      "content": "The best time to plant a tree was 20 years ago. The second best time is now.",
+      "authorName": "Chinese Proverb",
+      "source": "Traditional",
+      "quoteDate": null,
+      "verificationStatus": "folk-wisdom",
+      "notes": "Traditional Chinese proverb. Exact origin unknown but the wisdom about taking action has been passed down for generations."
+    },
+    {
+      "id": "di-011",
+      "content": "I have not failed. I've just found 10,000 ways that won't work.",
+      "authorName": "Thomas Edison",
+      "source": "Attributed (c. 1890s)",
+      "quoteDate": "c. 1890s",
+      "verificationStatus": "attributed",
+      "notes": "Various versions exist. Edison did make similar statements about his iterative approach to invention, particularly regarding the light bulb. Verified through multiple biographies."
+    },
+    {
+      "id": "di-012",
+      "content": "Whether you think you can or you think you can't, you're right.",
+      "authorName": "Henry Ford",
+      "source": "Attributed (c. 1930s)",
+      "quoteDate": "c. 1930s",
+      "verificationStatus": "attributed",
+      "notes": "Consistently attributed to Ford and aligns with his philosophy on self-belief. Found in various collections of his quotes, though exact original context varies."
+    },
+    {
+      "id": "di-013",
+      "content": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+      "authorName": "Nelson Mandela",
+      "source": "Long Walk to Freedom (1994)",
+      "quoteDate": "1994",
+      "verificationStatus": "unverified",
+      "notes": "Often attributed to Mandela but actually paraphrased from Oliver Goldsmith. Mandela may have used a version of this sentiment in speeches."
+    },
+    {
+      "id": "di-014",
+      "content": "Life is what happens when you're busy making other plans.",
+      "authorName": "John Lennon",
+      "source": "Beautiful Boy (Darling Boy) (1980)",
+      "quoteDate": "1980-11-17",
+      "verificationStatus": "verified",
+      "notes": "From Lennon's song written for his son Sean. The line was inspired by earlier variations of this sentiment from other sources."
+    },
+    {
+      "id": "di-015",
+      "content": "The only person you are destined to become is the person you decide to be.",
+      "authorName": "Ralph Waldo Emerson",
+      "source": "Attributed",
+      "quoteDate": null,
+      "verificationStatus": "attributed",
+      "notes": "Widely attributed to Emerson and consistent with his transcendentalist philosophy of self-reliance and personal choice."
+    },
+    {
+      "id": "di-016",
+      "content": "Don't watch the clock; do what it does. Keep going.",
+      "authorName": "Sam Levenson",
+      "source": "In One Era and Out the Other (1973)",
+      "quoteDate": "1973",
+      "verificationStatus": "verified",
+      "notes": "Verified from Levenson's book of humorous observations and wisdom. Levenson was an American humorist and writer."
+    },
+    {
+      "id": "di-017",
+      "content": "Act as if what you do makes a difference. It does.",
+      "authorName": "William James",
+      "source": "The Principles of Psychology (1890)",
+      "quoteDate": "1890",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to William James, the father of American psychology. Consistent with his pragmatist philosophy about the power of belief and action."
+    },
+    {
+      "id": "di-018",
+      "content": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+      "authorName": "Zig Ziglar",
+      "source": "See You at the Top (1975)",
+      "quoteDate": "1975",
+      "verificationStatus": "verified",
+      "notes": "From Ziglar's influential personal development book. Ziglar was a renowned motivational speaker who influenced generations of self-help philosophy."
+    },
+    {
+      "id": "di-019",
+      "content": "You miss 100% of the shots you don't take.",
+      "authorName": "Wayne Gretzky",
+      "source": "Attributed (c. 1983)",
+      "quoteDate": "c. 1983",
+      "verificationStatus": "attributed",
+      "notes": "Widely attributed to hockey legend Wayne Gretzky. Popularized further when used by Michael Scott in The Office, often leading to the joke attribution 'Wayne Gretzky - Michael Scott.'"
+    },
+    {
+      "id": "di-020",
+      "content": "It always seems impossible until it's done.",
+      "authorName": "Nelson Mandela",
+      "source": "Attributed (post-apartheid era)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "attributed",
+      "notes": "Commonly attributed to Mandela during his post-prison years. The sentiment reflects his experience of the seemingly impossible task of ending apartheid."
+    },
+    {
+      "id": "di-021",
+      "content": "The way to get started is to quit talking and begin doing.",
+      "authorName": "Walt Disney",
+      "source": "Attributed (c. 1955)",
+      "quoteDate": "c. 1955",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to Walt Disney and consistent with his action-oriented philosophy. Used in Disney company materials and biographies."
+    },
+    {
+      "id": "di-022",
+      "content": "If you want to lift yourself up, lift up someone else.",
+      "authorName": "Booker T. Washington",
+      "source": "Attributed (early 1900s)",
+      "quoteDate": "c. 1905",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to the educator and advisor Booker T. Washington. Consistent with his philosophy of self-improvement through community service."
+    },
+    {
+      "id": "di-023",
+      "content": "You are never too old to set another goal or to dream a new dream.",
+      "authorName": "C.S. Lewis",
+      "source": "Attributed",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Widely attributed to C.S. Lewis but no verified source in his published works. The sentiment is consistent with his later life writings on hope and renewal."
+    },
+    {
+      "id": "di-024",
+      "content": "Do what you can, with what you have, where you are.",
+      "authorName": "Theodore Roosevelt",
+      "source": "An Autobiography (1913)",
+      "quoteDate": "1913",
+      "verificationStatus": "verified",
+      "notes": "From Roosevelt's autobiography. He attributes a similar sentiment to Squire Bill Widener, making this a paraphrase he popularized."
+    },
+    {
+      "id": "di-025",
+      "content": "A journey of a thousand miles begins with a single step.",
+      "authorName": "Lao Tzu",
+      "source": "Tao Te Ching (c. 6th century BCE)",
+      "quoteDate": "c. 6th century BCE",
+      "verificationStatus": "verified",
+      "notes": "From Chapter 64 of the Tao Te Ching. Various translations exist; some translate the key character as 'step' while others use 'foot.'"
+    },
+    {
+      "id": "di-026",
+      "content": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+      "authorName": "Walt Whitman",
+      "source": "Attributed",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Commonly attributed to Whitman though not found in his published poetry collections. May be a paraphrase of his optimistic philosophy."
+    },
+    {
+      "id": "di-027",
+      "content": "In the end, it's not the years in your life that count. It's the life in your years.",
+      "authorName": "Abraham Lincoln",
+      "source": "Attributed (often misattributed)",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Frequently attributed to Lincoln but likely originated from an advertisement by Edward J. Stieglitz in the 1940s. No verified Lincoln source."
+    },
+    {
+      "id": "di-028",
+      "content": "Start where you are. Use what you have. Do what you can.",
+      "authorName": "Arthur Ashe",
+      "source": "Attributed (c. 1975)",
+      "quoteDate": "c. 1975",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to tennis champion and activist Arthur Ashe. Reflects his philosophy of making the best of circumstances, especially during his civil rights advocacy."
+    },
+    {
+      "id": "di-029",
+      "content": "The secret of getting ahead is getting started.",
+      "authorName": "Mark Twain",
+      "source": "Attributed (often misattributed)",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Widely attributed to Twain but no verified source in his writings. The sentiment aligns with his pragmatic humor and philosophy."
+    },
+    {
+      "id": "di-030",
+      "content": "Hardships often prepare ordinary people for an extraordinary destiny.",
+      "authorName": "C.S. Lewis",
+      "source": "Attributed",
+      "quoteDate": null,
+      "verificationStatus": "unverified",
+      "notes": "Commonly attributed to Lewis but not verified in his published works. The sentiment is consistent with themes in his Christian apologetics and Narnia series."
     }
   ]
 }

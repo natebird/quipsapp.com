@@ -1,0 +1,372 @@
+{
+  "id": "disney-animated",
+  "name": "Disney Animated",
+  "description": "Magical quotes from Disney's animated classics, from the golden age to modern masterpieces.",
+  "author": "Quips Editorial",
+  "colorName": "magenta",
+  "iconName": "wand.and.stars",
+  "category": "Movies",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "disney-001",
+      "content": "Hakuna Matata! It means no worries for the rest of your days.",
+      "authorName": "Timon and Pumbaa",
+      "source": "The Lion King (1994)",
+      "quoteDate": "1994-06-24",
+      "verificationStatus": "verified",
+      "notes": "Song by Elton John and Tim Rice. The Swahili phrase became a cultural catchphrase worldwide."
+    },
+    {
+      "id": "disney-002",
+      "content": "The past can hurt. But the way I see it, you can either run from it or learn from it.",
+      "authorName": "Rafiki",
+      "source": "The Lion King (1994)",
+      "quoteDate": "1994-06-24",
+      "verificationStatus": "verified",
+      "notes": "Rafiki's wisdom to Simba. Accompanied by the mandrill hitting Simba with his stick to make the point."
+    },
+    {
+      "id": "disney-003",
+      "content": "Remember who you are.",
+      "authorName": "Mufasa",
+      "source": "The Lion King (1994)",
+      "quoteDate": "1994-06-24",
+      "verificationStatus": "verified",
+      "notes": "Mufasa's ghost appears to remind Simba of his identity and duty. James Earl Jones voiced the character."
+    },
+    {
+      "id": "disney-004",
+      "content": "To infinity and beyond!",
+      "authorName": "Buzz Lightyear (Tim Allen)",
+      "source": "Toy Story (1995)",
+      "quoteDate": "1995-11-22",
+      "verificationStatus": "verified",
+      "notes": "Buzz's catchphrase. First Pixar feature film and first fully computer-animated feature."
+    },
+    {
+      "id": "disney-005",
+      "content": "You've got a friend in me.",
+      "authorName": "Woody (Tom Hanks)",
+      "source": "Toy Story (1995)",
+      "quoteDate": "1995-11-22",
+      "verificationStatus": "verified",
+      "notes": "Randy Newman's theme song, sung as dialogue by Woody. Became the franchise's signature song."
+    },
+    {
+      "id": "disney-006",
+      "content": "Just keep swimming.",
+      "authorName": "Dory (Ellen DeGeneres)",
+      "source": "Finding Nemo (2003)",
+      "quoteDate": "2003-05-30",
+      "verificationStatus": "verified",
+      "notes": "Dory's mantra for perseverance. Became an inspirational phrase far beyond the film."
+    },
+    {
+      "id": "disney-007",
+      "content": "Fish are friends, not food.",
+      "authorName": "Bruce the Shark",
+      "source": "Finding Nemo (2003)",
+      "quoteDate": "2003-05-30",
+      "verificationStatus": "verified",
+      "notes": "The sharks' support group pledge. Humorous take on addiction recovery meetings."
+    },
+    {
+      "id": "disney-008",
+      "content": "Let it go.",
+      "authorName": "Elsa (Idina Menzel)",
+      "source": "Frozen (2013)",
+      "quoteDate": "2013-11-27",
+      "verificationStatus": "verified",
+      "notes": "From the Oscar-winning song. Became a global phenomenon and empowerment anthem."
+    },
+    {
+      "id": "disney-009",
+      "content": "Some people are worth melting for.",
+      "authorName": "Olaf (Josh Gad)",
+      "source": "Frozen (2013)",
+      "quoteDate": "2013-11-27",
+      "verificationStatus": "verified",
+      "notes": "Olaf's expression of love for Anna. Embodies the film's theme of sacrificial love."
+    },
+    {
+      "id": "disney-010",
+      "content": "The cold never bothered me anyway.",
+      "authorName": "Elsa (Idina Menzel)",
+      "source": "Frozen (2013)",
+      "quoteDate": "2013-11-27",
+      "verificationStatus": "verified",
+      "notes": "Final line of 'Let It Go' before Elsa's dramatic door slam. Became a meme and catchphrase."
+    },
+    {
+      "id": "disney-011",
+      "content": "Ohana means family. Family means nobody gets left behind or forgotten.",
+      "authorName": "Lilo",
+      "source": "Lilo & Stitch (2002)",
+      "quoteDate": "2002-06-21",
+      "verificationStatus": "verified",
+      "notes": "Hawaiian concept of extended family. Central theme of the film about found family."
+    },
+    {
+      "id": "disney-012",
+      "content": "A dream is a wish your heart makes.",
+      "authorName": "Cinderella",
+      "source": "Cinderella (1950)",
+      "quoteDate": "1950-02-15",
+      "verificationStatus": "verified",
+      "notes": "Opening song of the film. Became one of Disney's most iconic phrases about hope."
+    },
+    {
+      "id": "disney-013",
+      "content": "Even miracles take a little time.",
+      "authorName": "Fairy Godmother",
+      "source": "Cinderella (1950)",
+      "quoteDate": "1950-02-15",
+      "verificationStatus": "verified",
+      "notes": "The Godmother's wisdom about patience. Verna Felton voiced the character."
+    },
+    {
+      "id": "disney-014",
+      "content": "If you can dream it, you can do it.",
+      "authorName": "Tom Fitzgerald (often misattributed to Walt Disney)",
+      "source": "Epcot's Horizons attraction",
+      "quoteDate": "1983",
+      "verificationStatus": "unverified",
+      "notes": "Commonly attributed to Walt Disney, but actually written by Disney Imagineer Tom Fitzgerald for Epcot's Horizons attraction in 1983, seventeen years after Walt Disney's death. The misattribution persists in popular culture."
+    },
+    {
+      "id": "disney-015",
+      "content": "The flower that blooms in adversity is the most rare and beautiful of all.",
+      "authorName": "The Emperor",
+      "source": "Mulan (1998)",
+      "quoteDate": "1998-06-19",
+      "verificationStatus": "verified",
+      "notes": "The Emperor's praise for Mulan. Reflects the film's themes of hidden worth and resilience."
+    },
+    {
+      "id": "disney-016",
+      "content": "A true hero isn't measured by the size of his strength, but by the strength of his heart.",
+      "authorName": "Zeus",
+      "source": "Hercules (1997)",
+      "quoteDate": "1997-06-27",
+      "verificationStatus": "verified",
+      "notes": "Zeus explaining what makes a true hero. Rip Torn voiced Zeus in the film."
+    },
+    {
+      "id": "disney-017",
+      "content": "Adventure is out there!",
+      "authorName": "Ellie",
+      "source": "Up (2009)",
+      "quoteDate": "2009-05-29",
+      "verificationStatus": "verified",
+      "notes": "From Ellie's Adventure Book. Becomes the film's emotional throughline about living fully."
+    },
+    {
+      "id": "disney-018",
+      "content": "Squirrel!",
+      "authorName": "Dug",
+      "source": "Up (2009)",
+      "quoteDate": "2009-05-29",
+      "verificationStatus": "verified",
+      "notes": "Dug's easily distracted exclamation. Became a popular reference for distraction and ADHD humor."
+    },
+    {
+      "id": "disney-019",
+      "content": "Anyone can cook.",
+      "authorName": "Auguste Gusteau",
+      "source": "Ratatouille (2007)",
+      "quoteDate": "2007-06-29",
+      "verificationStatus": "verified",
+      "notes": "Gusteau's democratic philosophy about culinary talent. Brad Garrett voiced the character."
+    },
+    {
+      "id": "disney-020",
+      "content": "You must not let anyone define your limits because of where you come from.",
+      "authorName": "Gusteau",
+      "source": "Ratatouille (2007)",
+      "quoteDate": "2007-06-29",
+      "verificationStatus": "verified",
+      "notes": "Gusteau encouraging Remy. Reflects the film's theme about overcoming social barriers."
+    },
+    {
+      "id": "disney-021",
+      "content": "I'm surrounded by idiots.",
+      "authorName": "Scar",
+      "source": "The Lion King (1994)",
+      "quoteDate": "1994-06-24",
+      "verificationStatus": "verified",
+      "notes": "Scar's exasperated complaint about the hyenas. Jeremy Irons voiced the villain."
+    },
+    {
+      "id": "disney-022",
+      "content": "Our fate lives within us. You only have to be brave enough to see it.",
+      "authorName": "Merida",
+      "source": "Brave (2012)",
+      "quoteDate": "2012-06-22",
+      "verificationStatus": "verified",
+      "notes": "Merida's realization about destiny. First Pixar film with a female protagonist."
+    },
+    {
+      "id": "disney-023",
+      "content": "I see the light.",
+      "authorName": "Rapunzel",
+      "source": "Tangled (2010)",
+      "quoteDate": "2010-11-24",
+      "verificationStatus": "verified",
+      "notes": "From the romantic lantern scene duet with Flynn. Oscar-nominated song by Alan Menken."
+    },
+    {
+      "id": "disney-024",
+      "content": "I've got a dream!",
+      "authorName": "Rapunzel",
+      "source": "Tangled (2010)",
+      "quoteDate": "2010-11-24",
+      "verificationStatus": "verified",
+      "notes": "From the Snuggly Duckling song where thugs reveal their dreams. Mandy Moore voiced Rapunzel."
+    },
+    {
+      "id": "disney-025",
+      "content": "The seaweed is always greener in somebody else's lake.",
+      "authorName": "Sebastian",
+      "source": "The Little Mermaid (1989)",
+      "quoteDate": "1989-11-17",
+      "verificationStatus": "verified",
+      "notes": "From 'Under the Sea.' Sebastian tries to convince Ariel to stay. Samuel E. Wright voiced the crab."
+    },
+    {
+      "id": "disney-026",
+      "content": "I want to be where the people are.",
+      "authorName": "Ariel",
+      "source": "The Little Mermaid (1989)",
+      "quoteDate": "1989-11-17",
+      "verificationStatus": "verified",
+      "notes": "From 'Part of Your World.' Jodi Benson's song launched the Disney Renaissance."
+    },
+    {
+      "id": "disney-027",
+      "content": "Tale as old as time.",
+      "authorName": "Mrs. Potts",
+      "source": "Beauty and the Beast (1991)",
+      "quoteDate": "1991-11-22",
+      "verificationStatus": "verified",
+      "notes": "Oscar-winning song by Alan Menken and Howard Ashman. Angela Lansbury sang the original."
+    },
+    {
+      "id": "disney-028",
+      "content": "I want adventure in the great wide somewhere.",
+      "authorName": "Belle",
+      "source": "Beauty and the Beast (1991)",
+      "quoteDate": "1991-11-22",
+      "verificationStatus": "verified",
+      "notes": "From 'Belle (Reprise).' Establishes Belle's desire for more than provincial life."
+    },
+    {
+      "id": "disney-029",
+      "content": "A whole new world.",
+      "authorName": "Aladdin",
+      "source": "Aladdin (1992)",
+      "quoteDate": "1992-11-25",
+      "verificationStatus": "verified",
+      "notes": "Oscar-winning song during the magic carpet ride. Brad Kane provided Aladdin's singing voice."
+    },
+    {
+      "id": "disney-030",
+      "content": "You ain't never had a friend like me.",
+      "authorName": "Genie (Robin Williams)",
+      "source": "Aladdin (1992)",
+      "quoteDate": "1992-11-25",
+      "verificationStatus": "verified",
+      "notes": "Williams' show-stopping performance. His improvisation changed how Disney used voice actors."
+    },
+    {
+      "id": "disney-031",
+      "content": "I'm not worthless. And I don't have fleas.",
+      "authorName": "Aladdin",
+      "source": "Aladdin (1992)",
+      "quoteDate": "1992-11-25",
+      "verificationStatus": "verified",
+      "notes": "Aladdin's defiant response to insults. Scott Weinger voiced the character."
+    },
+    {
+      "id": "disney-032",
+      "content": "How far I'll go.",
+      "authorName": "Moana",
+      "source": "Moana (2016)",
+      "quoteDate": "2016-11-23",
+      "verificationStatus": "verified",
+      "notes": "Lin-Manuel Miranda's Oscar-nominated song about calling and destiny. Auli'i Cravalho voiced Moana."
+    },
+    {
+      "id": "disney-033",
+      "content": "I am Moana of Motunui. You will board my boat and restore the heart to Te Fiti.",
+      "authorName": "Moana",
+      "source": "Moana (2016)",
+      "quoteDate": "2016-11-23",
+      "verificationStatus": "verified",
+      "notes": "Moana's repeated declaration to Maui. Shows her determination and identity."
+    },
+    {
+      "id": "disney-034",
+      "content": "You're welcome!",
+      "authorName": "Maui (Dwayne Johnson)",
+      "source": "Moana (2016)",
+      "quoteDate": "2016-11-23",
+      "verificationStatus": "verified",
+      "notes": "From Maui's egotistical song about his heroic deeds. Lin-Manuel Miranda wrote the song."
+    },
+    {
+      "id": "disney-035",
+      "content": "The only thing predictable about life is its unpredictability.",
+      "authorName": "Remy",
+      "source": "Ratatouille (2007)",
+      "quoteDate": "2007-06-29",
+      "verificationStatus": "verified",
+      "notes": "Remy's philosophy about embracing uncertainty. Patton Oswalt voiced the rat chef."
+    },
+    {
+      "id": "disney-036",
+      "content": "Venture outside your comfort zone. The rewards are worth it.",
+      "authorName": "Rapunzel",
+      "source": "Tangled (2010)",
+      "quoteDate": "2010-11-24",
+      "verificationStatus": "verified",
+      "notes": "Rapunzel's realization after leaving her tower. Reflects the film's coming-of-age themes."
+    },
+    {
+      "id": "disney-037",
+      "content": "When life gets you down, you know what you gotta do? Just keep swimming.",
+      "authorName": "Dory (Ellen DeGeneres)",
+      "source": "Finding Nemo (2003)",
+      "quoteDate": "2003-05-30",
+      "verificationStatus": "verified",
+      "notes": "Extended version of Dory's mantra. DeGeneres' real-life optimism influenced the character."
+    },
+    {
+      "id": "disney-038",
+      "content": "I never look back, darling. It distracts from the now.",
+      "authorName": "Edna Mode",
+      "source": "The Incredibles (2004)",
+      "quoteDate": "2004-11-05",
+      "verificationStatus": "verified",
+      "notes": "Edna's philosophy on forward-thinking. Brad Bird voiced the iconic fashion designer."
+    },
+    {
+      "id": "disney-039",
+      "content": "No capes!",
+      "authorName": "Edna Mode",
+      "source": "The Incredibles (2004)",
+      "quoteDate": "2004-11-05",
+      "verificationStatus": "verified",
+      "notes": "Edna's firm design rule, demonstrated with superhero cape accidents. Became a popular safety meme."
+    },
+    {
+      "id": "disney-040",
+      "content": "When there's too much to do, don't let it bother you. Forget about your worries and your strife.",
+      "authorName": "Baloo",
+      "source": "The Jungle Book (1967)",
+      "quoteDate": "1967-10-18",
+      "verificationStatus": "verified",
+      "notes": "From 'The Bare Necessities.' Phil Harris voiced Baloo in the original film."
+    }
+  ]
+}

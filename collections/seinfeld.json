@@ -1,0 +1,237 @@
+{
+  "id": "seinfeld",
+  "name": "Seinfeld",
+  "description": "Iconic quotes and catchphrases from the show about nothing that became everything.",
+  "author": "Quips Editorial",
+  "colorName": "orange",
+  "iconName": "tv.fill",
+  "category": "Television",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "seinfeld-001",
+      "content": "No soup for you!",
+      "authorName": "The Soup Nazi (Larry Thomas)",
+      "source": "Seinfeld, S7E6 'The Soup Nazi' (1995)",
+      "quoteDate": "1995-11-02",
+      "verificationStatus": "verified",
+      "notes": "Based on real NYC soup vendor Al Yeganeh. The episode made Thomas an icon; he was nominated for an Emmy."
+    },
+    {
+      "id": "seinfeld-002",
+      "content": "Serenity now!",
+      "authorName": "Frank Costanza (Jerry Stiller)",
+      "source": "Seinfeld, S9E3 'The Serenity Now' (1997)",
+      "quoteDate": "1997-10-09",
+      "verificationStatus": "verified",
+      "notes": "Frank's anger management technique that backfires. Later revealed: 'Serenity now, insanity later.'"
+    },
+    {
+      "id": "seinfeld-003",
+      "content": "Yada yada yada.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S8E19 'The Yada Yada' (1997)",
+      "quoteDate": "1997-04-24",
+      "verificationStatus": "verified",
+      "notes": "Originally Yiddish expression. The episode explored using it to skip uncomfortable story details."
+    },
+    {
+      "id": "seinfeld-004",
+      "content": "These pretzels are making me thirsty!",
+      "authorName": "Kramer (Michael Richards)",
+      "source": "Seinfeld, S3E11 'The Alternate Side' (1991)",
+      "quoteDate": "1991-12-04",
+      "verificationStatus": "verified",
+      "notes": "Kramer's one line in a Woody Allen film. Each character delivers it differently throughout the episode."
+    },
+    {
+      "id": "seinfeld-005",
+      "content": "Not that there's anything wrong with that.",
+      "authorName": "Jerry Seinfeld",
+      "source": "Seinfeld, S4E17 'The Outing' (1993)",
+      "quoteDate": "1993-02-11",
+      "verificationStatus": "verified",
+      "notes": "Jerry and George's repeated qualifier about being mistaken for gay. Won a GLAAD Media Award."
+    },
+    {
+      "id": "seinfeld-006",
+      "content": "I'm out there, Jerry, and I'm lovin' every minute of it!",
+      "authorName": "Kramer (Michael Richards)",
+      "source": "Seinfeld, S5E21 'The Hamptons' (1994)",
+      "quoteDate": "1994-05-12",
+      "verificationStatus": "verified",
+      "notes": "Kramer's enthusiastic embrace of life without underwear. Peak Kramer eccentricity."
+    },
+    {
+      "id": "seinfeld-007",
+      "content": "Giddy up!",
+      "authorName": "Kramer (Michael Richards)",
+      "source": "Seinfeld (1989-1998)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "verified",
+      "notes": "Kramer's catchphrase expressing enthusiasm. Used throughout the series run."
+    },
+    {
+      "id": "seinfeld-008",
+      "content": "Festivus for the rest of us!",
+      "authorName": "Frank Costanza (Jerry Stiller)",
+      "source": "Seinfeld, S9E10 'The Strike' (1997)",
+      "quoteDate": "1997-12-18",
+      "verificationStatus": "verified",
+      "notes": "Created by writer Dan O'Keefe's real family. December 23rd Festivus celebrations now occur worldwide."
+    },
+    {
+      "id": "seinfeld-009",
+      "content": "I was in the pool!",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S5E21 'The Hamptons' (1994)",
+      "quoteDate": "1994-05-12",
+      "verificationStatus": "verified",
+      "notes": "George's excuse for 'shrinkage.' The episode coined the term for mainstream audiences."
+    },
+    {
+      "id": "seinfeld-010",
+      "content": "Hello, Newman.",
+      "authorName": "Jerry Seinfeld",
+      "source": "Seinfeld (1989-1998)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "verified",
+      "notes": "Jerry's disdainful greeting to his nemesis. Wayne Knight played the postal worker Newman."
+    },
+    {
+      "id": "seinfeld-011",
+      "content": "It's not a lie if you believe it.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S6E16 'The Beard' (1995)",
+      "quoteDate": "1995-02-09",
+      "verificationStatus": "verified",
+      "notes": "George's philosophy on deception and self-delusion. Core to his character's psychology."
+    },
+    {
+      "id": "seinfeld-012",
+      "content": "I don't want to be a pirate!",
+      "authorName": "Jerry Seinfeld",
+      "source": "Seinfeld, S5E2 'The Puffy Shirt' (1993)",
+      "quoteDate": "1993-09-23",
+      "verificationStatus": "verified",
+      "notes": "Jerry forced to wear the puffy shirt on Today Show. The actual shirt is in the Smithsonian."
+    },
+    {
+      "id": "seinfeld-013",
+      "content": "The jerk store called, and they're running out of you!",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S8E13 'The Comeback' (1997)",
+      "quoteDate": "1997-01-30",
+      "verificationStatus": "verified",
+      "notes": "George's delayed comeback. The episode satirizes the obsession with the perfect retort."
+    },
+    {
+      "id": "seinfeld-014",
+      "content": "I'm not a lesbian. I hate men, but I'm not a lesbian.",
+      "authorName": "Elaine Benes (Julia Louis-Dreyfus)",
+      "source": "Seinfeld, S4E17 'The Outing' (1993)",
+      "quoteDate": "1993-02-11",
+      "verificationStatus": "verified",
+      "notes": "Elaine's clarification during the mistaken identity episode. Julia Louis-Dreyfus' comedic timing shines."
+    },
+    {
+      "id": "seinfeld-015",
+      "content": "You're so good looking.",
+      "authorName": "Jerry Seinfeld",
+      "source": "Seinfeld, S6E9 'The Secretary' (1994)",
+      "quoteDate": "1994-12-08",
+      "verificationStatus": "verified",
+      "notes": "Jerry's alternative to 'God bless you' after sneezes. A running bit about social conventions."
+    },
+    {
+      "id": "seinfeld-016",
+      "content": "Hoochie mama!",
+      "authorName": "Frank Costanza (Jerry Stiller)",
+      "source": "Seinfeld, S9E3 'The Serenity Now' (1997)",
+      "quoteDate": "1997-10-09",
+      "verificationStatus": "verified",
+      "notes": "Frank's alternative outburst to 'Serenity now.' Jerry Stiller's delivery made it memorable."
+    },
+    {
+      "id": "seinfeld-017",
+      "content": "I'm Victoria's Secret model.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S5E11 'The Conversion' (1993)",
+      "quoteDate": "1993-12-16",
+      "verificationStatus": "verified",
+      "notes": "George's lie to impress a woman. Classic George self-delusion and overreach."
+    },
+    {
+      "id": "seinfeld-018",
+      "content": "That's gold, Jerry! Gold!",
+      "authorName": "Kenny Bania (Steve Hytner)",
+      "source": "Seinfeld, S7E6 'The Soup Nazi' (1995)",
+      "quoteDate": "1995-11-02",
+      "verificationStatus": "verified",
+      "notes": "Bania's catchphrase about his hacky comedy material. A recurring annoyance for Jerry."
+    },
+    {
+      "id": "seinfeld-019",
+      "content": "Who is this?",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld (1989-1998)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "verified",
+      "notes": "George's phone greeting, never saying hello. A character quirk throughout the series."
+    },
+    {
+      "id": "seinfeld-020",
+      "content": "I'm an architect.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S4E14 'The Visa' (1993)",
+      "quoteDate": "1993-01-27",
+      "verificationStatus": "verified",
+      "notes": "George's go-to fake profession when lying. Art Vandelay is his fictional architecture firm."
+    },
+    {
+      "id": "seinfeld-021",
+      "content": "Newman!",
+      "authorName": "Jerry Seinfeld",
+      "source": "Seinfeld (1989-1998)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "verified",
+      "notes": "Jerry's exclamation of disgust. The delivery varies from resigned to outraged throughout the series."
+    },
+    {
+      "id": "seinfeld-022",
+      "content": "The sea was angry that day, my friends.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S5E14 'The Marine Biologist' (1994)",
+      "quoteDate": "1994-02-10",
+      "verificationStatus": "verified",
+      "notes": "Opening of George's dramatic whale rescue story. One of the show's most beloved monologues."
+    },
+    {
+      "id": "seinfeld-023",
+      "content": "You want a piece of me?",
+      "authorName": "Frank Costanza (Jerry Stiller)",
+      "source": "Seinfeld, S6E10 'The Race' (1994)",
+      "quoteDate": "1994-12-15",
+      "verificationStatus": "verified",
+      "notes": "Frank's aggressive challenge. Jerry Stiller's intensity made Frank a fan favorite."
+    },
+    {
+      "id": "seinfeld-024",
+      "content": "I have no eye for fashion.",
+      "authorName": "Elaine Benes (Julia Louis-Dreyfus)",
+      "source": "Seinfeld, S6E16 'The Beard' (1995)",
+      "quoteDate": "1995-02-09",
+      "verificationStatus": "verified",
+      "notes": "Elaine's self-assessment about style. Ironic given the show's influence on 90s fashion."
+    },
+    {
+      "id": "seinfeld-025",
+      "content": "We're taking it up a notch!",
+      "authorName": "Elaine Benes (Julia Louis-Dreyfus)",
+      "source": "Seinfeld (1989-1998)",
+      "quoteDate": "c. 1994",
+      "verificationStatus": "verified",
+      "notes": "Elaine's enthusiasm for escalating situations. Part of her character's bold, assertive nature."
+    }
+  ]
+}

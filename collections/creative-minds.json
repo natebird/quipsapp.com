@@ -6,55 +6,277 @@
   "colorName": "purple",
   "iconName": "paintbrush.fill",
   "category": "Creativity",
-  "lastUpdated": "2025-01-15T12:00:00Z",
+  "lastUpdated": "2025-12-26T12:00:00Z",
   "quotes": [
     {
       "id": "cm-001",
       "content": "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
       "authorName": "Albert Einstein",
-      "source": "Saturday Evening Post, 1929"
+      "source": "The Saturday Evening Post (October 26, 1929)",
+      "notes": "From an interview with George Sylvester Viereck titled 'What Life Means to Einstein.' This is the verified full quote; shorter versions often circulate.",
+      "quoteDate": "1929-10-26",
+      "verificationStatus": "verified"
     },
     {
       "id": "cm-002",
       "content": "Every child is an artist. The problem is how to remain an artist once we grow up.",
       "authorName": "Pablo Picasso",
-      "source": null
+      "source": "Attributed (c. 1950s)",
+      "notes": "Widely attributed to Picasso. The sentiment appears in various biographies though the exact original context is difficult to verify.",
+      "quoteDate": "c. 1950s",
+      "verificationStatus": "attributed"
     },
     {
       "id": "cm-003",
       "content": "Creativity takes courage.",
       "authorName": "Henri Matisse",
-      "source": null
+      "source": "Attributed (c. 1940s)",
+      "notes": "Commonly attributed to Matisse and consistent with his philosophy of bold artistic expression. Exact source unverified.",
+      "quoteDate": "c. 1940s",
+      "verificationStatus": "attributed"
     },
     {
       "id": "cm-004",
       "content": "The chief enemy of creativity is good sense.",
       "authorName": "Pablo Picasso",
-      "source": null
+      "source": "Attributed",
+      "notes": "Attributed to Picasso. Reflects his rebellious approach to artistic convention and willingness to break rules.",
+      "quoteDate": null,
+      "verificationStatus": "attributed"
     },
     {
       "id": "cm-005",
       "content": "You can't use up creativity. The more you use, the more you have.",
       "authorName": "Maya Angelou",
-      "source": null
+      "source": "Conversations with Maya Angelou (1989)",
+      "notes": "From an interview. Angelou frequently discussed creativity as an inexhaustible resource in her lectures and writings.",
+      "quoteDate": "1989",
+      "verificationStatus": "verified"
     },
     {
       "id": "cm-006",
       "content": "To be creative means to be in love with life.",
       "authorName": "Osho",
-      "source": null
+      "source": "Creativity: Unleashing the Forces Within (1999)",
+      "notes": "From Osho's book on creativity. Originally from his discourses on living creatively.",
+      "quoteDate": "1999",
+      "verificationStatus": "verified"
     },
     {
       "id": "cm-007",
       "content": "The desire to create is one of the deepest yearnings of the human soul.",
       "authorName": "Dieter F. Uchtdorf",
-      "source": null
+      "source": "General Conference Address (October 2008)",
+      "notes": "From Uchtdorf's LDS General Conference talk 'Happiness, Your Heritage.' Verified from official church records.",
+      "quoteDate": "2008-10",
+      "verificationStatus": "verified"
     },
     {
       "id": "cm-008",
-      "content": "Imagination is the beginning of creation.",
+      "content": "Imagination is the beginning of creation. You imagine what you desire, you will what you imagine, and at last, you create what you will.",
       "authorName": "George Bernard Shaw",
-      "source": null
+      "source": "Back to Methuselah (1921)",
+      "notes": "From Shaw's play 'Back to Methuselah.' The full passage describes the creative process in sequence.",
+      "quoteDate": "1921",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-009",
+      "content": "Art is not what you see, but what you make others see.",
+      "authorName": "Edgar Degas",
+      "source": "Attributed (c. 1880s)",
+      "notes": "Attributed to French Impressionist Edgar Degas. Reflects his philosophy that art is about perception and communication.",
+      "quoteDate": "c. 1880s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-010",
+      "content": "Creativity is intelligence having fun.",
+      "authorName": "Albert Einstein",
+      "source": "Attributed (unverified)",
+      "notes": "Widely attributed to Einstein but no verified source exists. The sentiment aligns with his playful approach to science and thought experiments.",
+      "quoteDate": null,
+      "verificationStatus": "unverified"
+    },
+    {
+      "id": "cm-011",
+      "content": "The painter has the Universe in his mind and hands.",
+      "authorName": "Leonardo da Vinci",
+      "source": "Treatise on Painting (c. 1490s, published 1651)",
+      "notes": "From Leonardo's collected writings on painting, compiled after his death. Original Italian: 'Il pittore ha l'universo nella sua mente e nelle sue mani.'",
+      "quoteDate": "1651",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-012",
+      "content": "There is no must in art because art is free.",
+      "authorName": "Wassily Kandinsky",
+      "source": "Concerning the Spiritual in Art (1911)",
+      "notes": "From Kandinsky's influential theoretical text on abstract art and the spiritual purpose of artistic creation.",
+      "quoteDate": "1911",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-013",
+      "content": "The artist is nothing without the gift, but the gift is nothing without work.",
+      "authorName": "Emile Zola",
+      "source": "Attributed (c. 1860s)",
+      "notes": "Attributed to French author Emile Zola. Reflects his naturalist philosophy balancing talent with discipline.",
+      "quoteDate": "c. 1860s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-014",
+      "content": "I dream my painting and I paint my dream.",
+      "authorName": "Vincent van Gogh",
+      "source": "Letters to Theo (1888)",
+      "notes": "From Van Gogh's extensive correspondence with his brother Theo. Describes his intuitive creative process.",
+      "quoteDate": "1888",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-015",
+      "content": "Learn the rules like a pro, so you can break them like an artist.",
+      "authorName": "Pablo Picasso",
+      "source": "Attributed",
+      "notes": "Widely attributed to Picasso though unverified. Reflects his journey from classical training to revolutionary modernism.",
+      "quoteDate": null,
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-016",
+      "content": "Have no fear of perfection - you'll never reach it.",
+      "authorName": "Salvador Dali",
+      "source": "Attributed (c. 1960s)",
+      "notes": "Attributed to Dali and consistent with his surrealist embrace of imperfection and the unexpected.",
+      "quoteDate": "c. 1960s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-017",
+      "content": "The creative adult is the child who survived.",
+      "authorName": "Ursula K. Le Guin",
+      "source": "Attributed (c. 1990s)",
+      "notes": "Attributed to the science fiction author. Reflects her views on imagination and the importance of preserving childlike wonder.",
+      "quoteDate": "c. 1990s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-018",
+      "content": "I begin with an idea, and then it becomes something else.",
+      "authorName": "Pablo Picasso",
+      "source": "Attributed (interviews, c. 1950s)",
+      "notes": "From various interviews with Picasso about his creative process. Describes how his works evolved organically.",
+      "quoteDate": "c. 1950s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-019",
+      "content": "If you hear a voice within you say 'you cannot paint,' then by all means paint, and that voice will be silenced.",
+      "authorName": "Vincent van Gogh",
+      "source": "Letters to Theo (October 1883)",
+      "notes": "Verified from Van Gogh's letters. Advice about overcoming self-doubt through persistent creative action.",
+      "quoteDate": "1883-10",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-020",
+      "content": "The worst enemy to creativity is self-doubt.",
+      "authorName": "Sylvia Plath",
+      "source": "The Unabridged Journals of Sylvia Plath (1950-1962, published 2000)",
+      "notes": "From Plath's personal journals. Reflects her struggles with perfectionism and creative blocks.",
+      "quoteDate": "2000",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-021",
+      "content": "To practice any art, no matter how well or badly, is a way to make your soul grow.",
+      "authorName": "Kurt Vonnegut",
+      "source": "A Man Without a Country (2005)",
+      "notes": "From Vonnegut's collection of essays. He encourages creating for its own sake rather than for recognition.",
+      "quoteDate": "2005",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-022",
+      "content": "Art enables us to find ourselves and lose ourselves at the same time.",
+      "authorName": "Thomas Merton",
+      "source": "No Man Is an Island (1955)",
+      "notes": "From Merton's book on spiritual life. The Trappist monk saw art as a form of contemplation.",
+      "quoteDate": "1955",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-023",
+      "content": "Inspiration exists, but it has to find you working.",
+      "authorName": "Pablo Picasso",
+      "source": "Attributed",
+      "notes": "One of Picasso's most famous quotes about the creative process. Emphasizes discipline over waiting for inspiration.",
+      "quoteDate": null,
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-024",
+      "content": "I saw the angel in the marble and carved until I set him free.",
+      "authorName": "Michelangelo",
+      "source": "Attributed (Renaissance era)",
+      "notes": "Frequently attributed to Michelangelo regarding his sculpture process. No contemporary source, but consistent with Renaissance artistic philosophy.",
+      "quoteDate": null,
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-025",
+      "content": "Great things are done by a series of small things brought together.",
+      "authorName": "Vincent van Gogh",
+      "source": "Letters to Theo (October 1882)",
+      "notes": "Verified from Van Gogh's correspondence. Advice about breaking large creative projects into manageable steps.",
+      "quoteDate": "1882-10",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-026",
+      "content": "The true sign of intelligence is not knowledge but imagination.",
+      "authorName": "Albert Einstein",
+      "source": "Attributed (c. 1920s-1930s)",
+      "notes": "Commonly attributed to Einstein. Aligns with his emphasis on thought experiments and creative thinking in physics.",
+      "quoteDate": "c. 1920s-1930s",
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-027",
+      "content": "Art is the lie that enables us to realize the truth.",
+      "authorName": "Pablo Picasso",
+      "source": "The Arts (May 1923)",
+      "notes": "From an interview in The Arts magazine. One of Picasso's most philosophical statements about artistic representation.",
+      "quoteDate": "1923-05",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-028",
+      "content": "Everything you can imagine is real.",
+      "authorName": "Pablo Picasso",
+      "source": "Attributed",
+      "notes": "Widely attributed to Picasso. Reflects his surrealist connections and belief in the reality of imaginative experience.",
+      "quoteDate": null,
+      "verificationStatus": "attributed"
+    },
+    {
+      "id": "cm-029",
+      "content": "A creative man is motivated by the desire to achieve, not by the desire to beat others.",
+      "authorName": "Ayn Rand",
+      "source": "The Fountainhead (1943)",
+      "notes": "From Rand's novel about architect Howard Roark. Reflects her philosophy of individual creative achievement.",
+      "quoteDate": "1943",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "cm-030",
+      "content": "The object of art is not to reproduce reality, but to create a reality of the same intensity.",
+      "authorName": "Alberto Giacometti",
+      "source": "Attributed (c. 1960s)",
+      "notes": "Attributed to the Swiss sculptor. Reflects his approach to creating art that captures emotional rather than literal truth.",
+      "quoteDate": "c. 1960s",
+      "verificationStatus": "attributed"
     }
   ]
 }

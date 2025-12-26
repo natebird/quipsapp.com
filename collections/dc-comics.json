@@ -1,0 +1,327 @@
+{
+  "id": "dc-comics",
+  "name": "DC Comics & Films",
+  "description": "Legendary quotes from Batman, Superman, Wonder Woman, and the DC universe across comics and film.",
+  "author": "Quips Editorial",
+  "colorName": "navyBlue",
+  "iconName": "shield.fill",
+  "category": "Movies",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "dc-001",
+      "content": "Why do we fall, Bruce? So we can learn to pick ourselves up.",
+      "authorName": "Thomas Wayne (Linus Roache)",
+      "source": "Batman Begins (2005)",
+      "quoteDate": "2005-06-15",
+      "verificationStatus": "verified",
+      "notes": "Thomas Wayne's lesson to young Bruce. Alfred later echoes this, making it a thematic throughline of Nolan's trilogy."
+    },
+    {
+      "id": "dc-002",
+      "content": "It's not who I am underneath, but what I do that defines me.",
+      "authorName": "Bruce Wayne (Christian Bale)",
+      "source": "Batman Begins (2005)",
+      "quoteDate": "2005-06-15",
+      "verificationStatus": "verified",
+      "notes": "Bruce echoes Rachel's earlier words back to her, revealing his identity. Central theme of the film."
+    },
+    {
+      "id": "dc-003",
+      "content": "Why so serious?",
+      "authorName": "The Joker (Heath Ledger)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Joker's menacing catchphrase during his 'scar story' scenes. Ledger won a posthumous Oscar for this role."
+    },
+    {
+      "id": "dc-004",
+      "content": "You either die a hero, or you live long enough to see yourself become the villain.",
+      "authorName": "Harvey Dent (Aaron Eckhart)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Dent's prophetic statement that foreshadows his transformation into Two-Face. One of the film's most quoted lines."
+    },
+    {
+      "id": "dc-005",
+      "content": "Some men just want to watch the world burn.",
+      "authorName": "Alfred Pennyworth (Michael Caine)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Alfred's explanation of the Joker's motivations. Became a widely-used phrase for describing irrational chaos."
+    },
+    {
+      "id": "dc-006",
+      "content": "I'm not a monster. I'm just ahead of the curve.",
+      "authorName": "The Joker (Heath Ledger)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Joker's self-justification during his interrogation scene. Shows his view of himself as an agent of truth."
+    },
+    {
+      "id": "dc-007",
+      "content": "Madness, as you know, is like gravity. All it takes is a little push.",
+      "authorName": "The Joker (Heath Ledger)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Joker's closing philosophy to Batman. Summarizes his worldview that everyone is corruptible."
+    },
+    {
+      "id": "dc-008",
+      "content": "The night is darkest just before the dawn. And I promise you, the dawn is coming.",
+      "authorName": "Harvey Dent (Aaron Eckhart)",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Dent's optimistic speech before his downfall. The irony deepens as he becomes Two-Face."
+    },
+    {
+      "id": "dc-009",
+      "content": "I'm Batman.",
+      "authorName": "Bruce Wayne (Michael Keaton)",
+      "source": "Batman (1989)",
+      "quoteDate": "1989-06-23",
+      "verificationStatus": "verified",
+      "notes": "Keaton's iconic delivery to a mugger. Became the definitive Batman introduction across all media."
+    },
+    {
+      "id": "dc-010",
+      "content": "A hero can be anyone. Even a man doing something as simple as putting a coat around a young boy's shoulders.",
+      "authorName": "Batman (Christian Bale)",
+      "source": "The Dark Knight Rises (2012)",
+      "quoteDate": "2012-07-20",
+      "verificationStatus": "verified",
+      "notes": "Batman reveals his identity to Gordon by referencing Gordon's kindness to him as a child. Closes the trilogy's arc."
+    },
+    {
+      "id": "dc-011",
+      "content": "I believe in Harvey Dent.",
+      "authorName": "Campaign slogan",
+      "source": "The Dark Knight (2008)",
+      "quoteDate": "2008-07-18",
+      "verificationStatus": "verified",
+      "notes": "Gotham's campaign slogan for Dent. Appears on buttons and signs throughout the film."
+    },
+    {
+      "id": "dc-012",
+      "content": "You don't owe this world a thing. You never did.",
+      "authorName": "Martha Kent (Diane Lane)",
+      "source": "Man of Steel (2013)",
+      "quoteDate": "2013-06-14",
+      "verificationStatus": "verified",
+      "notes": "Martha's advice to Clark about his choice to be a hero. Emphasizes that heroism is a choice, not an obligation."
+    },
+    {
+      "id": "dc-013",
+      "content": "You will give the people of Earth an ideal to strive towards.",
+      "authorName": "Jor-El (Russell Crowe)",
+      "source": "Man of Steel (2013)",
+      "quoteDate": "2013-06-14",
+      "verificationStatus": "verified",
+      "notes": "Jor-El's vision for his son's role on Earth. Defines Superman as a symbol of hope."
+    },
+    {
+      "id": "dc-014",
+      "content": "I fight for those who cannot fight for themselves.",
+      "authorName": "Diana Prince (Gal Gadot)",
+      "source": "Wonder Woman (2017)",
+      "quoteDate": "2017-06-02",
+      "verificationStatus": "verified",
+      "notes": "Diana's declaration of her purpose. Encapsulates Wonder Woman's protective warrior ethos."
+    },
+    {
+      "id": "dc-015",
+      "content": "It's not about deserve. It's about what you believe. And I believe in love.",
+      "authorName": "Diana Prince (Gal Gadot)",
+      "source": "Wonder Woman (2017)",
+      "quoteDate": "2017-06-02",
+      "verificationStatus": "verified",
+      "notes": "Diana's response to Ares. Love as a philosophy distinguishes Wonder Woman from other DC heroes."
+    },
+    {
+      "id": "dc-016",
+      "content": "I used to want to save the world. But then I glimpsed the darkness that lives within their light.",
+      "authorName": "Diana Prince (Gal Gadot)",
+      "source": "Wonder Woman (2017)",
+      "quoteDate": "2017-06-02",
+      "verificationStatus": "verified",
+      "notes": "Opening narration reflecting on Diana's disillusionment. Sets up her journey in the film."
+    },
+    {
+      "id": "dc-017",
+      "content": "Only the fiercest among them could be a true Amazon.",
+      "authorName": "Queen Hippolyta (Connie Nielsen)",
+      "source": "Wonder Woman (2017)",
+      "quoteDate": "2017-06-02",
+      "verificationStatus": "verified",
+      "notes": "Hippolyta describing Amazon warrior standards. Establishes the culture Diana was raised in."
+    },
+    {
+      "id": "dc-018",
+      "content": "Tell me, do you bleed? You will.",
+      "authorName": "Batman (Ben Affleck)",
+      "source": "Batman v Superman: Dawn of Justice (2016)",
+      "quoteDate": "2016-03-25",
+      "verificationStatus": "verified",
+      "notes": "Batman's threat to Superman during their first confrontation. Became a trailer highlight."
+    },
+    {
+      "id": "dc-019",
+      "content": "If there is even a one percent chance that he is our enemy, we have to take it as an absolute certainty.",
+      "authorName": "Bruce Wayne (Ben Affleck)",
+      "source": "Batman v Superman: Dawn of Justice (2016)",
+      "quoteDate": "2016-03-25",
+      "verificationStatus": "verified",
+      "notes": "Bruce's paranoid logic about Superman. Shows his post-trauma mindset after Metropolis."
+    },
+    {
+      "id": "dc-020",
+      "content": "Is it really surprising that the most powerful man in the world should be a figure of controversy?",
+      "authorName": "News broadcast",
+      "source": "Batman v Superman: Dawn of Justice (2016)",
+      "quoteDate": "2016-03-25",
+      "verificationStatus": "verified",
+      "notes": "Media commentary on Superman's polarizing presence. Reflects real-world debates about power and accountability."
+    },
+    {
+      "id": "dc-021",
+      "content": "I'm vengeance.",
+      "authorName": "Batman (Robert Pattinson)",
+      "source": "The Batman (2022)",
+      "quoteDate": "2022-03-04",
+      "verificationStatus": "verified",
+      "notes": "This Batman's self-identification. The film explores how this identity limits him until he becomes hope."
+    },
+    {
+      "id": "dc-022",
+      "content": "Fear is a tool. When that light hits the sky, it's not just a call. It's a warning.",
+      "authorName": "Batman (Robert Pattinson)",
+      "source": "The Batman (2022)",
+      "quoteDate": "2022-03-04",
+      "verificationStatus": "verified",
+      "notes": "Opening narration explaining Batman's psychological warfare approach. Sets the film's noir tone."
+    },
+    {
+      "id": "dc-023",
+      "content": "The Bat and the Cat. It has a nice ring.",
+      "authorName": "Selina Kyle (Zoe Kravitz)",
+      "source": "The Batman (2022)",
+      "quoteDate": "2022-03-04",
+      "verificationStatus": "verified",
+      "notes": "Selina's playful acknowledgment of their partnership. Hints at their comic book romance."
+    },
+    {
+      "id": "dc-024",
+      "content": "All I have are negative thoughts.",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Arthur's journal entry about his mental state. Phoenix won the Oscar for his portrayal of mental illness."
+    },
+    {
+      "id": "dc-025",
+      "content": "Is it just me, or is it getting crazier out there?",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Arthur's observation to his social worker. Reflects societal breakdown as a theme."
+    },
+    {
+      "id": "dc-026",
+      "content": "The worst part of having a mental illness is people expect you to behave as if you don't.",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Arthur's journal entry about societal expectations. Resonated with mental health advocacy discussions."
+    },
+    {
+      "id": "dc-027",
+      "content": "I used to think my life was a tragedy. But now I realize it's a comedy.",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Arthur's transformation moment. Marks his full embrace of the Joker identity."
+    },
+    {
+      "id": "dc-028",
+      "content": "You get what you deserve!",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Joker's declaration during the climactic talk show scene. The film's most shocking moment."
+    },
+    {
+      "id": "dc-029",
+      "content": "My mother always tells me to smile and put on a happy face.",
+      "authorName": "Arthur Fleck (Joaquin Phoenix)",
+      "source": "Joker (2019)",
+      "quoteDate": "2019-10-04",
+      "verificationStatus": "verified",
+      "notes": "Arthur explaining his forced positivity. His mother's advice becomes tragically ironic."
+    },
+    {
+      "id": "dc-030",
+      "content": "I am the king of Atlantis!",
+      "authorName": "Arthur Curry (Jason Momoa)",
+      "source": "Aquaman (2018)",
+      "quoteDate": "2018-12-21",
+      "verificationStatus": "verified",
+      "notes": "Arthur claiming his birthright. Momoa's portrayal reinvented Aquaman for modern audiences."
+    },
+    {
+      "id": "dc-031",
+      "content": "Permission to come aboard?",
+      "authorName": "Arthur Curry (Jason Momoa)",
+      "source": "Aquaman (2018)",
+      "quoteDate": "2018-12-21",
+      "verificationStatus": "verified",
+      "notes": "Arthur's quip arriving at a submarine. Shows his irreverent humor."
+    },
+    {
+      "id": "dc-032",
+      "content": "I'm a friend of your son's. I work with him.",
+      "authorName": "Barry Allen (Ezra Miller)",
+      "source": "Justice League (2017)",
+      "quoteDate": "2017-11-17",
+      "verificationStatus": "verified",
+      "notes": "Barry awkwardly introducing himself to Commissioner Gordon. Comic relief in the team's first assembly."
+    },
+    {
+      "id": "dc-033",
+      "content": "Kneel before Zod.",
+      "authorName": "General Zod (Terence Stamp)",
+      "source": "Superman II (1980)",
+      "quoteDate": "1980-12-04",
+      "verificationStatus": "verified",
+      "notes": "Zod's demand for submission. Became one of the most quoted villain lines in superhero cinema."
+    },
+    {
+      "id": "dc-034",
+      "content": "In blackest day, in brightest night, beware your fears made into light.",
+      "authorName": "Sinestro Corps Oath",
+      "source": "Green Lantern Corps (Comics)",
+      "quoteDate": null,
+      "verificationStatus": "verified",
+      "notes": "The Yellow Lantern oath, counterpart to the Green Lantern oath. Fear-based power source."
+    },
+    {
+      "id": "dc-035",
+      "content": "In brightest day, in blackest night, no evil shall escape my sight.",
+      "authorName": "Green Lantern Oath",
+      "source": "Green Lantern (Comics, 1959)",
+      "quoteDate": "1959",
+      "verificationStatus": "verified",
+      "notes": "The iconic Green Lantern oath, first appeared in Green Lantern #9 (1959). Recited when charging power rings."
+    }
+  ]
+}

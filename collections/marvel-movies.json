@@ -1,0 +1,372 @@
+{
+  "id": "marvel-movies",
+  "name": "Marvel Movies",
+  "description": "Iconic lines from Marvel superhero films spanning the MCU, X-Men, Spider-Man, and more.",
+  "author": "Quips Editorial",
+  "colorName": "red",
+  "iconName": "bolt.fill",
+  "category": "Movies",
+  "lastUpdated": "2025-12-26T12:00:00Z",
+  "quotes": [
+    {
+      "id": "marvel-001",
+      "content": "I am Iron Man.",
+      "authorName": "Tony Stark (Robert Downey Jr.)",
+      "source": "Iron Man (2008)",
+      "quoteDate": "2008-05-02",
+      "verificationStatus": "verified",
+      "notes": "Final line of the first MCU film. Stark's press conference confession was improvised by Downey and changed superhero movie conventions."
+    },
+    {
+      "id": "marvel-002",
+      "content": "With great power comes great responsibility.",
+      "authorName": "Uncle Ben (Cliff Robertson)",
+      "source": "Spider-Man (2002)",
+      "quoteDate": "2002-05-03",
+      "verificationStatus": "verified",
+      "notes": "Originally from Amazing Fantasy #15 (1962). The Sam Raimi film made this the definitive Spider-Man motto."
+    },
+    {
+      "id": "marvel-003",
+      "content": "I can do this all day.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Captain America: The First Avenger (2011)",
+      "quoteDate": "2011-07-22",
+      "verificationStatus": "verified",
+      "notes": "Steve's catchphrase, first said before his transformation. Becomes a running gag throughout the MCU, culminating in Endgame."
+    },
+    {
+      "id": "marvel-004",
+      "content": "Wakanda forever!",
+      "authorName": "T'Challa (Chadwick Boseman)",
+      "source": "Black Panther (2018)",
+      "quoteDate": "2018-02-16",
+      "verificationStatus": "verified",
+      "notes": "The Wakandan salute became a cultural phenomenon. Tragically gained new meaning after Boseman's death in 2020."
+    },
+    {
+      "id": "marvel-005",
+      "content": "I am Groot.",
+      "authorName": "Groot (Vin Diesel)",
+      "source": "Guardians of the Galaxy (2014)",
+      "quoteDate": "2014-08-01",
+      "verificationStatus": "verified",
+      "notes": "Groot's only words, with different meanings conveyed through inflection. Diesel recorded the line in multiple languages."
+    },
+    {
+      "id": "marvel-006",
+      "content": "That's my secret, Captain. I'm always angry.",
+      "authorName": "Bruce Banner (Mark Ruffalo)",
+      "source": "The Avengers (2012)",
+      "quoteDate": "2012-05-04",
+      "verificationStatus": "verified",
+      "notes": "Banner's revelation before transforming in the Battle of New York. Redefines the character's relationship with the Hulk."
+    },
+    {
+      "id": "marvel-007",
+      "content": "Puny god.",
+      "authorName": "Hulk (Mark Ruffalo)",
+      "source": "The Avengers (2012)",
+      "quoteDate": "2012-05-04",
+      "verificationStatus": "verified",
+      "notes": "After smashing Loki repeatedly against the floor. One of the film's biggest crowd-pleasing moments."
+    },
+    {
+      "id": "marvel-008",
+      "content": "I love you 3000.",
+      "authorName": "Morgan Stark (Lexi Rabe)",
+      "source": "Avengers: Endgame (2019)",
+      "quoteDate": "2019-04-26",
+      "verificationStatus": "verified",
+      "notes": "Based on something Downey's real children said to him. Tony repeats it in his recorded message, adding emotional weight."
+    },
+    {
+      "id": "marvel-009",
+      "content": "Avengers, assemble.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Avengers: Endgame (2019)",
+      "quoteDate": "2019-04-26",
+      "verificationStatus": "verified",
+      "notes": "The iconic comics rallying cry, saved for 11 years until this climactic moment. Cap finally says the full phrase."
+    },
+    {
+      "id": "marvel-010",
+      "content": "I am inevitable.",
+      "authorName": "Thanos (Josh Brolin)",
+      "source": "Avengers: Endgame (2019)",
+      "quoteDate": "2019-04-26",
+      "verificationStatus": "verified",
+      "notes": "Thanos' declaration before snapping, countered by Tony's 'I am Iron Man.' Bookends the Infinity Saga."
+    },
+    {
+      "id": "marvel-011",
+      "content": "Dread it. Run from it. Destiny arrives all the same.",
+      "authorName": "Thanos (Josh Brolin)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Thanos' nihilistic philosophy. First spoken to Gamora; reflects his fatalistic worldview."
+    },
+    {
+      "id": "marvel-012",
+      "content": "Perfectly balanced, as all things should be.",
+      "authorName": "Thanos (Josh Brolin)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Thanos explains his motivation while teaching young Gamora. Became a widely-used meme format."
+    },
+    {
+      "id": "marvel-013",
+      "content": "I'm Mary Poppins, y'all!",
+      "authorName": "Yondu (Michael Rooker)",
+      "source": "Guardians of the Galaxy Vol. 2 (2017)",
+      "quoteDate": "2017-05-05",
+      "verificationStatus": "verified",
+      "notes": "After Peter calls him Mary Poppins during a descent. Yondu's proud acceptance is both funny and touching."
+    },
+    {
+      "id": "marvel-014",
+      "content": "We are Groot.",
+      "authorName": "Groot (Vin Diesel)",
+      "source": "Guardians of the Galaxy (2014)",
+      "quoteDate": "2014-08-01",
+      "verificationStatus": "verified",
+      "notes": "Groot's sacrifice moment. The shift from 'I' to 'We' signifies his acceptance of the Guardians as family."
+    },
+    {
+      "id": "marvel-015",
+      "content": "Higher, further, faster.",
+      "authorName": "Carol Danvers (Brie Larson)",
+      "source": "Captain Marvel (2019)",
+      "quoteDate": "2019-03-08",
+      "verificationStatus": "verified",
+      "notes": "Carol's Air Force motto with Maria Rambeau. Became the marketing tagline for the film."
+    },
+    {
+      "id": "marvel-016",
+      "content": "I'm not looking for forgiveness, and I'm way past asking permission.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Captain America: Civil War (2016)",
+      "quoteDate": "2016-05-06",
+      "verificationStatus": "verified",
+      "notes": "Steve's declaration to Tony when choosing to protect Bucky. Defines his character's moral absolutism."
+    },
+    {
+      "id": "marvel-017",
+      "content": "The hardest choices require the strongest wills.",
+      "authorName": "Thanos (Josh Brolin)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Thanos' justification for his genocidal plan. Spoken to Doctor Strange on Titan."
+    },
+    {
+      "id": "marvel-018",
+      "content": "Whosoever holds this hammer, if he be worthy, shall possess the power of Thor.",
+      "authorName": "Odin (Anthony Hopkins)",
+      "source": "Thor (2011)",
+      "quoteDate": "2011-05-06",
+      "verificationStatus": "verified",
+      "notes": "The enchantment Odin places on Mjolnir. Sets up the 'worthiness' theme that pays off in later films."
+    },
+    {
+      "id": "marvel-019",
+      "content": "Another!",
+      "authorName": "Thor (Chris Hemsworth)",
+      "source": "Thor (2011)",
+      "quoteDate": "2011-05-06",
+      "verificationStatus": "verified",
+      "notes": "Thor smashes his coffee mug demanding more. A comedic culture clash moment that became a meme."
+    },
+    {
+      "id": "marvel-020",
+      "content": "I have been falling for thirty minutes!",
+      "authorName": "Loki (Tom Hiddleston)",
+      "source": "Thor: Ragnarok (2017)",
+      "quoteDate": "2017-11-03",
+      "verificationStatus": "verified",
+      "notes": "Loki's complaint after Doctor Strange's portal trick. Exemplifies Ragnarok's comedic tone."
+    },
+    {
+      "id": "marvel-021",
+      "content": "The sun will shine on us again.",
+      "authorName": "Loki (Tom Hiddleston)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Loki's final words to Thor before Thanos kills him. Shows his character growth and fraternal love."
+    },
+    {
+      "id": "marvel-022",
+      "content": "I'm just a kid from Brooklyn.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Captain America: The First Avenger (2011)",
+      "quoteDate": "2011-07-22",
+      "verificationStatus": "verified",
+      "notes": "Steve's humble self-description to Dr. Erskine. Defines his character's everyman quality."
+    },
+    {
+      "id": "marvel-023",
+      "content": "Part of the journey is the end.",
+      "authorName": "Tony Stark (Robert Downey Jr.)",
+      "source": "Avengers: Endgame (2019)",
+      "quoteDate": "2019-04-26",
+      "verificationStatus": "verified",
+      "notes": "From Tony's recorded message. Foreshadows his sacrifice and provides closure for his character arc."
+    },
+    {
+      "id": "marvel-024",
+      "content": "You get hurt, hurt 'em back. You get killed, walk it off.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Avengers: Age of Ultron (2015)",
+      "quoteDate": "2015-05-01",
+      "verificationStatus": "verified",
+      "notes": "Cap's battle motivation to the team. Showcases his no-quit attitude with a touch of dark humor."
+    },
+    {
+      "id": "marvel-025",
+      "content": "Just because someone stumbles and loses their path, doesn't mean they can't be saved.",
+      "authorName": "Charles Xavier (James McAvoy)",
+      "source": "X-Men: Days of Future Past (2014)",
+      "quoteDate": "2014-05-23",
+      "verificationStatus": "verified",
+      "notes": "Charles' message about hope and redemption. Central to the X-Men's philosophy on mutant rehabilitation."
+    },
+    {
+      "id": "marvel-026",
+      "content": "Mutation: it is the key to our evolution.",
+      "authorName": "Charles Xavier (Patrick Stewart)",
+      "source": "X-Men (2000)",
+      "quoteDate": "2000-07-14",
+      "verificationStatus": "verified",
+      "notes": "Opening narration explaining mutants. Sets up the franchise's civil rights allegory."
+    },
+    {
+      "id": "marvel-027",
+      "content": "I'm the best there is at what I do. But what I do best isn't very nice.",
+      "authorName": "Logan / Wolverine (Hugh Jackman)",
+      "source": "X-Men (2000)",
+      "quoteDate": "2000-07-14",
+      "verificationStatus": "verified",
+      "notes": "Classic Wolverine line from the comics. First appeared in Wolverine #1 (1982) by Chris Claremont."
+    },
+    {
+      "id": "marvel-028",
+      "content": "So this is what it feels like.",
+      "authorName": "Logan / Wolverine (Hugh Jackman)",
+      "source": "Logan (2017)",
+      "quoteDate": "2017-03-03",
+      "verificationStatus": "verified",
+      "notes": "Logan's final words, presumably about mortality. Jackman's emotional farewell to the character after 17 years."
+    },
+    {
+      "id": "marvel-029",
+      "content": "Maximum effort!",
+      "authorName": "Deadpool (Ryan Reynolds)",
+      "source": "Deadpool (2016)",
+      "quoteDate": "2016-02-12",
+      "verificationStatus": "verified",
+      "notes": "Wade's battle cry. Became Reynolds' signature phrase, used in marketing and sequels."
+    },
+    {
+      "id": "marvel-030",
+      "content": "I'm touching myself tonight.",
+      "authorName": "Deadpool (Ryan Reynolds)",
+      "source": "Deadpool (2016)",
+      "quoteDate": "2016-02-12",
+      "verificationStatus": "verified",
+      "notes": "Wade's response to meeting Colossus. Exemplifies the R-rated humor that defined the film."
+    },
+    {
+      "id": "marvel-031",
+      "content": "You're about to be killed by a Zamboni!",
+      "authorName": "Deadpool (Ryan Reynolds)",
+      "source": "Deadpool (2016)",
+      "quoteDate": "2016-02-12",
+      "verificationStatus": "verified",
+      "notes": "Wade's creative threat during the final battle. Shows Deadpool's absurdist approach to violence."
+    },
+    {
+      "id": "marvel-032",
+      "content": "You didn't see that coming?",
+      "authorName": "Pietro Maximoff (Aaron Taylor-Johnson)",
+      "source": "Avengers: Age of Ultron (2015)",
+      "quoteDate": "2015-05-01",
+      "verificationStatus": "verified",
+      "notes": "Quicksilver's catchphrase, referencing his super-speed. His final use of it is tragically heroic."
+    },
+    {
+      "id": "marvel-033",
+      "content": "Before we get started, does anyone want to get out?",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Captain America: The Winter Soldier (2014)",
+      "quoteDate": "2014-04-04",
+      "verificationStatus": "verified",
+      "notes": "Cap alone in elevator full of HYDRA agents. The ensuing fight became one of the MCU's best action scenes."
+    },
+    {
+      "id": "marvel-034",
+      "content": "I could do this all day. Yeah, I know.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Avengers: Endgame (2019)",
+      "quoteDate": "2019-04-26",
+      "verificationStatus": "verified",
+      "notes": "Cap fighting his 2012 self. The meta exchange pays off the running catchphrase."
+    },
+    {
+      "id": "marvel-035",
+      "content": "We don't trade lives.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Steve's moral stance on sacrificing Vision. Contrasts with his own willingness to sacrifice himself."
+    },
+    {
+      "id": "marvel-036",
+      "content": "I had a date.",
+      "authorName": "Steve Rogers (Chris Evans)",
+      "source": "Captain America: The First Avenger (2011)",
+      "quoteDate": "2011-07-22",
+      "verificationStatus": "verified",
+      "notes": "Steve's last words before crashing into the ice. The promised dance with Peggy becomes a saga-long thread."
+    },
+    {
+      "id": "marvel-037",
+      "content": "You want forgiveness? Get religion.",
+      "authorName": "Peter Parker (Tobey Maguire)",
+      "source": "Spider-Man 3 (2007)",
+      "quoteDate": "2007-05-04",
+      "verificationStatus": "verified",
+      "notes": "Symbiote-influenced Peter. The line became a meme representing the film's darker Peter moments."
+    },
+    {
+      "id": "marvel-038",
+      "content": "Pizza time!",
+      "authorName": "Peter Parker (Tobey Maguire)",
+      "source": "Spider-Man 2 (2004)",
+      "quoteDate": "2004-06-30",
+      "verificationStatus": "verified",
+      "notes": "Peter's delivery job catchphrase. Became a viral meme decades after the film's release."
+    },
+    {
+      "id": "marvel-039",
+      "content": "I'm gonna put some dirt in your eye.",
+      "authorName": "Peter Parker (Tobey Maguire)",
+      "source": "Spider-Man 3 (2007)",
+      "quoteDate": "2007-05-04",
+      "verificationStatus": "verified",
+      "notes": "Symbiote Peter's taunt. One of the Raimi trilogy's most memed lines."
+    },
+    {
+      "id": "marvel-040",
+      "content": "Mr. Stark, I don't feel so good.",
+      "authorName": "Peter Parker (Tom Holland)",
+      "source": "Avengers: Infinity War (2018)",
+      "quoteDate": "2018-04-27",
+      "verificationStatus": "verified",
+      "notes": "Peter's heartbreaking death scene. Holland improvised much of the emotional delivery; Tony's reaction devastated audiences."
+    }
+  ]
+}

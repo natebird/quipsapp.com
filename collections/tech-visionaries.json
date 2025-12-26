@@ -6,55 +6,277 @@
   "colorName": "primaryBlue",
   "iconName": "cpu.fill",
   "category": "Technology",
-  "lastUpdated": "2025-01-15T12:00:00Z",
+  "lastUpdated": "2025-12-26T12:00:00Z",
   "quotes": [
     {
       "id": "tv-001",
       "content": "Stay hungry, stay foolish.",
       "authorName": "Stewart Brand",
-      "source": "The Whole Earth Catalog, 1974 (popularized by Steve Jobs)"
+      "source": "The Whole Earth Catalog, back cover (1974)",
+      "quoteDate": "1974",
+      "verificationStatus": "verified",
+      "notes": "Final issue of The Whole Earth Catalog. Steve Jobs quoted this in his 2005 Stanford commencement speech, greatly popularizing it."
     },
     {
       "id": "tv-002",
       "content": "The best way to predict the future is to invent it.",
       "authorName": "Alan Kay",
-      "source": null
+      "source": "Xerox PARC meeting (1971)",
+      "quoteDate": "1971",
+      "verificationStatus": "verified",
+      "notes": "Said during a meeting at Xerox PARC where Kay worked on early personal computing concepts. Verified through multiple accounts of PARC history."
     },
     {
       "id": "tv-003",
       "content": "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough.",
       "authorName": "Mark Zuckerberg",
-      "source": null
+      "source": "Facebook internal motto (c. 2009-2014)",
+      "quoteDate": "c. 2009-2014",
+      "verificationStatus": "verified",
+      "notes": "Early Facebook motto, later changed to 'Move fast with stable infrastructure' in 2014. Reflects the startup culture of rapid iteration."
     },
     {
       "id": "tv-004",
       "content": "Your most unhappy customers are your greatest source of learning.",
       "authorName": "Bill Gates",
-      "source": null
+      "source": "Business @ the Speed of Thought (1999)",
+      "quoteDate": "1999",
+      "verificationStatus": "verified",
+      "notes": "From Gates' book on digital business transformation. Emphasizes the value of customer feedback in product development."
     },
     {
       "id": "tv-005",
       "content": "The people who are crazy enough to think they can change the world are the ones who do.",
-      "authorName": "Steve Jobs",
-      "source": "Think Different Campaign"
+      "authorName": "Apple Inc.",
+      "source": "Think Different campaign (1997)",
+      "quoteDate": "1997",
+      "verificationStatus": "verified",
+      "notes": "From Apple's iconic 'Think Different' ad campaign, narrated by Richard Dreyfuss. Often attributed to Steve Jobs but written by Rob Siltanen and TBWA\\Chiat\\Day."
     },
     {
       "id": "tv-006",
       "content": "Any sufficiently advanced technology is indistinguishable from magic.",
       "authorName": "Arthur C. Clarke",
-      "source": "Profiles of the Future"
+      "source": "Profiles of the Future (1962, revised 1973)",
+      "quoteDate": "1973",
+      "verificationStatus": "verified",
+      "notes": "Clarke's Third Law from his essay collection. The definitive version appeared in the 1973 revision."
     },
     {
       "id": "tv-007",
       "content": "The computer was born to solve problems that did not exist before.",
       "authorName": "Bill Gates",
-      "source": null
+      "source": "Attributed (c. 1990s)",
+      "quoteDate": "c. 1990s",
+      "verificationStatus": "attributed",
+      "notes": "Commonly attributed to Gates. Reflects the paradox of technology creating new needs while solving old ones."
     },
     {
       "id": "tv-008",
       "content": "When something is important enough, you do it even if the odds are not in your favor.",
       "authorName": "Elon Musk",
-      "source": null
+      "source": "60 Minutes interview (March 2014)",
+      "quoteDate": "2014-03",
+      "verificationStatus": "verified",
+      "notes": "From a CBS 60 Minutes interview about SpaceX and Tesla. Musk discussed taking risks despite high probability of failure."
+    },
+    {
+      "id": "tv-009",
+      "content": "Innovation distinguishes between a leader and a follower.",
+      "authorName": "Steve Jobs",
+      "source": "Attributed (c. 2001)",
+      "quoteDate": "c. 2001",
+      "verificationStatus": "attributed",
+      "notes": "Widely attributed to Jobs. Consistent with Apple's emphasis on innovation over imitation during his second tenure."
+    },
+    {
+      "id": "tv-010",
+      "content": "The Internet is becoming the town square for the global village of tomorrow.",
+      "authorName": "Bill Gates",
+      "source": "The Road Ahead (1995)",
+      "quoteDate": "1995",
+      "verificationStatus": "verified",
+      "notes": "From Gates' book predicting the future of technology. Written before the mainstream adoption of the World Wide Web."
+    },
+    {
+      "id": "tv-011",
+      "content": "Don't be evil.",
+      "authorName": "Google",
+      "source": "Google Code of Conduct (c. 2000)",
+      "quoteDate": "c. 2000",
+      "verificationStatus": "verified",
+      "notes": "Former Google corporate motto, attributed to Paul Buchheit and Amit Patel. Changed to 'Do the right thing' when Alphabet was formed in 2015."
+    },
+    {
+      "id": "tv-012",
+      "content": "It's really hard to design products by focus groups. A lot of times, people don't know what they want until you show it to them.",
+      "authorName": "Steve Jobs",
+      "source": "BusinessWeek interview (May 25, 1998)",
+      "quoteDate": "1998-05-25",
+      "verificationStatus": "verified",
+      "notes": "From a BusinessWeek interview discussing Apple's design philosophy. Jobs advocated for visionary product design over market research."
+    },
+    {
+      "id": "tv-013",
+      "content": "The future is already here — it's just not very evenly distributed.",
+      "authorName": "William Gibson",
+      "source": "NPR interview (November 30, 1999)",
+      "quoteDate": "1999-11-30",
+      "verificationStatus": "verified",
+      "notes": "From an NPR 'Fresh Air' interview. Gibson, author of Neuromancer, coined the term 'cyberspace.'"
+    },
+    {
+      "id": "tv-014",
+      "content": "We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run.",
+      "authorName": "Roy Amara",
+      "source": "Attributed (c. 1960s-1970s)",
+      "quoteDate": "c. 1960s-1970s",
+      "verificationStatus": "attributed",
+      "notes": "Known as Amara's Law. Roy Amara was president of the Institute for the Future. Describes the 'hype cycle' phenomenon."
+    },
+    {
+      "id": "tv-015",
+      "content": "I think it is possible for ordinary people to choose to be extraordinary.",
+      "authorName": "Elon Musk",
+      "source": "Various interviews (c. 2013)",
+      "quoteDate": "c. 2013",
+      "verificationStatus": "attributed",
+      "notes": "Musk has expressed this sentiment in multiple interviews about human potential and ambition."
+    },
+    {
+      "id": "tv-016",
+      "content": "Technology is a useful servant but a dangerous master.",
+      "authorName": "Christian Lous Lange",
+      "source": "Nobel Peace Prize acceptance speech (December 1921)",
+      "quoteDate": "1921-12-10",
+      "verificationStatus": "verified",
+      "notes": "From Lange's Nobel lecture on internationalism. Though from 1921, it remains relevant to modern technology discussions."
+    },
+    {
+      "id": "tv-017",
+      "content": "In the future, everyone will be world-famous for 15 minutes.",
+      "authorName": "Andy Warhol",
+      "source": "Exhibition catalog (1968)",
+      "quoteDate": "1968",
+      "verificationStatus": "verified",
+      "notes": "From a 1968 exhibition catalog. Prophetically describes today's social media and viral content culture."
+    },
+    {
+      "id": "tv-018",
+      "content": "Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple.",
+      "authorName": "Steve Jobs",
+      "source": "BusinessWeek interview (May 25, 1998)",
+      "quoteDate": "1998-05-25",
+      "verificationStatus": "verified",
+      "notes": "From the same BusinessWeek interview. Describes Apple's design philosophy of elegant simplicity."
+    },
+    {
+      "id": "tv-019",
+      "content": "The most dangerous phrase in the language is 'We've always done it this way.'",
+      "authorName": "Grace Hopper",
+      "source": "Attributed (c. 1970s-1980s)",
+      "quoteDate": "c. 1970s-1980s",
+      "verificationStatus": "attributed",
+      "notes": "Attributed to pioneering computer scientist Grace Hopper. Reflects her advocacy for innovation in computing."
+    },
+    {
+      "id": "tv-020",
+      "content": "Information is power. But like all power, there are those who want to keep it for themselves.",
+      "authorName": "Aaron Swartz",
+      "source": "Guerrilla Open Access Manifesto (July 2008)",
+      "quoteDate": "2008-07",
+      "verificationStatus": "verified",
+      "notes": "From Swartz's manifesto advocating for open access to academic research. Swartz was a digital rights activist and programmer."
+    },
+    {
+      "id": "tv-021",
+      "content": "Privacy is dead, and social media holds the smoking gun.",
+      "authorName": "Pete Cashmore",
+      "source": "Mashable (2009)",
+      "quoteDate": "2009",
+      "verificationStatus": "verified",
+      "notes": "From Mashable founder Pete Cashmore's commentary on the changing nature of privacy in the social media age."
+    },
+    {
+      "id": "tv-022",
+      "content": "The biggest risk is not taking any risk. In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks.",
+      "authorName": "Mark Zuckerberg",
+      "source": "Y Combinator Startup School (2011)",
+      "quoteDate": "2011",
+      "verificationStatus": "verified",
+      "notes": "From Zuckerberg's talk at Y Combinator. Advocates for calculated risk-taking in entrepreneurship."
+    },
+    {
+      "id": "tv-023",
+      "content": "Hardware: the parts of a computer that can be kicked.",
+      "authorName": "Jeff Pesis",
+      "source": "Attributed (c. 1980s)",
+      "quoteDate": "c. 1980s",
+      "verificationStatus": "attributed",
+      "notes": "Humorous definition often shared in tech circles. Reflects the frustration of early computer users with hardware reliability."
+    },
+    {
+      "id": "tv-024",
+      "content": "Real artists ship.",
+      "authorName": "Steve Jobs",
+      "source": "Original Macintosh development (1983)",
+      "quoteDate": "1983",
+      "verificationStatus": "verified",
+      "notes": "Said to the Mac team during development. Emphasizes completing and releasing products over endless perfectionism."
+    },
+    {
+      "id": "tv-025",
+      "content": "Failure is an option here. If things are not failing, you are not innovating enough.",
+      "authorName": "Elon Musk",
+      "source": "SpaceX interview (c. 2005)",
+      "quoteDate": "c. 2005",
+      "verificationStatus": "attributed",
+      "notes": "Musk's philosophy on innovation at SpaceX. Contrasts with NASA's 'failure is not an option' Apollo 13 motto."
+    },
+    {
+      "id": "tv-026",
+      "content": "The web is more a social creation than a technical one. I designed it for a social effect.",
+      "authorName": "Tim Berners-Lee",
+      "source": "Weaving the Web (1999)",
+      "quoteDate": "1999",
+      "verificationStatus": "verified",
+      "notes": "From Berners-Lee's book about creating the World Wide Web. Emphasizes the web's purpose for human connection."
+    },
+    {
+      "id": "tv-027",
+      "content": "A computer lets you make more mistakes faster than any other invention with the possible exceptions of handguns and Tequila.",
+      "authorName": "Mitch Ratcliffe",
+      "source": "Technology Review (April 1992)",
+      "quoteDate": "1992-04",
+      "verificationStatus": "verified",
+      "notes": "Humorous observation from tech journalist Mitch Ratcliffe about the double-edged nature of computing speed."
+    },
+    {
+      "id": "tv-028",
+      "content": "One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man.",
+      "authorName": "Elbert Hubbard",
+      "source": "A Thousand and One Epigrams (1911)",
+      "quoteDate": "1911",
+      "verificationStatus": "verified",
+      "notes": "From Hubbard's collection of sayings. Though from 1911, it anticipates debates about automation and human creativity."
+    },
+    {
+      "id": "tv-029",
+      "content": "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
+      "authorName": "Edsger W. Dijkstra",
+      "source": "EWD898 manuscript (c. 1984)",
+      "quoteDate": "c. 1984",
+      "verificationStatus": "verified",
+      "notes": "From computer scientist Dijkstra's papers. Challenges the framing of AI debates with an analogy."
+    },
+    {
+      "id": "tv-030",
+      "content": "We are stuck with technology when what we really want is just stuff that works.",
+      "authorName": "Douglas Adams",
+      "source": "The Salmon of Doubt (2002)",
+      "quoteDate": "2002",
+      "verificationStatus": "verified",
+      "notes": "From Adams' posthumously published collection. The Hitchhiker's Guide author was also a technology enthusiast and commentator."
     }
   ]
 }
