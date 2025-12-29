@@ -67,7 +67,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Baskerville', Georgia, serif;
 }
 
 img {
@@ -768,7 +768,7 @@ a {
 }
 
 .course-hero-title {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Baskerville', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -853,7 +853,7 @@ a {
 }
 
 .course-success-content h2 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Baskerville', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -919,7 +919,7 @@ a {
 }
 
 .course-section-title {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Baskerville', Georgia, serif;
     font-size: 1.75rem;
     font-weight: 700;
     text-align: center;
@@ -1264,7 +1264,7 @@ a {
 }
 
 .course-promo-content h2 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Baskerville', Georgia, serif;
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1rem;
