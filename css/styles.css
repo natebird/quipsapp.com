@@ -533,10 +533,7 @@ a {
 }
 
 .newsletter-wrapper {
-    background-color: var(--bg-secondary);
-    border-radius: var(--card-radius);
-    padding: 2rem;
-    max-width: 500px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
@@ -548,14 +545,20 @@ a {
 .newsletter-content h4 {
     font-size: 1.75rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
+@media (min-width: 768px) {
+    .newsletter-content h4 {
+        font-size: 2rem;
+    }
+}
+
 .newsletter-content blockquote {
-    font-size: 0.9375rem;
+    font-size: 1.0625rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
     border: none;
@@ -956,6 +959,15 @@ a {
 
 .course-prose strong {
     color: var(--text-primary);
+}
+
+.course-prose a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+}
+
+.course-prose a:hover {
+    color: var(--accent-primary-dark);
 }
 
 .course-highlight {

@@ -193,20 +193,35 @@
         // Fetch MailerLite tracking (as original embed does)
         fetch('https://assets.mailerlite.com/jsonp/1995826/forms/174542333353657562/takel');
 
-        form.addEventListener('submit', function() {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
             if (submitBtn && loadingBtn) {
                 submitBtn.style.display = 'none';
                 loadingBtn.style.display = 'inline-flex';
             }
-        });
 
-        // MailerLite success callback (global function expected by their script)
-        window.ml_webform_success_34955352 = function() {
-            if (body && success) {
-                body.style.display = 'none';
-                success.style.display = 'block';
+            try {
+                const formData = new FormData(form);
+                await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+
+                // Show success state
+                if (body && success) {
+                    body.style.display = 'none';
+                    success.style.display = 'block';
+                }
+            } catch (error) {
+                // Reset button state on error
+                if (submitBtn && loadingBtn) {
+                    submitBtn.style.display = 'inline-flex';
+                    loadingBtn.style.display = 'none';
+                }
             }
-        };
+        });
     }
 
     // ===== Course Signup Form =====
@@ -225,23 +240,38 @@
             const submitBtn = form.querySelector('.course-submit-btn');
             const loadingBtn = form.querySelector('.course-loading-btn');
 
-            form.addEventListener('submit', function() {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
                 if (submitBtn && loadingBtn) {
                     submitBtn.style.display = 'none';
                     loadingBtn.style.display = 'inline-flex';
                 }
+
+                try {
+                    const formData = new FormData(form);
+                    await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors'
+                    });
+
+                    // Show success state
+                    if (heroSection && successSection) {
+                        heroSection.style.display = 'none';
+                        successSection.style.display = 'block';
+                        otherSections.forEach(section => section.style.display = 'none');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                } catch (error) {
+                    // Reset button state on error
+                    if (submitBtn && loadingBtn) {
+                        submitBtn.style.display = 'inline-flex';
+                        loadingBtn.style.display = 'none';
+                    }
+                }
             });
         });
-
-        // MailerLite success callback for course form
-        window.ml_webform_success_34957238 = function() {
-            if (heroSection && successSection) {
-                heroSection.style.display = 'none';
-                successSection.style.display = 'block';
-                otherSections.forEach(section => section.style.display = 'none');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        };
     }
 
     // ===== Initialize =====
