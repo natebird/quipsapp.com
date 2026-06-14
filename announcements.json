@@ -1,0 +1,10 @@
+{
+  "title": "Welcome to the new in-app announcements",
+  "content": "This is a test announcement. Tap below to see the latest release notes, or dismiss it — it won't show again until we post something new.",
+  "timestamp": "2026-06-14T00:00:00Z",
+  "link": {
+    "type": "web",
+    "url": "https://quipsapp.com/releases.html",
+    "label": "See what's new"
+  }
+}
