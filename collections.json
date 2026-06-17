@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-25T12:00:00Z",
+  "lastUpdated": "2026-06-17T12:00:00Z",
   "collections": [
     {
       "id": "inspiration-daily",
@@ -67,7 +67,7 @@
       "name": "Literary Classics",
       "description": "Memorable lines from the greatest works of literature throughout history.",
       "author": "Quips Editorial",
-      "quoteCount": 30,
+      "quoteCount": 29,
       "previewQuotes": [
         "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
         "All happy families are alike; each unhappy family is unhappy in its own way."
@@ -151,6 +151,21 @@
       "iconName": "tv.fill",
       "category": "Television",
       "lastUpdated": "2025-12-25T12:00:00Z"
+    },
+    {
+      "id": "how-i-met-your-mother",
+      "name": "How I Met Your Mother",
+      "description": "Legen— wait for it —dary lines and catchphrases from the gang at MacLaren's Pub.",
+      "author": "Quips Editorial",
+      "quoteCount": 88,
+      "previewQuotes": [
+        "It's gonna be legen— wait for it —dary!",
+        "Have you met Ted?"
+      ],
+      "colorName": "gold",
+      "iconName": "tv.fill",
+      "category": "Television",
+      "lastUpdated": "2026-06-17T12:00:00Z"
     },
     {
       "id": "fantasy-worlds",
