@@ -9,6 +9,3 @@
 .vscode/
 *.swp
 *.swo
-
-# Claude
-.claude/
