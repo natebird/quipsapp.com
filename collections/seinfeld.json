@@ -6,7 +6,7 @@
   "colorName": "orange",
   "iconName": "tv.fill",
   "category": "Television",
-  "lastUpdated": "2025-12-26T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "quotes": [
     {
       "id": "seinfeld-001",
@@ -232,6 +232,15 @@
       "quoteDate": "c. 1994",
       "verificationStatus": "verified",
       "notes": "Elaine's enthusiasm for escalating situations. Part of her character's bold, assertive nature."
+    },
+    {
+      "id": "seinfeld-026",
+      "content": "I'm master of my domain.",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S4E11 'The Contest' (1992)",
+      "quoteDate": "1992-11-18",
+      "verificationStatus": "verified",
+      "notes": "The Contest episode's central catchphrase, about remaining celibate. Won the Writers Guild Award for Best Episodic Comedy. One of the show's most celebrated episodes."
     }
   ]
 }

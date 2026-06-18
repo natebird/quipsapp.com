@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-17T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "collections": [
     {
       "id": "inspiration-daily",
@@ -22,7 +22,7 @@
       "name": "Stoic Wisdom",
       "description": "Timeless philosophy from Marcus Aurelius, Seneca, and Epictetus to guide your life.",
       "author": "Quips Editorial",
-      "quoteCount": 30,
+      "quoteCount": 31,
       "previewQuotes": [
         "You have power over your mind - not outside events. Realize this, and you will find strength.",
         "We suffer more often in imagination than in reality."
@@ -30,7 +30,7 @@
       "colorName": "navyBlue",
       "iconName": "building.columns.fill",
       "category": "Philosophy",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-18T12:00:00Z"
     },
     {
       "id": "creative-minds",
@@ -67,7 +67,7 @@
       "name": "Literary Classics",
       "description": "Memorable lines from the greatest works of literature throughout history.",
       "author": "Quips Editorial",
-      "quoteCount": 29,
+      "quoteCount": 30,
       "previewQuotes": [
         "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
         "All happy families are alike; each unhappy family is unhappy in its own way."
@@ -75,7 +75,7 @@
       "colorName": "brown",
       "iconName": "book.fill",
       "category": "Literature",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-18T12:00:00Z"
     },
     {
       "id": "mindfulness",
@@ -142,7 +142,7 @@
       "name": "Seinfeld",
       "description": "Iconic quotes and catchphrases from the show about nothing that became everything.",
       "author": "Quips Editorial",
-      "quoteCount": 25,
+      "quoteCount": 26,
       "previewQuotes": [
         "No soup for you!",
         "Serenity now!"
@@ -150,7 +150,7 @@
       "colorName": "orange",
       "iconName": "tv.fill",
       "category": "Television",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-18T12:00:00Z"
     },
     {
       "id": "how-i-met-your-mother",
@@ -172,7 +172,7 @@
       "name": "Fantasy Worlds",
       "description": "Epic quotes from beloved fantasy books, films, and TV adaptations.",
       "author": "Quips Editorial",
-      "quoteCount": 35,
+      "quoteCount": 36,
       "previewQuotes": [
         "Not all those who wander are lost.",
         "Winter is coming."
@@ -180,7 +180,7 @@
       "colorName": "forestGreen",
       "iconName": "flame.fill",
       "category": "Literature",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-18T12:00:00Z"
     },
     {
       "id": "western-movies",
@@ -202,7 +202,7 @@
       "name": "Sci-Fi Screen",
       "description": "Memorable quotes from science fiction movies and television that shaped our imagination.",
       "author": "Quips Editorial",
-      "quoteCount": 40,
+      "quoteCount": 41,
       "previewQuotes": [
         "May the Force be with you.",
         "Live long and prosper."
@@ -210,7 +210,7 @@
       "colorName": "cyan",
       "iconName": "sparkles",
       "category": "Movies",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-18T12:00:00Z"
     }
   ]
 }
