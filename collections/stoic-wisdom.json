@@ -6,7 +6,7 @@
   "colorName": "navyBlue",
   "iconName": "building.columns.fill",
   "category": "Philosophy",
-  "lastUpdated": "2025-12-26T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "quotes": [
     {
       "id": "sw-001",
@@ -277,6 +277,15 @@
       "quoteDate": "c. 49 CE",
       "verificationStatus": "verified",
       "notes": "Core thesis of 'De Brevitate Vitae.' Seneca argues that life is ample for those who spend it wisely."
+    },
+    {
+      "id": "sw-031",
+      "content": "If a man knows not to which port he sails, no wind is favorable.",
+      "authorName": "Seneca",
+      "source": "Letters to Lucilius, Letter 71 (c. 65 CE)",
+      "quoteDate": "c. 65 CE",
+      "verificationStatus": "verified",
+      "notes": "Translation of Latin 'Ignoranti quem portum petat nullus suus ventus est'; Seneca's navigation metaphor arguing that without a clear purpose, no circumstance can help you."
     }
   ]
 }

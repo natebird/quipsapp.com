@@ -6,7 +6,7 @@
   "colorName": "forestGreen",
   "iconName": "flame.fill",
   "category": "Literature",
-  "lastUpdated": "2025-12-26T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "quotes": [
     {
       "id": "fantasy-001",
@@ -322,6 +322,15 @@
       "quoteDate": "2007-07-21",
       "verificationStatus": "verified",
       "notes": "Snape's revelation about his love for Lily Potter. The series' most emotional twist."
+    },
+    {
+      "id": "fantasy-036",
+      "content": "I am no man!",
+      "authorName": "Éowyn (Miranda Otto)",
+      "source": "The Lord of the Rings: The Return of the King (2003)",
+      "quoteDate": "2003-12-17",
+      "verificationStatus": "verified",
+      "notes": "Éowyn's reveal to the Witch-king after he declares no living man can kill him; the film condensed Tolkien's longer passage to this three-word subversion of the prophecy."
     }
   ]
 }

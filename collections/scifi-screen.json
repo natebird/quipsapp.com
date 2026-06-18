@@ -6,7 +6,7 @@
   "colorName": "cyan",
   "iconName": "sparkles",
   "category": "Movies",
-  "lastUpdated": "2025-12-26T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "quotes": [
     {
       "id": "scifi-001",
@@ -367,6 +367,15 @@
       "quoteDate": "1968-04-02",
       "verificationStatus": "verified",
       "notes": "HAL's polite refusal became template for sinister AI. Rain's calm voice made it chilling."
+    },
+    {
+      "id": "scifi-041",
+      "content": "Soylent Green is people!",
+      "authorName": "Detective Thorn (Charlton Heston)",
+      "source": "Soylent Green (1973)",
+      "quoteDate": "1973-04-06",
+      "verificationStatus": "verified",
+      "notes": "Thorn's horrified revelation closing the film; one of cinema's most famous dystopian twists and a lasting shorthand for corporate dehumanization."
     }
   ]
 }

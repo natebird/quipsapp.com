@@ -6,7 +6,7 @@
   "colorName": "brown",
   "iconName": "book.fill",
   "category": "Literature",
-  "lastUpdated": "2025-12-26T12:00:00Z",
+  "lastUpdated": "2026-06-18T12:00:00Z",
   "quotes": [
     {
       "id": "lc-001",
@@ -268,6 +268,15 @@
       "quoteDate": "1883",
       "verificationStatus": "verified",
       "notes": "From Zarathustra's discourses. Explores the irrational nature of love while acknowledging its internal logic."
+    },
+    {
+      "id": "lc-030",
+      "content": "The world breaks everyone and afterward many are strong at the broken places.",
+      "authorName": "Ernest Hemingway",
+      "source": "A Farewell to Arms, Book 3, Chapter 34 (1929)",
+      "quoteDate": "1929",
+      "verificationStatus": "verified",
+      "notes": "Narrator Frederic Henry's reflection on suffering and resilience; the 1929 Scribner's first edition spells 'every one' as two words, modernized here per common transcription convention."
     }
   ]
 }
