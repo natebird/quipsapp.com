@@ -405,6 +405,15 @@
       "notes": "Barney's grandiose retelling of the night his suit-clad persona came into being."
     },
     {
+      "id": "himym-045",
+      "content": "You know the Golden Rule? Well, there's one above it, the Platinum Rule: under no circumstances do you ever, ever, ever love thy neighbor.",
+      "authorName": "Barney Stinson (Neil Patrick Harris)",
+      "source": "How I Met Your Mother, S3E11 'The Platinum Rule' (2007)",
+      "quoteDate": "2007-12-10",
+      "verificationStatus": "verified",
+      "notes": "Barney's cardinal rule against ever getting involved with anyone you cannot easily avoid afterward, the episode's namesake."
+    },
+    {
       "id": "himym-046",
       "content": "Think of me as Yoda. Only instead of being little and green, I wear suits and I'm awesome. I'm your bro. I'm Broda.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
@@ -717,7 +726,7 @@
       "source": "How I Met Your Mother, S9E24 'Last Forever, Part Two' (2014)",
       "quoteDate": "2014-03-31",
       "verificationStatus": "verified",
-      "notes": "Robin answering Lily's fear that the gang's friendship is over, in the series finale (the source article misattributes this line to Lily)."
+      "notes": "Robin answering Lily's fear that the gang's friendship is over, in the series finale."
     },
     {
       "id": "himym-081",
@@ -799,6 +808,78 @@
       "quoteDate": "2006-01-23",
       "verificationStatus": "verified",
       "notes": "Marshall deflating Ted's breathless 'drumroll' metaphor for an unconsummated night with Victoria."
+    },
+    {
+      "id": "himym-090",
+      "content": "A girl is allowed to be crazy, as long as she is equally hot. Thus, if she's this crazy, she has to be this hot. You want her to stay above the line, also known as the Vicky Mendoza Diagonal.",
+      "authorName": "Barney Stinson (Neil Patrick Harris)",
+      "source": "How I Met Your Mother, S3E5 'How I Met Everyone Else' (2007)",
+      "quoteDate": "2007-10-22",
+      "verificationStatus": "verified",
+      "notes": "Barney's dating graph plotting craziness against hotness, named for an ex who 'played jump rope with that line.'"
+    },
+    {
+      "id": "himym-091",
+      "content": "All my life, I have dared to go past what is possible — past the impossible, to the place where the possible and the impossible meet, to become the Possimpible.",
+      "authorName": "Barney Stinson (Neil Patrick Harris)",
+      "source": "How I Met Your Mother, S4E14 'The Possimpible' (2009)",
+      "quoteDate": "2009-02-02",
+      "verificationStatus": "verified",
+      "notes": "Barney coining a nonsense buzzword while filming an over-the-top video resume."
+    },
+    {
+      "id": "himym-092",
+      "content": "A woo girl is a type of young woman who, like the cuckoo bird or the whip-poor-will, gets her name from the signature sound she makes.",
+      "authorName": "Ted Mosby (Josh Radnor)",
+      "source": "How I Met Your Mother, S4E8 'Woooo!' (2008)",
+      "quoteDate": "2008-11-17",
+      "verificationStatus": "verified",
+      "notes": "Future Ted's narration defining the breed of partier who shouts 'Woo!' at everything, after Robin falls in with a group of them."
+    },
+    {
+      "id": "himym-093",
+      "content": "There's a little thing in corporate America I like to call the chain of screaming. Arthur's boss screams at Arthur, Arthur screams at you, you go home and scream at Lily, Lily screams at a kid in her kindergarten class — and the whole thing starts all over again, completing the circle of screaming.",
+      "authorName": "Barney Stinson (Neil Patrick Harris)",
+      "source": "How I Met Your Mother, S3E15 'The Chain of Screaming' (2008)",
+      "quoteDate": "2008-04-14",
+      "verificationStatus": "verified",
+      "notes": "Barney talking Marshall out of confronting his abusive boss by framing workplace anger as a cycle that flows downhill."
+    },
+    {
+      "id": "himym-094",
+      "content": "Once she leaves the room, you strip down naked and wait. When she comes back, she's so charmed by your confidence and bravado that she sleeps with you. It works two out of three times.",
+      "authorName": "Mitch (the Naked Man)",
+      "source": "How I Met Your Mother, S4E9 'The Naked Man' (2008)",
+      "quoteDate": "2008-11-24",
+      "verificationStatus": "verified",
+      "notes": "The one-off character Robin brings home explaining his signature seduction move; the gang spends the episode testing his 'two out of three' success rate."
+    },
+    {
+      "id": "himym-095",
+      "content": "It's called revertigo. It's that thing where, when you're around people from your past, you start behaving like the person you were back when you knew them.",
+      "authorName": "Marshall Eriksen (Jason Segel)",
+      "source": "How I Met Your Mother, S3E16 'Sandcastles in the Sand' (2008)",
+      "quoteDate": "2008-04-21",
+      "verificationStatus": "verified",
+      "notes": "Marshall coins the term as Robin reverts to her teenage self around an old flame."
+    },
+    {
+      "id": "himym-096",
+      "content": "Marshall and Lily had a rule that at any point during a fight, they could pause and take a break.",
+      "authorName": "Ted Mosby (Josh Radnor)",
+      "source": "How I Met Your Mother, S1E22 'Come On' (2006)",
+      "quoteDate": "2006-05-15",
+      "verificationStatus": "verified",
+      "notes": "Future Ted's narration introducing the couple's long-running habit of hitting 'pause' on an argument and resuming it later."
+    },
+    {
+      "id": "himym-097",
+      "content": "The crazy eyes are a well-documented condition of the pupils. It's an indicator of future mental instability.",
+      "authorName": "Ted Mosby (Josh Radnor)",
+      "source": "How I Met Your Mother, S2E7 'Swarley' (2006)",
+      "quoteDate": "2006-11-06",
+      "verificationStatus": "verified",
+      "notes": "Ted's mock-clinical definition after Barney warns Marshall that his new date has 'the crazy eyes.'"
     }
   ]
 }
