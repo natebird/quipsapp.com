@@ -6,13 +6,14 @@
   "colorName": "lemon",
   "iconName": "umbrella.fill",
   "category": "Television",
-  "lastUpdated": "2026-06-17T12:00:00Z",
+  "lastUpdated": "2026-06-20T12:00:00Z",
   "quotes": [
     {
       "id": "himym-001",
       "content": "Kids, I'm gonna tell you an incredible story. The story of how I met your mother.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Future Ted's opening narration that frames the entire nine-season series."
@@ -22,6 +23,7 @@
       "content": "Have you met Ted?",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Barney's signature wingman move, used to introduce Ted to women throughout the series."
@@ -31,6 +33,7 @@
       "content": "Suit up!",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2006",
       "verificationStatus": "verified",
       "notes": "Barney's rallying cry; he's convinced a suit can elevate any occasion."
@@ -40,6 +43,7 @@
       "content": "It's gonna be legen— wait for it —and I hope you're not lactose intolerant because the second half of that word is —dairy! Legendary!",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S4E2 'The Best Burger in New York' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-09-29",
       "verificationStatus": "verified",
       "notes": "Barney's signature catchphrase in its fullest form, complete with the 'legen-dairy' pun, while hyping the hunt for a legendary burger."
@@ -49,6 +53,7 @@
       "content": "Challenge accepted.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2008",
       "verificationStatus": "verified",
       "notes": "Barney's instant reply to any dare, however absurd or ill-advised."
@@ -58,6 +63,7 @@
       "content": "When I get sad, I stop being sad and be awesome instead. True story.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S2E1 'Where Were We?' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-09-18",
       "verificationStatus": "verified",
       "notes": "Barney's life philosophy, offered to a heartbroken Ted in the season two premiere."
@@ -67,6 +73,7 @@
       "content": "True story.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2006",
       "verificationStatus": "verified",
       "notes": "Barney's tag for his most dubious and exaggerated claims."
@@ -76,6 +83,7 @@
       "content": "New is always better.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2010",
       "verificationStatus": "verified",
       "notes": "Barney's rule applied to everything from gadgets to relationships."
@@ -85,6 +93,7 @@
       "content": "Daddy's home.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2009",
       "verificationStatus": "verified",
       "notes": "Barney's swaggering entrance line whenever he walks into MacLaren's."
@@ -94,6 +103,7 @@
       "content": "Up top!",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2007",
       "verificationStatus": "verified",
       "notes": "Barney's perpetual demand for a high five, often left hanging."
@@ -103,6 +113,7 @@
       "content": "A lie is just a great story that someone ruined with the truth.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2009",
       "verificationStatus": "verified",
       "notes": "Barney's tongue-in-cheek defense of his elaborate fabrications."
@@ -112,6 +123,7 @@
       "content": "The Lemon Law: you can bail on any first date within the first five minutes, no questions asked.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S1E8 'The Duel' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-11-14",
       "verificationStatus": "verified",
       "notes": "Barney's proposed dating rule, modeled on consumer protections for defective cars."
@@ -121,6 +133,7 @@
       "content": "Whatever you do in this life, it's not legendary unless your friends are there to see it.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S9E17 'Sunrise' (2014)",
+      "sourceType": "television",
       "quoteDate": "2014-03-24",
       "verificationStatus": "verified",
       "notes": "A drunk Barney's parting wisdom after mentoring two strangers for a night."
@@ -130,6 +143,7 @@
       "content": "Lawyered!",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2007",
       "verificationStatus": "verified",
       "notes": "Marshall's triumphant exclamation after winning an argument, fitting for the future lawyer."
@@ -139,6 +153,7 @@
       "content": "Slap bet!",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S2E9 'Slap Bet' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-11-20",
       "verificationStatus": "verified",
       "notes": "Marshall becomes 'Slap Bet Commissioner,' launching one of the show's longest-running gags."
@@ -148,6 +163,7 @@
       "content": "Love doesn't make sense. You can't logic your way into or out of it. Love is totally nonsensical, but we have to keep doing it, or else we're lost and love is dead and humanity should just pack it in. Because love is the best thing we do.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2009",
       "verificationStatus": "verified",
       "notes": "Marshall's impassioned defense of love and its glorious lack of logic."
@@ -157,6 +173,7 @@
       "content": "Let's go to the mall, everybody!",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S2E9 'Slap Bet' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-11-20",
       "verificationStatus": "verified",
       "notes": "From Robin's secret past as Canadian teen pop sensation 'Robin Sparkles.'"
@@ -166,6 +183,7 @@
       "content": "I don't wanna get married right now, maybe ever, and if we got together I'd feel like I'd either have to marry you or break your heart, and I just couldn't do either of those things.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S1E2 'Purple Giraffe' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-26",
       "verificationStatus": "verified",
       "notes": "Robin's fuller, gentler let-down to Ted early on, prizing her independence over settling down."
@@ -175,6 +193,7 @@
       "content": "Nothing good happens after 2 a.m.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E18 'Nothing Good Happens After 2 A.M.' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-04-10",
       "verificationStatus": "verified",
       "notes": "Ted's mother's rule, which he promptly ignores to rush over to Robin's apartment."
@@ -184,6 +203,7 @@
       "content": "If you're not scared, then you're not taking a chance. And if you're not taking a chance, then what the hell are you doing?",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2013",
       "verificationStatus": "verified",
       "notes": "Ted on the courage required to chase love, a recurring theme of his narration."
@@ -193,6 +213,7 @@
       "content": "Sometimes things have to fall apart to make way for better things.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2008",
       "verificationStatus": "verified",
       "notes": "Ted's optimistic reframing of heartbreak and life's setbacks."
@@ -202,6 +223,7 @@
       "content": "You will be shocked, kids, when you discover how easy it is in life to part ways with people forever.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2011",
       "verificationStatus": "verified",
       "notes": "Future Ted's bittersweet reflection on friendships that quietly fade away."
@@ -211,6 +233,7 @@
       "content": "What up?",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2007",
       "verificationStatus": "verified",
       "notes": "Barney's enthusiastic greeting, often paired with a demand for a high five."
@@ -220,6 +243,7 @@
       "content": "And that, kids, is the story of how I met your mother.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S9E23 'Last Forever' (2014)",
+      "sourceType": "television",
       "quoteDate": "2014-03-31",
       "verificationStatus": "verified",
       "notes": "The payoff line Future Ted spends nine seasons building toward in the series finale."
@@ -229,6 +253,7 @@
       "content": "Ted, I'm sorry. It doesn't matter to me who you marry. I know they'll be awesome, because they'll think you are.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S4E17 'The Front Porch' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-03-23",
       "verificationStatus": "verified",
       "notes": "Lily's apology after meddling in Ted's love life, born of her 'Front Porch Test' for who truly belongs in his future."
@@ -238,6 +263,7 @@
       "content": "It's the olive theory. It's based on my friends Marshall and Lily. He hates olives, she loves them. In a weird way, that's what makes them such a great couple. The perfect balance.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Ted's first-date theory of love; Barney later reveals Marshall actually likes olives and gives them up just to make Lily happy."
@@ -247,6 +273,7 @@
       "content": "I think I'm in love with you.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Ted blurts this to Robin on their very first date, the romantic misfire that sets the entire series in motion."
@@ -256,6 +283,7 @@
       "content": "The great moments of your life won't necessarily be the things you do. They'll also be the things that happen to you. Now, I'm not saying you can't take action to affect the outcome of your life. You have to take action, and you will. But never forget that on any given day, you can step out the front door and your whole life can change forever.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S4E22 'Right Place Right Time' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-05-04",
       "verificationStatus": "verified",
       "notes": "Future Ted's narration on fate and chance, delivered as a chain of tiny coincidences quietly reshapes his entire day."
@@ -265,6 +293,7 @@
       "content": "If you're looking for the word that means caring for someone beyond all rationality and wanting them to have everything they want no matter how much it destroys you, it's love. And when you love someone, you just, you don't stop. Ever. Even when people roll their eyes or call you crazy. Even then. Especially then. You just don't give up.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2014",
       "verificationStatus": "verified",
       "notes": "One of Ted's most-quoted speeches, a definition of love as stubborn devotion that refuses to quit."
@@ -274,6 +303,7 @@
       "content": "We struggle so hard to hold on to these things that we know are gonna disappear eventually. And that's really noble.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E17 'Life Among the Gorillas' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-03-20",
       "verificationStatus": "verified",
       "notes": "Ted on the bittersweet effort of clinging to the things, and people, we already know we're destined to lose."
@@ -283,6 +313,7 @@
       "content": "Preserving something that's already gone? Sounds like environmental law.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S1E17 'Life Among the Gorillas' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-03-20",
       "verificationStatus": "verified",
       "notes": "Marshall's wry, lawyerly answer to Ted's wistful musing about holding on to the past."
@@ -292,6 +323,7 @@
       "content": "Lily, there are a million reasons why I love you. You make me laugh, you take care of me when I'm sick, you're sweet and caring, and you even invented an egg dish and named it after me. But the main reason I love you is that you're my best friend, Lily.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2007",
       "verificationStatus": "verified",
       "notes": "Marshall's heartfelt rundown of everything he loves about Lily, landing on friendship as the foundation of it all."
@@ -301,6 +333,7 @@
       "content": "Your mom and I had such a great time seeing you. I love you.",
       "authorName": "Marvin Eriksen Sr. (Bill Fagerbakke)",
       "source": "How I Met Your Mother, S6E14 'Last Words' (2011)",
+      "sourceType": "television",
       "quoteDate": "2011-01-17",
       "verificationStatus": "verified",
       "notes": "An accidental voicemail becomes Marshall's father's final message to him, in one of the series' most emotional episodes."
@@ -310,6 +343,7 @@
       "content": "In my body, where the shame gland should be, there's a second awesome gland. True story.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S2E7 'Columns' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-11-13",
       "verificationStatus": "verified",
       "notes": "Barney explains his complete absence of embarrassment as a biological superpower."
@@ -319,6 +353,7 @@
       "content": "Nothing suits me like a suit.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S5E12 'Girls Versus Suits' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-01-11",
       "verificationStatus": "verified",
       "notes": "The closing line of Barney's big musical number in the show's milestone 100th episode, a love song to his wardrobe."
@@ -328,6 +363,7 @@
       "content": "Have you ever noticed that a group of women always seems hotter than the individual women in it? I call it the Cheerleader Effect.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2009",
       "verificationStatus": "verified",
       "notes": "One of Barney's many pseudo-scientific dating theories, complete with its own name and TED-talk-style delivery."
@@ -337,6 +373,7 @@
       "content": "The future is scary, but you can't just run back to the past because it's familiar. Yes, it's tempting, but it's a mistake.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2014",
       "verificationStatus": "verified",
       "notes": "Robin's hard-won advice to Ted about moving forward instead of retreating into what feels safe."
@@ -346,6 +383,7 @@
       "content": "I love Marshall. But I had this dream of who I was gonna be, and I'm just so scared I'm gonna wake up one day and I'm not her.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S1E22 'Come On' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-05-15",
       "verificationStatus": "unverified",
       "notes": "Lily's reasoning before leaving for an art fellowship in San Francisco; paraphrased from the season-one finale, exact wording approximate."
@@ -355,6 +393,7 @@
       "content": "You can't design your life like a building. It doesn't work that way. You just have to live it, and it will design itself. Listen to what the world is telling you to do, and take the leap.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S4E24 'The Leap' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-05-18",
       "verificationStatus": "verified",
       "notes": "Lily urging Ted to stop overplanning and take a chance, in the season-four finale that gives the episode its name."
@@ -364,6 +403,7 @@
       "content": "You son of a bitch!",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2008",
       "verificationStatus": "verified",
       "notes": "Lily's recurring outburst of delighted disbelief whenever someone drops good news or pitches a wild plan."
@@ -373,6 +413,7 @@
       "content": "Sometimes we search for one thing, but discover another.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E14 'The Bracket' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-03-31",
       "verificationStatus": "verified",
       "notes": "Barney's reflective sign-off after failing to identify which scorned ex was sabotaging his game."
@@ -382,6 +423,7 @@
       "content": "Dude, where's your suit? Just once, when I say 'suit up,' I wish you'd put on a suit.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Barney needling Ted over his refusal to dress up, planting the suit running gag in the very first episode."
@@ -391,6 +433,7 @@
       "content": "It's time to let go of the fantasies. It's time to grow up.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S6E2 'Cleaning House' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-09-27",
       "verificationStatus": "verified",
       "notes": "Barney admitting he's clung to invented stories about a celebrity father, while packing up his childhood home."
@@ -400,6 +443,7 @@
       "content": "That was the night I was born. I rose like a phoenix from her mentholated bosom and strode into the world, Armani-clad and fully awesome.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E10 'The Yips' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-11-26",
       "verificationStatus": "verified",
       "notes": "Barney's grandiose retelling of the night his suit-clad persona came into being."
@@ -409,6 +453,7 @@
       "content": "You know the Golden Rule? Well, there's one above it, the Platinum Rule: under no circumstances do you ever, ever, ever love thy neighbor.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E11 'The Platinum Rule' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-12-10",
       "verificationStatus": "verified",
       "notes": "Barney's cardinal rule against ever getting involved with anyone you cannot easily avoid afterward, the episode's namesake."
@@ -418,6 +463,7 @@
       "content": "Think of me as Yoda. Only instead of being little and green, I wear suits and I'm awesome. I'm your bro. I'm Broda.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E5 'How I Met Everyone Else' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-10-22",
       "verificationStatus": "verified",
       "notes": "Barney casting himself as Ted's wise mentor in the art of being awesome."
@@ -427,6 +473,7 @@
       "content": "The Bro Code has been around for centuries. Nay, whatever's more than centuries.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E17 'The Goat' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-04-28",
       "verificationStatus": "verified",
       "notes": "Barney unveiling the Bro Code with a characteristically grand (and vague) sense of its history."
@@ -436,6 +483,7 @@
       "content": "I'm also pleased to announce the Bro Code is now available in select airlines across the country. And Lufthansa. 'Der Bro Code' is, like, huge in Germany.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E17 'The Goat' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-04-28",
       "verificationStatus": "verified",
       "notes": "Part of Barney's mock-corporate presentation rolling out the Bro Code."
@@ -445,6 +493,7 @@
       "content": "Ladies, gentlemen, Ted.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S1E15 'Game Night' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-02-27",
       "verificationStatus": "verified",
       "notes": "The opening of Barney's triumphant 'peace out' speech about how awesomely awesome his life is."
@@ -454,6 +503,7 @@
       "content": "You see, kids, right from the moment I met your mom, I knew I have to love this woman as much as I can, and as long as I can, and I can never stop loving her, not even for a second.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S9E24 'Last Forever, Part Two' (2014)",
+      "sourceType": "television",
       "quoteDate": "2014-03-31",
       "verificationStatus": "verified",
       "notes": "Future Ted's vow about Tracy, the mother, in the series finale."
@@ -463,6 +513,7 @@
       "content": "You can ask the universe for signs all you want, but ultimately we'll only see what we want to see, when we're ready to see it.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S5E24 'Doppelgangers' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-05-24",
       "verificationStatus": "verified",
       "notes": "Future Ted reflecting on signs and readiness as the gang hunts for Barney's doppelganger."
@@ -472,6 +523,7 @@
       "content": "Never underestimate the power of destiny. Because when you least expect it, the littlest thing can cause a ripple effect that changes your life.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S2E15 'Lucky Penny' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-02-12",
       "verificationStatus": "verified",
       "notes": "Future Ted opening the episode that traces a chain of events back to a single found penny."
@@ -481,6 +533,7 @@
       "content": "I'm sorry, when I'm excited I abbreviate words I shouldn't.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E1 'Pilot' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-09-19",
       "verificationStatus": "verified",
       "notes": "Ted, mid-pep-talk to Marshall about proposing, sheepishly apologizing for clipping his words."
@@ -490,6 +543,7 @@
       "content": "Shouldn't we hold out for the person who doesn't just tolerate our little quirks, but actually kind of likes them?",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S5E2 'Double Date' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-09-28",
       "verificationStatus": "verified",
       "notes": "Ted deciding he'd rather wait for someone who embraces his quirks than settle for being tolerated."
@@ -499,6 +553,7 @@
       "content": "Here's the thing about mistakes: sometimes, even when you know something's a mistake, you gotta make it anyway.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E21 'Milk' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-05-08",
       "verificationStatus": "verified",
       "notes": "Future Ted narrating Ted's choice to chase Robin instead of a sure-thing setup."
@@ -508,6 +563,7 @@
       "content": "It's only once you've stopped that you realize how hard it is to start again.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S6E3 'Unfinished' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-10-04",
       "verificationStatus": "verified",
       "notes": "Ted, now teaching architecture, on having shelved his dream of building on the New York skyline."
@@ -517,6 +573,7 @@
       "content": "We're going to get older, whether we like it or not, so the only question is whether we get on with our lives or desperately cling to the past.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S4E4 'Intervention' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-10-13",
       "verificationStatus": "verified",
       "notes": "Ted framing the choice between growing up and holding on, as the gang faces big life changes."
@@ -526,6 +583,7 @@
       "content": "There are two big days in any love story: the day you meet the girl of your dreams and the day you marry her.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S6E1 'Big Days' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-09-20",
       "verificationStatus": "verified",
       "notes": "Future Ted opening season six, foreshadowing the wedding where he'll finally meet the mother."
@@ -535,6 +593,7 @@
       "content": "Here's the secret, kids: none of us can vow to be perfect. In the end, all we can do is promise to love each other with everything we've got. Because love's the best thing we do.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S9E22 'The End of the Aisle' (2014)",
+      "sourceType": "television",
       "quoteDate": "2014-03-24",
       "verificationStatus": "verified",
       "notes": "Future Ted's narration over Barney and Robin's wedding vows."
@@ -544,6 +603,7 @@
       "content": "Every night can't be legendary. If all nights are legendary, no nights are legendary.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S7E21 'Now We're Even' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-04-16",
       "verificationStatus": "verified",
       "notes": "Ted's takeaway after Barney's campaign to make every single night legendary."
@@ -553,6 +613,7 @@
       "content": "Some couples always support each other, and some couples always challenge each other. But is one really better than the other? Yes. Support is better. Way better.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S6E20 'The Exploding Meatball Sub' (2011)",
+      "sourceType": "television",
       "quoteDate": "2011-04-11",
       "verificationStatus": "verified",
       "notes": "Future Ted contrasting his combative romance with Zoey against Marshall and Lily's steady support."
@@ -562,6 +623,7 @@
       "content": "It's funny: sometimes you walk into a place and you know you're exactly where you're supposed to be.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S4E22 'Right Place Right Time' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-05-04",
       "verificationStatus": "verified",
       "notes": "Future Ted on the strange certainty of being in the right place at the right time."
@@ -571,6 +633,7 @@
       "content": "A word of advice: play along. The more you fight it, the worse it's gonna get.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S4E4 'Intervention' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-10-13",
       "verificationStatus": "verified",
       "notes": "Future Ted's counsel during the gang's run of interventions."
@@ -580,6 +643,7 @@
       "content": "When you believe in people, people come through.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S9E2 'Coming Back' (2013)",
+      "sourceType": "television",
       "quoteDate": "2013-09-23",
       "verificationStatus": "verified",
       "notes": "Future Ted on faith in friends, during the Farhampton wedding weekend."
@@ -589,6 +653,7 @@
       "content": "Sometimes our best decisions are the ones that don't make sense at all.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S5E20 'Home Wreckers' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-04-19",
       "verificationStatus": "verified",
       "notes": "Future Ted reflecting on impulse, after Ted buys a dilapidated house on a whim."
@@ -598,6 +663,7 @@
       "content": "Oprah wasn't built in a day.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S8E5 'The Autumn of Break-Ups' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-11-05",
       "verificationStatus": "verified",
       "notes": "Lily reassuring Robin, mid running-gag where she casts herself as Oprah (and Marshall as Gayle)."
@@ -607,6 +673,7 @@
       "content": "It's just, eventually we're all gonna move on. It's called growing up.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S5E22 'Robots Versus Wrestlers' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-05-10",
       "verificationStatus": "verified",
       "notes": "Lily gently consoling a panicked Barney who fears the group is drifting apart."
@@ -616,6 +683,7 @@
       "content": "The three-day rule is a childish, manipulative mind game. But yeah, you wait three days.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S4E21 'The Three Days Rule' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-04-27",
       "verificationStatus": "verified",
       "notes": "Lily on the absurd dating convention of waiting three days to call, which she endorses anyway."
@@ -625,6 +693,7 @@
       "content": "Say goodbye to all the times you felt lost, to all the times it was a 'no' instead of a 'yes,' to all the scrapes and bruises, to all the heartache.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S9E3 'Last Time in New York' (2013)",
+      "sourceType": "television",
       "quoteDate": "2013-09-30",
       "verificationStatus": "verified",
       "notes": "Lily urging Ted to bid farewell only to the painful parts of New York, since the good things will keep."
@@ -634,6 +703,7 @@
       "content": "You can't just skip ahead to where you think your life should be.",
       "authorName": "Lily Aldrin (Alyson Hannigan)",
       "source": "How I Met Your Mother, S5E20 'Home Wreckers' (2010)",
+      "sourceType": "television",
       "quoteDate": "2010-04-19",
       "verificationStatus": "verified",
       "notes": "Lily counseling Ted after he impulsively buys a fixer-upper to feel like his life is on track."
@@ -643,6 +713,7 @@
       "content": "If you keep giving up on people so quickly, you could miss out on something great.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S1E8 'The Duel' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-11-15",
       "verificationStatus": "verified",
       "notes": "Robin pushing back on Barney's five-minute 'Lemon Law,' arguing you can't size someone up that fast."
@@ -652,6 +723,7 @@
       "content": "Aren't you tired of waiting for destiny, Ted? Isn't it time to make your own destiny?",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S7E24 'The Magician's Code, Part Two' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-05-14",
       "verificationStatus": "verified",
       "notes": "Robin pressing Ted to stop waiting on fate and reach out to Victoria."
@@ -661,6 +733,7 @@
       "content": "If you have chemistry, you only need one other thing: timing.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S7E1 'The Best Man' (2011)",
+      "sourceType": "television",
       "quoteDate": "2011-09-19",
       "verificationStatus": "verified",
       "notes": "Robin's answer when Ted asks what to believe in if not destiny, with the wry coda that timing is everything."
@@ -670,6 +743,7 @@
       "content": "I get recognized one time, and I start thinking I'm Julia Roberts. I'm no VIP. I'm not even an IP. I'm just a lonely little P sitting out here in the gutter.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S1E5 'Okay Awesome' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-10-10",
       "verificationStatus": "verified",
       "notes": "Robin mocking herself after a single brush with recognition goes to her head, stuck outside a club."
@@ -679,6 +753,7 @@
       "content": "Of course, it's one thing not to want something; it's another to be told you can't have it.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S7E12 'Symphony of Illumination' (2011)",
+      "sourceType": "television",
       "quoteDate": "2011-12-05",
       "verificationStatus": "verified",
       "notes": "Robin's quiet reckoning after learning she likely can't have children, even though she never wanted them."
@@ -688,6 +763,7 @@
       "content": "Why am I constantly looking for reasons to be unhappy?",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother (2005-2014)",
+      "sourceType": "television",
       "quoteDate": "c. 2011",
       "verificationStatus": "unverified",
       "notes": "Robin's question in a therapy session during her arc with Kevin; exact episode unconfirmed (likely season seven's 'The Stinson Missile Crisis' or 'Field Trip')."
@@ -697,6 +773,7 @@
       "content": "I don't know where I'm gonna be in five years. I don't wanna know. I want my life to be an adventure.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S2E22 'Something Blue' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-05-14",
       "verificationStatus": "verified",
       "notes": "Robin during the 'where will we be in five years' talk that ends her relationship with Ted."
@@ -706,6 +783,7 @@
       "content": "If I ask you to change too many things about yourself, you're not gonna be the man I fell in love with.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S8E19 'The Fortress' (2013)",
+      "sourceType": "television",
       "quoteDate": "2013-03-18",
       "verificationStatus": "verified",
       "notes": "Robin telling Barney she loves even his creepiest quirks, after he tries to remodel his bachelor pad for her."
@@ -715,6 +793,7 @@
       "content": "Oh my god, look at you cowards. So afraid of any kind of change. So terrified of anything new.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S4E4 'Intervention' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-10-13",
       "verificationStatus": "verified",
       "notes": "Robin chiding the gang for fearing change, just before realizing she's not ready to move to Japan."
@@ -724,6 +803,7 @@
       "content": "We'll always be friends. It's just never gonna be how it was. It can't be. And that doesn't have to be a sad thing.",
       "authorName": "Robin Scherbatsky (Cobie Smulders)",
       "source": "How I Met Your Mother, S9E24 'Last Forever, Part Two' (2014)",
+      "sourceType": "television",
       "quoteDate": "2014-03-31",
       "verificationStatus": "verified",
       "notes": "Robin answering Lily's fear that the gang's friendship is over, in the series finale."
@@ -733,6 +813,7 @@
       "content": "It's not about proof; it's about faith. Faith is what gives life shape and meaning.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S7E13 'Tailgate' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-01-02",
       "verificationStatus": "verified",
       "notes": "Marshall defending his wish to raise his kid believing in yetis and leprechauns."
@@ -742,6 +823,7 @@
       "content": "You have to let me dance my own battles.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S8E20 'The Time Travelers' (2013)",
+      "sourceType": "television",
       "quoteDate": "2013-03-25",
       "verificationStatus": "verified",
       "notes": "Marshall's deliberate pun on 'fight my own battles,' tied to the episode's dancer's-hip running gag."
@@ -751,6 +833,7 @@
       "content": "Look at us, riding around in a limo, eating hot dogs. It's like we're the president.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S1E11 'The Limo' (2005)",
+      "sourceType": "television",
       "quoteDate": "2005-12-19",
       "verificationStatus": "verified",
       "notes": "Marshall reveling in the group's New Year's Eve splurge as they chase five parties in a rented limo."
@@ -760,6 +843,7 @@
       "content": "Happy Slapsgiving, everybody!",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S3E9 'Slapsgiving' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-11-19",
       "verificationStatus": "verified",
       "notes": "Marshall christening the holiday after landing the third slap of the Slap Bet on Barney at Thanksgiving."
@@ -769,6 +853,7 @@
       "content": "All hail Beercules!",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S7E22 'Good Crazy' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-04-30",
       "verificationStatus": "verified",
       "notes": "A drunk Marshall summoning his college alter ego at an Atlantic City craps table."
@@ -778,6 +863,7 @@
       "content": "I've never asked Lily to do anything 'no questions asked' because I never wanted to. She's the love of my life. I never keep anything from her.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S9E7 'No Questions Asked' (2013)",
+      "sourceType": "television",
       "quoteDate": "2013-10-28",
       "verificationStatus": "verified",
       "notes": "Marshall explaining why he's never called in a blind favor on Lily, as he wrestles with hiding his judgeship from her."
@@ -787,6 +873,7 @@
       "content": "I'm cuddly. Deal with it.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S4E21 'The Three Days Rule' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-04-27",
       "verificationStatus": "verified",
       "notes": "Marshall unapologetically defending his snuggly side against Barney's teasing."
@@ -796,6 +883,7 @@
       "content": "Revenge fantasies never work out the way you want.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S8E11 'The Final Page, Part One' (2012)",
+      "sourceType": "television",
       "quoteDate": "2012-12-17",
       "verificationStatus": "verified",
       "notes": "Marshall warning Ted before he confronts his old college professor; the full line tacks on 'especially dance-based revenge.'"
@@ -805,6 +893,7 @@
       "content": "A drumroll? So what? That's it? You just said good night, went home, and performed the drum solo?",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S1E13 'Drumroll, Please' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-01-23",
       "verificationStatus": "verified",
       "notes": "Marshall deflating Ted's breathless 'drumroll' metaphor for an unconsummated night with Victoria."
@@ -814,6 +903,7 @@
       "content": "A girl is allowed to be crazy, as long as she is equally hot. Thus, if she's this crazy, she has to be this hot. You want her to stay above the line, also known as the Vicky Mendoza Diagonal.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E5 'How I Met Everyone Else' (2007)",
+      "sourceType": "television",
       "quoteDate": "2007-10-22",
       "verificationStatus": "verified",
       "notes": "Barney's dating graph plotting craziness against hotness, named for an ex who 'played jump rope with that line.'"
@@ -823,6 +913,7 @@
       "content": "All my life, I have dared to go past what is possible — past the impossible, to the place where the possible and the impossible meet, to become the Possimpible.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S4E14 'The Possimpible' (2009)",
+      "sourceType": "television",
       "quoteDate": "2009-02-02",
       "verificationStatus": "verified",
       "notes": "Barney coining a nonsense buzzword while filming an over-the-top video resume."
@@ -832,6 +923,7 @@
       "content": "A woo girl is a type of young woman who, like the cuckoo bird or the whip-poor-will, gets her name from the signature sound she makes.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S4E8 'Woooo!' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-11-17",
       "verificationStatus": "verified",
       "notes": "Future Ted's narration defining the breed of partier who shouts 'Woo!' at everything, after Robin falls in with a group of them."
@@ -841,6 +933,7 @@
       "content": "There's a little thing in corporate America I like to call the chain of screaming. Arthur's boss screams at Arthur, Arthur screams at you, you go home and scream at Lily, Lily screams at a kid in her kindergarten class — and the whole thing starts all over again, completing the circle of screaming.",
       "authorName": "Barney Stinson (Neil Patrick Harris)",
       "source": "How I Met Your Mother, S3E15 'The Chain of Screaming' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-04-14",
       "verificationStatus": "verified",
       "notes": "Barney talking Marshall out of confronting his abusive boss by framing workplace anger as a cycle that flows downhill."
@@ -850,6 +943,7 @@
       "content": "Once she leaves the room, you strip down naked and wait. When she comes back, she's so charmed by your confidence and bravado that she sleeps with you. It works two out of three times.",
       "authorName": "Mitch (the Naked Man)",
       "source": "How I Met Your Mother, S4E9 'The Naked Man' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-11-24",
       "verificationStatus": "verified",
       "notes": "The one-off character Robin brings home explaining his signature seduction move; the gang spends the episode testing his 'two out of three' success rate."
@@ -859,6 +953,7 @@
       "content": "It's called revertigo. It's that thing where, when you're around people from your past, you start behaving like the person you were back when you knew them.",
       "authorName": "Marshall Eriksen (Jason Segel)",
       "source": "How I Met Your Mother, S3E16 'Sandcastles in the Sand' (2008)",
+      "sourceType": "television",
       "quoteDate": "2008-04-21",
       "verificationStatus": "verified",
       "notes": "Marshall coins the term as Robin reverts to her teenage self around an old flame."
@@ -868,6 +963,7 @@
       "content": "Marshall and Lily had a rule that at any point during a fight, they could pause and take a break.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S1E22 'Come On' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-05-15",
       "verificationStatus": "verified",
       "notes": "Future Ted's narration introducing the couple's long-running habit of hitting 'pause' on an argument and resuming it later."
@@ -877,6 +973,7 @@
       "content": "The crazy eyes are a well-documented condition of the pupils. It's an indicator of future mental instability.",
       "authorName": "Ted Mosby (Josh Radnor)",
       "source": "How I Met Your Mother, S2E7 'Swarley' (2006)",
+      "sourceType": "television",
       "quoteDate": "2006-11-06",
       "verificationStatus": "verified",
       "notes": "Ted's mock-clinical definition after Barney warns Marshall that his new date has 'the crazy eyes.'"

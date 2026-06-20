@@ -56,9 +56,9 @@ VALID_STATUS = {"verified", "attributed", "unverified", "folk-wisdom"}
 # additive only. Validated only when the field is present.
 VALID_SOURCE_TYPES = {
     "unspecified", "inPerson", "book", "article", "newspaper", "magazine",
-    "movie", "television", "podcast", "radio", "song", "speech", "interview",
-    "website", "socialMedia", "video", "letter", "poem", "play", "lecture",
-    "documentary",
+    "comic", "movie", "television", "podcast", "radio", "song", "speech",
+    "interview", "website", "socialMedia", "video", "letter", "poem", "play",
+    "lecture", "documentary",
 }
 ID_RE = re.compile(r"^[a-z0-9]+-\d{3,}$")
 TS_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")

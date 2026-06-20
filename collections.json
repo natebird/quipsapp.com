@@ -30,7 +30,7 @@
       "colorName": "gold",
       "iconName": "sunrise.fill",
       "category": "Inspiration",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "stoic-wisdom",
@@ -45,7 +45,7 @@
       "colorName": "navyBlue",
       "iconName": "building.columns.fill",
       "category": "Philosophy",
-      "lastUpdated": "2026-06-18T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "creative-minds",
@@ -60,7 +60,7 @@
       "colorName": "purple",
       "iconName": "paintbrush.fill",
       "category": "Creativity",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "tech-visionaries",
@@ -75,7 +75,7 @@
       "colorName": "primaryBlue",
       "iconName": "cpu.fill",
       "category": "Technology",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "literary-classics",
@@ -90,7 +90,7 @@
       "colorName": "brown",
       "iconName": "book.fill",
       "category": "Literature",
-      "lastUpdated": "2026-06-18T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "mindfulness",
@@ -105,7 +105,7 @@
       "colorName": "mint",
       "iconName": "leaf.fill",
       "category": "Wellness",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "marvel-movies",
@@ -120,7 +120,7 @@
       "colorName": "red",
       "iconName": "bolt.fill",
       "category": "Movies",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "dc-comics",
@@ -135,7 +135,7 @@
       "colorName": "navyBlue",
       "iconName": "shield.fill",
       "category": "Movies",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "disney-animated",
@@ -150,7 +150,7 @@
       "colorName": "magenta",
       "iconName": "wand.and.stars",
       "category": "Movies",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "seinfeld",
@@ -165,7 +165,7 @@
       "colorName": "orange",
       "iconName": "tv.fill",
       "category": "Television",
-      "lastUpdated": "2026-06-18T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "how-i-met-your-mother",
@@ -180,7 +180,7 @@
       "colorName": "lemon",
       "iconName": "umbrella.fill",
       "category": "Television",
-      "lastUpdated": "2026-06-17T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "fantasy-worlds",
@@ -195,7 +195,7 @@
       "colorName": "forestGreen",
       "iconName": "flame.fill",
       "category": "Literature",
-      "lastUpdated": "2026-06-18T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "western-movies",
@@ -210,7 +210,7 @@
       "colorName": "brown",
       "iconName": "sun.dust.fill",
       "category": "Movies",
-      "lastUpdated": "2025-12-25T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     },
     {
       "id": "scifi-screen",
@@ -225,7 +225,7 @@
       "colorName": "cyan",
       "iconName": "sparkles",
       "category": "Movies",
-      "lastUpdated": "2026-06-18T12:00:00Z"
+      "lastUpdated": "2026-06-20T12:00:00Z"
     }
   ]
 }
