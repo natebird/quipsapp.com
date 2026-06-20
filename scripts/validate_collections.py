@@ -18,6 +18,8 @@ Checks (errors fail the run; warnings are reported but pass unless --strict):
     - each collection's prefix is unique across all collections (full run only)
     - every quote has the required fields and a valid verificationStatus
       (verified, attributed, unverified, folk-wisdom)
+    - sourceType, when present, is a known QuoteSourceType rawValue
+      (speech, book, movie, podcast, …)
     - no duplicate quote text within a collection
 
   WARN
@@ -49,6 +51,15 @@ from collections import Counter
 REQUIRED_QUOTE_FIELDS = {"id", "content", "authorName", "source", "verificationStatus", "notes"}
 MIRRORED_FIELDS = ("name", "author", "category", "colorName", "iconName")
 VALID_STATUS = {"verified", "attributed", "unverified", "folk-wisdom"}
+# Optional per-quote source category. Mirrors QuoteSourceType.rawValue in the iOS
+# app (QuotebookCore/.../Models/QuoteSourceType.swift) — keep in sync; values are
+# additive only. Validated only when the field is present.
+VALID_SOURCE_TYPES = {
+    "unspecified", "inPerson", "book", "article", "newspaper", "magazine",
+    "movie", "television", "podcast", "radio", "song", "speech", "interview",
+    "website", "socialMedia", "video", "letter", "poem", "play", "lecture",
+    "documentary",
+}
 ID_RE = re.compile(r"^[a-z0-9]+-\d{3,}$")
 TS_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 # Accepts the date shapes actually used across the collections:
@@ -150,6 +161,8 @@ def validate_collection(cid, data, entry, rep):
             rep.error(f"{cid}/{qid}: missing fields {sorted(missing)}")
         if q.get("verificationStatus") not in VALID_STATUS:
             rep.error(f"{cid}/{qid}: invalid verificationStatus {q.get('verificationStatus')!r}")
+        if "sourceType" in q and q.get("sourceType") not in VALID_SOURCE_TYPES:
+            rep.error(f"{cid}/{qid}: invalid sourceType {q.get('sourceType')!r}")
         if not str(q.get("content", "")).strip():
             rep.error(f"{cid}/{qid}: empty content")
         qd = q.get("quoteDate")

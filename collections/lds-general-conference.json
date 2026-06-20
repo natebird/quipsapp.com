@@ -1,0 +1,572 @@
+{
+  "id": "lds-general-conference",
+  "name": "LDS General Conference",
+  "description": "Faith-promoting words from prophets, apostles, and leaders of The Church of Jesus Christ of Latter-day Saints, drawn from recent general conferences.",
+  "author": "Quips Editorial",
+  "colorName": "primaryBlue",
+  "iconName": "mic.fill",
+  "category": "Faith",
+  "lastUpdated": "2026-06-20T12:00:00Z",
+  "quotes": [
+    {
+      "id": "ldsgc-001",
+      "content": "Because of Jesus Christ, our failures do not have to define us. They can refine us.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"God among Us,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-002",
+      "content": "Rather than becoming bitter, let Him help you become better.",
+      "authorName": "Dale G. Renlund",
+      "source": "\"Infuriating Unfairness,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-003",
+      "content": "His is a gospel of second and third chances, made possible by His atoning sacrifice.",
+      "authorName": "Gerrit W. Gong",
+      "source": "\"Room in the Inn,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-004",
+      "content": "The Lord does not require perfect faith for us to have access to His perfect power. But He does ask us to believe.",
+      "authorName": "Russell M. Nelson",
+      "source": "\"Christ Is Risen; Faith in Him Will Move Mountains,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-04",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-005",
+      "content": "Everyone has the right to be loved, to feel peaceful, and to find safety at home.",
+      "authorName": "Jeffrey R. Holland",
+      "source": "\"Not as the World Giveth,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-006",
+      "content": "Through the redeeming Atonement and glorious Resurrection of Jesus Christ, broken hearts can be healed, anguish can become peace, and distress can become hope.",
+      "authorName": "Reyna I. Aburto",
+      "source": "\"The Grave Has No Victory,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Relief Society General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-007",
+      "content": "We cannot wait for conversion to simply happen to our children. Accidental conversion is not a principle of the gospel of Jesus Christ.",
+      "authorName": "Joy D. Jones",
+      "source": "\"Essential Conversations,\" April 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Primary General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-008",
+      "content": "Worthiness is not flawlessness. Worthiness is being honest and trying.",
+      "authorName": "Bradley R. Wilcox",
+      "source": "\"Worthiness Is Not Flawlessness,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Young Men General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-009",
+      "content": "God loves us as we are, but He also loves us too much to leave us this way.",
+      "authorName": "Bradley R. Wilcox",
+      "source": "\"Worthiness Is Not Flawlessness,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Young Men General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-010",
+      "content": "If we are not one, we are not His.",
+      "authorName": "Dale G. Renlund",
+      "source": "\"The Peace of Christ Abolishes Enmity,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-011",
+      "content": "Jesus always looks on the heart and not on the appearance.",
+      "authorName": "Ulisses Soares",
+      "source": "\"The Savior's Abiding Compassion,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-012",
+      "content": "Trust in God and each other brings heaven's blessings.",
+      "authorName": "Gerrit W. Gong",
+      "source": "\"Trust Again,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-013",
+      "content": "Remember, the best way for you to improve the world is to prepare the world for Christ by inviting all to follow Him.",
+      "authorName": "Bonnie H. Cordon",
+      "source": "\"Come unto Christ and Don't Come Alone,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Young Women General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-014",
+      "content": "Small efforts collectively make a big impact, magnifying the many individual things we do as disciples of Jesus Christ.",
+      "authorName": "Sharon Eubank",
+      "source": "\"I Pray He'll Use Us,\" October 2021 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2021-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Relief Society General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-015",
+      "content": "In a world that so desperately needs all the light it can get, please do not minimize the eternal light God put in your soul before this world was.",
+      "authorName": "Jeffrey R. Holland",
+      "source": "\"Fear Not: Believe Only!,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-016",
+      "content": "When the storms in life come, you can be steady because you are standing on the rock of your faith in Jesus Christ.",
+      "authorName": "Henry B. Eyring",
+      "source": "\"Steady in the Storms,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the First Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-017",
+      "content": "I testify that there is nothing in your life that is broken that is beyond the curative, redeeming, and enabling power of Jesus Christ.",
+      "authorName": "Amy A. Wright",
+      "source": "\"Christ Heals That Which Is Broken,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Primary General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-018",
+      "content": "Repenting is the key to progress. Pure faith keeps us moving forward on the covenant path.",
+      "authorName": "Russell M. Nelson",
+      "source": "\"The Power of Spiritual Momentum,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-03",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-019",
+      "content": "It's not about the ice cream. And it's not about doing more. It's about doing what matters.",
+      "authorName": "Rebecca L. Craven",
+      "source": "\"Do What Mattereth Most,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Young Women General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-020",
+      "content": "As we choose to make covenants and keep them, we will be blessed with more happiness in this life and a glorious eternal life to come.",
+      "authorName": "Jean B. Bingham",
+      "source": "\"Covenants with God Strengthen, Protect, and Prepare Us for Eternal Glory,\" April 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Relief Society General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-021",
+      "content": "Making and keeping covenants actually makes life easier!",
+      "authorName": "Russell M. Nelson",
+      "source": "\"Overcome the World and Find Rest,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-022",
+      "content": "You can find confidence, peace, safety, happiness, and belonging now and eternally, because you will find all of it in Jesus Christ, in His gospel, and in His Church.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"Jesus Christ Is the Strength of Youth,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-023",
+      "content": "To live in such a way that you give beauty for the ashes of your life is an act of faith that follows the Savior.",
+      "authorName": "Kristin M. Yee",
+      "source": "\"Beauty for Ashes: The Healing Path of Forgiveness,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Relief Society General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-024",
+      "content": "I am learning that Heavenly Father is more interested in my growth as a disciple of Jesus Christ than He is with my comfort.",
+      "authorName": "Michelle D. Craig",
+      "source": "\"Wholehearted,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Young Women General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-025",
+      "content": "He is the point, not our perfect progress.",
+      "authorName": "Michelle D. Craig",
+      "source": "\"Wholehearted,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Young Women General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-026",
+      "content": "The Savior invites us to see our lives through Him in order to see more of Him in our lives.",
+      "authorName": "Tracy Y. Browning",
+      "source": "\"Seeing More of Jesus Christ in Our Lives,\" October 2022 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2022-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the Primary General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-027",
+      "content": "Contention is a choice. Peacemaking is a choice. You have your agency to choose contention or reconciliation. I urge you to choose to be a peacemaker, now and always.",
+      "authorName": "Russell M. Nelson",
+      "source": "\"Peacemakers Needed,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-028",
+      "content": "Jesus Christ can lighten our load. Jesus Christ can lift our burdens. Jesus Christ provides a way for us to be relieved of the weight of sin.",
+      "authorName": "Camille N. Johnson",
+      "source": "\"Jesus Christ Is Relief,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-02",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Relief Society General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-029",
+      "content": "The God of heaven and earth will help us overcome discouragement and whatever obstacles we encounter if we look to Him, follow the promptings of the Holy Ghost, and just keep going—with faith.",
+      "authorName": "Carl B. Cook",
+      "source": "\"Just Keep Going—with Faith,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Presidency of the Seventy; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-030",
+      "content": "Jesus Christ is the strength of families. Jesus Christ is the strength of youth. Jesus Christ is the strength of parents.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"Jesus Christ Is the Strength of Parents,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-031",
+      "content": "The Lord loves you. He always has. The Lord wants you to come back.",
+      "authorName": "Henry B. Eyring",
+      "source": "\"Finding Personal Peace,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Second Counselor in the First Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-032",
+      "content": "One of the most evident signs that we are drawing closer to the Savior and becoming more like Him is the loving, patient, and kind way with which we treat our fellow beings, whatever the circumstances.",
+      "authorName": "Ulisses Soares",
+      "source": "\"Followers of the Prince of Peace,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-033",
+      "content": "As your mind remains firmly and forever upon the thought of Jesus Christ, and as you continue to focus your life more fully on the Savior, I promise you that you will feel His hope, His peace, and His love.",
+      "authorName": "Neil L. Andersen",
+      "source": "\"My Mind Caught Hold upon This Thought of Jesus Christ,\" April 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-04-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-034",
+      "content": "The very things that will make your mortal life the best it can be are exactly the same things that will make your life throughout all eternity the best it can be!",
+      "authorName": "Russell M. Nelson",
+      "source": "\"Think Celestial!,\" October 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-035",
+      "content": "Covenants are the shape of God's embrace.",
+      "authorName": "Robert M. Daines",
+      "source": "\"Sir, We Would Like to See Jesus,\" October 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-09-30",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Seventy; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-036",
+      "content": "Though choices may have taken you far away from the Savior and His Church, the Master Healer stands at the road that leads home, welcoming you.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"The Prodigal and the Road That Leads Home,\" October 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-10-01",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-037",
+      "content": "Love is the thing that changes hearts. It is the purest motive of all, and others can feel it.",
+      "authorName": "Tamara W. Runia",
+      "source": "\"Seeing God's Family through the Overview Lens,\" October 2023 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2023-09-30",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Young Women General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-038",
+      "content": "Everything about the Father's plan for His beloved children is designed to bring everyone home.",
+      "authorName": "Patrick Kearon",
+      "source": "\"God's Intent Is to Bring You Home,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-07",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-039",
+      "content": "My beloved friends, our prayers are our sweetest hour, our most 'sincere desire,' our simplest, purest form of worship.",
+      "authorName": "Jeffrey R. Holland",
+      "source": "\"Motions of a Hidden Fire,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-040",
+      "content": "True joy multiplies when it is shared.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"A Higher Joy,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-041",
+      "content": "True disciples do not ignore the seemingly small things that sustain and strengthen their testimony of Jesus, such as prayer, study of the scriptures, Sabbath observance, partaking of the sacrament, repentance, ministering, and worship in the house of the Lord.",
+      "authorName": "D. Todd Christofferson",
+      "source": "\"The Testimony of Jesus,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-07",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-042",
+      "content": "The essence of truly belonging is to be one with Christ.",
+      "authorName": "Quentin L. Cook",
+      "source": "\"Be One with Christ,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-043",
+      "content": "Every time we faithfully receive, review, remember, and renew sacred covenants, our spiritual anchors are secured ever more firmly and steadfastly to the \"rock\" of Jesus Christ.",
+      "authorName": "David A. Bednar",
+      "source": "\"Be Still, and Know That I Am God,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-044",
+      "content": "When you know that Heavenly Father is real and that He loves you, you can live with courage and hope!",
+      "authorName": "Susan H. Porter",
+      "source": "\"Pray, He Is There,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Primary General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-045",
+      "content": "Through honoring our covenants, we enable God to pour out the multitude of promised blessings associated with those covenants.",
+      "authorName": "J. Anette Dennis",
+      "source": "\"Put Ye On the Lord Jesus Christ,\" April 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Relief Society General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-046",
+      "content": "My decision to follow Jesus Christ is the most important decision I have ever made.",
+      "authorName": "Russell M. Nelson",
+      "source": "\"The Lord Jesus Christ Will Come Again,\" October 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-10-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-047",
+      "content": "My brothers and sisters, hope is a living gift, a gift that grows as we increase our faith in Jesus Christ.",
+      "authorName": "Neil L. Andersen",
+      "source": "\"The Triumph of Hope,\" October 2024 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2024-10-05",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-048",
+      "content": "Heaven isn't for people who've been perfect; it's for people who've been forgiven, who choose Christ again and again.",
+      "authorName": "Tamara W. Runia",
+      "source": "\"Your Repentance Doesn't Burden Jesus Christ; It Brightens His Joy,\" April 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as First Counselor in the Young Women General Presidency; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-049",
+      "content": "When you welcome this majestic reality into your very soul and feel both the comfort and the thrill of it, your entire paradigm shifts!",
+      "authorName": "Patrick Kearon",
+      "source": "\"Receive His Gift,\" April 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-050",
+      "content": "Virtue makes everything better and happier!",
+      "authorName": "Russell M. Nelson",
+      "source": "\"Confidence in the Presence of God,\" April 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-04-06",
+      "verificationStatus": "verified",
+      "notes": "Spoken as President of the Church; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-051",
+      "content": "The unity we seek is not to have everyone stand in the same place; it is to have everyone face in the same direction—toward Jesus Christ.",
+      "authorName": "Dieter F. Uchtdorf",
+      "source": "\"By This All Will Know That You Are My Disciples,\" April 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-04-05",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-052",
+      "content": "Yet, to be a peacemaker is not to be weak but to be strong in a way that the world may not understand.",
+      "authorName": "Gary E. Stevenson",
+      "source": "\"Blessed Are the Peacemakers,\" October 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-10-04",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-053",
+      "content": "In His restored Church, we are all better when no one sits alone.",
+      "authorName": "Gerrit W. Gong",
+      "source": "\"No One Sits Alone,\" October 2025 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2025-10-04",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-054",
+      "content": "Because of Him, no matter how bad things are right now, your best days are ahead.",
+      "authorName": "Emily Belle Freeman",
+      "source": "\"Best Days and Worst Days,\" April 2026 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2026-04-05",
+      "verificationStatus": "verified",
+      "notes": "Spoken as Young Women General President; verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-055",
+      "content": "\"All mankind may be saved\" because of Him and His atoning sacrifice. All means everyone. If everyone, then anyone. If anyone, then even one. And if even one, then even you.",
+      "authorName": "Dale G. Renlund",
+      "source": "\"Because of Jesus Christ,\" April 2026 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2026-04-05",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; the opening phrase quotes Article of Faith 1:3, and the passage was verified verbatim against the official talk on churchofjesuschrist.org."
+    },
+    {
+      "id": "ldsgc-056",
+      "content": "Life is better—everything is better—when we are about His business.",
+      "authorName": "Patrick Kearon",
+      "source": "\"About His Business,\" April 2026 General Conference",
+      "sourceType": "speech",
+      "quoteDate": "2026-04-04",
+      "verificationStatus": "verified",
+      "notes": "Spoken as a member of the Quorum of the Twelve Apostles; verified verbatim against the official talk on churchofjesuschrist.org."
+    }
+  ]
+}

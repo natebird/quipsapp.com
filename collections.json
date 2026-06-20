@@ -1,7 +1,22 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-18T12:00:00Z",
+  "lastUpdated": "2026-06-20T12:00:00Z",
   "collections": [
+    {
+      "id": "lds-general-conference",
+      "name": "LDS General Conference",
+      "description": "Faith-promoting words from prophets, apostles, and leaders of The Church of Jesus Christ of Latter-day Saints, drawn from recent general conferences.",
+      "author": "Quips Editorial",
+      "quoteCount": 56,
+      "previewQuotes": [
+        "Because of Jesus Christ, our failures do not have to define us. They can refine us.",
+        "Worthiness is not flawlessness. Worthiness is being honest and trying."
+      ],
+      "colorName": "primaryBlue",
+      "iconName": "mic.fill",
+      "category": "Faith",
+      "lastUpdated": "2026-06-20T12:00:00Z"
+    },
     {
       "id": "inspiration-daily",
       "name": "Daily Inspiration",

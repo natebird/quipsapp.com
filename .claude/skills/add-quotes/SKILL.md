@@ -34,10 +34,19 @@ is an index of every collection and must be kept in sync (its `quoteCount` and `
      "source": "Show/Book/Film, S1E1 'Episode Title' (Year)",
      "quoteDate": "2005-09-19",
      "verificationStatus": "verified",
+     "sourceType": "television",
      "notes": "One sentence of context about the quote."
    }
    ```
    - `authorName` — for shows/films use `Character (Actor)`; for people, the person's name.
+   - `sourceType` — *optional* category for the kind of source, mirroring the app's
+     `QuoteSourceType`. Match the file's existing entries: if they carry `sourceType`,
+     include it; if they don't, leave it off. Allowed values (use the exact rawValue):
+     `book`, `article`, `newspaper`, `magazine`, `movie`, `television`, `podcast`,
+     `radio`, `song`, `speech`, `interview`, `website`, `socialMedia`, `video`,
+     `letter`, `poem`, `play`, `lecture`, `documentary`, `inPerson`, `unspecified`.
+     E.g. a sitcom line is `television`, a film line `movie`, a conference talk or
+     address `speech`, a book passage `book`.
    - `source` — be as specific as the evidence allows. Use `Show (2005-2014)` when you can't
      pin the episode.
    - `quoteDate` — `YYYY-MM-DD` when known; otherwise `c. YYYY` for an approximate year.
