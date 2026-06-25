@@ -6,7 +6,7 @@
   "colorName": "navyBlue",
   "iconName": "building.columns.fill",
   "category": "Philosophy",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-25T12:00:00Z",
   "quotes": [
     {
       "id": "sw-001",
@@ -317,6 +317,16 @@
       "quoteDate": "c. 65 CE",
       "verificationStatus": "verified",
       "notes": "Translation of Latin 'Ignoranti quem portum petat nullus suus ventus est'; Seneca's navigation metaphor arguing that without a clear purpose, no circumstance can help you."
+    },
+    {
+      "id": "sw-032",
+      "content": "We have two ears and one mouth, so we should listen more than we say.",
+      "authorName": "Zeno of Citium",
+      "source": "Lives of the Eminent Philosophers by Diogenes Laërtius, Book VII (c. 250 CE)",
+      "sourceType": "book",
+      "quoteDate": "c. 250 CE",
+      "verificationStatus": "unverified",
+      "notes": "The attribution to Zeno via Diogenes Laërtius is well-established, but this English wording is a paraphrase; no single authoritative translation matches this exact phrasing (wording axis)."
     }
   ]
 }

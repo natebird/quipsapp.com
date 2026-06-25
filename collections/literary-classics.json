@@ -6,7 +6,7 @@
   "colorName": "brown",
   "iconName": "book.fill",
   "category": "Literature",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-25T12:00:00Z",
   "quotes": [
     {
       "id": "lc-001",
@@ -307,6 +307,26 @@
       "quoteDate": "1929",
       "verificationStatus": "verified",
       "notes": "Narrator Frederic Henry's reflection on suffering and resilience; the 1929 Scribner's first edition spells 'every one' as two words, modernized here per common transcription convention."
+    },
+    {
+      "id": "lc-031",
+      "content": "Abandon all hope, ye who enter here.",
+      "authorName": "Dante Alighieri",
+      "source": "The Divine Comedy: Inferno, Canto III, line 9 (c. 1314)",
+      "sourceType": "book",
+      "quoteDate": "c. 1314",
+      "verificationStatus": "unverified",
+      "notes": "Original Italian 'Lasciate ogne speranza, voi ch'intrate' is verified (Canto III.9); this English form is the dominant cultural rendering but diverges from major translations (Cary: 'Abandon every hope…'; Longfellow: 'All hope abandon…') — wording axis."
+    },
+    {
+      "id": "lc-032",
+      "content": "It was a pleasure to burn.",
+      "authorName": "Ray Bradbury",
+      "source": "Fahrenheit 451 (1953), opening line",
+      "sourceType": "book",
+      "quoteDate": "1953",
+      "verificationStatus": "verified",
+      "notes": "The novel's celebrated first sentence, introducing fireman Guy Montag and inverting the usual role of fire; among the most recognized opening lines in American literature."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-25T12:00:00Z",
   "collections": [
     {
       "id": "lds-general-conference",
@@ -37,7 +37,7 @@
       "name": "Stoic Wisdom",
       "description": "Timeless philosophy from Marcus Aurelius, Seneca, and Epictetus to guide your life.",
       "author": "Quips Editorial",
-      "quoteCount": 31,
+      "quoteCount": 32,
       "previewQuotes": [
         "You have power over your mind - not outside events. Realize this, and you will find strength.",
         "We suffer more often in imagination than in reality."
@@ -45,7 +45,7 @@
       "colorName": "navyBlue",
       "iconName": "building.columns.fill",
       "category": "Philosophy",
-      "lastUpdated": "2026-06-20T12:00:00Z"
+      "lastUpdated": "2026-06-25T12:00:00Z"
     },
     {
       "id": "creative-minds",
@@ -82,7 +82,7 @@
       "name": "Literary Classics",
       "description": "Memorable lines from the greatest works of literature throughout history.",
       "author": "Quips Editorial",
-      "quoteCount": 30,
+      "quoteCount": 32,
       "previewQuotes": [
         "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
         "All happy families are alike; each unhappy family is unhappy in its own way."
@@ -90,7 +90,7 @@
       "colorName": "brown",
       "iconName": "book.fill",
       "category": "Literature",
-      "lastUpdated": "2026-06-20T12:00:00Z"
+      "lastUpdated": "2026-06-25T12:00:00Z"
     },
     {
       "id": "mindfulness",
@@ -157,7 +157,7 @@
       "name": "Seinfeld",
       "description": "Iconic quotes and catchphrases from the show about nothing that became everything.",
       "author": "Quips Editorial",
-      "quoteCount": 26,
+      "quoteCount": 27,
       "previewQuotes": [
         "No soup for you!",
         "Serenity now!"
@@ -165,7 +165,7 @@
       "colorName": "orange",
       "iconName": "tv.fill",
       "category": "Television",
-      "lastUpdated": "2026-06-20T12:00:00Z"
+      "lastUpdated": "2026-06-25T12:00:00Z"
     },
     {
       "id": "how-i-met-your-mother",
@@ -202,7 +202,7 @@
       "name": "Western Movies",
       "description": "Legendary quotes from the Wild West, featuring outlaws, heroes, and frontier justice.",
       "author": "Quips Editorial",
-      "quoteCount": 30,
+      "quoteCount": 32,
       "previewQuotes": [
         "Go ahead, make my day.",
         "I'm your huckleberry."
@@ -210,7 +210,7 @@
       "colorName": "brown",
       "iconName": "sun.dust.fill",
       "category": "Movies",
-      "lastUpdated": "2026-06-20T12:00:00Z"
+      "lastUpdated": "2026-06-25T12:00:00Z"
     },
     {
       "id": "scifi-screen",

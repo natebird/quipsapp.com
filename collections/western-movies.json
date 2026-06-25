@@ -6,7 +6,7 @@
   "colorName": "brown",
   "iconName": "sun.dust.fill",
   "category": "Movies",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-25T12:00:00Z",
   "quotes": [
     {
       "id": "western-001",
@@ -306,6 +306,26 @@
       "sourceType": "movie",
       "notes": "Clyde's matter-of-fact introduction. The film revolutionized violence in American cinema.",
       "quoteDate": "1967-08-13",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "western-031",
+      "content": "Who are those guys?",
+      "authorName": "Butch Cassidy (Paul Newman)",
+      "source": "Butch Cassidy and the Sundance Kid (1969), dir. George Roy Hill",
+      "sourceType": "movie",
+      "notes": "Repeated refrain as Butch and Sundance are relentlessly pursued by a mysterious 'superposse'; the running gag underscores the film's blend of comedy and menace.",
+      "quoteDate": "1969",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "western-032",
+      "content": "That'll be the day.",
+      "authorName": "Ethan Edwards (John Wayne)",
+      "source": "The Searchers (1956), dir. John Ford",
+      "sourceType": "movie",
+      "notes": "Ethan's dismissive recurring line; John Ford's masterpiece of the genre and the phrase directly inspired Buddy Holly's 1957 hit of the same name.",
+      "quoteDate": "1956",
       "verificationStatus": "verified"
     }
   ]

@@ -6,7 +6,7 @@
   "colorName": "orange",
   "iconName": "tv.fill",
   "category": "Television",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-25T12:00:00Z",
   "quotes": [
     {
       "id": "seinfeld-001",
@@ -267,6 +267,16 @@
       "quoteDate": "1992-11-18",
       "verificationStatus": "verified",
       "notes": "The Contest episode's central catchphrase, about remaining celibate. Won the Writers Guild Award for Best Episodic Comedy. One of the show's most celebrated episodes."
+    },
+    {
+      "id": "seinfeld-027",
+      "content": "Was that wrong? Should I not have done that?",
+      "authorName": "George Costanza (Jason Alexander)",
+      "source": "Seinfeld, S3E12 'The Red Dot' (1991)",
+      "sourceType": "television",
+      "quoteDate": "1991-12-11",
+      "verificationStatus": "verified",
+      "notes": "George's self-justifying opener after sleeping with the office cleaning woman; he pleads ignorance that 'that sort of thing is frowned upon.' One of the show's most-quoted moments."
     }
   ]
 }
