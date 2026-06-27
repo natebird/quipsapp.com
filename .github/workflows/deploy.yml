@@ -1,0 +1,53 @@
+name: Deploy site
+
+# Builds the static site and deploys to GitHub Pages. The build pulls the
+# pinned collections version (.data-version) from data.quipsapp.com, so the
+# quote data lives in the public `quips-collections` repo, not here.
+#
+# Requires: Settings -> Pages -> Source = "GitHub Actions".
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Pull pinned collections from data.quipsapp.com
+        run: |
+          set -euo pipefail
+          VER="$(tr -d '[:space:]' < .data-version)"
+          BASE="https://data.quipsapp.com/v${VER}"
+          echo "Pulling collections v${VER} from ${BASE}"
+          curl -fsSL "${BASE}/collections.json" -o collections.json
+          mkdir -p collections
+          for id in $(python3 -c "import json;print('\n'.join(c['id'] for c in json.load(open('collections.json'))['collections']))"); do
+            curl -fsSL "${BASE}/collections/${id}.json" -o "collections/${id}.json"
+          done
+          echo "Pulled $(ls collections | wc -l) collection files."
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
