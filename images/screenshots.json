@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "comment": "Drives the home-page gallery (index.html) AND the screenshot copy step (quotebook-ios/bin/screenshots). 'source' is the Fastlane snapshot base name; bin/screenshots copies '<source>-light/-dark' from the snapshot output to the 'light'/'dark' filenames below.",
+  "device": "iPhone 17 Pro",
+  "gallery": [
+    {
+      "source": "main",
+      "label": "Your Quotes",
+      "alt": "Quips main quote list",
+      "light": "screenshot-light.png",
+      "dark": "screenshot-dark.png",
+      "optimize": false
+    },
+    {
+      "source": "quote-style",
+      "label": "Quote Style",
+      "alt": "Quips Quote Style screen",
+      "light": "quips-style-light-min.png",
+      "dark": "quips-style-dark-min.png",
+      "optimize": true
+    },
+    {
+      "source": "collections",
+      "label": "Collections",
+      "alt": "Quips collections",
+      "light": "quips-collections-light-min.png",
+      "dark": "quips-collections-dark-min.png",
+      "optimize": true
+    },
+    {
+      "source": "detail",
+      "label": "Quote Details",
+      "alt": "Quips quote detail",
+      "light": "quips-detail-light-min.png",
+      "dark": "quips-detail-dark-min.png",
+      "optimize": true
+    },
+    {
+      "source": "share-studio",
+      "label": "Share Studio",
+      "alt": "Quips Share Studio",
+      "light": "quips-share-studio-light-min.png",
+      "dark": "quips-share-studio-dark-min.png",
+      "optimize": true
+    },
+    {
+      "source": "widgets",
+      "label": "Widgets",
+      "alt": "Quips home screen widgets",
+      "light": "quips-widget-light-min.png",
+      "dark": "quips-widget-dark-min.png",
+      "optimize": true
+    }
+  ]
+}
