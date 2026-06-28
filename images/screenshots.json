@@ -49,7 +49,9 @@
       "alt": "Quips home screen widgets",
       "light": "quips-widget-light-min.png",
       "dark": "quips-widget-dark-min.png",
-      "optimize": true
+      "optimize": true,
+      "managed": false,
+      "note": "iOS 'Add Widget' gallery (SpringBoard, outside the app). Captured semi-automatically via quotebook-ios/bin/widget-screenshot; bin/screenshots leaves it untouched (managed:false)."
     }
   ]
 }
