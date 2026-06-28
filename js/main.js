@@ -119,6 +119,75 @@
         });
     }
 
+    // ===== Screenshot Gallery (manifest-driven) =====
+    // Builds the "See it in action" gallery from images/screenshots.json so
+    // adding/removing a screen is a data change, not an HTML edit. Each entry
+    // renders a light + dark image pair (toggled by the active theme via CSS).
+    async function initScreenshotGallery() {
+        const container = document.getElementById('screenshots-gallery');
+        if (!container) return;
+
+        const manifestUrl = container.dataset.manifest || 'images/screenshots.json';
+
+        let manifest;
+        try {
+            const response = await fetch(manifestUrl);
+            manifest = await response.json();
+        } catch (error) {
+            console.error('Error loading screenshots manifest:', error);
+            return; // Leave the <noscript> fallback in place.
+        }
+
+        const screens = (manifest && manifest.gallery) || [];
+        if (!screens.length) return;
+
+        // Clear the no-JS fallback now that we can render the real gallery.
+        container.innerHTML = '';
+
+        // Reveal-on-scroll for the wrappers we create (mirrors initScrollAnimations).
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        screens.forEach((screen, index) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'screenshot-wrapper';
+            wrapper.style.opacity = '0';
+            wrapper.style.animationDelay = `${index * 0.15}s`;
+
+            const lightImg = makeGalleryImage(screen, 'light');
+            const darkImg = makeGalleryImage(screen, 'dark');
+
+            // If a screenshot hasn't been generated yet, hide the whole slot so
+            // the live site never shows a broken-image icon.
+            const onError = () => wrapper.remove();
+            lightImg.addEventListener('error', onError);
+            darkImg.addEventListener('error', onError);
+
+            const label = document.createElement('span');
+            label.className = 'screenshot-label';
+            label.textContent = screen.label || '';
+
+            wrapper.append(lightImg, darkImg, label);
+            container.appendChild(wrapper);
+            observer.observe(wrapper);
+        });
+    }
+
+    function makeGalleryImage(screen, mode) {
+        const img = document.createElement('img');
+        img.src = `images/${screen[mode]}`;
+        img.alt = screen.alt || screen.label || 'Quips screenshot';
+        img.loading = 'lazy';
+        img.className = `gallery-screenshot screenshot-${mode}`;
+        return img;
+    }
+
     // ===== Header Scroll Effect =====
     function initHeaderScroll() {
         const header = document.querySelector('.header');
@@ -289,6 +358,7 @@
         // Other features
         initNavMenu();
         initSmoothScroll();
+        initScreenshotGallery();
         initScrollAnimations();
         initHeaderScroll();
         updateCopyrightYear();

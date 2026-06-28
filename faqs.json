@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2024-12-04",
+  "version": "1.1",
+  "lastUpdated": "2026-06-27",
   "sections": [
     {
       "id": "getting-started",
@@ -17,6 +17,11 @@
           "answer": "Tap the heart icon on any quote card to add it to your favorites. You can view all your favorite quotes by tapping the heart icon in the top navigation bar."
         },
         {
+          "id": "copy-quote",
+          "question": "How do I copy a quote?",
+          "answer": "Press and hold any quote, then tap Copy. The quote is copied to your clipboard as attributed text, including the author and date."
+        },
+        {
           "id": "search-quotes",
           "question": "How do I search for quotes?",
           "answer": "Use the search bar at the bottom of the main screen. You can search by quote text, author name, tags, or any other content in your quotes."
@@ -30,7 +35,12 @@
         {
           "id": "create-collections",
           "question": "How do I create collections?",
-          "answer": "Tap the collection dropdown at the top of the screen (shows \"All Quotes\" by default) and select \"Manage Collections.\" From there you can create new collections like \"Inspiration,\" \"Personal,\" or any category you want."
+          "answer": "Open the Collections screen and tap \"Add New Collection.\" Give it a name, color, and icon, then save. You can create collections like \"Inspiration,\" \"Personal,\" or any category you want, and assign quotes to them when creating or editing."
+        },
+        {
+          "id": "source-type",
+          "question": "Can I note where a quote came from?",
+          "answer": "Yes. When creating or editing a quote, tap the source row to choose a source type — book, movie, podcast, speech, comic, and more. Each type shows a matching icon on the quote throughout the app, alongside any free-text source you add."
         },
         {
           "id": "add-tags",
@@ -51,12 +61,17 @@
         {
           "id": "share-image",
           "question": "How do I share a quote as an image?",
-          "answer": "Tap on a quote to open the detail view, then tap the share icon. Choose from 4 beautiful styles: Minimal, Bold, Classic, or Text. Preview your quote image, then tap \"Share Quote\" to send it via Messages, social media, or save it to your photos."
+          "answer": "Tap a quote to open the detail view, then tap the share icon to open Share Studio. Customize the image before sharing — choose from six card styles; square, portrait, story, or wide sizes; light, dark, or saturated backgrounds; your own color and typeface; and toggle the author, date, and source on or off. Premium subscribers can also remove the watermark. When it looks right, tap Share to send it or save it to your photos."
+        },
+        {
+          "id": "share-story",
+          "question": "Can I share a quote as a Story?",
+          "answer": "Yes. In Share Studio, choose the Story (9:16) size to create a tall image made for Instagram and other Stories, alongside the classic square format."
         },
         {
           "id": "add-widget",
           "question": "How do I add a widget to my home screen?",
-          "answer": "Long-press on your home screen and tap the + button in the top corner. Search for \"Quips\" and choose your widget size. The widget displays a random quote from your favorites, refreshing throughout the day. You can also configure widgets in Settings > Widgets."
+          "answer": "Long-press on your home screen and tap the + button in the top corner. Search for \"Quips\" and choose your widget size. The widget displays a random quote, refreshing throughout the day. Medium and large widgets also have a one-tap share button for the quote they're showing. You can configure widgets in Settings > Widgets."
         }
       ]
     },
@@ -98,12 +113,22 @@
         {
           "id": "change-theme",
           "question": "How do I change the app theme?",
-          "answer": "Go to Settings > App Theme to customize colors and appearance. You can choose between light mode, dark mode, or automatic (follows your system setting). Premium subscribers get access to additional theme colors."
+          "answer": "Go to Settings > Appearance > App Theme to customize colors and appearance. You can choose between light mode, dark mode, or automatic (follows your system setting). Premium subscribers get access to additional theme colors."
+        },
+        {
+          "id": "quote-style",
+          "question": "How do I change how my quotes look?",
+          "answer": "Go to Settings > Appearance > Quote Style. Quotes show in vibrant color by default — switch between Bold and Subtle looks, recolor the quote text, and choose a typeface. A live example updates as you make changes. The default Bold and Subtle styles are free; additional colors and typefaces are a premium feature."
+        },
+        {
+          "id": "daily-quote",
+          "question": "How do I get a daily quote notification?",
+          "answer": "Go to Settings > Daily Quote and turn it on, then pick the time you'd like to receive it. Each day Quips delivers a quote as a notification at that time — an easy way to build a daily habit of inspiration."
         },
         {
           "id": "change-icon",
           "question": "Can I change the app icon?",
-          "answer": "Yes! Go to Settings > App Icon to choose from a variety of icon designs. This is a premium feature available to subscribers."
+          "answer": "Yes! Go to Settings > Appearance > App Icon to choose from a variety of icon designs, including the new Salmon icon. This is a premium feature available to subscribers."
         }
       ]
     },
@@ -135,7 +160,7 @@
         {
           "id": "premium-features",
           "question": "What's included in the premium subscription?",
-          "answer": "Premium includes: unlimited quotes (free is limited to 25), all theme colors and favorite icons, custom app icons, and access to all future premium features. Choose monthly ($0.99/month), annual ($8.99/year), or lifetime ($99.99)."
+          "answer": "Premium includes: unlimited quotes (free is limited to 25), all theme colors and favorite icons, additional Quote Style colors and typefaces, watermark-free sharing in Share Studio, custom app icons, and access to all future premium features. Choose monthly ($0.99/month) or annual ($8.99/year)."
         },
         {
           "id": "cancel-subscription",
