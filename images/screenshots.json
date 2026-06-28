@@ -12,14 +12,6 @@
       "optimize": false
     },
     {
-      "source": "quote-style",
-      "label": "Quote Style",
-      "alt": "Quips Quote Style screen",
-      "light": "quips-style-light-min.png",
-      "dark": "quips-style-dark-min.png",
-      "optimize": true
-    },
-    {
       "source": "collections",
       "label": "Collections",
       "alt": "Quips collections",
@@ -44,12 +36,22 @@
       "optimize": true
     },
     {
+      "source": "quote-style",
+      "label": "Quote Style",
+      "alt": "Quips Quote Style screen",
+      "light": "quips-style-light-min.png",
+      "dark": "quips-style-dark-min.png",
+      "optimize": true
+    },
+    {
       "source": "widgets",
       "label": "Widgets",
       "alt": "Quips home screen widgets",
       "light": "quips-widget-light-min.png",
       "dark": "quips-widget-dark-min.png",
-      "optimize": true
+      "optimize": true,
+      "managed": false,
+      "note": "iOS 'Add Widget' gallery (SpringBoard, outside the app). Captured semi-automatically via quotebook-ios/bin/widget-screenshot; bin/screenshots leaves it untouched (managed:false)."
     }
   ]
 }
