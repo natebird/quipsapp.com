@@ -471,7 +471,10 @@ a {
 
 .screenshots-gallery {
     display: flex;
-    justify-content: center;
+    /* "safe center" centers the row when it fits, but falls back to flex-start
+       when it overflows — otherwise plain centering pushes the first image off
+       the left edge and it can't be scrolled into view on load. */
+    justify-content: safe center;
     gap: 1.5rem;
     overflow-x: auto;
     padding: 1rem 0;

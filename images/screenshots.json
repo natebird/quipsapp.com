@@ -12,14 +12,6 @@
       "optimize": false
     },
     {
-      "source": "quote-style",
-      "label": "Quote Style",
-      "alt": "Quips Quote Style screen",
-      "light": "quips-style-light-min.png",
-      "dark": "quips-style-dark-min.png",
-      "optimize": true
-    },
-    {
       "source": "collections",
       "label": "Collections",
       "alt": "Quips collections",
@@ -41,6 +33,14 @@
       "alt": "Quips Share Studio",
       "light": "quips-share-studio-light-min.png",
       "dark": "quips-share-studio-dark-min.png",
+      "optimize": true
+    },
+    {
+      "source": "quote-style",
+      "label": "Quote Style",
+      "alt": "Quips Quote Style screen",
+      "light": "quips-style-light-min.png",
+      "dark": "quips-style-dark-min.png",
       "optimize": true
     },
     {
