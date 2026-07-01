@@ -9,3 +9,7 @@
 .vscode/
 *.swp
 *.swo
+
+# Collections data pulled from data.quipsapp.com at build/preview time
+/collections.json
+/collections/
