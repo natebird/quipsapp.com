@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #
 # Local preview server. Mirrors the GitHub Actions deploy step: pulls the pinned
-# collections data from data.quipsapp.com, then serves the whole site over HTTP
-# so fetch() works (browsers block fetch of local files over file://).
+# collections data from data.quipsapp.com, rebuilds the collection pages/sitemap,
+# the press kit archive, and terms.html/privacy.html from their sources, then
+# serves the whole site over HTTP so fetch() works (browsers block fetch of
+# local files over file://). Requires the `zip` CLI (for the press kit build).
 #
 # Usage:
-#   ./serve.sh            # pull data (if missing) and serve on :8000
+#   ./serve.sh            # pull data (if missing), rebuild, and serve on :8000
 #   ./serve.sh 4000       # serve on a different port
-#   ./serve.sh --refresh  # re-pull data even if it already exists
+#   ./serve.sh --refresh  # re-pull collections data even if it already exists
 #
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -36,6 +38,15 @@ if [[ ! -f collections.json || "$REFRESH" -eq 1 ]]; then
 else
   echo "Using existing collections data (run with --refresh to re-pull)."
 fi
+
+echo "Rebuilding collection pages and sitemap"
+node scripts/build-collections.mjs
+
+echo "Rebuilding press kit archive"
+node scripts/build-press-kit.mjs
+
+echo "Rebuilding terms.html/privacy.html from legal/*.md"
+node scripts/build-legal.mjs
 
 echo "Serving http://localhost:${PORT}  (Ctrl+C to stop)"
 # no-store so browsers never serve stale css/js while iterating locally
