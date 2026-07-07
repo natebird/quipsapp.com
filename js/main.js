@@ -16,9 +16,14 @@
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    // Get stored theme or null if not set
+    // Get stored theme or null if not set (localStorage can throw when
+    // storage is blocked, e.g. some private-browsing modes)
     function getStoredTheme() {
-        return localStorage.getItem(THEME_KEY);
+        try {
+            return localStorage.getItem(THEME_KEY);
+        } catch (e) {
+            return null;
+        }
     }
 
     // Apply theme to document
@@ -49,7 +54,9 @@
     // Apply a specific theme and remember the preference
     function setTheme(theme) {
         applyTheme(theme);
-        localStorage.setItem(THEME_KEY, theme);
+        try {
+            localStorage.setItem(THEME_KEY, theme);
+        } catch (e) { /* storage blocked — theme still applies this page */ }
     }
 
     // Toggle theme and save preference

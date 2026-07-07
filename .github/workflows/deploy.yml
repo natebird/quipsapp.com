@@ -85,9 +85,10 @@ jobs:
                                   errors.append(f"faqs.json: faq in section '{s.get('id')}' missing/empty '{field}'")
 
           # collections.json - manifest of public collections shown on collections.html
-          # and in the iOS app. This copy is overwritten later by the pinned pull below,
-          # but we validate the checked-in copy too as a sanity check.
-          cols = load("collections.json")
+          # and in the iOS app. It is NOT tracked in git: the pinned pull below
+          # creates it. Validate only if a local copy happens to exist.
+          import os
+          cols = load("collections.json") if os.path.exists("collections.json") else None
           if cols is not None:
               items = cols.get("collections")
               if not isinstance(items, list) or not items:

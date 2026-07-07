@@ -346,13 +346,13 @@ const STATIC_PAGES = [
     'terms.html'
 ];
 
-function sitemapXml(collectionIds, lastmod) {
+function sitemapXml(collectionIds) {
     const urls = [
         ...STATIC_PAGES.map((page) => `${SITE}/${page}`),
         ...collectionIds.map((id) => `${SITE}/collections/${id}.html`)
     ];
     const entries = urls
-        .map((url) => `  <url>\n    <loc>${escapeHtml(url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`)
+        .map((url) => `  <url>\n    <loc>${escapeHtml(url)}</loc>\n  </url>`)
         .join('\n');
     return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
 }
@@ -398,11 +398,10 @@ function main() {
         pageCount += 1;
     }
 
-    const lastmod = new Date().toISOString().slice(0, 10);
-    fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapXml(ids, lastmod), 'utf8');
+    fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapXml(ids), 'utf8');
 
     console.log(
-        `build-collections: wrote ${pageCount} collection pages to collections/ and sitemap.xml with ${STATIC_PAGES.length + ids.length} URLs (lastmod ${lastmod}).`
+        `build-collections: wrote ${pageCount} collection pages to collections/ and sitemap.xml with ${STATIC_PAGES.length + ids.length} URLs.`
     );
 }
 

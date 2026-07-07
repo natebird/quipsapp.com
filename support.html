@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://quipsapp.com/support.html">
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="Support - Quips">
+    <meta property="og:title" content="Support — Quips">
     <meta property="og:description" content="Quips Support - Get help with the Quips app. FAQs, tips, and contact information.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quipsapp.com/support.html">
@@ -18,11 +18,11 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Support - Quips">
+    <meta name="twitter:title" content="Support — Quips">
     <meta name="twitter:description" content="Quips Support - Get help with the Quips app. FAQs, tips, and contact information.">
     <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
 
-    <title>Support - Quips</title>
+    <title>Support — Quips</title>
 
     <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -147,10 +147,15 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 300ms ease, padding 300ms ease;
+            /* visibility hides collapsed answers from screen readers/tab order;
+               the 300ms delay keeps content visible during the collapse animation */
+            visibility: hidden;
+            transition: max-height 300ms ease, padding 300ms ease, visibility 0s linear 300ms;
         }
         .faq-item.open .faq-answer {
             max-height: 500px;
+            visibility: visible;
+            transition: max-height 300ms ease, padding 300ms ease, visibility 0s linear 0s;
         }
         .faq-answer-content {
             padding: 0 1.5rem 1.25rem;

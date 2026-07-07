@@ -131,10 +131,10 @@ Logo links to `index.html` (never `#`). Dropdown items, in this order:
 <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">…</button>
 ```
 
-The nav action button is `<a href="/index.html#download" class="btn btn-primary">Get Quips</a>`
-(`href="#download"` on index itself). Pre-rendered collection pages use
-root-absolute paths (`/index.html`, `/css/styles.css`) since they live in a
-subdirectory.
+The nav action button is `<a href="index.html#download" class="btn btn-primary">Get Quips</a>`
+(`href="#download"` on index itself, `/index.html#download` on pages in
+subdirectories). Pre-rendered collection pages and 404.html use root-absolute
+paths (`/index.html`, `/css/styles.css`) since they render at non-root URLs.
 
 ## Canonical footer (every page)
 

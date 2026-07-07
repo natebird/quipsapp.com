@@ -33,6 +33,8 @@ function fail(message) {
 function htmlToText(html) {
     return html
         .replace(/<(script|style)[\s\S]*?<\/\1>/gi, '')
+        // keep mailto addresses visible: "<a href=mailto:X>label</a>" -> "label: X"
+        .replace(/<a [^>]*href="mailto:([^"?]+)[^"]*"[^>]*>([\s\S]*?)<\/a>/gi, '$2: $1')
         .replace(/<h2[^>]*>/gi, '\n\n== ')
         .replace(/<\/h2>/gi, ' ==\n')
         .replace(/<h3[^>]*>/gi, '\n')
@@ -40,8 +42,10 @@ function htmlToText(html) {
         .replace(/<\/th>/gi, ': ')
         .replace(/<\/(td|tr)>/gi, '\n')
         .replace(/<[^>]+>/g, '')
-        .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+        // decode &amp; LAST so escaped entities (&amp;lt;) don't double-decode
+        .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
         .replace(/[ \t]+/g, ' ')
         .replace(/ ?\n ?/g, '\n')
         .replace(/\n{3,}/g, '\n\n')
@@ -121,5 +125,5 @@ fs.rmSync(stage, { recursive: true, force: true });
 const size = Math.round(fs.statSync(OUT_ZIP).size / 1024);
 console.log(`build-press-kit: wrote images/quips-press-kit.zip (${size} KB)`);
 if (skipped.length) {
-    console.warn(`build-press-kit: WARNING: skipped missing assets: ${skipped.join(', ')}`);
+    fail(`missing assets, refusing to ship an incomplete kit: ${skipped.join(', ')}`);
 }

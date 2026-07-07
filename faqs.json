@@ -40,7 +40,7 @@
         {
           "id": "public-collections",
           "question": "What are the curated Public Collections?",
-          "answer": "Public Collections are ready-made quote collections curated by Quips — more than 80 of them across topics like Stoicism, literature, film, music, comedy, and history. Open the Collections screen and tap \"Browse Public Collections\" to explore them, then add any collection to your library with one tap. Quips skips quotes you already have, so you won't end up with duplicates. Every collection is free to browse and add."
+          "answer": "Public Collections are ready-made quote collections curated by Quips — more than 80 of them across topics like Stoicism, literature, film, music, comedy, and history. Open the Collections screen and tap \"Browse Public Collections\" to explore them, then add any collection to your library with one tap. If a quote is already in your library, Smart Duplicate Detection lets you know and shows you the existing copy instead of adding it twice. Every collection is free to browse and add."
         },
         {
           "id": "source-type",

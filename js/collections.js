@@ -38,5 +38,5 @@ function getIconSvg(iconName) {
         'bird.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"></path><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"></path><path d="m20 7 2 .5-2 .5"></path><path d="M10 18v3"></path><path d="M14 17.75V21"></path><path d="M7 18a6 6 0 0 0 3.84-10.61"></path></svg>`,
         'teddybear.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2.5"></circle><circle cx="18" cy="5" r="2.5"></circle><path d="M16.5 7.5a6 6 0 0 1-9 0"></path><circle cx="12" cy="14" r="6.5"></circle><circle cx="10" cy="12.5" r="0.5" fill="currentColor"></circle><circle cx="14" cy="12.5" r="0.5" fill="currentColor"></circle><path d="M10.5 16a2 2 0 0 0 3 0"></path></svg>`
     };
-    return icons[iconName] || icons['sunrise.fill'];
+    return (Object.prototype.hasOwnProperty.call(icons, iconName) && icons[iconName]) || icons['sunrise.fill'];
 }
