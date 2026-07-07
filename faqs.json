@@ -38,6 +38,11 @@
           "answer": "Open the Collections screen and tap \"Add New Collection.\" Give it a name, color, and icon, then save. You can create collections like \"Inspiration,\" \"Personal,\" or any category you want, and assign quotes to them when creating or editing."
         },
         {
+          "id": "public-collections",
+          "question": "What are the curated Public Collections?",
+          "answer": "Public Collections are ready-made quote collections curated by Quips — more than 80 of them across topics like Stoicism, literature, film, music, comedy, and history. Open the Collections screen and tap \"Browse Public Collections\" to explore them, then add any collection to your library with one tap. Quips skips quotes you already have, so you won't end up with duplicates. Every collection is free to browse and add."
+        },
+        {
           "id": "source-type",
           "question": "Can I note where a quote came from?",
           "answer": "Yes. When creating or editing a quote, tap the source row to choose a source type — book, movie, podcast, speech, comic, and more. Each type shows a matching icon on the quote throughout the app, alongside any free-text source you add."

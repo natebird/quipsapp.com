@@ -38,4 +38,14 @@ else
 fi
 
 echo "Serving http://localhost:${PORT}  (Ctrl+C to stop)"
-exec python3 -m http.server "$PORT"
+# no-store so browsers never serve stale css/js while iterating locally
+exec python3 -c "
+import http.server
+
+class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_header('Cache-Control', 'no-store')
+        super().end_headers()
+
+http.server.ThreadingHTTPServer(('', ${PORT}), NoCacheHandler).serve_forever()
+"

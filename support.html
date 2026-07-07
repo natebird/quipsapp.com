@@ -3,18 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; base-uri 'self'; object-src 'none';">
     <meta name="description" content="Quips Support - Get help with the Quips app. FAQs, tips, and contact information.">
+    <link rel="canonical" href="https://quipsapp.com/support.html">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Support - Quips">
+    <meta property="og:description" content="Quips Support - Get help with the Quips app. FAQs, tips, and contact information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quipsapp.com/support.html">
+    <meta property="og:image" content="https://quipsapp.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support - Quips">
+    <meta name="twitter:description" content="Quips Support - Get help with the Quips app. FAQs, tips, and contact information.">
+    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
+
     <title>Support - Quips</title>
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/png" href="images/app-icon.png">
-    <link rel="apple-touch-icon" href="images/app-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- TODO(launch): uncomment and set the App Store id
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX, app-argument=https://quipsapp.com/">
+    -->
+
+    <!-- Cloudflare Web Analytics (manual beacon; skip if auto-injected)
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TODO"}'></script>
+    -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tweeting Birds",
+      "url": "https://quipsapp.com/",
+      "logo": "https://quipsapp.com/images/app-icon.png",
+      "email": "feedback@quipsapp.com"
+    }
+    </script>
+
     <style>
         .support-content {
             max-width: 800px;
@@ -147,10 +184,19 @@
     </style>
 </head>
 <body class="light-theme">
+    <script>
+    (function () {
+        try {
+            var theme = localStorage.getItem('quips-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.body.classList.replace('light-theme', 'dark-theme');
+        } catch (e) { /* leave default light theme */ }
+    })();
+    </script>
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="logo">
-                <img src="images/app-icon.png" alt="Quips" class="logo-icon">
+                <img src="images/app-icon.png" alt="Quips" class="logo-icon app-icon-light" width="512" height="512"><img src="images/app-icon-dark.png" alt="Quips" class="logo-icon app-icon-dark" width="512" height="512">
                 <span class="logo-text">Quips</span>
             </a>
             <div class="nav-actions">
@@ -171,6 +217,7 @@
                         <a href="course.html" class="nav-dropdown-item">Email Course</a>
                         <a href="support.html" class="nav-dropdown-item">Support</a>
                         <a href="releases.html" class="nav-dropdown-item">What's New</a>
+                        <a href="press.html" class="nav-dropdown-item">Press Kit</a>
                         <div class="nav-dropdown-divider"></div>
                         <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
                             <span class="theme-label-light">Dark Mode</span>
@@ -192,7 +239,7 @@
                         </button>
                     </div>
                 </div>
-                <a href="index.html#download" class="btn btn-primary">Download</a>
+                <a href="index.html#download" class="btn btn-primary">Get Quips</a>
             </div>
         </nav>
     </header>
@@ -227,12 +274,13 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <img src="images/app-icon.png" alt="Quips" class="footer-icon">
+                <img src="images/app-icon.png" alt="Quips" class="footer-icon app-icon-light" width="512" height="512" loading="lazy"><img src="images/app-icon-dark.png" alt="Quips" class="footer-icon app-icon-dark" width="512" height="512" loading="lazy">
                 <span class="footer-name">Quips</span>
             </div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms & Conditions</a>
+                <a href="press.html">Press Kit</a>
             </div>
             <p class="footer-copyright">&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.</p>
         </div>
@@ -246,6 +294,7 @@
                 const response = await fetch('faqs.json');
                 const data = await response.json();
                 renderFAQs(data);
+                injectFAQSchema(data);
             } catch (error) {
                 console.error('Error loading FAQs:', error);
                 document.getElementById('faq-container').innerHTML =
@@ -264,13 +313,14 @@
                 html += `<h3>${escapeHtml(section.title)}</h3>`;
 
                 section.faqs.forEach(faq => {
+                    const answerId = `faq-answer-${escapeHtml(section.id)}-${escapeHtml(faq.id)}`;
                     html += `
                         <div class="faq-item">
-                            <button class="faq-question">
+                            <button class="faq-question" aria-expanded="false" aria-controls="${answerId}">
                                 ${escapeHtml(faq.question)}
                                 ${chevronSvg}
                             </button>
-                            <div class="faq-answer">
+                            <div class="faq-answer" id="${answerId}">
                                 <div class="faq-answer-content">
                                     ${escapeHtml(faq.answer)}
                                 </div>
@@ -288,10 +338,46 @@
             initFAQAccordion();
         }
 
+        function stripHtml(text) {
+            if (text === null || text === undefined) return '';
+            return String(text).replace(/<[^>]*>/g, '').trim();
+        }
+
+        function injectFAQSchema(data) {
+            const mainEntity = [];
+            data.sections.forEach(section => {
+                section.faqs.forEach(faq => {
+                    mainEntity.push({
+                        "@type": "Question",
+                        "name": stripHtml(faq.question),
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": stripHtml(faq.answer)
+                        }
+                    });
+                });
+            });
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": mainEntity
+            };
+
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.textContent = JSON.stringify(schema);
+            document.head.appendChild(script);
+        }
+
         function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+            if (text === null || text === undefined) return '';
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
         }
 
         function initFAQAccordion() {
@@ -304,11 +390,14 @@
                     document.querySelectorAll('.faq-item.open').forEach(openItem => {
                         if (openItem !== item) {
                             openItem.classList.remove('open');
+                            const openButton = openItem.querySelector('.faq-question');
+                            if (openButton) openButton.setAttribute('aria-expanded', 'false');
                         }
                     });
 
                     // Toggle current item
                     item.classList.toggle('open', !isOpen);
+                    button.setAttribute('aria-expanded', String(!isOpen));
                 });
             });
         }
