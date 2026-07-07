@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; base-uri 'self'; object-src 'none';">
+    <meta name="description" content="Quips Press Kit - App description, screenshots, brand assets, and contact information for press and media.">
+    <link rel="canonical" href="https://quipsapp.com/press.html">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Press Kit — Quips">
+    <meta property="og:description" content="Quips Press Kit - App description, screenshots, brand assets, and contact information for press and media.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quipsapp.com/press.html">
+    <meta property="og:image" content="https://quipsapp.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Press Kit — Quips">
+    <meta name="twitter:description" content="Quips Press Kit - App description, screenshots, brand assets, and contact information for press and media.">
+    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
+
+    <title>Press Kit — Quips</title>
+
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- TODO(launch): uncomment and set the App Store id
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX, app-argument=https://quipsapp.com/">
+    -->
+
+    <!-- Cloudflare Web Analytics (manual beacon; skip if auto-injected)
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TODO"}'></script>
+    -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tweeting Birds",
+      "url": "https://quipsapp.com/",
+      "logo": "https://quipsapp.com/images/app-icon.png",
+      "email": "feedback@quipsapp.com"
+    }
+    </script>
+
+    <style>
+        .press-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: calc(64px + 3rem) 1.5rem 4rem;
+        }
+        .press-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .press-intro {
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .press-section {
+            margin-bottom: 3rem;
+        }
+        .press-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--accent-primary);
+        }
+        .press-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .press-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .press-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .press-stat {
+            background-color: var(--bg-secondary);
+            border-radius: var(--card-radius);
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+        .press-stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .press-stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .press-details-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .press-details-table tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .press-details-table tr:last-child {
+            border-bottom: none;
+        }
+        .press-details-table th, .press-details-table td {
+            text-align: left;
+            padding: 0.75rem 0;
+            vertical-align: top;
+        }
+        .press-details-table th {
+            width: 40%;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .press-details-table td {
+            color: var(--text-secondary);
+        }
+        .press-assets {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        @media (min-width: 640px) {
+            .press-assets {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .press-asset {
+            display: block;
+            background-color: var(--bg-secondary);
+            border-radius: var(--card-radius);
+            padding: 1.25rem;
+            text-align: center;
+            color: inherit;
+            transition: transform 150ms ease, box-shadow 150ms ease;
+        }
+        .press-asset:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+        }
+        .press-asset img {
+            max-width: 100%;
+            height: 64px;
+            object-fit: contain;
+            margin-bottom: 0.75rem;
+        }
+        .press-asset-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent-primary-dark);
+        }
+        .press-kit-download {
+            margin-bottom: 1.5rem;
+        }
+        .press-assets-note {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .contact-box {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-dark) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        .contact-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+        .contact-box p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        .contact-box .btn {
+            background: white;
+            color: var(--accent-primary-dark);
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+        .contact-box .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            transition: color 150ms ease;
+        }
+        .back-link:hover {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <script>
+    (function () {
+        try {
+            var theme = localStorage.getItem('quips-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.body.classList.replace('light-theme', 'dark-theme');
+        } catch (e) { /* leave default light theme */ }
+    })();
+    </script>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images/app-icon.png" alt="Quips" class="logo-icon app-icon-light" width="512" height="512"><img src="images/app-icon-dark.png" alt="Quips" class="logo-icon app-icon-dark" width="512" height="512">
+                <span class="logo-text">Quips</span>
+            </a>
+            <div class="nav-actions">
+                <div class="nav-menu-container">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown" id="navDropdown">
+                        <a href="collections.html" class="nav-dropdown-item">Collections</a>
+                        <a href="course.html" class="nav-dropdown-item">Email Course</a>
+                        <a href="support.html" class="nav-dropdown-item">Support</a>
+                        <a href="releases.html" class="nav-dropdown-item">What's New</a>
+                        <a href="press.html" class="nav-dropdown-item">Press Kit</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
+                            <span class="theme-label-light">Dark Mode</span>
+                            <span class="theme-label-dark">Light Mode</span>
+                            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="index.html#download" class="btn btn-primary">Get Quips</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="press-content">
+        <a href="index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Home
+        </a>
+
+        <h1>Press Kit</h1>
+        <p class="press-intro">Everything you need to write about Quips — description, screenshots, brand assets, and contact info.</p>
+
+        <section class="press-section">
+            <h2>About Quips</h2>
+
+            <h3>One-liner</h3>
+            <p>Quips is an iOS app for saving the quotes that move you and turning them into beautiful, shareable images.</p>
+
+            <h3>Short (~60 words)</h3>
+            <p>Quips helps people save the quotes that move them and turn them into beautiful images with Share Studio. Browse 80+ curated collections to start a library without a blank page, or build your own from books, podcasts, and conversations. Add a widget or Daily Quote notification to keep favorites close. No account required — quotes sync privately via iCloud.</p>
+
+            <h3>Long</h3>
+            <p>Quips helps people save the quotes that move them, style them into something worth sharing, and keep a private, synced library for themselves. Save a quote from a book, movie, podcast, or conversation the moment it lands, tag its source, and organize everything by author and tag. Browse 80+ curated Public Collections — Stoicism, literature, film, music, comedy, history, and more — to start a library without a blank page. Turn any quote into a beautiful image with Share Studio: six card styles, four sizes (including a 9:16 Story format), and full color and typeface customization. Opt in to a Daily Quote notification, or add a Home Screen widget that surfaces a quote and shares it with one tap.</p>
+            <p>Quips is free to start (save up to 25 quotes), with a Premium subscription ($0.99/month or $8.99/year) unlocking unlimited quotes, all Quote Style options, and watermark-free sharing.</p>
+        </section>
+
+        <section class="press-section">
+            <h2>By the Numbers</h2>
+            <div class="press-stats">
+                <div class="press-stat">
+                    <span class="press-stat-number">81</span>
+                    <span class="press-stat-label">Public Collections</span>
+                </div>
+                <div class="press-stat">
+                    <span class="press-stat-number">19</span>
+                    <span class="press-stat-label">Categories</span>
+                </div>
+                <div class="press-stat">
+                    <span class="press-stat-number">2,500+</span>
+                    <span class="press-stat-label">Curated Quotes</span>
+                </div>
+                <div class="press-stat">
+                    <span class="press-stat-number">6</span>
+                    <span class="press-stat-label">Share Studio Styles</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-section">
+            <h2>Screenshots</h2>
+            <p>Shown in light mode below; the app supports light, dark, and saturated appearances throughout.</p>
+            <div class="screenshots-gallery">
+                <div class="screenshot-wrapper">
+                    <img src="images/screenshot-light.png" alt="Quips main quote list" class="gallery-screenshot" width="1350" height="2760" loading="lazy">
+                    <span class="screenshot-label">Your Quotes</span>
+                </div>
+                <div class="screenshot-wrapper">
+                    <img src="images/quips-collections-light-min.png" alt="Quips collections" class="gallery-screenshot" width="489" height="1000" loading="lazy">
+                    <span class="screenshot-label">Collections</span>
+                </div>
+                <div class="screenshot-wrapper">
+                    <img src="images/quips-detail-light-min.png" alt="Quips quote detail" class="gallery-screenshot" width="489" height="1000" loading="lazy">
+                    <span class="screenshot-label">Quote Detail</span>
+                </div>
+                <div class="screenshot-wrapper">
+                    <img src="images/quips-share-studio-light-min.png" alt="Quips Share Studio" class="gallery-screenshot" width="489" height="1000" loading="lazy">
+                    <span class="screenshot-label">Share Studio</span>
+                </div>
+                <div class="screenshot-wrapper">
+                    <img src="images/quips-style-light-min.png" alt="Quips Quote Style" class="gallery-screenshot" width="489" height="1000" loading="lazy">
+                    <span class="screenshot-label">Quote Style</span>
+                </div>
+                <div class="screenshot-wrapper">
+                    <img src="images/quips-widget-light-min.png" alt="Quips widget" class="gallery-screenshot" width="489" height="1000" loading="lazy">
+                    <span class="screenshot-label">Widget</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-section">
+            <h2>Brand Assets</h2>
+            <p>Click any card to download that asset, or grab the whole kit — copy, app details, icons, screenshots, and the social preview — in one archive.</p>
+            <p class="press-kit-download">
+                <a href="images/quips-press-kit.zip" class="btn btn-primary" download>Download Press Kit (.zip)</a>
+            </p>
+            <div class="press-assets">
+                <a class="press-asset" href="images/app-icon@1024.png" download="quips-app-icon-1024.png">
+                    <img src="images/app-icon.png" alt="Quips app icon" width="512" height="512" loading="lazy">
+                    <span class="press-asset-label">App Icon (1024px)</span>
+                </a>
+                <a class="press-asset" href="images/app-icon-dark@1024.png" download="quips-app-icon-dark-1024.png">
+                    <img src="images/app-icon-dark.png" alt="Quips app icon, dark variant" width="512" height="512" loading="lazy">
+                    <span class="press-asset-label">App Icon — Dark (1024px)</span>
+                </a>
+                <a class="press-asset" href="images/og-image.png" download>
+                    <img src="images/og-image.png" alt="Quips social preview image" width="1200" height="630" loading="lazy">
+                    <span class="press-asset-label">Social Preview</span>
+                </a>
+                <a class="press-asset" href="images/apple-touch-icon.png" download>
+                    <img src="images/apple-touch-icon.png" alt="Quips touch icon" width="180" height="180" loading="lazy">
+                    <span class="press-asset-label">Touch Icon (180px)</span>
+                </a>
+            </div>
+            <p class="press-assets-note">Need the "Download on the App Store" badge? Use Apple's official artwork from <a href="https://developer.apple.com/app-store/marketing/guidelines/" rel="noopener">Apple's marketing resources</a>.</p>
+        </section>
+
+        <section class="press-section">
+            <h2>App Details</h2>
+            <table class="press-details-table">
+                <tr><th>App Name</th><td>Quips: Quote Collector</td></tr>
+                <tr><th>Price</th><td>Free, with optional Premium subscription ($0.99/month or $8.99/year)</td></tr>
+                <tr><th>Platforms</th><td>iOS &amp; iPadOS</td></tr>
+                <tr><th>Category</th><td>Lifestyle</td></tr>
+                <tr><th>Age Rating</th><td>4+</td></tr>
+                <tr><th>Developer</th><td>Nate Bird / Tweeting Birds</td></tr>
+                <tr><th>Website</th><td><a href="https://quipsapp.com">quipsapp.com</a></td></tr>
+                <tr><th>Public Collections</th><td><a href="https://github.com/natebird/quips-collections">github.com/natebird/quips-collections</a></td></tr>
+                <tr><th>Release Date</th><td>Coming soon (2026)</td></tr>
+                <tr><th>App Store</th><td>Link available at launch</td></tr>
+            </table>
+        </section>
+
+        <section class="press-section">
+            <h2>About the Developer</h2>
+            <p>Quips is built by Nate Bird, an independent iOS developer. The app grew out of a simple, personal problem: collecting quotes from books, podcasts, and conversations, and actually being able to find and share them again later — rather than losing them in a Notes app.</p>
+        </section>
+
+        <section class="press-section">
+            <h2>What People Are Saying</h2>
+            <!-- PLACEHOLDER: add press mentions and review pull-quotes at launch -->
+            <p>Press mentions and reviews will appear here after launch.</p>
+        </section>
+
+        <div class="contact-box">
+            <h2>Media Inquiries</h2>
+            <p>For interviews, review copies, or additional assets, get in touch — I read every message.</p>
+            <a href="mailto:feedback@quipsapp.com?subject=Press%20Inquiry" class="btn">Email Press Contact</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="images/app-icon.png" alt="Quips" class="footer-icon app-icon-light" width="512" height="512" loading="lazy"><img src="images/app-icon-dark.png" alt="Quips" class="footer-icon app-icon-dark" width="512" height="512" loading="lazy">
+                <span class="footer-name">Quips</span>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="press.html">Press Kit</a>
+            </div>
+            <p class="footer-copyright">&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

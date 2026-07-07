@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://assets.mailerlite.com https://cloudflareinsights.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none';">
     <meta name="description" content="Learn how to collect, organize, and use the quotes that matter—from books, conversations, and family moments. Free 7-day email course teaches you the system I wish I'd known from the start.">
     <meta name="keywords" content="quote collecting, how to save quotes, organize quotes, memorable quotes, quote organization system, preserve family quotes, capture kids' sayings">
+    <link rel="canonical" href="https://quipsapp.com/course.html">
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="The Art of Quote Collecting - Free 7-Day Email Course">
+    <meta property="og:title" content="The Art of Quote Collecting — Free Email Course — Quips">
     <meta property="og:description" content="Learn how to collect, organize, and use the quotes that matter most. A free 7-day email course.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://quipsapp.com/course.html">
+    <meta property="og:image" content="https://quipsapp.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-    <title>The Art of Quote Collecting - Free 7-Day Email Course</title>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Art of Quote Collecting — Free Email Course — Quips">
+    <meta name="twitter:description" content="Learn how to collect, organize, and use the quotes that matter most. A free 7-day email course.">
+    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
+
+    <title>The Art of Quote Collecting — Free Email Course — Quips</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/png" href="images/app-icon.png">
-    <link rel="apple-touch-icon" href="images/app-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,13 +36,41 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- TODO(launch): uncomment and set the App Store id
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX, app-argument=https://quipsapp.com/">
+    -->
+
+    <!-- Cloudflare Web Analytics (manual beacon; skip if auto-injected)
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TODO"}'></script>
+    -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tweeting Birds",
+      "url": "https://quipsapp.com/",
+      "logo": "https://quipsapp.com/images/app-icon.png",
+      "email": "feedback@quipsapp.com"
+    }
+    </script>
 </head>
 <body class="light-theme">
+    <script>
+    (function () {
+        try {
+            var theme = localStorage.getItem('quips-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.body.classList.replace('light-theme', 'dark-theme');
+        } catch (e) { /* leave default light theme */ }
+    })();
+    </script>
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="logo">
-                <img src="images/app-icon.png" alt="Quips" class="logo-icon">
+                <img src="images/app-icon.png" alt="Quips" class="logo-icon app-icon-light" width="512" height="512"><img src="images/app-icon-dark.png" alt="Quips" class="logo-icon app-icon-dark" width="512" height="512">
                 <span class="logo-text">Quips</span>
             </a>
             <div class="nav-actions">
@@ -53,6 +91,7 @@
                         <a href="course.html" class="nav-dropdown-item">Email Course</a>
                         <a href="support.html" class="nav-dropdown-item">Support</a>
                         <a href="releases.html" class="nav-dropdown-item">What's New</a>
+                        <a href="press.html" class="nav-dropdown-item">Press Kit</a>
                         <div class="nav-dropdown-divider"></div>
                         <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
                             <span class="theme-label-light">Dark Mode</span>
@@ -74,7 +113,7 @@
                         </button>
                     </div>
                 </div>
-                <a href="index.html#download" class="btn btn-primary">Download App</a>
+                <a href="index.html#download" class="btn btn-primary">Get Quips</a>
             </div>
         </nav>
     </header>
@@ -84,12 +123,14 @@
         <div class="container">
             <div class="course-hero-content">
                 <h1 class="course-hero-title">Never Forget the Words That Matter Most</h1>
-                <p class="course-hero-subtitle">A free 7-day email course that teaches you how to collect, organize, and use the quotes that matter most.</p>
+                <p class="course-hero-subtitle">A free 7-day email course on capturing, organizing, and actually using the quotes you'd otherwise lose — one short lesson a day.</p>
 
                 <form class="course-signup-form" action="https://assets.mailerlite.com/jsonp/1995826/forms/174550881235109546/subscribe" method="post">
                     <div class="course-form-fields">
-                        <input type="text" name="fields[name]" placeholder="First name (optional)" autocomplete="given-name">
-                        <input type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+                        <label class="sr-only" for="course-name-hero">First name</label>
+                        <input type="text" id="course-name-hero" name="fields[name]" placeholder="First name (optional)" autocomplete="given-name">
+                        <label class="sr-only" for="course-email-hero">Email address</label>
+                        <input type="email" id="course-email-hero" name="fields[email]" placeholder="Email address" autocomplete="email" required>
                     </div>
                     <button type="submit" class="btn btn-primary course-submit-btn">Start Learning (It's Free)</button>
                     <button type="button" class="btn btn-primary course-loading-btn" disabled style="display: none;">
@@ -163,7 +204,7 @@
                 </div>
                 <div class="course-day">
                     <span class="course-day-number">Day 3</span>
-                    <h3>Context is Everything</h3>
+                    <h3>Context Is Everything</h3>
                     <p>Discover why most saved quotes are useless—and the 5 elements that make them valuable.</p>
                 </div>
                 <div class="course-day">
@@ -320,8 +361,10 @@
 
                 <form class="course-signup-form course-signup-form-final" action="https://assets.mailerlite.com/jsonp/1995826/forms/174550881235109546/subscribe" method="post">
                     <div class="course-form-fields">
-                        <input type="text" name="fields[name]" placeholder="First name (optional)" autocomplete="given-name">
-                        <input type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+                        <label class="sr-only" for="course-name-final">First name</label>
+                        <input type="text" id="course-name-final" name="fields[name]" placeholder="First name (optional)" autocomplete="given-name">
+                        <label class="sr-only" for="course-email-final">Email address</label>
+                        <input type="email" id="course-email-final" name="fields[email]" placeholder="Email address" autocomplete="email" required>
                     </div>
                     <button type="submit" class="btn btn-primary course-submit-btn">Send Me Day 1</button>
                     <button type="button" class="btn btn-primary course-loading-btn" disabled style="display: none;">
@@ -341,12 +384,13 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <img src="images/app-icon.png" alt="Quips" class="footer-icon">
+                <img src="images/app-icon.png" alt="Quips" class="footer-icon app-icon-light" width="512" height="512" loading="lazy"><img src="images/app-icon-dark.png" alt="Quips" class="footer-icon app-icon-dark" width="512" height="512" loading="lazy">
                 <span class="footer-name">Quips</span>
             </div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms & Conditions</a>
+                <a href="press.html">Press Kit</a>
             </div>
             <p class="footer-copyright">&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.</p>
         </div>
@@ -354,6 +398,5 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" defer></script>
 </body>
 </html>

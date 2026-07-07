@@ -401,6 +401,21 @@ a {
     margin-bottom: 3rem;
 }
 
+.theme-inline-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--accent-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.theme-inline-link:hover {
+    color: var(--accent-primary-dark);
+}
+
 /* ===== Features Section ===== */
 .features {
     padding: var(--section-padding) 0;
@@ -545,7 +560,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.newsletter-content h4 {
+.newsletter-content h2 {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -553,7 +568,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .newsletter-content h4 {
+    .newsletter-content h2 {
         font-size: 2rem;
     }
 }
@@ -635,7 +650,7 @@ a {
     padding: 1rem 0;
 }
 
-.newsletter-success h4 {
+.newsletter-success h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1675,4 +1690,367 @@ a {
 .suggest-box .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================================
+   Homepage relaunch additions (2026-07)
+   Hero eyebrow, Coming Soon pill, secondary button, feature-card link,
+   featured collection of the week, testimonials, pricing strip, FAQ.
+   ========================================================================= */
+
+/* Hero eyebrow kicker */
+.hero-eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-primary-dark);
+    margin-bottom: 0.75rem;
+}
+
+.dark-theme .hero-eyebrow {
+    color: var(--accent-primary);
+}
+
+/* Coming Soon pill (non-link placeholder for the App Store badge) */
+.btn-coming-soon {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    cursor: default;
+    user-select: none;
+}
+
+/* Secondary (outlined/ghost) button */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+/* Inline link inside a feature card (e.g. Curated Collections) */
+.feature-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--card-color, var(--accent-primary));
+}
+
+.feature-link::after {
+    content: " \2192";
+}
+
+.feature-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Featured Collection of the Week ===== */
+.featured-collection {
+    padding: var(--section-padding) 0;
+    background-color: var(--bg-primary);
+}
+
+.featured-card {
+    max-width: 720px;
+    margin: 3rem auto 1.25rem;
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    border-top: 4px solid var(--collection-color, var(--accent-primary));
+    padding: 2rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.featured-meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--collection-color, var(--accent-primary));
+    margin-bottom: 0.5rem;
+}
+
+.featured-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.featured-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.featured-browse-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--collection-color, var(--accent-primary));
+}
+
+.featured-browse-link::after {
+    content: "\2192";
+    transition: transform var(--transition-fast);
+}
+
+.featured-browse-link:hover::after {
+    transform: translateX(3px);
+}
+
+.featured-secondary {
+    text-align: center;
+    font-size: 0.9375rem;
+}
+
+.featured-secondary a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition-fast);
+}
+
+.featured-secondary a:hover {
+    color: var(--accent-primary);
+}
+
+/* ===== Testimonials (social proof) ===== */
+.testimonials {
+    padding: var(--section-padding) 0;
+    background-color: var(--bg-secondary);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--bg-primary);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-quote {
+    font-family: 'Baskerville', Georgia, serif;
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0 0 1.25rem;
+}
+
+.testimonial-quote::before {
+    content: "\201C";
+}
+
+.testimonial-quote::after {
+    content: "\201D";
+}
+
+.testimonial-attribution {
+    margin-top: auto;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.testimonial-attribution::before {
+    content: "\2014\00a0";
+}
+
+/* ===== Pricing strip (inside the #download CTA) ===== */
+.pricing-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 720px;
+    margin: 3rem auto 0;
+    text-align: left;
+}
+
+@media (min-width: 640px) {
+    .pricing-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.pricing-card {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-tier {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    background-color: var(--accent-complement);
+    color: #fff;
+}
+
+.pricing-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.pricing-features li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary-dark);
+    font-weight: 700;
+}
+
+.pricing-card-premium {
+    border: 2px solid var(--accent-primary);
+}
+
+/* ===== FAQ (homepage accordion) ===== */
+.faq {
+    padding: var(--section-padding) 0;
+    background-color: var(--bg-secondary);
+}
+
+.faq-list {
+    max-width: 720px;
+    margin: 3rem auto 2rem;
+}
+
+.faq-item {
+    background-color: var(--bg-primary);
+    border-radius: var(--card-radius);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.faq-heading {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.faq-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.faq-chevron {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.faq-toggle[aria-expanded="true"] .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.25rem;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.faq-more {
+    text-align: center;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+}
+
+.faq-more a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.faq-more a:hover {
+    color: var(--accent-primary-dark);
+}
+
+/* App icon light/dark pairing — the markup renders both, the active theme
+   shows one (same pattern as .screenshot-light/.screenshot-dark). */
+.light-theme .app-icon-dark {
+    display: none;
+}
+
+.dark-theme .app-icon-light {
+    display: none;
 }

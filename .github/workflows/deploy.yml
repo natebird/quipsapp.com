@@ -25,6 +25,90 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Validate JSON data files
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import sys
+          import datetime
+
+          errors = []
+
+          def load(path):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      return json.load(f)
+              except Exception as e:
+                  errors.append(f"{path}: invalid JSON ({e})")
+                  return None
+
+          # announcements.json - single in-app announcement banner, consumed by the iOS app.
+          ann = load("announcements.json")
+          if ann is not None:
+              for field in ("title", "content", "timestamp"):
+                  if not isinstance(ann.get(field), str) or not ann.get(field):
+                      errors.append(f"announcements.json: missing/empty required field '{field}'")
+              ts = ann.get("timestamp")
+              if isinstance(ts, str):
+                  try:
+                      datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                  except ValueError:
+                      errors.append(f"announcements.json: 'timestamp' is not a valid ISO-8601 datetime: {ts!r}")
+              link = ann.get("link")
+              if link is not None:
+                  if not isinstance(link, dict):
+                      errors.append("announcements.json: 'link' must be an object")
+                  else:
+                      for field in ("type", "url", "label"):
+                          if not isinstance(link.get(field), str) or not link.get(field):
+                              errors.append(f"announcements.json: link.{field} missing/empty")
+
+          # faqs.json - sections of FAQs shown on support.html and in the iOS app.
+          faqs = load("faqs.json")
+          if faqs is not None:
+              sections = faqs.get("sections")
+              if not isinstance(sections, list) or not sections:
+                  errors.append("faqs.json: 'sections' must be a non-empty list")
+              else:
+                  for s in sections:
+                      if not isinstance(s, dict) or not s.get("id") or not s.get("title"):
+                          errors.append(f"faqs.json: section missing id/title: {s!r}")
+                          continue
+                      items = s.get("faqs")
+                      if not isinstance(items, list) or not items:
+                          errors.append(f"faqs.json: section '{s.get('id')}' has no faqs")
+                          continue
+                      for item in items:
+                          for field in ("id", "question", "answer"):
+                              if not isinstance(item.get(field), str) or not item.get(field):
+                                  errors.append(f"faqs.json: faq in section '{s.get('id')}' missing/empty '{field}'")
+
+          # collections.json - manifest of public collections shown on collections.html
+          # and in the iOS app. It is NOT tracked in git: the pinned pull below
+          # creates it. Validate only if a local copy happens to exist.
+          import os
+          cols = load("collections.json") if os.path.exists("collections.json") else None
+          if cols is not None:
+              items = cols.get("collections")
+              if not isinstance(items, list) or not items:
+                  errors.append("collections.json: 'collections' must be a non-empty list")
+              else:
+                  for c in items:
+                      for field in ("id", "name", "quoteCount"):
+                          if field not in c:
+                              errors.append(f"collections.json: collection missing '{field}': {c.get('id', c)!r}")
+
+          if errors:
+              print("JSON validation failed:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+
+          validated = ["announcements.json", "faqs.json"] + (["collections.json"] if cols is not None else [])
+          print(f"JSON validation passed: {', '.join(validated)}")
+          PY
+
       - name: Pull pinned collections from data.quipsapp.com
         run: |
           set -euo pipefail
@@ -37,6 +121,37 @@ jobs:
             curl -fsSL "${BASE}/collections/${id}.json" -o "collections/${id}.json"
           done
           echo "Pulled $(ls collections | wc -l) collection files."
+
+      - name: Validate pulled collections data
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import glob
+          import json
+          import sys
+
+          errors = []
+          for path in ["collections.json"] + sorted(glob.glob("collections/*.json")):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      json.load(f)
+              except Exception as e:
+                  errors.append(f"{path}: invalid JSON ({e})")
+
+          if errors:
+              print("Pulled collections data failed JSON validation:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+
+          print("Validated collections.json and all collections/*.json files pulled from data.quipsapp.com.")
+          PY
+
+      - name: Build collection pages and sitemap
+        run: node scripts/build-collections.mjs
+
+      - name: Build press kit archive
+        run: node scripts/build-press-kit.mjs
 
       - uses: actions/upload-pages-artifact@v5
         with:

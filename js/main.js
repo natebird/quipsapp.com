@@ -16,9 +16,14 @@
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    // Get stored theme or null if not set
+    // Get stored theme or null if not set (localStorage can throw when
+    // storage is blocked, e.g. some private-browsing modes)
     function getStoredTheme() {
-        return localStorage.getItem(THEME_KEY);
+        try {
+            return localStorage.getItem(THEME_KEY);
+        } catch (e) {
+            return null;
+        }
     }
 
     // Apply theme to document
@@ -46,12 +51,18 @@
         applyTheme(theme);
     }
 
+    // Apply a specific theme and remember the preference
+    function setTheme(theme) {
+        applyTheme(theme);
+        try {
+            localStorage.setItem(THEME_KEY, theme);
+        } catch (e) { /* storage blocked — theme still applies this page */ }
+    }
+
     // Toggle theme and save preference
     function toggleTheme() {
         const currentTheme = getCurrentTheme();
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(newTheme);
-        localStorage.setItem(THEME_KEY, newTheme);
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
     }
 
     // Listen for system theme changes (only applies if user hasn't set manual preference)
@@ -259,9 +270,6 @@
 
         if (!form) return;
 
-        // Fetch MailerLite tracking (as original embed does)
-        fetch('https://assets.mailerlite.com/jsonp/1995826/forms/174542333353657562/takel');
-
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
 
@@ -302,9 +310,6 @@
 
         if (!forms.length) return;
 
-        // Fetch MailerLite tracking
-        fetch('https://assets.mailerlite.com/jsonp/1995826/forms/174550881235109546/takel');
-
         forms.forEach(form => {
             const submitBtn = form.querySelector('.course-submit-btn');
             const loadingBtn = form.querySelector('.course-loading-btn');
@@ -343,6 +348,33 @@
         });
     }
 
+    // ===== Homepage FAQ Accordion =====
+    // Accessible accordion for the static FAQ list on index.html. Each
+    // question is a <button aria-expanded aria-controls> paired with a
+    // hidden answer panel. One panel open at a time.
+    function initHomeFaq() {
+        const toggles = document.querySelectorAll('.faq .faq-toggle');
+        if (!toggles.length) return;
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+
+                // Close any other open panel first (one open at a time).
+                toggles.forEach(other => {
+                    if (other === toggle) return;
+                    other.setAttribute('aria-expanded', 'false');
+                    const otherPanel = document.getElementById(other.getAttribute('aria-controls'));
+                    if (otherPanel) otherPanel.hidden = true;
+                });
+
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                const panel = document.getElementById(toggle.getAttribute('aria-controls'));
+                if (panel) panel.hidden = expanded;
+            });
+        });
+    }
+
     // ===== Initialize =====
     function init() {
         // Theme
@@ -355,6 +387,11 @@
             themeToggle.addEventListener('click', toggleTheme);
         }
 
+        // Inline theme links (e.g. "light mode" / "dark mode" in copy)
+        document.querySelectorAll('.theme-inline-link').forEach(link => {
+            link.addEventListener('click', () => setTheme(link.dataset.theme));
+        });
+
         // Other features
         initNavMenu();
         initSmoothScroll();
@@ -364,6 +401,7 @@
         updateCopyrightYear();
         initNewsletter();
         initCourseForm();
+        initHomeFaq();
     }
 
     // Run when DOM is ready

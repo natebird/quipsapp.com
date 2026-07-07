@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quips - Your daily dose of inspiration, beautifully organized. Save and organize your favorite quotes with a beautiful, colorful interface.">
-    <meta name="keywords" content="quotes, inspiration, motivation, iOS app, quote organizer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://assets.mailerlite.com https://cloudflareinsights.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none';">
+    <meta name="description" content="Save the quotes that move you, style them beautifully in Share Studio, and share them anywhere. Browse 80+ curated collections — free to start.">
+    <meta name="keywords" content="quotes, quote collector, quote organizer, motivation, inspiration, quotebook, wisdom, sayings, journal, widget, daily quote, stoicism, mindfulness, iOS app">
+    <link rel="canonical" href="https://quipsapp.com/">
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="Quips - Save the Quotes That Inspire You">
-    <meta property="og:description" content="Your daily dose of inspiration, beautifully organized.">
+    <meta property="og:title" content="Quips — Save, Style & Share Quotes">
+    <meta property="og:description" content="Turn any quote into a beautiful, shareable image. Save quotes from anywhere, browse 80+ curated collections, and revisit your favorites daily.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://quipsapp.com/">
+    <meta property="og:image" content="https://quipsapp.com/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Quips - Save the Quotes That Inspire You">
-    <meta name="twitter:description" content="Your daily dose of inspiration, beautifully organized.">
-    <meta name="twitter:image" content="images/og-image.png">
+    <meta name="twitter:title" content="Quips — Save, Style & Share Quotes">
+    <meta name="twitter:description" content="Turn any quote into a beautiful, shareable image. Save quotes from anywhere, browse 80+ curated collections, and revisit your favorites daily.">
+    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
 
-    <title>Quips - Your Daily Dose of Inspiration</title>
+    <title>Quips: Quote Collector — Save, Style & Share Quotes</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/png" href="images/app-icon.png">
-    <link rel="apple-touch-icon" href="images/app-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +36,105 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- TODO(launch): uncomment and set the App Store id
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX, app-argument=https://quipsapp.com/">
+    -->
+
+    <!-- Cloudflare Web Analytics (manual beacon; skip if auto-injected)
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TODO"}'></script>
+    -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tweeting Birds",
+      "url": "https://quipsapp.com/",
+      "logo": "https://quipsapp.com/images/app-icon.png",
+      "email": "feedback@quipsapp.com"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Quips: Quote Collector",
+      "operatingSystem": "iOS",
+      "applicationCategory": "LifestyleApplication",
+      "description": "Save the quotes that move you, style them beautifully in Share Studio, and share them anywhere. Browse 80+ curated collections — free to start.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Quips free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Quips is free to download and includes your first 25 saved quotes, every curated collection, home screen widgets, the Daily Quote, and Share Studio. If you outgrow the free tier, Premium unlocks unlimited quotes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Premium include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Premium unlocks unlimited quotes, every Quote Style color and typeface, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Quips has no accounts, no ads, and no tracking. Your quotes live on your device and sync privately through iCloud across your devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms is Quips available on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quips is an iPhone and iPad app, coming soon to the App Store. Home screen widgets, Siri, and Shortcuts are included, and iCloud keeps your library in sync across your devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up or export my quotes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your quotes back up automatically with iCloud, and you can export them anytime from Settings > Import/Export to a file you can save or share."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="light-theme">
+    <script>
+    (function () {
+        try {
+            var theme = localStorage.getItem('quips-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') document.body.classList.replace('light-theme', 'dark-theme');
+        } catch (e) { /* leave default light theme */ }
+    })();
+    </script>
+
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
-            <a href="#" class="logo">
-                <img src="images/app-icon.png" alt="Quips" class="logo-icon">
+            <a href="index.html" class="logo">
+                <img src="images/app-icon.png" alt="Quips" class="logo-icon app-icon-light" width="512" height="512"><img src="images/app-icon-dark.png" alt="Quips" class="logo-icon app-icon-dark" width="512" height="512">
                 <span class="logo-text">Quips</span>
             </a>
             <div class="nav-actions">
@@ -61,6 +155,7 @@
                         <a href="course.html" class="nav-dropdown-item">Email Course</a>
                         <a href="support.html" class="nav-dropdown-item">Support</a>
                         <a href="releases.html" class="nav-dropdown-item">What's New</a>
+                        <a href="press.html" class="nav-dropdown-item">Press Kit</a>
                         <div class="nav-dropdown-divider"></div>
                         <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
                             <span class="theme-label-light">Dark Mode</span>
@@ -82,7 +177,7 @@
                         </button>
                     </div>
                 </div>
-                <a href="#download" class="btn btn-primary">Download</a>
+                <a href="#download" class="btn btn-primary">Get Quips</a>
             </div>
         </nav>
     </header>
@@ -91,16 +186,20 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Your daily dose of inspiration, beautifully organized.</h1>
-                <p class="hero-subtitle">Save the quotes that move you. Organize them with beautiful, colorful cards. Revisit your favorite words of wisdom anytime.</p>
-                <a href="#" class="app-store-badge">
-                    <img src="images/app-store-badge.svg" alt="Download on the App Store">
+                <p class="hero-eyebrow">Quotes deserve more than a screenshot.</p>
+                <h1 class="hero-title">Save, style, and share the quotes that move you.</h1>
+                <p class="hero-subtitle">Turn any quote into a beautiful, shareable image. Start with 80+ curated collections, and build a library you'll actually revisit — no account required.</p>
+                <span class="btn btn-coming-soon">Coming Soon to the App Store</span>
+                <!-- TODO(launch): swap in badge linking to /go/appstore.html?p=hero
+                <a href="/go/appstore.html?p=hero" class="app-store-badge">
+                    <img src="images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
                 </a>
+                -->
             </div>
             <div class="hero-image">
                 <div class="phone-mockup">
-                    <img src="images/screenshot-light.png" alt="Quips app screenshot" class="screenshot screenshot-light">
-                    <img src="images/screenshot-dark.png" alt="Quips app screenshot dark mode" class="screenshot screenshot-dark">
+                    <img src="images/screenshot-light.png" alt="Quips app screenshot" class="screenshot screenshot-light" width="1350" height="2760">
+                    <img src="images/screenshot-dark.png" alt="Quips app screenshot dark mode" class="screenshot screenshot-dark" width="1350" height="2760">
                 </div>
             </div>
         </div>
@@ -109,7 +208,7 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Everything you need to capture inspiration</h2>
+            <h2 class="section-title">Built for people who collect words</h2>
             <div class="features-grid">
                 <div class="feature-card" style="--card-color: #42A5F5">
                     <div class="feature-icon">
@@ -129,8 +228,9 @@
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Public Collections</h3>
-                    <p class="feature-description">Browse curated quote collections on topics like Stoicism, creativity, and literature. Add them to your library for daily inspiration.</p>
+                    <h3 class="feature-title">Curated Collections</h3>
+                    <p class="feature-description">Browse 80+ curated collections on topics like Stoicism, creativity, and literature. Add them to your library for daily inspiration.</p>
+                    <a href="collections.html" class="feature-link">Browse the collections</a>
                 </div>
 
                 <div class="feature-card" style="--card-color: #AB47BC">
@@ -151,8 +251,8 @@
                             <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Make Them Pop</h3>
-                    <p class="feature-description">Quotes show in vibrant color by default. Choose Bold or Subtle looks, recolor the text, and pick a typeface in Quote Style.</p>
+                    <h3 class="feature-title">A Library That Looks Like You</h3>
+                    <p class="feature-description">Your quotes display in vibrant color inside the app. Switch between Bold and Subtle looks, recolor text, and choose a typeface — your whole collection, your style.</p>
                 </div>
 
                 <div class="feature-card" style="--card-color: #FF7043">
@@ -163,7 +263,7 @@
                         </svg>
                     </div>
                     <h3 class="feature-title">Daily Quote</h3>
-                    <p class="feature-description">Opt in to a daily quote notification delivered at a time you pick — an easy way to build an everyday habit of inspiration.</p>
+                    <p class="feature-description">Get one quote delivered each day at a time you choose — a small ritual that keeps your collection alive.</p>
                 </div>
 
                 <div class="feature-card" style="--card-color: #5C6BC0">
@@ -181,11 +281,12 @@
                 <div class="feature-card" style="--card-color: #E91E63">
                     <div class="feature-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Save Favorites</h3>
-                    <p class="feature-description">Heart the quotes that resonate with you and access them instantly in your favorites collection.</p>
+                    <h3 class="feature-title">Private by Design</h3>
+                    <p class="feature-description">No account, no ads, no tracking. Your quotes live on your device and sync privately through iCloud.</p>
                 </div>
 
                 <div class="feature-card" style="--card-color: #00D7D0">
@@ -206,17 +307,158 @@
     <section class="screenshots" id="screenshots">
         <div class="container">
             <h2 class="section-title">See it in action</h2>
-            <p class="section-subtitle">Beautiful in light mode. Stunning in dark mode.</p>
+            <p class="section-subtitle">Beautiful in <button type="button" class="theme-inline-link" data-theme="light">light mode</button>. Stunning in <button type="button" class="theme-inline-link" data-theme="dark">dark mode</button>.</p>
             <!-- Populated from images/screenshots.json by initScreenshotGallery() in js/main.js -->
             <div class="screenshots-gallery" id="screenshots-gallery" data-manifest="images/screenshots.json">
                 <noscript>
                     <div class="screenshot-wrapper">
-                        <img src="images/screenshot-light.png" alt="Quips main quote list" class="gallery-screenshot screenshot-light">
-                        <img src="images/screenshot-dark.png" alt="Quips main quote list" class="gallery-screenshot screenshot-dark">
+                        <img src="images/screenshot-light.png" alt="Quips main quote list" class="gallery-screenshot screenshot-light" width="1350" height="2760" loading="lazy">
+                        <img src="images/screenshot-dark.png" alt="Quips main quote list" class="gallery-screenshot screenshot-dark" width="1350" height="2760" loading="lazy">
                         <span class="screenshot-label">Your Quotes</span>
                     </div>
                 </noscript>
             </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection Section -->
+    <section class="featured-collection" id="featured-collection">
+        <div class="container">
+            <h2 class="section-title">Featured collection of the week</h2>
+            <!-- Card content is replaced by js/featured.js; the markup below is the no-JS / fetch-failure fallback -->
+            <div class="featured-card" id="featured-card">
+                <div class="featured-card-body">
+                    <h3 class="featured-name">80+ curated collections</h3>
+                    <p class="featured-description">Stoic wisdom, literary classics, creative minds, comedy one-liners, and more — hand-picked quotes ready to add to your library.</p>
+                    <a href="collections.html" class="featured-browse-link">Browse the collections</a>
+                </div>
+            </div>
+            <p class="featured-secondary"><a href="collections.html">See all collections</a></p>
+        </div>
+    </section>
+
+    <!-- PLACEHOLDER TESTIMONIALS — replace with real quotes before launch -->
+    <!-- Social Proof Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What early users are saying</h2>
+            <div class="testimonials-grid">
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">I've had quotes buried in my camera roll for years. Quips is the first app that actually made me want to organize them.</blockquote>
+                    <figcaption class="testimonial-attribution">TestFlight beta tester</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">The images from Share Studio look better than anything I could make in a design app. I share one with my book club every week.</blockquote>
+                    <figcaption class="testimonial-attribution">TestFlight beta tester</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <blockquote class="testimonial-quote">No account, no ads, and my quotes just show up on my iPad on their own. Exactly how an app should work.</blockquote>
+                    <figcaption class="testimonial-attribution">TestFlight beta tester</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- END PLACEHOLDER TESTIMONIALS -->
+
+    <!-- CTA Section -->
+    <section class="cta" id="download">
+        <div class="container cta-content">
+            <img src="images/app-icon.png" alt="Quips" class="cta-icon app-icon-light" width="512" height="512" loading="lazy"><img src="images/app-icon-dark.png" alt="Quips" class="cta-icon app-icon-dark" width="512" height="512" loading="lazy">
+            <h2 class="cta-title">Start your collection today</h2>
+            <p class="cta-subtitle">Quips is coming soon to the App Store — free to download.</p>
+            <span class="btn btn-coming-soon">Coming Soon to the App Store</span>
+            <!-- TODO(launch): swap in badge linking to /go/appstore.html?p=cta
+            <a href="/go/appstore.html?p=cta" class="app-store-badge">
+                <img src="images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
+            </a>
+            -->
+            <div class="pricing-strip">
+                <div class="pricing-card">
+                    <h3 class="pricing-tier">Free</h3>
+                    <p class="pricing-price">$0</p>
+                    <ul class="pricing-features">
+                        <li>Save your first 25 quotes</li>
+                        <li>Browse every curated collection</li>
+                        <li>Home screen widgets</li>
+                        <li>Daily Quote</li>
+                        <li>Share Studio</li>
+                    </ul>
+                </div>
+                <div class="pricing-card pricing-card-premium">
+                    <h3 class="pricing-tier">Premium <span class="pricing-badge">Limited launch pricing</span></h3>
+                    <p class="pricing-price">$0.99/month or $8.99/year</p>
+                    <ul class="pricing-features">
+                        <li>Unlimited quotes</li>
+                        <li>Every Quote Style color and typeface</li>
+                        <li>Watermark-free sharing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-heading">
+                        <button type="button" class="faq-toggle" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+                            Is Quips free?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                    </h3>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+                        <p>Yes. Quips is free to download and includes your first 25 saved quotes, every curated collection, home screen widgets, the Daily Quote, and Share Studio. If you outgrow the free tier, Premium unlocks unlimited quotes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-heading">
+                        <button type="button" class="faq-toggle" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                            What does Premium include?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                    </h3>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+                        <p>Premium unlocks unlimited quotes, every Quote Style color and typeface, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-heading">
+                        <button type="button" class="faq-toggle" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                            Do I need an account?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                    </h3>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+                        <p>No. Quips has no accounts, no ads, and no tracking. Your quotes live on your device and sync privately through iCloud across your devices.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-heading">
+                        <button type="button" class="faq-toggle" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                            What platforms is Quips available on?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                    </h3>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+                        <p>Quips is an iPhone and iPad app, coming soon to the App Store. Home screen widgets, Siri, and Shortcuts are included, and iCloud keeps your library in sync across your devices.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-heading">
+                        <button type="button" class="faq-toggle" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+                            Can I back up or export my quotes?
+                            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                    </h3>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+                        <p>Yes. Your quotes back up automatically with iCloud, and you can export them anytime from Settings &gt; Import/Export to a file you can save or share.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="faq-more">More questions? <a href="support.html">Visit Support</a></p>
         </div>
     </section>
 
@@ -226,12 +468,13 @@
             <div class="newsletter-wrapper">
                 <div class="newsletter-body">
                     <div class="newsletter-content">
-                        <h4>The Quote Unquote Newsletter</h4>
+                        <h2>The Quote Unquote Newsletter</h2>
                         <blockquote>Quotes deserve more than a screenshot. Get one quote each week, unpacked—the context, the meaning, and why it's worth holding onto.</blockquote>
                     </div>
                     <form class="newsletter-form" action="https://assets.mailerlite.com/jsonp/1995826/forms/174542333353657562/subscribe" method="post">
                         <div class="newsletter-form-row">
-                            <input type="email" name="fields[email]" placeholder="Email" autocomplete="email" required>
+                            <label class="sr-only" for="newsletter-email">Email address</label>
+                            <input type="email" id="newsletter-email" name="fields[email]" placeholder="Email" autocomplete="email" required>
                             <button type="submit" class="btn btn-primary newsletter-submit">Subscribe</button>
                             <button type="button" class="btn btn-primary newsletter-loading" disabled style="display: none;">
                                 <span class="newsletter-spinner"></span>
@@ -243,8 +486,8 @@
                     </form>
                 </div>
                 <div class="newsletter-success" style="display: none;">
-                    <h4>Thank you!</h4>
-                    <p>You have successfully subscribed to the Quote Unquote newsletter.</p>
+                    <h2>Thank you!</h2>
+                    <p>Almost there — check your inbox to confirm your subscription.</p>
                 </div>
             </div>
         </div>
@@ -261,28 +504,17 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="download">
-        <div class="container cta-content">
-            <img src="images/app-icon.png" alt="Quips" class="cta-icon">
-            <h2 class="cta-title">Start collecting inspiration today</h2>
-            <p class="cta-subtitle">Download Quips for free on the App Store.</p>
-            <a href="#" class="app-store-badge">
-                <img src="images/app-store-badge.svg" alt="Download on the App Store">
-            </a>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <img src="images/app-icon.png" alt="Quips" class="footer-icon">
+                <img src="images/app-icon.png" alt="Quips" class="footer-icon app-icon-light" width="512" height="512" loading="lazy"><img src="images/app-icon-dark.png" alt="Quips" class="footer-icon app-icon-dark" width="512" height="512" loading="lazy">
                 <span class="footer-name">Quips</span>
             </div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms & Conditions</a>
+                <a href="press.html">Press Kit</a>
             </div>
             <p class="footer-copyright">&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.</p>
         </div>
@@ -290,6 +522,6 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" defer></script>
+    <script src="js/featured.js"></script>
 </body>
 </html>
