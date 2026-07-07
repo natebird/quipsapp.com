@@ -159,6 +159,9 @@ jobs:
       - name: Build press kit archive
         run: node scripts/build-press-kit.mjs
 
+      - name: Build legal pages from Markdown
+        run: node scripts/build-legal.mjs
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: .
