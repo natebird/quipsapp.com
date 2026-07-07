@@ -105,7 +105,8 @@ jobs:
                   print(f"  - {e}")
               sys.exit(1)
 
-          print("JSON validation passed: announcements.json, faqs.json, collections.json")
+          validated = ["announcements.json", "faqs.json"] + (["collections.json"] if cols is not None else [])
+          print(f"JSON validation passed: {', '.join(validated)}")
           PY
 
       - name: Pull pinned collections from data.quipsapp.com

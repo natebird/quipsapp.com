@@ -109,6 +109,12 @@ for (const screen of manifest.gallery || []) {
     copyAsset(screen.dark, `screenshots/quips-${slug}-dark.png`);
 }
 
+// Refuse to ship an incomplete kit — and bail BEFORE touching the existing
+// zip, so a failed build never replaces a complete one on disk.
+if (skipped.length) {
+    fail(`missing assets, refusing to ship an incomplete kit: ${skipped.join(', ')}`);
+}
+
 // ---------------------------------------------------------------------------
 // 3. Zip it
 // ---------------------------------------------------------------------------
@@ -124,6 +130,3 @@ fs.rmSync(stage, { recursive: true, force: true });
 
 const size = Math.round(fs.statSync(OUT_ZIP).size / 1024);
 console.log(`build-press-kit: wrote images/quips-press-kit.zip (${size} KB)`);
-if (skipped.length) {
-    fail(`missing assets, refusing to ship an incomplete kit: ${skipped.join(', ')}`);
-}
