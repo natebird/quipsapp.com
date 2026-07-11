@@ -15,6 +15,8 @@ the Email Course nav item, press.html had a different footer encoding, etc.).
 | `collection.html` | Legacy client-rendered collection view (`?id=`) | Kept as fallback; canonical points to static page |
 | `collections/<id>.html` | Pre-rendered collection pages | **Generated** by `scripts/build-collections.mjs` — never hand-edit; edit the script's template |
 | `course.html` | 7-day email course landing | |
+| `quote-unquote.html` | Quote Unquote newsletter landing page | Subscribe form + archive list; linked from the homepage newsletter section |
+| `quote-unquote/<n>-<slug>.html` | Individual newsletter editions | Hand-authored (not generated); root-absolute paths like `collections/<id>.html` |
 | `support.html` | Support + FAQ (renders `faqs.json`) | |
 | `releases.html` | What's New / changelog | |
 | `press.html` | Press kit | |
@@ -47,7 +49,13 @@ In this order, after charset/viewport:
    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
    ```
 5. `<title>` — pattern: `<Page Name> — Quips` (homepage keeps its full marketing title).
-6. Favicons, Google Fonts (with preconnects), `css/styles.css` — unchanged from existing pages.
+6. Favicons, Google Fonts (with preconnects), `css/styles.css` — unchanged from
+   existing pages. The Google Fonts link loads three families (identical on every
+   page): **Inter** (UI/body), **Libre Baskerville** (display/headings — system
+   `Baskerville` is preferred on Apple, Libre Baskerville is the cross-platform
+   webfont, Georgia the last-resort fallback), and **Merriweather** (quote text,
+   italic). Update the `<link>` on every page and in the `build-collections.mjs` /
+   `build-legal.mjs` templates together if it changes.
 7. Smart App Banner placeholder (uncomment at launch, one place to fill the id):
    ```html
    <!-- TODO(launch): uncomment and set the App Store id
@@ -86,7 +94,9 @@ forms. Never add MailerLite hosts to `script-src` (we don't load their
 scripts), and keep the Cloudflare Insights hosts so the analytics beacon works
 when enabled.
 
-Pages **with** MailerLite forms (`index.html`, `course.html`):
+Pages **with** MailerLite forms (`index.html`, `course.html`, `quote-unquote.html`,
+and every `quote-unquote/<n>-<slug>.html` edition — each ends with a subscribe
+form):
 
 ```
 default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://assets.mailerlite.com https://cloudflareinsights.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none';
@@ -123,9 +133,10 @@ Logo links to `index.html` (never `#`). Dropdown items, in this order:
 
 ```html
 <a href="collections.html" class="nav-dropdown-item">Collections</a>
+<a href="releases.html" class="nav-dropdown-item">What's New</a>
+<a href="quote-unquote.html" class="nav-dropdown-item">Quote Unquote</a>
 <a href="course.html" class="nav-dropdown-item">Email Course</a>
 <a href="support.html" class="nav-dropdown-item">Support</a>
-<a href="releases.html" class="nav-dropdown-item">What's New</a>
 <a href="press.html" class="nav-dropdown-item">Press Kit</a>
 <div class="nav-dropdown-divider"></div>
 <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">…</button>
@@ -219,6 +230,61 @@ heading serif), tagline "QUOTES DESERVE MORE THAN A SCREENSHOT".
   them responsive.
 - Below-the-fold images get `loading="lazy"`. Above-the-fold hero images stay
   eager. PNG format (no WebP conversion — owner preference).
+
+## Collection tint colors (Quips Palette 2.0)
+
+Per-collection accents (listing card border/icon/badge, detail-page hero,
+quote-item borders) are driven by the collection's `colorName`, emitted as a
+`data-color` attribute and mapped to a hex in `css/styles.css`. The site brand
+accent stays teal (`--accent-primary`); only these collection/quote accents use
+the palette.
+
+- The palette is the app's **Quips Palette 2.0** — 16 OKLCH tokens, each with a
+  light + dark pair (`--c-rose … --c-gray`, defined in `:root` and `.dark-theme`).
+  Source of truth is the app's `ColorTintOption.hexPair`; if the app retunes,
+  update the `--c-*` values (see `app/proposals/quips-website-palette-update.md`).
+- `[data-color="<token>"]` selectors cover all 16 new tokens **and** keep the
+  old quips-collections data tokens (`gold`, `navyBlue`, `mint`, `forestGreen`,
+  `lemon`, `brown`, `primaryBlue`, `cloudy`, …) as aliases to the nearest new
+  hue, so pages render correctly both before and after the data repo migrates
+  to the new token names (`app/proposals/quips-collections-token-migration.md`).
+  When the data is fully migrated, the aliases can be dropped.
+- The detail hero fills a large area with the tint under text, so it sets
+  `--collection-ink` (near-black on light-fill tints and on every tint in dark
+  theme, white otherwise) to hold WCAG AA. Card accents sit on neutral
+  backgrounds and don't need it.
+- The Palette 2.0 `teal` token was renamed **`jade`** (`--c-jade`) so "Teal"
+  unambiguously means the brand color; `[data-color="jade"]` is canonical, with
+  `teal`/`mint` kept as aliases to `--c-jade`.
+- **Tints are for fills, icons, and borders — never text.** Saturated mid-tones
+  fail contrast as text on white (Yellow is 1.3:1). Badge labels and card CTAs
+  use `--text-primary` / `--accent-ink`, not `--collection-color`; the tint stays
+  on the border, icon, and card top-rule.
+
+## Brand color usage & accessibility
+
+The brand accent `--accent-primary` (#00D7D0) is a bright teal — great as a
+**fill/border/icon/focus** color, but too light for text (1.8:1 white-on-teal,
+1.8:1 teal-on-white). Two derived tokens keep it accessible:
+
+- `--accent-ink` — a darkened teal (#00726E light / #00D7D0 dark, theme-aware)
+  for **teal text and links**. Use it, not `--accent-primary`, for any
+  `color:` on text. Filled controls (`.btn-primary`, `.filter-pill.active`,
+  badges) use a fixed dark ink label (`#1A1A1A`) on the bright fill, never white.
+- `--danger` — a dedicated error red (#B3261E light / #FF5C4E dark), distinct
+  from Coral (`--accent-complement`). **Coral = action/warmth; Danger = errors
+  and "not included."** Never signal errors with Coral.
+- `--cta-from` / `--cta-to` (#BE4740 → #9A312C) — a **darkened Coral gradient**
+  used only by the large filled hero sections (`.cta`, `.course-final-cta`) so
+  white heading + subtitle text clears AA (~5:1); bright Coral is too light at
+  that scale. Their subtitles run at full opacity (not 0.9) for the same reason.
+  Small Coral controls (pricing badge) keep the bright `--accent-complement`
+  with a dark ink label.
+- Color is never the sole differentiator: collections read by icon + name +
+  color together, so the palette stays usable in color-blind vision.
+
+See the living brand guide (published Artifact, "Quips Brand Guide") for the
+full swatch set and rules.
 
 ## Generated files (never hand-edit)
 
