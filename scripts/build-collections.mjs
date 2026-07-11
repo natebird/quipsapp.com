@@ -188,7 +188,7 @@ function collectionPageHtml(collection) {
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/styles.css">
     <style>
@@ -339,6 +339,10 @@ const STATIC_PAGES = [
     '', // homepage -> https://quipsapp.com/
     'collections.html',
     'course.html',
+    'quote-unquote.html',
+    'quote-unquote/1-jobs.html',
+    'quote-unquote/2-rohn.html',
+    'quote-unquote/3-perlman.html',
     'support.html',
     'releases.html',
     'press.html',

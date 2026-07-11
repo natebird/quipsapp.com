@@ -29,7 +29,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -137,7 +137,25 @@
         </div>
 
         <div id="collections-container">
-            <p class="loading-text">Loading collections...</p>
+            <div class="skeleton-grid" role="status" aria-live="polite">
+                <span class="sr-only">Loading collections…</span>
+                <div class="skel-card" aria-hidden="true">
+                    <div class="skel-head"><span class="skel skel-avatar"></span><span class="skel-head-lines"><span class="skel skel-title"></span><span class="skel skel-sub"></span></span></div>
+                    <div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div>
+                </div>
+                <div class="skel-card" aria-hidden="true">
+                    <div class="skel-head"><span class="skel skel-avatar"></span><span class="skel-head-lines"><span class="skel skel-title"></span><span class="skel skel-sub"></span></span></div>
+                    <div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div>
+                </div>
+                <div class="skel-card" aria-hidden="true">
+                    <div class="skel-head"><span class="skel skel-avatar"></span><span class="skel-head-lines"><span class="skel skel-title"></span><span class="skel skel-sub"></span></span></div>
+                    <div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div>
+                </div>
+                <div class="skel-card" aria-hidden="true">
+                    <div class="skel-head"><span class="skel skel-avatar"></span><span class="skel-head-lines"><span class="skel skel-title"></span><span class="skel skel-sub"></span></span></div>
+                    <div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div>
+                </div>
+            </div>
         </div>
 
         <div class="suggest-box">

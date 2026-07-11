@@ -29,7 +29,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
     <style>
@@ -131,7 +131,16 @@
         </a>
 
         <div id="collection-detail">
-            <p class="loading-text">Loading collection...</p>
+            <div role="status" aria-live="polite">
+                <span class="sr-only">Loading collection…</span>
+                <div class="skel-hero" aria-hidden="true"></div>
+                <div class="skeleton-grid" aria-hidden="true">
+                    <div class="skel-card"><div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div></div>
+                    <div class="skel-card"><div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div></div>
+                    <div class="skel-card"><div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div></div>
+                    <div class="skel-card"><div class="skel-body"><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel short"></span></div></div>
+                </div>
+            </div>
         </div>
     </main>
 

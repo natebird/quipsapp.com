@@ -10,13 +10,12 @@
     /* Brand Colors */
     --accent-primary: #00D7D0;
     --accent-primary-dark: #00B8B2;
-    --accent-complement: #FF6B6B;
+    --accent-ink: #00726E;          /* darkened teal — legible as text/links on light surfaces (brand teal is too light for text: 1.8:1 on white) */
+    --accent-complement: #FF6B6B;   /* Coral — action/warmth only */
     --accent-complement-dark: #E55A5A;
-    --card-pink: #E91E63;
-    --card-blue: #42A5F5;
-    --card-purple: #AB47BC;
-    --card-teal: #26C6DA;
-    --card-orange: #FFA726;
+    --cta-from: #BE4740;            /* darkened Coral for large filled heroes — white text clears AA (5.0:1); bright Coral is too light at that scale */
+    --cta-to: #9A312C;
+    --danger: #B3261E;              /* errors / destructive — deliberately distinct from Coral so action ≠ alarm */
 
     /* UI */
     --border-color: #E5E7EB;
@@ -42,6 +41,9 @@
     --text-secondary: #A0A0A0;
     --text-muted: #6B6B6B;
     --border-color: #2D2D2D;
+    /* On dark grounds the bright brand teal is already high-contrast, so ink = the brand teal; danger brightens for near-black. */
+    --accent-ink: #00D7D0;
+    --danger: #FF5C4E;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -67,7 +69,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
 }
 
 img {
@@ -284,7 +286,7 @@ a {
 
 .btn-primary {
     background-color: var(--accent-primary);
-    color: white;
+    color: #1A1A1A; /* dark ink on bright teal = 9.6:1 (white failed at 1.8:1); fixed value — teal fill is the same in both themes */
 }
 
 .btn-primary:hover {
@@ -406,14 +408,14 @@ a {
     border: none;
     padding: 0;
     font: inherit;
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     text-decoration: underline;
     text-underline-offset: 2px;
     cursor: pointer;
 }
 
 .theme-inline-link:hover {
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
 }
 
 /* ===== Features Section ===== */
@@ -678,7 +680,7 @@ a {
 /* ===== CTA Section ===== */
 .cta {
     padding: var(--section-padding) 0;
-    background: linear-gradient(135deg, var(--accent-complement) 0%, var(--accent-complement-dark) 100%);
+    background: linear-gradient(135deg, var(--cta-from) 0%, var(--cta-to) 100%);
     color: white;
 }
 
@@ -708,7 +710,6 @@ a {
 
 .cta-subtitle {
     font-size: 1.125rem;
-    opacity: 0.9;
     margin-bottom: 2rem;
 }
 
@@ -789,7 +790,7 @@ a {
 }
 
 .course-hero-title {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -874,7 +875,7 @@ a {
 }
 
 .course-success-content h2 {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -917,7 +918,7 @@ a {
 }
 
 .course-success-steps a {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     text-decoration: underline;
 }
 
@@ -940,7 +941,7 @@ a {
 }
 
 .course-section-title {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
     font-size: 1.75rem;
     font-weight: 700;
     text-align: center;
@@ -980,12 +981,12 @@ a {
 }
 
 .course-prose a {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     text-decoration: underline;
 }
 
 .course-prose a:hover {
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
 }
 
 .course-highlight {
@@ -1044,7 +1045,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     margin-bottom: 0.5rem;
 }
 
@@ -1133,7 +1134,7 @@ a {
     content: "✗";
     position: absolute;
     left: 0;
-    color: var(--accent-complement);
+    color: var(--danger); /* "not included" mark = alarm, not the action Coral */
     font-weight: 700;
 }
 
@@ -1236,7 +1237,7 @@ a {
 
 /* Final CTA */
 .course-final-cta {
-    background: linear-gradient(135deg, var(--accent-complement) 0%, var(--accent-complement-dark) 100%) !important;
+    background: linear-gradient(135deg, var(--cta-from) 0%, var(--cta-to) 100%) !important;
     color: white;
 }
 
@@ -1252,7 +1253,6 @@ a {
 
 .course-final-subtitle {
     font-size: 1.125rem;
-    opacity: 0.9;
     margin-bottom: 2rem;
 }
 
@@ -1294,7 +1294,7 @@ a {
 }
 
 .course-promo-content h2 {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -1380,7 +1380,7 @@ a {
     transition: color var(--transition-fast);
 }
 .back-link:hover {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     text-decoration: none;
 }
 
@@ -1440,7 +1440,7 @@ a {
 .filter-pill.active {
     background-color: var(--accent-primary);
     border-color: var(--accent-primary);
-    color: #fff;
+    color: #1A1A1A; /* dark ink on bright teal fill (was white, 1.8:1) */
 }
 
 /* Collections grid */
@@ -1521,7 +1521,7 @@ a {
     font-weight: 600;
     letter-spacing: 0.02em;
     background-color: var(--bg-primary);
-    color: var(--collection-color, var(--accent-primary));
+    color: var(--text-primary); /* label = ink; the tint stays on the border (tints aren't legible as text — yellow is 1.3:1 on white) */
     border: 1px solid var(--collection-color, var(--accent-primary));
 }
 .collection-description {
@@ -1544,7 +1544,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    color: var(--collection-color, var(--accent-primary));
+    color: var(--accent-ink); /* CTA link uses the brand ink, not the per-collection tint (kept on the card's top rule + icon) */
     font-weight: 600;
     font-size: 0.875rem;
 }
@@ -1560,12 +1560,12 @@ a {
     border-radius: var(--card-radius);
     padding: 2.5rem 2rem;
     margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, var(--collection-color, var(--accent-primary)) 0%, var(--collection-color-light, var(--accent-primary-dark)) 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--collection-color, var(--accent-primary)) 0%, color-mix(in srgb, var(--collection-color, var(--accent-primary)) 74%, #fff) 100%);
+    color: var(--collection-ink, #fff);
 }
 .collection-hero .collection-icon {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background-color: color-mix(in srgb, var(--collection-ink, #fff) 20%, transparent);
+    color: var(--collection-ink, #fff);
     width: 56px;
     height: 56px;
 }
@@ -1588,7 +1588,7 @@ a {
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: color-mix(in srgb, var(--collection-ink, #fff) 20%, transparent);
 }
 .collection-hero p {
     font-size: 1.1rem;
@@ -1640,19 +1640,64 @@ a {
     font-size: 0.8125rem;
 }
 
-/* Color variants (shared by listing cards and detail hero) */
-[data-color="gold"] { --collection-color: #FFA726; --collection-color-light: #FFB74D; }
-[data-color="lemon"] { --collection-color: #FBC02D; --collection-color-light: #FDD835; }
-[data-color="navyBlue"] { --collection-color: #3949AB; --collection-color-light: #5C6BC0; }
-[data-color="purple"] { --collection-color: #AB47BC; --collection-color-light: #BA68C8; }
-[data-color="primaryBlue"] { --collection-color: #42A5F5; --collection-color-light: #64B5F6; }
-[data-color="brown"] { --collection-color: #8D6E63; --collection-color-light: #A1887F; }
-[data-color="mint"] { --collection-color: #26A69A; --collection-color-light: #4DB6AC; }
-[data-color="red"] { --collection-color: #E53935; --collection-color-light: #EF5350; }
-[data-color="magenta"] { --collection-color: #D81B60; --collection-color-light: #EC407A; }
-[data-color="orange"] { --collection-color: #FB8C00; --collection-color-light: #FFA726; }
-[data-color="forestGreen"] { --collection-color: #2E7D32; --collection-color-light: #43A047; }
-[data-color="cyan"] { --collection-color: #00ACC1; --collection-color-light: #26C6DA; }
+/* ---------------------------------------------------------------------------
+   Quips Palette 2.0 — per-collection tint tokens (light + dark pairs).
+   Source of truth: the app's ColorTintOption.hexPair (QuipsColorKit). These
+   drive only the collection/quote accents via [data-color]; the site's brand
+   accent stays teal (--accent-primary). The dark value of each hue is the same
+   hue tuned brighter for dark backgrounds, so accents stay vivid in both
+   themes. See docs proposal: quips-website-palette-update.md.
+   --------------------------------------------------------------------------- */
+:root {
+    --c-rose: #E03063;   --c-red: #E92528;     --c-orange: #E1791C;  --c-amber: #E2A520;
+    --c-yellow: #F7E120; --c-lime: #9EDB2A;    --c-green: #27AE57;   --c-jade: #27A98A;
+    --c-cyan: #29ACB2;   --c-sky: #1F9ED4;     --c-blue: #116BDF;    --c-indigo: #494BEC;
+    --c-violet: #8839E9; --c-purple: #B632CA;  --c-magenta: #D72D97; --c-gray: #8A8D90;
+}
+.dark-theme {
+    --c-rose: #F66E89;   --c-red: #FA7064;     --c-orange: #FDA260;  --c-amber: #FBB620;
+    --c-yellow: #DAC720; --c-lime: #9DDC21;    --c-green: #2BD66A;   --c-jade: #2BD1AA;
+    --c-cyan: #2DD3DA;   --c-sky: #45C2FC;     --c-blue: #4790FB;    --c-indigo: #6A7BF3;
+    --c-violet: #A174F0; --c-purple: #DE56F3;  --c-magenta: #F762B7; --c-gray: #9CA0A3;
+}
+
+/* Color variants (shared by listing cards and detail hero). Each new Palette
+   2.0 token maps to its tint; trailing selectors are the OLD quips-collections
+   data tokens, kept as aliases so pages render correctly both before and after
+   the data migration to the new token names (proposal:
+   quips-collections-token-migration.md). */
+[data-color="rose"]                                                          { --collection-color: var(--c-rose); }
+[data-color="red"]                                                           { --collection-color: var(--c-red); }
+[data-color="orange"]                                                        { --collection-color: var(--c-orange); }
+[data-color="amber"], [data-color="gold"], [data-color="brown"]              { --collection-color: var(--c-amber); }
+[data-color="yellow"], [data-color="lemon"]                                  { --collection-color: var(--c-yellow); }
+[data-color="lime"], [data-color="leaf"]                                     { --collection-color: var(--c-lime); }
+[data-color="green"], [data-color="forestGreen"], [data-color="mediumGreen"] { --collection-color: var(--c-green); }
+[data-color="jade"], [data-color="teal"], [data-color="mint"]                 { --collection-color: var(--c-jade); }
+[data-color="cyan"]                                                          { --collection-color: var(--c-cyan); }
+[data-color="sky"], [data-color="lightBlue"]                                 { --collection-color: var(--c-sky); }
+[data-color="blue"], [data-color="primaryBlue"], [data-color="navyBlue"]     { --collection-color: var(--c-blue); }
+[data-color="indigo"]                                                        { --collection-color: var(--c-indigo); }
+[data-color="violet"]                                                        { --collection-color: var(--c-violet); }
+[data-color="purple"]                                                        { --collection-color: var(--c-purple); }
+[data-color="magenta"]                                                       { --collection-color: var(--c-magenta); }
+[data-color="gray"], [data-color="cloudy"]                                   { --collection-color: var(--c-gray); }
+
+/* Hero text ink. The detail hero fills a large area with the tint and lays
+   text over it, so it needs a foreground chosen for contrast (guide §5).
+   Default is white; the light-fill tints below flip to near-black in light
+   theme, and since every Palette 2.0 tint is a bright pastel in dark theme,
+   the whole dark-theme hero flips to near-black. Only .collection-hero reads
+   --collection-ink; .quotes-grid[data-color] ignores it. */
+[data-color="yellow"], [data-color="lemon"],
+[data-color="lime"], [data-color="leaf"],
+[data-color="amber"], [data-color="gold"], [data-color="brown"],
+[data-color="orange"],
+[data-color="green"], [data-color="forestGreen"], [data-color="mediumGreen"],
+[data-color="jade"], [data-color="teal"], [data-color="mint"],
+[data-color="cyan"],
+[data-color="gray"], [data-color="cloudy"] { --collection-ink: #1a1a1a; }
+.dark-theme .collection-hero[data-color] { --collection-ink: #1a1a1a; }
 
 /* States */
 .loading-text, .error-text {
@@ -1661,7 +1706,46 @@ a {
     padding: 2rem;
 }
 .error-text {
-    color: var(--accent-complement);
+    color: var(--danger);
+}
+
+/* Skeleton loading (client-rendered collections index + detail) */
+@keyframes skeleton-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media (min-width: 700px) {
+    .skeleton-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.skel-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    padding: 1.75rem;
+    border-top: 4px solid var(--border-color);
+}
+.skel-hero {
+    height: 210px;
+    border-radius: var(--card-radius);
+    background-color: var(--bg-secondary);
+    margin-bottom: 2.5rem;
+}
+.skel {
+    display: block;
+    height: 12px;
+    border-radius: 6px;
+    background-color: var(--border-color);
+}
+.skel-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.skel-avatar { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0; }
+.skel-head-lines { flex: 1; display: grid; gap: 0.5rem; }
+.skel-title { height: 20px; width: 60%; }
+.skel-sub { width: 40%; }
+.skel-body { display: grid; gap: 0.6rem; }
+.skel-body .skel.short { width: 72%; }
+@media (prefers-reduced-motion: no-preference) {
+    .skel, .skel-hero { animation: skeleton-pulse 1.5s ease-in-out infinite; }
 }
 
 /* Suggest box */
@@ -1683,7 +1767,7 @@ a {
 }
 .suggest-box .btn {
     background: #fff;
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
     padding: 0.75rem 2rem;
     font-size: 1rem;
 }
@@ -1704,12 +1788,12 @@ a {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
     margin-bottom: 0.75rem;
 }
 
 .dark-theme .hero-eyebrow {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
 }
 
 /* Coming Soon pill (non-link placeholder for the App Store badge) */
@@ -1742,7 +1826,7 @@ a {
     margin-top: 0.75rem;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--card-color, var(--accent-primary));
+    color: var(--accent-ink); /* brand ink, not the card tint (tints aren't legible as text) */
 }
 
 .feature-link::after {
@@ -1779,7 +1863,7 @@ a {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--collection-color, var(--accent-primary));
+    color: var(--accent-ink); /* eyebrow uses brand ink, not the tint */
     margin-bottom: 0.5rem;
 }
 
@@ -1803,7 +1887,7 @@ a {
     gap: 0.4rem;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--collection-color, var(--accent-primary));
+    color: var(--accent-ink); /* browse link uses brand ink, not the tint */
 }
 
 .featured-browse-link::after {
@@ -1828,7 +1912,7 @@ a {
 }
 
 .featured-secondary a:hover {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
 }
 
 /* ===== Testimonials (social proof) ===== */
@@ -1861,7 +1945,7 @@ a {
 }
 
 .testimonial-quote {
-    font-family: 'Baskerville', Georgia, serif;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
     font-style: italic;
     font-size: 1.0625rem;
     line-height: 1.7;
@@ -1935,7 +2019,7 @@ a {
     letter-spacing: 0.02em;
     text-transform: none;
     background-color: var(--accent-complement);
-    color: #fff;
+    color: #1A1A1A; /* dark ink on Coral fill (was white, 2.8:1) */
 }
 
 .pricing-price {
@@ -1964,7 +2048,7 @@ a {
     content: "\2713";
     position: absolute;
     left: 0;
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
     font-weight: 700;
 }
 
@@ -2036,13 +2120,13 @@ a {
 }
 
 .faq-more a {
-    color: var(--accent-primary);
+    color: var(--accent-ink);
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 .faq-more a:hover {
-    color: var(--accent-primary-dark);
+    color: var(--accent-ink);
 }
 
 /* App icon light/dark pairing — the markup renders both, the active theme
@@ -2053,4 +2137,412 @@ a {
 
 .dark-theme .app-icon-light {
     display: none;
+}
+
+/* ===== Quote Unquote Newsletter ===== */
+
+.newsletter-archive-link {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.9375rem;
+}
+
+.newsletter-archive-link a {
+    color: var(--accent-ink);
+    font-weight: 600;
+}
+
+.newsletter-archive-link a:hover {
+    color: var(--accent-ink);
+}
+
+.qu-hero {
+    padding-top: calc(64px + 4rem);
+    padding-bottom: calc(var(--section-padding) * 0.6);
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.qu-hero-content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.qu-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-ink);
+    margin-bottom: 1rem;
+}
+
+.qu-hero-title {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .qu-hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+.qu-hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.qu-hero .newsletter-wrapper {
+    max-width: 460px;
+}
+
+.qu-hero-note {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* Article/landing body sections (mirrors .course-section) */
+.qu-section {
+    padding: var(--section-padding) 0;
+}
+
+.qu-section:nth-child(odd) {
+    background-color: var(--bg-primary);
+}
+
+.qu-section:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.qu-section-title {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .qu-section-title {
+        font-size: 2.25rem;
+    }
+}
+
+.qu-prose {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.qu-prose p {
+    margin-bottom: 1.25rem;
+}
+
+.qu-prose ul,
+.qu-prose ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.qu-prose li {
+    margin-bottom: 0.5rem;
+}
+
+.qu-prose strong {
+    color: var(--text-primary);
+}
+
+.qu-prose a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+}
+
+.qu-prose a:hover {
+    color: var(--accent-ink);
+}
+
+.qu-prose blockquote {
+    background-color: var(--bg-primary);
+    border-left: 4px solid var(--accent-primary);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0 var(--card-radius) var(--card-radius) 0;
+    font-style: italic;
+}
+
+.qu-section:nth-child(even) .qu-prose blockquote {
+    background-color: var(--bg-secondary);
+}
+
+.qu-highlight {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--card-radius);
+    border-left: 4px solid var(--accent-primary);
+    margin: 2rem 0;
+}
+
+.qu-section:nth-child(even) .qu-highlight {
+    background-color: var(--bg-primary);
+}
+
+/* Sample edition callout on the landing page */
+.qu-sample {
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.qu-section:nth-child(even) .qu-sample {
+    background-color: var(--bg-primary);
+}
+
+.qu-sample-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-ink);
+    margin-bottom: 0.75rem;
+}
+
+.qu-sample h3 {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 1.375rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.qu-sample p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.qu-sample-link {
+    color: var(--accent-ink);
+    font-weight: 600;
+}
+
+.qu-sample-link:hover {
+    color: var(--accent-ink);
+}
+
+/* Archive list (landing page + edition footers) */
+.qu-archive-list {
+    max-width: 640px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.qu-archive-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    background-color: var(--bg-primary);
+    border-radius: var(--card-radius);
+    padding: 1.25rem 1.5rem;
+    transition: box-shadow var(--transition-fast);
+}
+
+.qu-section:nth-child(even) .qu-archive-item {
+    background-color: var(--bg-secondary);
+}
+
+.qu-archive-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.qu-archive-number {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--accent-ink);
+    white-space: nowrap;
+}
+
+.qu-archive-item-body h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.qu-archive-item-body p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Article header (edition pages) */
+.qu-article-header {
+    padding-top: calc(64px + 3rem);
+    padding-bottom: 2.5rem;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    text-align: center;
+}
+
+.qu-article-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-ink);
+    margin-bottom: 1rem;
+}
+
+.qu-article-eyebrow a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.qu-article-title {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .qu-article-title {
+        font-size: 2.5rem;
+    }
+}
+
+.qu-article-subtitle {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.qu-article-meta {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Pull quote */
+.qu-quote {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .qu-quote {
+        font-size: 1.75rem;
+    }
+}
+
+.qu-quote cite {
+    display: block;
+    margin-top: 1.25rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* References / footnotes */
+.qu-refs {
+    max-width: 640px;
+    margin: 2rem auto 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 1.25rem;
+}
+
+.qu-refs li {
+    margin-bottom: 0.75rem;
+}
+
+.qu-refs a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+}
+
+.qu-refs a:hover {
+    color: var(--accent-ink);
+}
+
+.qu-ref-link {
+    color: var(--accent-ink);
+    text-decoration: none;
+}
+
+/* Save-to-Quips CTA box */
+.qu-save-cta {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+}
+
+.qu-section:nth-child(even) .qu-save-cta {
+    background-color: var(--bg-primary);
+}
+
+.qu-save-cta h3 {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.qu-save-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Prev/next edition nav */
+.qu-edition-nav {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.qu-edition-nav a {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+}
+
+.qu-edition-nav a:hover {
+    color: var(--accent-ink);
+}
+
+.qu-edition-nav .qu-nav-archive {
+    color: var(--text-muted);
+    font-weight: 400;
 }
