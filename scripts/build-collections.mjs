@@ -245,9 +245,10 @@ ${itemListJsonLd}
                     </button>
                     <div class="nav-dropdown" id="navDropdown">
                         <a href="/collections.html" class="nav-dropdown-item">Collections</a>
+                        <a href="/releases.html" class="nav-dropdown-item">What's New</a>
+                        <a href="/quote-unquote.html" class="nav-dropdown-item">Quote Unquote</a>
                         <a href="/course.html" class="nav-dropdown-item">Email Course</a>
                         <a href="/support.html" class="nav-dropdown-item">Support</a>
-                        <a href="/releases.html" class="nav-dropdown-item">What's New</a>
                         <a href="/press.html" class="nav-dropdown-item">Press Kit</a>
                         <div class="nav-dropdown-divider"></div>
                         <button class="nav-dropdown-item theme-toggle-item" id="themeToggle">
@@ -341,8 +342,7 @@ const STATIC_PAGES = [
     'course.html',
     'quote-unquote.html',
     'quote-unquote/1-jobs.html',
-    'quote-unquote/2-rohn.html',
-    'quote-unquote/3-perlman.html',
+    'quote-unquote/2-crocker.html',
     'support.html',
     'releases.html',
     'press.html',
