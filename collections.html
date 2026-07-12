@@ -126,6 +126,10 @@
         <h1>Quote Collections</h1>
         <p class="collections-intro">Browse curated collections of inspiring quotes. Tap a collection to read every quote, then add it to the Quips app for daily inspiration on your device.</p>
 
+        <!-- Dynamic cross-collection feeds (rendered by js/feeds.js). Empty until
+             the generated feeds load; leaves no gap if they're unavailable. -->
+        <div class="feed-shelves" id="feed-shelves" data-mode="full"></div>
+
         <div class="collections-toolbar" id="collections-toolbar" hidden>
             <div class="collections-search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -183,16 +187,37 @@
 
     <script src="js/main.js"></script>
     <script src="js/collections.js"></script>
+    <script src="js/feeds.js"></script>
     <script>
         let allCollections = [];
         let activeCategory = 'all';
         let searchTerm = '';
 
+        // Surface the newest collections first: primarily by when a collection
+        // was added (addedAt, from the data feed since v1.8.0), then by its most
+        // recent update (lastUpdated). Stable within a timestamp, so the curated
+        // order in collections.json is preserved among ties. Falls back to
+        // lastUpdated if an older feed lacks addedAt.
+        function sortByNewest(collections) {
+            const added = c => String(c.addedAt || c.lastUpdated || '');
+            const updated = c => String(c.lastUpdated || '');
+            return collections
+                .map((collection, index) => ({ collection, index }))
+                .sort((a, b) => {
+                    const byAdded = added(b.collection).localeCompare(added(a.collection));
+                    if (byAdded !== 0) return byAdded;
+                    const byUpdated = updated(b.collection).localeCompare(updated(a.collection));
+                    if (byUpdated !== 0) return byUpdated;
+                    return a.index - b.index;
+                })
+                .map(entry => entry.collection);
+        }
+
         async function loadCollections() {
             try {
                 const response = await fetch('collections.json');
                 const data = await response.json();
-                allCollections = data.collections || [];
+                allCollections = sortByNewest(data.collections || []);
                 buildFilters(allCollections);
                 document.getElementById('collections-toolbar').hidden = false;
                 applyFilters();

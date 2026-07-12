@@ -1838,81 +1838,171 @@ a {
 }
 
 /* ===== Featured Collection of the Week ===== */
-.featured-collection {
+/* ===== Dynamic collection feeds (homepage teaser + collections page) ===== */
+.collection-feeds {
     padding: var(--section-padding) 0;
     background-color: var(--bg-primary);
 }
 
-.featured-card {
+.feed-shelves {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    margin-top: 2.5rem;
+}
+
+/* Collections page: the container starts empty and only fills if the feeds
+   load — don't reserve space (or add a divider) when it stays empty. */
+.feed-shelves:empty {
+    margin: 0;
+}
+
+.collections-content .feed-shelves:not(:empty) {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Homepage no-JS / fetch-failure fallback (replaced on success). */
+.feed-fallback {
     max-width: 720px;
-    margin: 3rem auto 1.25rem;
-    background-color: var(--bg-secondary);
-    border-radius: var(--card-radius);
-    border-top: 4px solid var(--collection-color, var(--accent-primary));
-    padding: 2rem;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    margin: 0 auto;
+    text-align: center;
 }
 
-.featured-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.featured-meta {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--accent-ink); /* eyebrow uses brand ink, not the tint */
-    margin-bottom: 0.5rem;
-}
-
-.featured-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
-}
-
-.featured-description {
+.feed-fallback p {
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1.25rem;
 }
 
-.featured-browse-link {
+.feed-shelf-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.feed-shelf-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.feed-shelf-icon {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 10px;
+    color: var(--collection-color, var(--accent-ink));
+    background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 14%, transparent);
+}
+
+.feed-shelf-icon svg {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.feed-shelf-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.feed-shelf-link {
+    flex-shrink: 0;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--accent-ink); /* browse link uses brand ink, not the tint */
+    color: var(--accent-ink);
 }
 
-.featured-browse-link::after {
+.feed-shelf-link::after {
     content: "\2192";
+    margin-left: 0.35rem;
     transition: transform var(--transition-fast);
+    display: inline-block;
 }
 
-.featured-browse-link:hover::after {
+.feed-shelf-link:hover::after {
     transform: translateX(3px);
 }
 
-.featured-secondary {
-    text-align: center;
-    font-size: 0.9375rem;
+/* Horizontal, scroll-snapping rail of quote cards. */
+.feed-shelf-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 280px);
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0.75rem;
+    scrollbar-width: thin;
 }
 
-.featured-secondary a {
-    color: var(--text-secondary);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color var(--transition-fast);
+.feed-card {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.35rem;
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    border-top: 4px solid var(--collection-color, var(--accent-primary));
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.featured-secondary a:hover {
-    color: var(--accent-ink);
+.feed-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.feed-card-quote {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-primary);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+.feed-card-author {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--collection-color, var(--accent-ink));
+    margin: 0;
+}
+
+.feed-card-foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feed-card-collection {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.feed-card-issue {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    color: var(--collection-color, var(--accent-ink));
+    background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 16%, transparent);
 }
 
 /* ===== Testimonials (social proof) ===== */
