@@ -121,6 +121,17 @@ jobs:
             curl -fsSL "${BASE}/collections/${id}.json" -o "collections/${id}.json"
           done
           echo "Pulled $(ls collections | wc -l) collection files."
+          # Generated cross-collection feeds (Recently Added / On This Day /
+          # Newsletter Picks). Optional — a version may not publish them; the
+          # site degrades gracefully, so a missing feed is not a build failure.
+          for feed in recently-added on-this-day newsletter-picks; do
+            if curl -fsSL "${BASE}/${feed}.json" -o "${feed}.json"; then
+              echo "Pulled ${feed}.json"
+            else
+              echo "No ${feed}.json for v${VER} (skipping)"
+              rm -f "${feed}.json"
+            fi
+          done
 
       - name: Validate pulled collections data
         run: |
@@ -130,8 +141,10 @@ jobs:
           import json
           import sys
 
+          import os
           errors = []
-          for path in ["collections.json"] + sorted(glob.glob("collections/*.json")):
+          feeds = [f for f in ("recently-added.json", "on-this-day.json", "newsletter-picks.json") if os.path.exists(f)]
+          for path in ["collections.json"] + sorted(glob.glob("collections/*.json")) + feeds:
               try:
                   with open(path, "r", encoding="utf-8") as f:
                       json.load(f)
@@ -144,7 +157,7 @@ jobs:
                   print(f"  - {e}")
               sys.exit(1)
 
-          print("Validated collections.json and all collections/*.json files pulled from data.quipsapp.com.")
+          print(f"Validated collections.json, all collections/*.json, and {len(feeds)} generated feed(s) pulled from data.quipsapp.com.")
           PY
 
       # Pin Node so the build doesn't drift with runner image updates

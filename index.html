@@ -88,7 +88,7 @@
           "name": "What does Premium include?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Premium unlocks unlimited quotes, every Quote Style color and typeface, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing."
+            "text": "Premium unlocks unlimited quotes, advanced search, custom quote styles (every color and typeface), multiple Quote of the Day schedules, custom app themes and icons, more private and public collections, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing."
           }
         },
         {
@@ -322,19 +322,18 @@
         </div>
     </section>
 
-    <!-- Featured Collection Section -->
-    <section class="featured-collection" id="featured-collection">
+    <!-- Dynamic Collection Feeds (Recently Added / On This Day / Newsletter Picks) -->
+    <section class="collection-feeds" id="collection-feeds">
         <div class="container">
-            <h2 class="section-title">Featured collection of the week</h2>
-            <!-- Card content is replaced by js/featured.js; the markup below is the no-JS / fetch-failure fallback -->
-            <div class="featured-card" id="featured-card">
-                <div class="featured-card-body">
-                    <h3 class="featured-name">80+ curated collections</h3>
-                    <p class="featured-description">Stoic wisdom, literary classics, creative minds, comedy one-liners, and more — hand-picked quotes ready to add to your library.</p>
-                    <a href="collections.html" class="featured-browse-link">Browse the collections</a>
+            <h2 class="section-title">Fresh from the collections</h2>
+            <!-- Shelves are rendered by js/feeds.js from the generated feeds; the
+                 markup below is the no-JS / fetch-failure fallback. -->
+            <div class="feed-shelves" id="feed-shelves" data-mode="teaser">
+                <div class="feed-fallback">
+                    <p>Explore 80+ curated collections — Stoic wisdom, literary classics, comedy one-liners, and more, hand-picked and ready to add to your library.</p>
+                    <a href="collections.html" class="btn btn-primary">Browse the collections</a>
                 </div>
             </div>
-            <p class="featured-secondary"><a href="collections.html">See all collections</a></p>
         </div>
     </section>
 
@@ -390,7 +389,11 @@
                     <p class="pricing-price">$0.99/month or $8.99/year</p>
                     <ul class="pricing-features">
                         <li>Unlimited quotes</li>
-                        <li>Every Quote Style color and typeface</li>
+                        <li>Advanced search</li>
+                        <li>Custom quote styles — every color and typeface</li>
+                        <li>Multiple Quote of the Day schedules</li>
+                        <li>Custom app themes and icons</li>
+                        <li>More private and public collections</li>
                         <li>Watermark-free sharing</li>
                     </ul>
                 </div>
@@ -422,7 +425,7 @@
                         </button>
                     </h3>
                     <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
-                        <p>Premium unlocks unlimited quotes, every Quote Style color and typeface, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing.</p>
+                        <p>Premium unlocks unlimited quotes, advanced search, custom quote styles (every color and typeface), multiple Quote of the Day schedules, custom app themes and icons, more private and public collections, and watermark-free sharing in Share Studio. It's $0.99/month or $8.99/year — limited launch pricing.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -524,6 +527,7 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script src="js/featured.js"></script>
+    <script src="js/collections.js"></script>
+    <script src="js/feeds.js"></script>
 </body>
 </html>
