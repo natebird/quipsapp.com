@@ -306,7 +306,14 @@ ${quotes.map(quoteItemHtml).join('\n')}
                 <h2 class="cta-title">Add this collection to your library</h2>
                 <p class="cta-subtitle">Get Quips and add ${escapeHtml(name)} to your library with one tap.</p>
                 <span class="btn btn-coming-soon">Coming Soon to the App Store</span>
-                <!-- TODO(launch): swap in badge linking to /go/appstore.html?p=collection -->
+                <!-- TODO(launch): swap in badge linking to /go/appstore.html?p=collection
+                     data-collection-id lets js/main.js's initDeepLinkBadges()
+                     try the quips://public-collection/<id> scheme first and
+                     fall back to this href if the app isn't installed.
+                <a href="/go/appstore.html?p=collection" class="app-store-badge" data-collection-id="${escapeHtml(collection.id)}">
+                    <img src="/images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
+                </a>
+                -->
             </div>
         </section>
     </main>

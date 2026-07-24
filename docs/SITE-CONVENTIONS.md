@@ -170,6 +170,15 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
   appends `ct=website-<placement>` campaign tokens. Cloudflare Web Analytics
   pageviews of `/go/appstore.html` = badge clicks (CF WA has no custom
   events), so visits vs. clicks gives the conversion funnel.
+- Collection page badges (`p=collection`, in `scripts/build-collections.mjs`)
+  additionally carry `data-collection-id="<id>"`. `js/main.js`'s
+  `initDeepLinkBadges()` uses it to try the native
+  `quips://public-collection/<id>` scheme first (for users who already have
+  the app) and falls back to the badge's normal `/go/appstore.html?p=collection`
+  href after 1.5s if the app doesn't open (detected via
+  `visibilitychange`/`pagehide`). This only activates once the badge's
+  `TODO(launch)` comment is uncommented — until then it's inert markup inside
+  the comment, same as every other badge.
 
 ## Forms (MailerLite)
 

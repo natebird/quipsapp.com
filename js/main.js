@@ -375,6 +375,50 @@
         });
     }
 
+    // ===== App Store Deep Link (collection CTAs) =====
+    // Post-launch, collection page App Store badges carry a
+    // data-collection-id and try the native `quips://public-collection/<id>`
+    // deep link first (for users who already have the app installed),
+    // falling back to the badge's normal /go/appstore.html href if the app
+    // doesn't open within DEEP_LINK_TIMEOUT_MS. Detection: if opening the
+    // scheme backgrounds the tab (visibilitychange/pagehide fires) before the
+    // timeout, the app handled it and the fallback navigation is skipped.
+    // No-op today — badges only get data-collection-id once the TODO(launch)
+    // comment around them is uncommented in scripts/build-collections.mjs.
+    const DEEP_LINK_TIMEOUT_MS = 1500;
+
+    function openInQuips(link) {
+        const collectionId = link.dataset.collectionId;
+        const fallbackUrl = link.getAttribute('href');
+        if (!collectionId || !fallbackUrl) return;
+
+        let appOpened = false;
+        const markOpened = () => {
+            if (document.hidden) appOpened = true;
+        };
+        document.addEventListener('visibilitychange', markOpened);
+        window.addEventListener('pagehide', markOpened);
+
+        window.location.href = `quips://public-collection/${encodeURIComponent(collectionId)}`;
+
+        setTimeout(() => {
+            document.removeEventListener('visibilitychange', markOpened);
+            window.removeEventListener('pagehide', markOpened);
+            if (!appOpened) {
+                window.location.href = fallbackUrl;
+            }
+        }, DEEP_LINK_TIMEOUT_MS);
+    }
+
+    function initDeepLinkBadges() {
+        document.querySelectorAll('.app-store-badge[data-collection-id]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openInQuips(link);
+            });
+        });
+    }
+
     // ===== Initialize =====
     function init() {
         // Theme
@@ -402,6 +446,7 @@
         initNewsletter();
         initCourseForm();
         initHomeFaq();
+        initDeepLinkBadges();
     }
 
     // Run when DOM is ready
