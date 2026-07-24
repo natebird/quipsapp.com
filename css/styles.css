@@ -1384,6 +1384,67 @@ a {
     text-decoration: none;
 }
 
+/* Dataset totals (collections.html) — rendered from collections-stats.json.
+   auto-fit keeps the six cards on one row on desktop and reflows to 3/2 on
+   narrower screens without a media query. */
+.collection-stats {
+    margin-bottom: 2.5rem;
+}
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+.stat-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+.stat-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+}
+.stat-value {
+    font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    /* Tabular figures so the six numbers align optically across the row. */
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+}
+/* The four verification tiers are one group, so they share a treatment and are
+   set apart from the two count cards by a coloured top edge. Each tier needs a
+   visible edge or it reads as a count card instead — hence text-secondary, not
+   border-color, for the faintest one. Colour is never the only cue; the label
+   always names the tier. */
+.stat-card-verified,
+.stat-card-attributed,
+.stat-card-unverified,
+.stat-card-folk-wisdom {
+    border-top-width: 3px;
+    border-top-style: solid;
+}
+.stat-card-verified { border-top-color: var(--accent-primary); }
+.stat-card-attributed { border-top-color: var(--accent-complement); }
+.stat-card-unverified { border-top-color: var(--text-muted); }
+.stat-card-folk-wisdom { border-top-color: var(--text-secondary); }
+
+@media (max-width: 480px) {
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
+
 /* Filter toolbar */
 .collections-toolbar {
     display: flex;

@@ -368,6 +368,25 @@ function sitemapXml(collectionIds) {
     return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
 }
 
+// Dataset totals for the cards at the top of collections.html. Per-quote
+// verificationStatus lives only in collections/<id>.json, so it is tallied
+// here — the page would otherwise have to fetch all 80+ files to show one
+// number. Statuses are listed explicitly rather than derived from the data, so
+// an unexpected value fails the build instead of silently missing a card.
+const VERIFICATION_STATUSES = ['verified', 'attributed', 'unverified', 'folk-wisdom'];
+
+function statsJson(collectionCount, quoteCount, byStatus) {
+    return `${JSON.stringify(
+        {
+            collections: collectionCount,
+            quotes: quoteCount,
+            verification: byStatus
+        },
+        null,
+        2
+    )}\n`;
+}
+
 // ---------------------------------------------------------------------------
 // Build
 // ---------------------------------------------------------------------------
@@ -381,6 +400,8 @@ function main() {
 
     const ids = [];
     let pageCount = 0;
+    let quoteCount = 0;
+    const byStatus = Object.fromEntries(VERIFICATION_STATUSES.map((s) => [s, 0]));
 
     for (const entry of collections) {
         if (!entry || typeof entry.id !== 'string' || !entry.id) {
@@ -401,6 +422,15 @@ function main() {
             if (!quote || typeof quote.content !== 'string' || !quote.content) {
                 fail(`collections/${id}.json: quote missing 'content': ${JSON.stringify(quote)}`);
             }
+            const status = quote.verificationStatus;
+            if (!(status in byStatus)) {
+                fail(
+                    `collections/${id}.json: quote ${quote.id} has unknown verificationStatus ` +
+                        `${JSON.stringify(status)} (expected one of ${VERIFICATION_STATUSES.join(', ')})`
+                );
+            }
+            byStatus[status] += 1;
+            quoteCount += 1;
         }
         collection.id = id;
 
@@ -410,9 +440,18 @@ function main() {
     }
 
     fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapXml(ids), 'utf8');
+    fs.writeFileSync(
+        path.join(ROOT, 'collections-stats.json'),
+        statsJson(pageCount, quoteCount, byStatus),
+        'utf8'
+    );
 
     console.log(
         `build-collections: wrote ${pageCount} collection pages to collections/ and sitemap.xml with ${STATIC_PAGES.length + ids.length} URLs.`
+    );
+    console.log(
+        `build-collections: wrote collections-stats.json — ${quoteCount} quotes, ` +
+            VERIFICATION_STATUSES.map((s) => `${s} ${byStatus[s]}`).join(', ') + '.'
     );
 }
 
