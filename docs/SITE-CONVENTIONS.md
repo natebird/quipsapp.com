@@ -201,7 +201,7 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
   collections pages; avoid corporate "we".
 - Public contact email: `feedback@quipsapp.com`. (`nate@quipsapp.com` appears
   only in the course welcome copy as a personal touch.)
-- Pricing: free tier = 25 saved quotes; Premium = $0.99/month or $8.99/year
+- Pricing: free tier = 100 saved quotes; Premium = $0.99/month or $8.99/year
   (limited launch pricing), unlocking unlimited quotes, all Quote Style colors
   and typefaces, and watermark-free Share Studio sharing. Keep faqs.json,
   terms.html, press.html, and the homepage pricing strip in sync.
