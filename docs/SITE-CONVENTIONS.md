@@ -283,12 +283,14 @@ The brand accent `--accent-primary` (#00D7D0) is a bright teal — great as a
 - `--danger` — a dedicated error red (#B3261E light / #FF5C4E dark), distinct
   from Coral (`--accent-complement`). **Coral = action/warmth; Danger = errors
   and "not included."** Never signal errors with Coral.
-- `--cta-from` / `--cta-to` (#BE4740 → #9A312C) — a **darkened Coral gradient**
-  used only by the large filled hero sections (`.cta`, `.course-final-cta`) so
-  white heading + subtitle text clears AA (~5:1); bright Coral is too light at
-  that scale. Their subtitles run at full opacity (not 0.9) for the same reason.
-  Small Coral controls (pricing badge) keep the bright `--accent-complement`
-  with a dark ink label.
+- `--cta-from` / `--cta-to` — the **brand Coral gradient** (`--accent-complement`
+  → `--accent-complement-dark`, #FF6B6B → #E55A5A) used only by the large filled
+  sections (`.cta`, `.course-final-cta`). Coral is too light for white text at
+  any scale, so these bands set `--cta-ink` (#1A1A1A) as their text color —
+  6.3:1 on the light end, 4.9:1 on the dark end. That headroom is thin: text on
+  Coral runs at **full opacity**, never faded (dimmed ink lands near 3.5:1), and
+  the ink is never lightened toward white. Small Coral controls (pricing badge)
+  follow the same rule — bright fill, dark ink label.
 - Color is never the sole differentiator: collections read by icon + name +
   color together, so the palette stays usable in color-blind vision.
 
