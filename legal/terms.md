@@ -153,7 +153,7 @@ You may not:
 
 Premium subscriptions unlock:
 
-- Unlimited quotes (free users limited to 25 saved quotes)
+- Unlimited quotes (free users limited to 100 saved quotes)
 - Full access to all theme colors and favorite icons
 - Custom app icon selection
 - All Quote Style colors and typefaces
