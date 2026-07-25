@@ -13,8 +13,9 @@
     --accent-ink: #00726E;          /* darkened teal — legible as text/links on light surfaces (brand teal is too light for text: 1.8:1 on white) */
     --accent-complement: #FF6B6B;   /* Coral — action/warmth only */
     --accent-complement-dark: #E55A5A;
-    --cta-from: #BE4740;            /* darkened Coral for large filled heroes — white text clears AA (5.0:1); bright Coral is too light at that scale */
-    --cta-to: #9A312C;
+    --cta-from: var(--accent-complement);       /* bright Coral for large filled bands — pair with --cta-ink, never white (2.8:1) */
+    --cta-to: var(--accent-complement-dark);
+    --cta-ink: #1A1A1A;             /* dark ink on Coral fills — 6.3:1 on #FF6B6B, 4.9:1 on #E55A5A */
     --danger: #B3261E;              /* errors / destructive — deliberately distinct from Coral so action ≠ alarm */
 
     /* UI */
@@ -681,7 +682,7 @@ a {
 .cta {
     padding: var(--section-padding) 0;
     background: linear-gradient(135deg, var(--cta-from) 0%, var(--cta-to) 100%);
-    color: white;
+    color: var(--cta-ink);
 }
 
 .cta-content {
@@ -1238,7 +1239,7 @@ a {
 /* Final CTA */
 .course-final-cta {
     background: linear-gradient(135deg, var(--cta-from) 0%, var(--cta-to) 100%) !important;
-    color: white;
+    color: var(--cta-ink);
 }
 
 .course-final-cta-content {
@@ -1248,7 +1249,7 @@ a {
 }
 
 .course-final-cta .course-section-title {
-    color: white;
+    color: var(--cta-ink);
 }
 
 .course-final-subtitle {
@@ -1277,8 +1278,9 @@ a {
 
 .course-privacy-note {
     font-size: 0.8125rem;
-    opacity: 0.75;
     margin-top: 1rem;
+    /* No opacity fade: dimming the ink on the Coral band drops it to ~3.5:1.
+       Size alone carries the hierarchy. */
 }
 
 /* Course Promo Section (for main page) */
