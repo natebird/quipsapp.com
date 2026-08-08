@@ -122,9 +122,10 @@ jobs:
           done
           echo "Pulled $(ls collections | wc -l) collection files."
           # Generated cross-collection feeds (Recently Added / On This Day /
-          # Newsletter Picks). Optional — a version may not publish them; the
+          # Newsletter Picks), the weekly featured collection schedule, and the
+          # site search index. Optional — a version may not publish them; the
           # site degrades gracefully, so a missing feed is not a build failure.
-          for feed in recently-added on-this-day newsletter-picks; do
+          for feed in recently-added on-this-day newsletter-picks featured-collections search-index; do
             if curl -fsSL "${BASE}/${feed}.json" -o "${feed}.json"; then
               echo "Pulled ${feed}.json"
             else
@@ -143,7 +144,9 @@ jobs:
 
           import os
           errors = []
-          feeds = [f for f in ("recently-added.json", "on-this-day.json", "newsletter-picks.json") if os.path.exists(f)]
+          optional = ("recently-added.json", "on-this-day.json", "newsletter-picks.json",
+                      "featured-collections.json", "search-index.json")
+          feeds = [f for f in optional if os.path.exists(f)]
           for path in ["collections.json"] + sorted(glob.glob("collections/*.json")) + feeds:
               try:
                   with open(path, "r", encoding="utf-8") as f:

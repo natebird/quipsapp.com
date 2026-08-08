@@ -134,6 +134,12 @@
             <dl class="stat-grid" id="stat-grid"></dl>
         </section>
 
+        <!-- The week's featured collection (rendered by js/feeds.js from
+             featured-collections.json). Stays hidden unless a week's date range
+             contains today AND its collection joins against collections.json —
+             a past week is never shown as if it were current. -->
+        <section class="featured-collection" id="featured-collection" aria-labelledby="featured-collection-heading" hidden></section>
+
         <!-- Dynamic cross-collection feeds (rendered by js/feeds.js). Empty until
              the generated feeds load; leaves no gap if they're unavailable. -->
         <div class="feed-shelves" id="feed-shelves" data-mode="full"></div>
@@ -144,6 +150,8 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
+                <!-- The placeholder promises only collections until the search
+                     index actually loads (js/collections-search.js upgrades it). -->
                 <input type="search" id="collections-search-input" placeholder="Search collections..." aria-label="Search collections" autocomplete="off">
             </div>
             <div class="collection-filters" id="collection-filters" role="group" aria-label="Filter by category"></div>
@@ -195,11 +203,18 @@
 
     <script src="js/main.js"></script>
     <script src="js/collections.js"></script>
+    <script src="js/collections-search.js"></script>
     <script src="js/feeds.js"></script>
     <script>
         let allCollections = [];
         let activeCategory = 'all';
-        let searchTerm = '';
+        let searchTerm = '';   // lowercased, for matching
+        let searchQuery = '';  // as typed, for display
+        let indexRequested = false;
+
+        const searchInput = () => document.getElementById('collections-search-input');
+        const resultsContainer = () => document.getElementById('collections-container');
+        const filterPills = () => document.querySelectorAll('#collection-filters .filter-pill');
 
         // Surface the newest collections first: primarily by when a collection
         // was added (addedAt, from the data feed since v1.8.0), then by its most
@@ -228,6 +243,7 @@
                 allCollections = sortByNewest(data.collections || []);
                 buildFilters(allCollections);
                 document.getElementById('collections-toolbar').hidden = false;
+                seedSearchFromUrl();
                 applyFilters();
             } catch (error) {
                 console.error('Error loading collections:', error);
@@ -281,67 +297,178 @@
             const categories = [...new Set(collections.map(c => c.category).filter(Boolean))].sort();
             const filters = document.getElementById('collection-filters');
             const pills = [{ label: 'All', value: 'all' }, ...categories.map(c => ({ label: c, value: c }))];
+            // The count span stays hidden until a query is active: without one
+            // the pills behave exactly as they always have.
             filters.innerHTML = pills.map(p =>
-                `<button class="filter-pill${p.value === 'all' ? ' active' : ''}" data-category="${escapeHtml(p.value)}">${escapeHtml(p.label)}</button>`
+                `<button class="filter-pill${p.value === 'all' ? ' active' : ''}" data-category="${escapeHtml(p.value)}">${escapeHtml(p.label)}<span class="filter-pill-count" hidden></span></button>`
             ).join('');
 
             filters.addEventListener('click', (e) => {
                 const pill = e.target.closest('.filter-pill');
                 if (!pill) return;
-                activeCategory = pill.dataset.category;
-                filters.querySelectorAll('.filter-pill').forEach(b => b.classList.toggle('active', b === pill));
+                setActiveCategory(pill.dataset.category);
                 applyFilters();
             });
 
-            const input = document.getElementById('collections-search-input');
-            input.addEventListener('input', () => {
-                searchTerm = input.value.trim().toLowerCase();
+            searchInput().addEventListener('input', () => {
+                searchQuery = searchInput().value.trim();
+                searchTerm = searchQuery.toLowerCase();
+                // Kick off the index but never wait on it — the collection
+                // results below are rendered from data already in memory.
+                if (searchTerm) requestSearchIndex();
                 applyFilters();
+            });
+
+            resultsContainer().addEventListener('click', onResultsClick);
+        }
+
+        function setActiveCategory(category) {
+            activeCategory = category;
+            filterPills().forEach(pill => pill.classList.toggle('active', pill.dataset.category === category));
+        }
+
+        // Author results have no page of their own, so they re-run the search
+        // for that name. The href works on its own (?q= is read on load); this
+        // just keeps the click from costing a page load.
+        function onResultsClick(event) {
+            if (event.target.closest('[data-clear-category]')) {
+                setActiveCategory('all');
+                applyFilters();
+                return;
+            }
+            if (event.target.closest('[data-clear-search]')) {
+                runSearch('');
+                return;
+            }
+            const author = event.target.closest('.author-result');
+            if (author) {
+                event.preventDefault();
+                try {
+                    history.replaceState(null, '', author.getAttribute('href'));
+                } catch (error) { /* keep the results even if the URL can't be rewritten */ }
+                runSearch(author.dataset.searchQuery || '');
+            }
+        }
+
+        function runSearch(query) {
+            searchQuery = query;
+            searchTerm = query.toLowerCase();
+            searchInput().value = query;
+            if (searchTerm) requestSearchIndex();
+            applyFilters();
+            searchInput().focus();
+        }
+
+        function seedSearchFromUrl() {
+            let query = '';
+            try {
+                query = (new URLSearchParams(window.location.search).get('q') || '').trim();
+            } catch (error) { /* no URLSearchParams: fall through to no query */ }
+            if (!query) return;
+            searchQuery = query;
+            searchTerm = query.toLowerCase();
+            searchInput().value = query;
+            requestSearchIndex();
+        }
+
+        // One fetch per page view, on demand. When it lands, re-render if a
+        // query is still on screen so the quote/author groups appear.
+        function requestSearchIndex() {
+            if (indexRequested) return;
+            indexRequested = true;
+            QuipsSearch.ensureIndex().then(() => {
+                const stats = QuipsSearch.stats();
+                if (stats) {
+                    const label = `Search ${stats.quoteCount.toLocaleString()} quotes, ` +
+                        `${stats.authorCount.toLocaleString()} authors, and every collection`;
+                    searchInput().placeholder = label;
+                    searchInput().setAttribute('aria-label', label);
+                }
+                if (searchTerm) applyFilters();
             });
         }
 
         function applyFilters() {
-            const filtered = allCollections.filter(c => {
-                const matchesCategory = activeCategory === 'all' || c.category === activeCategory;
-                const haystack = `${c.name} ${c.description} ${c.category} ${c.author}`.toLowerCase();
-                const matchesSearch = !searchTerm || haystack.includes(searchTerm);
-                return matchesCategory && matchesSearch;
-            });
-            renderCollections(filtered);
-        }
-
-        function renderCollections(collections) {
-            const container = document.getElementById('collections-container');
-            if (!collections.length) {
-                container.innerHTML = '<div class="collections-grid"><p class="collections-empty">No collections match your search.</p></div>';
+            if (!searchTerm) {
+                resetFacets();
+                renderCollections(allCollections.filter(c =>
+                    activeCategory === 'all' || c.category === activeCategory));
                 return;
             }
 
-            const cards = collections.map(collection => {
-                const preview = (collection.previewQuotes && collection.previewQuotes[0]) || '';
-                return `
-                    <a class="collection-card" href="collections/${encodeURIComponent(collection.id)}.html" data-color="${escapeHtml(collection.colorName)}">
-                        <div class="collection-header">
-                            <div class="collection-icon">${getIconSvg(collection.iconName)}</div>
-                            <div class="collection-info">
-                                <h2 class="collection-name">${escapeHtml(collection.name)}</h2>
-                                <div class="collection-meta">
-                                    <span class="collection-badge">${escapeHtml(collection.category)}</span>
-                                    <span>${Number(collection.quoteCount) || 0} quotes</span>
-                                </div>
+            const results = QuipsSearch.search(searchTerm, allCollections);
+            updateFacets(QuipsSearch.facetCounts(results));
+            QuipsSearch.render(resultsContainer(), {
+                results: QuipsSearch.applyCategory(results, activeCategory),
+                unfilteredTotal: results.total,
+                display: searchQuery,
+                category: activeCategory,
+                pending: QuipsSearch.pending(),
+                collectionsGridHtml
+            });
+        }
+
+        // Facet counts come from the same items the category filter keeps, so a
+        // pill showing a number can't be clicked into an empty screen. "All" is
+        // never disabled — it's the way back out of a category that emptied.
+        function updateFacets(counts) {
+            filterPills().forEach(pill => {
+                const category = pill.dataset.category;
+                const count = category === 'all' ? counts.all : (counts[category] || 0);
+                const badge = pill.querySelector('.filter-pill-count');
+                badge.textContent = count;
+                badge.hidden = false;
+                pill.disabled = category !== 'all' && count === 0;
+            });
+        }
+
+        function resetFacets() {
+            filterPills().forEach(pill => {
+                pill.querySelector('.filter-pill-count').hidden = true;
+                pill.disabled = false;
+            });
+        }
+
+        function collectionCardHtml(collection, options = {}) {
+            const query = options.query || '';
+            const heading = options.headingTag || 'h2';
+            const reason = (options.reasons && options.reasons[collection.id]) || '';
+            const mark = text => query ? QuipsSearch.highlight(text, query) : escapeHtml(text);
+            const preview = (collection.previewQuotes && collection.previewQuotes[0]) || '';
+            return `
+                <a class="collection-card" href="collections/${encodeURIComponent(collection.id)}.html" data-color="${escapeHtml(collection.colorName)}">
+                    <div class="collection-header">
+                        <div class="collection-icon">${getIconSvg(collection.iconName)}</div>
+                        <div class="collection-info">
+                            <${heading} class="collection-name">${mark(collection.name)}</${heading}>
+                            <div class="collection-meta">
+                                <span class="collection-badge">${escapeHtml(collection.category)}</span>
+                                <span>${Number(collection.quoteCount) || 0} quotes</span>
                             </div>
                         </div>
-                        <p class="collection-description">${escapeHtml(collection.description)}</p>
-                        ${preview ? `<p class="collection-card-preview">${escapeHtml(preview)}</p>` : ''}
-                        <span class="collection-card-cta">
-                            View all quotes
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </span>
-                    </a>
-                `;
-            }).join('');
+                    </div>
+                    ${reason ? `<p class="collection-card-reason">${reason}</p>` : ''}
+                    <p class="collection-description">${mark(collection.description)}</p>
+                    ${preview ? `<p class="collection-card-preview">${mark(preview)}</p>` : ''}
+                    <span class="collection-card-cta">
+                        View all quotes
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </span>
+                </a>
+            `;
+        }
 
-            container.innerHTML = `<div class="collections-grid">${cards}</div>`;
+        function collectionsGridHtml(collections, options) {
+            return `<div class="collections-grid">${collections.map(c => collectionCardHtml(c, options)).join('')}</div>`;
+        }
+
+        function renderCollections(collections) {
+            const container = resultsContainer();
+            if (!collections.length) {
+                container.innerHTML = '<div class="collections-grid"><p class="collections-empty">No collections in this category.</p></div>';
+                return;
+            }
+            container.innerHTML = collectionsGridHtml(collections);
         }
 
         document.addEventListener('DOMContentLoaded', () => {

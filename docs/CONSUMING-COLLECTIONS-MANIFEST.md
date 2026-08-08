@@ -92,12 +92,60 @@ newsletter-picks quotes also carry `newsletterIssue`. Decode leniently.
 | On This Day | `on-this-day.json` | **`days{}` keyed by `"MM-DD"`** (not `quotes[]`) | Look up the visitor's **local** `MM-DD`; hide if the key is absent (~222 of 366 populated). Quotes within a day are oldest-first by `quoteDate`. Decide a Feb-29 policy. |
 | Newsletter Picks | `newsletter-picks.json` | collection-shaped, `quotes[]` with `newsletterIssue` | "As seen in Quote Unquote #N" badge; deep-link to the issue |
 
+## Featured collections & search index
+
+Two further artifacts are consumed the same optional way. Neither is published
+yet as of data v1.10.0, so the site pulls them if they exist and shows nothing
+if they don't.
+
+**`featured-collections.json`** — one featured collection per ISO week:
+
+```jsonc
+{ "weeks": [ { "weekStart": "2026-08-03", "weekEnd": "2026-08-09",
+               "collectionId": "michael-jordan",
+               "note": "Michael Jordan — seasonal: matches sport for August",
+               "quote": { "id": "mj-001", "content": "…", "authorName": "Michael Jordan",
+                          "sourceCollection": "michael-jordan" } } ] }
+```
+
+Pick the week whose bounds contain the visitor's **local** `YYYY-MM-DD` (plain
+string comparison). No matching week is normal — the schedule runs ~12 weeks out
+and a long release gap can outrun it — so render nothing rather than showing a
+past week as current. The entry carries no presentation: name, colour, and icon
+come from joining `collectionId` against `collections.json`, so a rename or
+palette change ships in that file alone. If the join fails, skip the week.
+
+**`search-index.json`** — every quote plus an author roster (~1 MB):
+
+```jsonc
+{ "quoteCount": 2670, "authorCount": 924,
+  "quotes":  [ { "id": "mj-001", "content": "…", "authorName": "Michael Jordan",
+                 "source": "…", "quoteDate": "1994",
+                 "verificationStatus": "verified", "sourceCollection": "michael-jordan" } ],
+  "authors": [ { "name": "C. S. Lewis", "quoteCount": 38, "collectionCount": 5,
+                 "variants": ["C.S. Lewis"] } ] }
+```
+
+Fetch it **lazily** — on the first keystroke, not on page load — and fall back to
+searching `collections.json` alone until it lands. The roster folds spellings of
+one name into `variants` while quote entries keep their collection's spelling, so
+join a quote to its author through `name` + `variants` rather than normalising
+names yourself.
+
 ## Status on quipsapp.com
 
 - The `collections.html` grid sorts newest-added first by `addedAt` (this doc's
-  sort). `.data-version` is pinned to 1.9.0 (PR #17).
+  sort). `.data-version` is pinned to 1.10.0.
 - The three generated feeds render as shelves via `js/feeds.js` — a homepage
   teaser (replacing the old "featured collection of the week") and full shelves
   above the collections grid. `.github/workflows/deploy.yml` pulls the feeds
   same-origin next to `collections.json` (so `connect-src 'self'` suffices);
   each is optional and a missing feed simply drops its shelf.
+- `featured-collections.json` and `search-index.json` are pulled by the same
+  optional loop and wired up: `js/feeds.js` renders the week's featured card
+  into `#featured-collection`, and `js/collections-search.js` searches quotes and
+  authors. **Neither file exists in v1.10.0** (its `manifest.json` still lists
+  only the three feeds under `generated`), so both features are dormant until a
+  data release publishes them and `.data-version` is bumped — check with
+  `curl -fsI https://data.quipsapp.com/v<VERSION>/search-index.json` before
+  bumping, since a version missing them silently drops both.

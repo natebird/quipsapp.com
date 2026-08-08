@@ -4,7 +4,8 @@
  *
  * Renders the generated cross-collection feeds published by data.quipsapp.com
  * — Recently Added, On This Day, and Newsletter Picks — into a #feed-shelves
- * container. The feeds are pulled same-origin at build time (see
+ * container, plus the weekly featured collection into #featured-collection
+ * (collections.html only). The feeds are pulled same-origin at build time (see
  * .github/workflows/deploy.yml), so this just fetches the local JSON.
  *
  * Contract: docs/CONSUMING-COLLECTIONS-MANIFEST.md.
@@ -23,11 +24,20 @@
 
     var TEASER_LIMIT = 8;
 
+    // Same arrow the collection cards use, so the featured card's CTA matches.
+    var ARROW_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+
     // Local calendar day as "MM-DD" (the on-this-day.json key).
     function localMMDD(date) {
         var m = String(date.getMonth() + 1).padStart(2, '0');
         var d = String(date.getDate()).padStart(2, '0');
         return m + '-' + d;
+    }
+
+    // Local calendar day as "YYYY-MM-DD" — the featured schedule's week bounds
+    // are plain ISO dates, so string comparison is the whole comparison.
+    function localISODate(date) {
+        return date.getFullYear() + '-' + localMMDD(date);
     }
 
     function el(tag, className, text) {
@@ -94,6 +104,68 @@
         return shelf;
     }
 
+    // The week whose bounds contain today, or null. A gap is normal: the
+    // schedule is maintained ~12 weeks out and a long release gap can outrun
+    // it. Never fall back to the newest past week — a stale "featured this
+    // week" is worse than no featured section at all.
+    function currentWeek(featured, today) {
+        var weeks = (featured && featured.weeks) || [];
+        for (var i = 0; i < weeks.length; i++) {
+            var week = weeks[i];
+            if (week && week.weekStart <= today && today <= week.weekEnd) return week;
+        }
+        return null;
+    }
+
+    // The page's one editorial slot: the week's collection, the curator's note,
+    // and a quote from it. The feed carries no presentation — name, colour and
+    // icon are joined from collections.json, so a rename or palette change
+    // ships in that file alone. No join, no card.
+    function renderFeatured(container, featured, collById) {
+        var week = currentWeek(featured, localISODate(new Date()));
+        if (!week) return;
+        var collection = collById[week.collectionId];
+        if (!collection) return;
+
+        var card = el('a', 'feed-card feed-card-featured');
+        card.href = 'collections/' + encodeURIComponent(collection.id) + '.html';
+        if (collection.colorName) card.setAttribute('data-color', String(collection.colorName));
+
+        var head = el('div', 'featured-head');
+        if (collection.iconName && typeof window.getIconSvg === 'function') {
+            var icon = el('span', 'featured-icon');
+            icon.innerHTML = window.getIconSvg(collection.iconName); // trusted constant SVG
+            head.append(icon);
+        }
+        var heading = el('div', 'featured-headings');
+        var name = el('h2', 'featured-name', collection.name);
+        name.id = 'featured-collection-heading';
+        heading.append(name);
+        var meta = [collection.category, (Number(collection.quoteCount) || 0) + ' quotes']
+            .filter(Boolean).join(' · ');
+        heading.append(el('p', 'featured-meta', meta));
+        head.append(heading);
+        card.append(head);
+
+        // Editorial prose written for a reader — safe to show as-is.
+        if (week.note) card.append(el('p', 'featured-note', week.note));
+
+        var quote = week.quote || {};
+        if (quote.content) {
+            var block = el('blockquote', 'featured-quote');
+            block.append(el('p', 'featured-quote-text', quote.content));
+            if (quote.authorName) block.append(el('footer', 'featured-quote-author', quote.authorName));
+            card.append(block);
+        }
+
+        var cta = el('span', 'collection-card-cta', 'View all quotes');
+        cta.insertAdjacentHTML('beforeend', ARROW_SVG); // trusted constant SVG
+        card.append(cta);
+
+        container.replaceChildren(el('p', 'featured-eyebrow', 'Featured this week'), card);
+        container.hidden = false;
+    }
+
     async function init() {
         var container = document.getElementById('feed-shelves');
         if (!container) return;
@@ -103,18 +175,25 @@
             return teaser ? quotes.slice(0, TEASER_LIMIT) : quotes;
         };
 
+        // Only collections.html has a featured slot; skip the fetch elsewhere.
+        var featuredEl = document.getElementById('featured-collection');
+
         try {
             var results = await Promise.all([
                 fetch('collections.json').then(function (r) { return r.json(); }),
                 fetchJsonOptional('recently-added.json'),
                 fetchJsonOptional('on-this-day.json'),
-                fetchJsonOptional('newsletter-picks.json')
+                fetchJsonOptional('newsletter-picks.json'),
+                featuredEl ? fetchJsonOptional('featured-collections.json') : null
             ]);
 
-            var index = results[0], recentlyAdded = results[1], onThisDay = results[2], newsletter = results[3];
+            var index = results[0], recentlyAdded = results[1], onThisDay = results[2],
+                newsletter = results[3], featured = results[4];
 
             var collById = {};
             ((index && index.collections) || []).forEach(function (c) { collById[c.id] = c; });
+
+            if (featuredEl && featured) renderFeatured(featuredEl, featured, collById);
 
             var shelves = [];
 
