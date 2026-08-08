@@ -35,6 +35,16 @@ if [[ ! -f collections.json || "$REFRESH" -eq 1 ]]; then
     curl -fsSL "${BASE}/collections/${id}.json" -o "collections/${id}.json"
   done
   echo "Pulled $(ls collections | wc -l) collection files."
+  # Optional generated artifacts, same list (and same degrade-quietly rule) as
+  # the deploy workflow, so local preview matches what CI publishes.
+  for feed in recently-added on-this-day newsletter-picks featured-collections search-index; do
+    if curl -fsSL "${BASE}/${feed}.json" -o "${feed}.json"; then
+      echo "Pulled ${feed}.json"
+    else
+      echo "No ${feed}.json for v${VER} (skipping)"
+      rm -f "${feed}.json"
+    fi
+  done
 else
   echo "Using existing collections data (run with --refresh to re-pull)."
 fi

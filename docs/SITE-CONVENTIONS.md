@@ -11,7 +11,7 @@ the Email Course nav item, press.html had a different footer encoding, etc.).
 | Page | Purpose | Notes |
 |------|---------|-------|
 | `index.html` | Marketing homepage | Primary CTA = app download (Coming Soon until launch) |
-| `collections.html` | Public collections index | Links to pre-rendered `/collections/<id>.html` pages |
+| `collections.html` | Public collections index | Links to pre-rendered `/collections/<id>.html` pages; weekly featured card + search over collections/quotes/authors (`?q=` seeds the search box) |
 | `collection.html` | Legacy client-rendered collection view (`?id=`) | Kept as fallback; canonical points to static page |
 | `collections/<id>.html` | Pre-rendered collection pages | **Generated** by `scripts/build-collections.mjs` — never hand-edit; edit the script's template |
 | `course.html` | 7-day email course landing | |
@@ -313,6 +313,14 @@ have to fetch all 80+ files to show one number — hence the build-time tally.
 The build fails on an unrecognised status rather than silently dropping a card.
 The cards are hidden until the file loads, so a version that predates it (or a
 failed fetch) leaves no empty shell.
+
+The deploy workflow (and `serve.sh`) also pull five optional artifacts next to
+the index: `recently-added.json`, `on-this-day.json`, `newsletter-picks.json`,
+`featured-collections.json`, and `search-index.json`. All five are gitignored,
+and a data version that doesn't publish one is **not** a build failure — the
+page drops that feature and shows nothing in its place. `search-index.json` is
+~1 MB and is fetched only on the first keystroke in the collections search box,
+never on page load.
 
 The pulled `collections.json` carries two per-collection dates from
 `data.quipsapp.com`: `addedAt` (when the collection was first published, since
