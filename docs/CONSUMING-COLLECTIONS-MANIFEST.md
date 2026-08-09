@@ -94,9 +94,14 @@ newsletter-picks quotes also carry `newsletterIssue`. Decode leniently.
 
 ## Featured collections & search index
 
-Two further artifacts are consumed the same optional way. Neither is published
-yet as of data v1.10.0, so the site pulls them if they exist and shows nothing
-if they don't.
+Two further artifacts are consumed the same optional way, both published since
+data v1.11.0. They stay optional: the site pulls them if they exist and shows
+nothing if they don't, so older pins keep working.
+
+Note that v1.11.0's `manifest.json` advertises `featuredCollections` under
+`generated` but **not** `searchIndex`, even though `search-index.json` is
+served. Until the manifest lists it, manifest-driven clients won't discover the
+index; this site pulls both by path at build time, so it's unaffected.
 
 **`featured-collections.json`** — one featured collection per ISO week:
 
@@ -135,7 +140,7 @@ names yourself.
 ## Status on quipsapp.com
 
 - The `collections.html` grid sorts newest-added first by `addedAt` (this doc's
-  sort). `.data-version` is pinned to 1.10.0.
+  sort). `.data-version` is pinned to 1.11.0.
 - The three generated feeds render as shelves via `js/feeds.js` — a homepage
   teaser (replacing the old "featured collection of the week") and full shelves
   above the collections grid. `.github/workflows/deploy.yml` pulls the feeds
@@ -144,8 +149,7 @@ names yourself.
 - `featured-collections.json` and `search-index.json` are pulled by the same
   optional loop and wired up: `js/feeds.js` renders the week's featured card
   into `#featured-collection`, and `js/collections-search.js` searches quotes and
-  authors. **Neither file exists in v1.10.0** (its `manifest.json` still lists
-  only the three feeds under `generated`), so both features are dormant until a
-  data release publishes them and `.data-version` is bumped — check with
-  `curl -fsI https://data.quipsapp.com/v<VERSION>/search-index.json` before
-  bumping, since a version missing them silently drops both.
+  authors. Both are live as of the v1.11.0 pin (2,711 quotes, 941 authors).
+  Before any future bump, check the target version actually publishes them —
+  `curl -fsI https://data.quipsapp.com/v<VERSION>/search-index.json` — since a
+  version missing them silently drops both features.
