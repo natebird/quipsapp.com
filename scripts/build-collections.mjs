@@ -364,7 +364,12 @@ const VERIFICATION_STATUSES = ['verified', 'attributed', 'unverified', 'folk-wis
 // Feeds whose section header carries its own iconName, drawn by js/feeds.js
 // through the same lookup. Pulled alongside the index and each one optional, so
 // the check below skips any that a build didn't fetch.
-const ICON_BEARING_FEEDS = ['recently-added.json', 'newsletter-picks.json', 'on-this-day.json'];
+const ICON_BEARING_FEEDS = [
+    'recently-added.json',
+    'newsletter-picks.json',
+    'on-this-day.json',
+    'new-collections.json'
+];
 
 function statsJson(collectionCount, quoteCount, byStatus) {
     return `${JSON.stringify(

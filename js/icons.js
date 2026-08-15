@@ -42,6 +42,11 @@ var QUIPS_ICONS = {
     'bird.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"></path><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"></path><path d="m20 7 2 .5-2 .5"></path><path d="M10 18v3"></path><path d="M14 17.75V21"></path><path d="M7 18a6 6 0 0 0 3.84-10.61"></path></svg>`,
     'teddybear.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2.5"></circle><circle cx="18" cy="5" r="2.5"></circle><path d="M16.5 7.5a6 6 0 0 1-9 0"></path><circle cx="12" cy="14" r="6.5"></circle><circle cx="10" cy="12.5" r="0.5" fill="currentColor"></circle><circle cx="14" cy="12.5" r="0.5" fill="currentColor"></circle><path d="M10.5 16a2 2 0 0 0 3 0"></path></svg>`,
 
+    // The New Collections shelf (new-collections.json). Stacked cards with a
+    // spark: "new collections" rather than the plain `sparkles` that Recently
+    // Added already uses — the two shelves sit together and need to differ.
+    'sparkles.rectangle.stack.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="14" height="12" rx="2"></rect><path d="M6 6h11a2 2 0 0 1 2 2v9"></path><path d="M19.5 2 20 3.5 21.5 4 20 4.5 19.5 6 19 4.5 17.5 4 19 3.5 19.5 2Z"></path></svg>`,
+
     // Added 2026-08: 36 icons for surfaces that were falling back to
     // sunrise.fill because no icon matched their iconName.
     'moon.fill': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>`,
