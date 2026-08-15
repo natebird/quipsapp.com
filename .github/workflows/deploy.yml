@@ -121,11 +121,13 @@ jobs:
             curl -fsSL "${BASE}/collections/${id}.json" -o "collections/${id}.json"
           done
           echo "Pulled $(ls collections | wc -l) collection files."
-          # Generated cross-collection feeds (Recently Added / On This Day /
-          # Newsletter Picks), the weekly featured collection schedule, and the
-          # site search index. Optional — a version may not publish them; the
-          # site degrades gracefully, so a missing feed is not a build failure.
-          for feed in recently-added on-this-day newsletter-picks featured-collections search-index; do
+          # Generated cross-collection feeds (Recently Added / New Collections /
+          # On This Day / Newsletter Picks), the weekly featured collection
+          # schedule, and the site search index. Optional — a version may not
+          # publish them; the site degrades gracefully, so a missing feed is not
+          # a build failure. new-collections.json first ships in collections
+          # v1.14.0, so older pins simply skip it.
+          for feed in recently-added new-collections on-this-day newsletter-picks featured-collections search-index; do
             if curl -fsSL "${BASE}/${feed}.json" -o "${feed}.json"; then
               echo "Pulled ${feed}.json"
             else
