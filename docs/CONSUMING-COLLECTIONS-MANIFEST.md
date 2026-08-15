@@ -94,14 +94,41 @@ newsletter-picks quotes also carry `newsletterIssue`. Decode leniently.
 
 ## Featured collections & search index
 
-Two further artifacts are consumed the same optional way, both published since
-data v1.11.0. They stay optional: the site pulls them if they exist and shows
-nothing if they don't, so older pins keep working.
+Three further artifacts are consumed the same optional way — two published since
+data v1.11.0, and `new-collections.json` since v1.14.0. They stay optional: the
+site pulls them if they exist and shows nothing if they don't, so older pins
+keep working.
 
 Note that v1.11.0's `manifest.json` advertises `featuredCollections` under
 `generated` but **not** `searchIndex`, even though `search-index.json` is
 served. Until the manifest lists it, manifest-driven clients won't discover the
 index; this site pulls both by path at build time, so it's unaffected.
+
+**`new-collections.json`** — the 12 most recently published collections, newest
+first, for a "what's new" shelf:
+
+```jsonc
+{ "id": "new-collections", "name": "New Collections", "generated": true,
+  "lastUpdated": "2026-08-15T12:00:00Z",
+  "collections": [ { "id": "spider-man", "name": "Spider-Man", "description": "…",
+                     "quoteCount": 40, "previewQuotes": ["…", "…"],
+                     "colorName": "red", "iconName": "circle.hexagongrid.fill",
+                     "category": "Movies", "addedAt": "2026-08-15T12:00:00Z" } ] }
+```
+
+Note the payload is `collections[]`, **not** `quotes[]` — this is the one
+"what's new" answer the quote feeds can't give. `recently-added.json`
+deliberately excludes every quote that arrived with a brand-new collection (so a
+40-quote import doesn't swamp a 25-item shelf), which means adding a collection
+moves no quote feed at all. That's why the manifest names this at the top level
+as `newCollections` rather than under `generated`: a client iterating `generated`
+to draw quote shelves must not meet a payload it can't render.
+
+Entries are self-contained — they carry their own name, colour, icon and preview
+quotes — so a card renders without joining against `collections.json`. Ordering
+is by `addedAt` (first published), not `lastUpdated`. It's a top-N rather than a
+time window, so entries deep in the list are older collections sharing a
+backfilled timestamp; render the first few, not all twelve.
 
 **`featured-collections.json`** — one featured collection per ISO week:
 
