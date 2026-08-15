@@ -3,17 +3,21 @@
  * Dynamic collection feeds (homepage + collections page)
  *
  * Renders the generated cross-collection feeds published by data.quipsapp.com
- * — Recently Added, On This Day, and Newsletter Picks — into a #feed-shelves
- * container, plus the weekly featured collection into #featured-collection
- * (collections.html only). The feeds are pulled same-origin at build time (see
- * .github/workflows/deploy.yml), so this just fetches the local JSON.
+ * — New Collections, Recently Added, On This Day, and Newsletter Picks — into a
+ * #feed-shelves container, plus the weekly featured collection into
+ * #featured-collection (collections.html only). The feeds are pulled
+ * same-origin at build time (see .github/workflows/deploy.yml), so this just
+ * fetches the local JSON.
  *
  * Contract: docs/CONSUMING-COLLECTIONS-MANIFEST.md.
  *
- * Each quote carries `sourceCollection` (the real collection it lives in); we
- * look that up in collections.json for the collection's name + color and link
- * the card to its detail page. Any feed that is missing or empty is skipped;
- * on a total failure the container's fallback markup (if any) stays in place.
+ * Most feeds carry `quotes[]`, where each quote's `sourceCollection` names the
+ * real collection it lives in; we look that up in collections.json for the
+ * name + color and link the card to its detail page. New Collections is the
+ * exception: it carries `collections[]` and each entry is already
+ * self-contained, so it renders a different card and needs no join. Any feed
+ * that is missing or empty is skipped; on a total failure the container's
+ * fallback markup (if any) stays in place.
  *
  * The container's `data-mode` controls density:
  *   - "teaser" (homepage): cap each shelf and show a "See all" link.
@@ -23,6 +27,12 @@
     'use strict';
 
     var TEASER_LIMIT = 8;
+
+    // New Collections is capped in *both* modes, unlike the quote shelves.
+    // The feed is a top-N rather than a time window, so once the genuinely
+    // recent collections run out it continues into older ones that share a
+    // backfilled `addedAt` — showing all twelve would present those as new.
+    var NEW_COLLECTIONS_LIMIT = 6;
 
     // Same arrow the collection cards use, so the featured card's CTA matches.
     var ARROW_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
@@ -76,6 +86,40 @@
         return card;
     }
 
+    // A card for a whole collection rather than a quote. Unlike quoteCard this
+    // needs no `collById` join: new-collections.json entries carry their own
+    // name, colour, icon and preview quotes, so the card renders from the feed
+    // alone and a collection missing from the index still draws correctly.
+    function collectionCard(collection) {
+        var card = el('a', 'feed-card feed-collection-card');
+        card.href = 'collections/' + encodeURIComponent(collection.id || '') + '.html';
+        if (collection.colorName) {
+            card.setAttribute('data-color', String(collection.colorName));
+        }
+
+        var head = el('div', 'feed-collection-head');
+        if (collection.iconName && typeof window.getIconSvg === 'function') {
+            var icon = el('span', 'feed-collection-icon');
+            icon.innerHTML = window.getIconSvg(collection.iconName); // trusted constant SVG
+            head.append(icon);
+        }
+        head.append(el('h4', 'feed-collection-name', collection.name || ''));
+        card.append(head);
+
+        // One preview quote says more about a collection than its description.
+        var preview = (collection.previewQuotes || [])[0];
+        if (preview) card.append(el('p', 'feed-card-quote', preview));
+
+        var foot = el('div', 'feed-card-foot');
+        var meta = [collection.category, (Number(collection.quoteCount) || 0) + ' quotes']
+            .filter(Boolean).join(' · ');
+        foot.append(el('span', 'feed-card-collection', meta));
+        card.append(foot);
+        return card;
+    }
+
+    // Takes ready-built cards rather than quotes, so a shelf can hold quote
+    // cards or collection cards without knowing the difference.
     function buildShelf(opts) {
         var shelf = el('section', 'feed-shelf');
         if (opts.colorName) shelf.setAttribute('data-color', String(opts.colorName));
@@ -96,8 +140,8 @@
         }
 
         var scroller = el('div', 'feed-shelf-scroller');
-        opts.quotes.forEach(function (quote) {
-            scroller.append(quoteCard(quote, opts.collById));
+        opts.cards.forEach(function (card) {
+            scroller.append(card);
         });
 
         shelf.append(head, scroller);
@@ -182,13 +226,14 @@
             var results = await Promise.all([
                 fetch('collections.json').then(function (r) { return r.json(); }),
                 fetchJsonOptional('recently-added.json'),
+                fetchJsonOptional('new-collections.json'),
                 fetchJsonOptional('on-this-day.json'),
                 fetchJsonOptional('newsletter-picks.json'),
                 featuredEl ? fetchJsonOptional('featured-collections.json') : null
             ]);
 
-            var index = results[0], recentlyAdded = results[1], onThisDay = results[2],
-                newsletter = results[3], featured = results[4];
+            var index = results[0], recentlyAdded = results[1], newCollections = results[2],
+                onThisDay = results[3], newsletter = results[4], featured = results[5];
 
             var collById = {};
             ((index && index.collections) || []).forEach(function (c) { collById[c.id] = c; });
@@ -196,6 +241,24 @@
             if (featuredEl && featured) renderFeatured(featuredEl, featured, collById);
 
             var shelves = [];
+
+            // New Collections — whole collections, newest first. Leads the
+            // shelves because it is the most direct answer to "what's new":
+            // Recently Added deliberately excludes every quote that arrived
+            // with a brand-new collection, so a new collection shows up here
+            // and nowhere else.
+            if (newCollections && Array.isArray(newCollections.collections)
+                && newCollections.collections.length) {
+                shelves.push(buildShelf({
+                    title: newCollections.name || 'New Collections',
+                    iconName: newCollections.iconName,
+                    colorName: newCollections.colorName,
+                    cards: newCollections.collections
+                        .slice(0, NEW_COLLECTIONS_LIMIT)
+                        .map(collectionCard),
+                    seeAllHref: teaser ? 'collections.html' : null
+                }));
+            }
 
             // On This Day — day-keyed by MM-DD; hidden when today has no entry.
             if (onThisDay && onThisDay.days) {
@@ -205,8 +268,9 @@
                         title: onThisDay.name || 'On This Day',
                         iconName: onThisDay.iconName,
                         colorName: onThisDay.colorName,
-                        quotes: cap(todays),
-                        collById: collById,
+                        cards: cap(todays).map(function (quote) {
+                            return quoteCard(quote, collById);
+                        }),
                         seeAllHref: teaser ? 'collections.html' : null
                     }));
                 }
@@ -218,8 +282,9 @@
                     title: recentlyAdded.name || 'Recently Added',
                     iconName: recentlyAdded.iconName,
                     colorName: recentlyAdded.colorName,
-                    quotes: cap(recentlyAdded.quotes),
-                    collById: collById,
+                    cards: cap(recentlyAdded.quotes).map(function (quote) {
+                        return quoteCard(quote, collById);
+                    }),
                     seeAllHref: teaser ? 'collections.html' : null
                 }));
             }
@@ -230,8 +295,9 @@
                     title: newsletter.name || 'From Quote Unquote',
                     iconName: newsletter.iconName,
                     colorName: newsletter.colorName,
-                    quotes: cap(newsletter.quotes),
-                    collById: collById,
+                    cards: cap(newsletter.quotes).map(function (quote) {
+                        return quoteCard(quote, collById);
+                    }),
                     seeAllHref: teaser ? 'quote-unquote.html' : null
                 }));
             }
