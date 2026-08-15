@@ -146,8 +146,11 @@ jobs:
 
           import os
           errors = []
-          optional = ("recently-added.json", "on-this-day.json", "newsletter-picks.json",
-                      "featured-collections.json", "search-index.json")
+          # Keep in sync with the pull loop above — a feed missing from this
+          # tuple is fetched but never JSON-validated, so a malformed one would
+          # reach the deployed site instead of failing the build.
+          optional = ("recently-added.json", "new-collections.json", "on-this-day.json",
+                      "newsletter-picks.json", "featured-collections.json", "search-index.json")
           feeds = [f for f in optional if os.path.exists(f)]
           for path in ["collections.json"] + sorted(glob.glob("collections/*.json")) + feeds:
               try:
