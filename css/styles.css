@@ -2085,6 +2085,51 @@ a {
     background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 16%, transparent);
 }
 
+/* ===== New Collections shelf card =====
+   Same rail and tinted card as a quote shelf, but the card leads with the
+   collection's identity — icon and name — and uses a preview quote as the
+   supporting line, since a quote says more about a collection than its
+   description does. */
+.feed-collection-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.feed-collection-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    color: var(--collection-color, var(--accent-ink));
+    background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 14%, transparent);
+}
+
+.feed-collection-icon svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.feed-collection-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* The preview quote is supporting text here, not the subject, so it sits
+   lighter and shorter than the same element on a quote card. */
+.feed-collection-card .feed-card-quote {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
 /* ===== Featured collection (collections.html) =====
    The page's one editorial slot. Same tinted card as a shelf card, given more
    weight: full width, a curator's note, and the week's quote. */
