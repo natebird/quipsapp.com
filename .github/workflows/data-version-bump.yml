@@ -1,0 +1,119 @@
+name: Bump data version
+
+# Opens a PR bumping .data-version when quips-collections publishes a new
+# release.
+#
+# The site serves whatever version .data-version pins (see deploy.yml), so a
+# collections release is invisible here until that pin moves. That bump used to
+# be a manual step in a second repo with nothing to force it, which is how the
+# site sat on an older version while new collections were already live on the
+# CDN.
+#
+# This watches https://data.quipsapp.com/latest/manifest.json — the same mutable
+# pointer the iOS app reads — and opens the bump PR itself. It deliberately does
+# not merge: a human still reviews and merges, which is what triggers deploy.
+#
+# Triggers:
+#   schedule            - the normal path; releases are infrequent, so a few
+#                         hours of lag is fine and costs no setup.
+#   workflow_dispatch   - run it by hand right after cutting a release.
+#   repository_dispatch - optional instant path. quips-collections can POST
+#                         event_type "collections-released" at the end of its
+#                         release workflow, which requires a PAT stored there
+#                         with pull-requests write access to this repo. Nothing
+#                         here needs changing to enable it.
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [collections-released]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: data-version-bump
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Resolve published vs pinned version
+        id: versions
+        run: |
+          set -euo pipefail
+          # Always read the manifest rather than trusting a dispatch payload:
+          # it is the source of truth, and a dispatch can arrive before the CDN
+          # has the new objects.
+          PUBLISHED="$(curl -fsSL https://data.quipsapp.com/latest/manifest.json \
+            | python3 -c 'import json,sys; print(json.load(sys.stdin)["version"])')"
+          PINNED="$(tr -d '[:space:]' < .data-version)"
+
+          # The version reaches us over the network and is about to become a
+          # branch name, a commit message, and a file's contents. Only ever let
+          # a bare semver through.
+          if ! printf '%s' "$PUBLISHED" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "::error::Refusing to act on malformed published version: '${PUBLISHED}'"
+            exit 1
+          fi
+
+          echo "published=${PUBLISHED}" >> "$GITHUB_OUTPUT"
+          echo "pinned=${PINNED}" >> "$GITHUB_OUTPUT"
+          echo "Published ${PUBLISHED}; pinned ${PINNED}."
+
+          if [ "$PUBLISHED" = "$PINNED" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Already up to date — nothing to do."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open the bump PR
+        if: steps.versions.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PUBLISHED: ${{ steps.versions.outputs.published }}
+          PINNED: ${{ steps.versions.outputs.pinned }}
+        run: |
+          set -euo pipefail
+          BRANCH="chore/data-version-${PUBLISHED//./-}"
+
+          # Idempotent: the schedule fires every 6h, so most runs after the
+          # first will find the PR already open and should do nothing.
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            echo "PR for ${BRANCH} is already open — nothing to do."
+            exit 0
+          fi
+
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b "$BRANCH"
+          printf '%s\n' "$PUBLISHED" > .data-version
+          git add .data-version
+          git commit -m "chore: Bump data version to ${PUBLISHED}"
+          git push -u origin "$BRANCH"
+
+          cat > /tmp/pr-body.md <<EOF
+          Bumps the data pin from \`${PINNED}\` to \`${PUBLISHED}\`, picking up
+          [quips-collections v${PUBLISHED}](https://github.com/natebird/quips-collections/releases/tag/v${PUBLISHED}).
+
+          Opened automatically by \`.github/workflows/data-version-bump.yml\`, which
+          watches \`data.quipsapp.com/latest/manifest.json\` for a version the site
+          isn't serving yet.
+
+          Merging deploys the site against the new data. Check the release notes
+          first if this is a minor or major bump — those carry new or restructured
+          collections, not just added quotes.
+          EOF
+
+          gh pr create \
+            --base "${GITHUB_REF_NAME}" \
+            --head "$BRANCH" \
+            --title "chore: Bump data version to ${PUBLISHED}" \
+            --body-file /tmp/pr-body.md
