@@ -17,6 +17,7 @@
 /recently-added.json
 /on-this-day.json
 /newsletter-picks.json
+/new-collections.json
 # Weekly featured-collection schedule and the quote/author search index
 # (~1 MB), pulled the same way — never committed.
 /featured-collections.json
