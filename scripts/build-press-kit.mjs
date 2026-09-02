@@ -74,7 +74,7 @@ const factSheet = [
     '                glyph — not a recolour. Use it on dark grounds.',
     'brand/          Wordmark and icon+wordmark lockup (SVG, outlined —',
     '                no font needed to render them correctly)',
-    'screenshots/    Marketing screenshots, light + dark (iPhone)',
+    'screenshots/    Marketing screenshots, light + dark, foldered by platform (iphone/, ipad/, mac/)',
     'quips-social-preview.png  1200x630 social/OG image',
     '',
     'The wordmark is Libre Baskerville, supplied as outlines rather than live',
@@ -104,7 +104,11 @@ function copyAsset(src, dest) {
         skipped.push(src);
         return;
     }
-    fs.copyFileSync(from, path.join(kitDir, dest));
+    // Screenshots are foldered per platform, so the destination directory may
+    // not exist yet — the fixed mkdirs above only create the top-level folders.
+    const to = path.join(kitDir, dest);
+    fs.mkdirSync(path.dirname(to), { recursive: true });
+    fs.copyFileSync(from, to);
 }
 
 copyAsset('app-icon@1024.png', 'icons/quips-app-icon-1024.png');
@@ -122,9 +126,16 @@ copyAsset('og-image.png', 'quips-social-preview.png');
 
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'screenshots.json'), 'utf8'));
 for (const screen of manifest.gallery || []) {
+    // Entries predating the multi-platform manifest carry no "platform"; they
+    // were all iPhone, so that is what an absent field means.
+    const platform = screen.platform || 'iphone';
     const slug = (screen.source || screen.label || 'screen').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    copyAsset(screen.light, `screenshots/quips-${slug}-light.png`);
-    copyAsset(screen.dark, `screenshots/quips-${slug}-dark.png`);
+    // Namespaced by platform, and foldered by it too: the same `source` now
+    // appears once per platform ("main" is an iPhone, an iPad, and a Mac shot),
+    // so a name built from the source alone would have the last platform
+    // silently overwrite the others in the kit.
+    copyAsset(screen.light, `screenshots/${platform}/quips-${platform}-${slug}-light.png`);
+    copyAsset(screen.dark, `screenshots/${platform}/quips-${platform}-${slug}-dark.png`);
 }
 
 // Refuse to ship an incomplete kit — and bail BEFORE touching the existing

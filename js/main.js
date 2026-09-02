@@ -133,7 +133,8 @@
     // ===== Screenshot Gallery (manifest-driven) =====
     // Builds the "See it in action" gallery from images/screenshots.json so
     // adding/removing a screen is a data change, not an HTML edit. Each entry
-    // renders a light + dark image pair (toggled by the active theme via CSS).
+    // renders a light + dark image pair (toggled by the active theme via CSS),
+    // and entries are grouped into one tab per platform (iPhone / iPad / Mac).
     async function initScreenshotGallery() {
         const container = document.getElementById('screenshots-gallery');
         if (!container) return;
@@ -152,6 +153,18 @@
         const screens = (manifest && manifest.gallery) || [];
         if (!screens.length) return;
 
+        // Platform order comes from the manifest, not from the order screens
+        // happen to appear in — the tabs should read iPhone, iPad, Mac even if
+        // a screen is appended out of order. A manifest with no "platforms"
+        // (the pre-2.0 shape) is a single unlabelled iPhone group, which
+        // renders exactly as the gallery did before tabs existed.
+        const platforms = (manifest.platforms || []).filter(
+            platform => screens.some(screen => platformOf(screen) === platform.id)
+        );
+        const groups = platforms.length
+            ? platforms.map(platform => ({ ...platform, screens: screens.filter(s => platformOf(s) === platform.id) }))
+            : [{ id: 'iphone', label: '', screens }];
+
         // Clear the no-JS fallback now that we can render the real gallery.
         container.innerHTML = '';
 
@@ -165,37 +178,137 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        screens.forEach((screen, index) => {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'screenshot-wrapper';
-            wrapper.style.opacity = '0';
-            wrapper.style.animationDelay = `${index * 0.15}s`;
+        const tablist = document.createElement('div');
+        tablist.className = 'screenshots-tabs';
+        tablist.setAttribute('role', 'tablist');
+        tablist.setAttribute('aria-label', 'Screenshot platform');
 
-            const lightImg = makeGalleryImage(screen, 'light');
-            const darkImg = makeGalleryImage(screen, 'dark');
+        const tabs = [];
+        const panels = [];
 
-            // If a screenshot hasn't been generated yet, hide the whole slot so
-            // the live site never shows a broken-image icon.
-            const onError = () => wrapper.remove();
-            lightImg.addEventListener('error', onError);
-            darkImg.addEventListener('error', onError);
+        groups.forEach((group, groupIndex) => {
+            const panel = document.createElement('div');
+            panel.className = 'screenshots-row';
+            panel.id = `screenshots-panel-${group.id}`;
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-label', group.label || 'Screenshots');
+            panel.hidden = groupIndex !== 0;
 
-            const label = document.createElement('span');
-            label.className = 'screenshot-label';
-            label.textContent = screen.label || '';
+            group.screens.forEach((screen, index) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'screenshot-wrapper';
+                wrapper.style.opacity = '0';
+                wrapper.style.animationDelay = `${index * 0.15}s`;
 
-            wrapper.append(lightImg, darkImg, label);
-            container.appendChild(wrapper);
-            observer.observe(wrapper);
+                const lightImg = makeGalleryImage(screen, 'light', group);
+                const darkImg = makeGalleryImage(screen, 'dark', group);
+
+                // If a screenshot hasn't been generated yet, hide the whole slot
+                // so the live site never shows a broken-image icon — and if that
+                // empties a platform, drop its tab too rather than offering one
+                // that opens onto nothing.
+                const onError = () => {
+                    wrapper.remove();
+                    if (!panel.querySelector('.screenshot-wrapper')) removeGroup(group.id);
+                };
+                lightImg.addEventListener('error', onError);
+                darkImg.addEventListener('error', onError);
+
+                const label = document.createElement('span');
+                label.className = 'screenshot-label';
+                label.textContent = screen.label || '';
+
+                wrapper.append(lightImg, darkImg, label);
+                panel.appendChild(wrapper);
+                observer.observe(wrapper);
+            });
+
+            panels.push(panel);
+
+            if (!group.label) return;   // single unlabelled group: no tab to draw
+
+            const tab = document.createElement('button');
+            tab.type = 'button';
+            tab.className = 'screenshots-tab';
+            tab.textContent = group.label;
+            tab.id = `screenshots-tab-${group.id}`;
+            tab.dataset.platform = group.id;
+            tab.setAttribute('role', 'tab');
+            tab.setAttribute('aria-controls', panel.id);
+            tab.setAttribute('aria-selected', String(groupIndex === 0));
+            // Roving tabindex: only the selected tab is in the tab order, and
+            // the arrow keys move between them (the ARIA tabs pattern).
+            tab.tabIndex = groupIndex === 0 ? 0 : -1;
+            tab.addEventListener('click', () => selectTab(group.id));
+            tab.addEventListener('keydown', onTabKeydown);
+            panel.setAttribute('aria-labelledby', tab.id);
+            tabs.push(tab);
+            tablist.appendChild(tab);
         });
+
+        function selectTab(platformId, { focus = false } = {}) {
+            tabs.forEach(tab => {
+                const selected = tab.dataset.platform === platformId;
+                tab.setAttribute('aria-selected', String(selected));
+                tab.tabIndex = selected ? 0 : -1;
+                if (selected && focus) tab.focus();
+            });
+            panels.forEach(panel => {
+                panel.hidden = panel.id !== `screenshots-panel-${platformId}`;
+                // A hidden panel keeps whatever the reader scrolled it to; the
+                // row is centered when it fits, so reset it to the start rather
+                // than reopening mid-row.
+                if (!panel.hidden) panel.scrollLeft = 0;
+            });
+        }
+
+        function onTabKeydown(event) {
+            const visible = tabs.filter(tab => !tab.hidden);
+            const step = { ArrowRight: 1, ArrowLeft: -1, Home: -Infinity, End: Infinity }[event.key];
+            if (step === undefined) return;
+            event.preventDefault();
+            const current = visible.indexOf(event.currentTarget);
+            let next;
+            if (step === -Infinity) next = 0;
+            else if (step === Infinity) next = visible.length - 1;
+            else next = (current + step + visible.length) % visible.length;
+            selectTab(visible[next].dataset.platform, { focus: true });
+        }
+
+        function removeGroup(platformId) {
+            const tab = tabs.find(t => t.dataset.platform === platformId);
+            const panel = panels.find(p => p.id === `screenshots-panel-${platformId}`);
+            if (panel) panel.remove();
+            if (!tab) return;
+            const wasSelected = tab.getAttribute('aria-selected') === 'true';
+            tab.hidden = true;
+            const remaining = tabs.filter(t => !t.hidden);
+            // One platform left is not a choice; drop the tab strip entirely.
+            if (remaining.length <= 1) tablist.hidden = true;
+            if (wasSelected && remaining.length) selectTab(remaining[0].dataset.platform);
+        }
+
+        if (tabs.length > 1) container.appendChild(tablist);
+        panels.forEach(panel => container.appendChild(panel));
     }
 
-    function makeGalleryImage(screen, mode) {
+    // Entries predating the multi-platform manifest carry no "platform"; they
+    // were all iPhone, so that is what an absent field means.
+    function platformOf(screen) {
+        return screen.platform || 'iphone';
+    }
+
+    function makeGalleryImage(screen, mode, group) {
         const img = document.createElement('img');
         img.src = `images/${screen[mode]}`;
         img.alt = screen.alt || screen.label || 'Quips screenshot';
         img.loading = 'lazy';
-        img.className = `gallery-screenshot screenshot-${mode}`;
+        img.className = `gallery-screenshot screenshot-${mode} is-${group.id}`;
+        // Framed shots carry their own bezel and shadow in the PNG; unframed
+        // ones (iPad, Mac) get the rounded corner and shadow from CSS, which
+        // would double up if applied to a bezel. Framing is the default —
+        // every screenshot was framed before the manifest could say otherwise.
+        if (group.frame === false) img.classList.add('is-unframed');
         return img;
     }
 

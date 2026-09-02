@@ -1,57 +1,188 @@
 {
-  "version": "1.0",
-  "comment": "Drives the home-page gallery (index.html) AND the screenshot copy step (quotebook-ios/bin/screenshots). 'source' is the Fastlane snapshot base name; bin/screenshots copies '<source>-light/-dark' from the snapshot output to the 'light'/'dark' filenames below.",
+  "version": "2.0",
+  "comment": "Drives the home-page gallery (index.html / initScreenshotGallery in js/main.js), the press-kit build (scripts/build-press-kit.mjs), and the screenshot publish step (quotebook-ios/bin/screenshots). 'source' is the Fastlane snapshot base name emitted by UITests/SnapshotUITests.swift; bin/screenshots copies '<source>-light/-dark' from the capture output to the 'light'/'dark' filenames below. Every gallery entry names the 'platform' it belongs to; the site renders one tab per platform, in the order they appear under 'platforms'.",
   "device": "iPhone 17 Pro",
+  "deviceComment": "Legacy top-level field, kept because bin/widget-screenshot reads it to pick the simulator for the SpringBoard capture. It duplicates the iphone platform's 'device'; change both together.",
+  "platforms": [
+    {
+      "id": "iphone",
+      "label": "iPhone",
+      "device": "iPhone 17 Pro",
+      "capture": "fastlane",
+      "frame": true,
+      "maxWidth": 1000,
+      "comment": "Framed by `fastlane frameit` per fastlane/Framefile.json — light gets the Cosmic Orange bezel, dark gets Silver. Those bezels exist only for iPhone 17 Pro / Pro Max, which is why this device is pinned."
+    },
+    {
+      "id": "ipad",
+      "label": "iPad",
+      "device": "iPad Pro 13-inch (M5)",
+      "capture": "fastlane",
+      "orientation": "landscape",
+      "frame": false,
+      "maxWidth": 1400,
+      "comment": "Landscape, unlike the App Store set: an iPad held long-side-up is how the app is used at that size, and it fills a wide gallery slot instead of leaving a third of it empty. bin/screenshots turns this into TEST_RUNNER_QUIPS_SNAPSHOT_ORIENTATION for the capture run; SnapshotUITests rotates before navigating. Unframed because frameit ships no iPad bezel in the pinned frame set, so these publish as bare screenshots and the site rounds the corners and casts the shadow in CSS (.gallery-screenshot.is-unframed)."
+    },
+    {
+      "id": "mac",
+      "label": "Mac",
+      "capture": "manual",
+      "frame": false,
+      "maxWidth": 1600,
+      "comment": "No simulator: the Mac shots are window captures produced by quotebook-ios/bin/mac-screenshot, which builds and runs the real app. Every mac entry is 'managed': false so bin/screenshots never overwrites them."
+    }
+  ],
   "gallery": [
     {
+      "platform": "iphone",
       "source": "main",
       "label": "Your Quotes",
-      "alt": "Quips main quote list",
+      "alt": "The Quips library on iPhone, listing saved quotes",
       "light": "screenshot-light.png",
       "dark": "screenshot-dark.png",
       "optimize": false
     },
     {
+      "platform": "iphone",
       "source": "collections",
       "label": "Collections",
-      "alt": "Quips collections",
+      "alt": "The Quips sidebar on iPhone, showing collections and their quote counts",
       "light": "quips-collections-light-min.png",
       "dark": "quips-collections-dark-min.png",
       "optimize": true
     },
     {
-      "source": "detail",
-      "label": "Quote Details",
-      "alt": "Quips quote detail",
-      "light": "quips-detail-light-min.png",
-      "dark": "quips-detail-dark-min.png",
+      "platform": "iphone",
+      "source": "public-collections",
+      "label": "Discover",
+      "alt": "Discover on iPhone, browsing curated public collections",
+      "light": "quips-discover-light-min.png",
+      "dark": "quips-discover-dark-min.png",
       "optimize": true
     },
     {
+      "platform": "iphone",
+      "source": "search",
+      "label": "Search",
+      "alt": "Search on iPhone, filtering quotes as the query is typed",
+      "light": "quips-search-light-min.png",
+      "dark": "quips-search-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "iphone",
       "source": "share-studio",
       "label": "Share Studio",
-      "alt": "Quips Share Studio",
+      "alt": "Share Studio on iPhone, composing a square quote image",
       "light": "quips-share-studio-light-min.png",
       "dark": "quips-share-studio-dark-min.png",
       "optimize": true
     },
     {
+      "platform": "iphone",
+      "source": "story-share",
+      "label": "Story Format",
+      "alt": "Share Studio on iPhone at the 9:16 story size",
+      "light": "quips-story-light-min.png",
+      "dark": "quips-story-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "iphone",
       "source": "quote-style",
       "label": "Quote Style",
-      "alt": "Quips Quote Style screen",
+      "alt": "The Quote Style settings screen on iPhone",
       "light": "quips-style-light-min.png",
       "dark": "quips-style-dark-min.png",
       "optimize": true
     },
     {
+      "platform": "iphone",
       "source": "widgets",
       "label": "Widgets",
-      "alt": "Quips home screen widgets",
+      "alt": "Quips widgets in the iOS home screen widget gallery",
       "light": "quips-widget-light-min.png",
       "dark": "quips-widget-dark-min.png",
       "optimize": true,
       "managed": false,
       "note": "iOS 'Add Widget' gallery (SpringBoard, outside the app). Captured semi-automatically via quotebook-ios/bin/widget-screenshot; bin/screenshots leaves it untouched (managed:false)."
+    },
+
+    {
+      "platform": "ipad",
+      "source": "main",
+      "label": "Your Quotes",
+      "alt": "The Quips library on iPad, with the sidebar beside the quote list",
+      "light": "quips-ipad-main-light-min.png",
+      "dark": "quips-ipad-main-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "ipad",
+      "source": "public-collections",
+      "label": "Discover",
+      "alt": "Discover on iPad, browsing curated public collections",
+      "light": "quips-ipad-discover-light-min.png",
+      "dark": "quips-ipad-discover-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "ipad",
+      "source": "share-studio",
+      "label": "Share Studio",
+      "alt": "Share Studio on iPad, composing a square quote image",
+      "light": "quips-ipad-share-studio-light-min.png",
+      "dark": "quips-ipad-share-studio-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "ipad",
+      "source": "search",
+      "label": "Search",
+      "alt": "Search on iPad, filtering quotes as the query is typed",
+      "light": "quips-ipad-search-light-min.png",
+      "dark": "quips-ipad-search-dark-min.png",
+      "optimize": true
+    },
+    {
+      "platform": "ipad",
+      "source": "quote-style",
+      "label": "Quote Style",
+      "alt": "The Quote Style settings screen on iPad",
+      "light": "quips-ipad-style-light-min.png",
+      "dark": "quips-ipad-style-dark-min.png",
+      "optimize": true
+    },
+
+    {
+      "platform": "mac",
+      "source": "main",
+      "label": "Your Quotes",
+      "alt": "The Quips library on Mac, with the sidebar beside the quote list",
+      "light": "quips-mac-main-light-min.png",
+      "dark": "quips-mac-main-dark-min.png",
+      "optimize": true,
+      "managed": false
+    },
+    {
+      "platform": "mac",
+      "source": "public-collections",
+      "label": "Discover",
+      "alt": "Discover on Mac, browsing curated public collections",
+      "light": "quips-mac-discover-light-min.png",
+      "dark": "quips-mac-discover-dark-min.png",
+      "optimize": true,
+      "managed": false
+    },
+    {
+      "platform": "mac",
+      "source": "share-studio",
+      "label": "Share Studio",
+      "alt": "The Share Studio window on Mac, composing a quote image",
+      "light": "quips-mac-share-studio-light-min.png",
+      "dark": "quips-mac-share-studio-dark-min.png",
+      "optimize": true,
+      "managed": false
     }
   ]
 }

@@ -206,6 +206,55 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
   and typefaces, and watermark-free Share Studio sharing. Keep faqs.json,
   terms.html, press.html, and the homepage pricing strip in sync.
 
+## Screenshot gallery (`images/screenshots.json`)
+
+The home page's "See it in action" gallery is data-driven: `js/main.js`
+(`initScreenshotGallery`) reads `images/screenshots.json` and builds the whole
+section, so adding or removing a screen is a JSON edit, never an HTML one. The
+same manifest drives `scripts/build-press-kit.mjs` and, in the app repo,
+`bin/screenshots` / `bin/mac-screenshot` / `bin/widget-screenshot`.
+
+- **`platforms[]`** declares the tabs, in the order they render (iPhone, iPad,
+  Mac). Each carries the `device` to capture on, how it is captured (`fastlane`
+  or `manual`), whether the shot ships with a device bezel (`frame`), and the
+  `maxWidth` the publish step downscales to. Tabs are only drawn when more than
+  one platform has screenshots.
+- **`gallery[]`** is flat, and every entry names its `platform`. An entry with
+  no `platform` means iPhone — that is what the pre-2.0 manifest's entries were,
+  and every consumer still reads them that way.
+- **`source`** is the Fastlane snapshot base name from
+  `UITests/SnapshotUITests.swift` (`main`, `search`, `story-share`, …); the
+  capture step looks for `<device>-<source>-light/-dark.png`. A `source` with no
+  matching test is skipped with a warning, so a screen deleted from the suite
+  leaves a stale image on the site rather than an error — check the run output.
+- **`orientation`** (fastlane platforms) is `portrait` unless stated. iPad is
+  `landscape` — the app is used that way at that size, and a portrait shot
+  leaves a third of a wide gallery slot empty. `bin/screenshots` passes it as
+  `TEST_RUNNER_QUIPS_SNAPSHOT_ORIENTATION`, an environment variable rather than
+  an xcarg: that prefix is how xcodebuild reaches the XCUITest *runner*, and the
+  test is what rotates the device. Passed as an xcarg it becomes an inert build
+  setting and every shot comes out portrait with no error anywhere. Note the App
+  Store set (`quips-marketing/appstore/appstore-assets.json`) is still portrait
+  on iPad and is unaffected by this field.
+- **`managed: false`** means the images are produced outside `bin/screenshots`
+  and must never be overwritten by it: the iOS widget gallery (SpringBoard,
+  captured by `bin/widget-screenshot`) and every Mac entry (captured by
+  `bin/mac-screenshot`).
+- Each entry names a `light` and a `dark` file. Both are rendered and the active
+  theme shows one via CSS, the same pairing the app icons use.
+- Mac shots come from `bin/mac-screenshot`, which has no simulator or UI
+  automation to work with — the `UITests` target is iOS-only. It launches the
+  real Debug app with the marketing seed, reaches each screen by launch argument
+  or `quips://` deep link, and photographs the window with `screencapture -l`.
+  It needs **Screen Recording** permission for the terminal running it. The
+  window it captures is selected by title, so a navigation that silently did
+  nothing fails the screen instead of publishing the library three times.
+- iPhone shots carry a frameit device bezel baked into the PNG. iPad and Mac
+  shots do not — the pinned frameit frame set has no bezel for either — so they
+  get `.is-unframed` and take their rounded corners and shadow from CSS. Never
+  put `.is-unframed` on a framed shot: the bezel is already rounded and a second
+  radius clips its corners.
+
 ## App icon assets
 
 - `images/app-icon.png` (512px, light/default) and `images/app-icon-dark.png`
