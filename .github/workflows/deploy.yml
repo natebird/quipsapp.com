@@ -170,7 +170,7 @@ jobs:
 
       # Pin Node so the build doesn't drift with runner image updates
       # (matches the Node 24 Pages-actions baseline from the CI bump in #11).
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
 
