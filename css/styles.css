@@ -57,6 +57,15 @@
     padding: 0;
 }
 
+/* The `hidden` attribute means hidden, full stop. The UA supplies it as a plain
+   `display: none`, which any component rule setting `display: flex`/`grid`
+   outranks — so an element JS had hidden stayed on screen. That is what showed
+   all three screenshot-gallery panels (.screenshots-row) at once no matter
+   which platform tab was selected. Keep this above the component rules. */
+[hidden] {
+    display: none !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
