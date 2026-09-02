@@ -85,6 +85,22 @@ function hasIcon(iconName) {
     return Object.prototype.hasOwnProperty.call(ICONS, resolveIconName(iconName));
 }
 
+// Published as /icons.json so quips-collections can validate a new collection's
+// iconName offline, against a checked-in mirror of this list, instead of finding
+// out at deploy time. Names only — the drawings stay here, where they are used.
+// An alias counts as supported: hasIcon() resolves it before looking up.
+function iconNamesJson() {
+    const names = [...new Set([...Object.keys(ICONS), ...Object.keys(ICON_ALIASES)])].sort();
+    return JSON.stringify(
+        {
+            note: 'iconName values quipsapp.com can render. Generated from js/icons.js by scripts/build-collections.mjs — do not hand-edit.',
+            names
+        },
+        null,
+        2
+    ) + '\n';
+}
+
 function getIconSvg(iconName) {
     return ICONS[resolveIconName(iconName)] || ICONS['sunrise.fill'];
 }
@@ -456,6 +472,7 @@ function main() {
         }
     }
 
+    fs.writeFileSync(path.join(ROOT, 'icons.json'), iconNamesJson(), 'utf8');
     fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapXml(ids), 'utf8');
     fs.writeFileSync(
         path.join(ROOT, 'collections-stats.json'),
