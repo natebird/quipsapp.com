@@ -69,9 +69,17 @@ const factSheet = [
     htmlToText(mainWithoutAssets),
     '',
     '== Included Files ==',
-    'icons/          App icon, light + dark variants (1024px PNG)',
+    'icons/          App icon at 1024 / 512 / 256 px (PNG), light and dark.',
+    '                The dark variant is a separate design — black tile, teal',
+    '                glyph — not a recolour. Use it on dark grounds.',
+    'brand/          Wordmark and icon+wordmark lockup (SVG, outlined —',
+    '                no font needed to render them correctly)',
     'screenshots/    Marketing screenshots, light + dark (iPhone)',
     'quips-social-preview.png  1200x630 social/OG image',
+    '',
+    'The wordmark is Libre Baskerville, supplied as outlines rather than live',
+    'text so it renders identically everywhere. Please do not re-set it in',
+    'another face, recolour it, or stretch it.',
     '',
     'For the "Download on the App Store" badge, use Apple\'s official artwork:',
     'https://developer.apple.com/app-store/marketing/guidelines/',
@@ -84,6 +92,7 @@ const factSheet = [
 const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'press-kit-'));
 const kitDir = path.join(stage, KIT_NAME);
 fs.mkdirSync(path.join(kitDir, 'icons'), { recursive: true });
+fs.mkdirSync(path.join(kitDir, 'brand'), { recursive: true });
 fs.mkdirSync(path.join(kitDir, 'screenshots'), { recursive: true });
 
 fs.writeFileSync(path.join(kitDir, 'quips-press-kit.txt'), factSheet);
@@ -100,6 +109,15 @@ function copyAsset(src, dest) {
 
 copyAsset('app-icon@1024.png', 'icons/quips-app-icon-1024.png');
 copyAsset('app-icon-dark@1024.png', 'icons/quips-app-icon-dark-1024.png');
+// Journalists drop these straight into a layout, where a 1024 master is
+// oversized and gets scaled badly by whatever tool they are using.
+copyAsset('quips-app-icon-512.png', 'icons/quips-app-icon-512.png');
+copyAsset('quips-app-icon-256.png', 'icons/quips-app-icon-256.png');
+copyAsset('quips-app-icon-dark-512.png', 'icons/quips-app-icon-dark-512.png');
+copyAsset('quips-app-icon-dark-256.png', 'icons/quips-app-icon-dark-256.png');
+copyAsset('brand/quips-wordmark.svg', 'brand/quips-wordmark.svg');
+copyAsset('brand/quips-wordmark-reverse.svg', 'brand/quips-wordmark-reverse.svg');
+copyAsset('brand/quips-lockup.svg', 'brand/quips-lockup.svg');
 copyAsset('og-image.png', 'quips-social-preview.png');
 
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'screenshots.json'), 'utf8'));
