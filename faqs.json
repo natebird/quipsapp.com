@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "lastUpdated": "2026-06-27",
+  "version": "2.0",
+  "lastUpdated": "2026-08-15",
   "sections": [
     {
       "id": "getting-started",
@@ -9,22 +9,32 @@
         {
           "id": "add-quote",
           "question": "How do I add a new quote?",
-          "answer": "Tap the + button in the bottom right corner of the main screen. Enter your quote text, add an author (optional), and tap Save. You can also add tags, a source, notes, and assign the quote to a collection."
+          "answer": "On iPhone, tap + in the bar at the bottom of the screen. On iPad and Mac — and on an iPhone turned sideways — + sits in the toolbar at the top. With a keyboard, Command-N starts a new quote and Shift-Command-N starts one from whatever is on your clipboard. Only the quote itself is required; the author, tags, source, notes and collection are all optional, and you can add them later."
+        },
+        {
+          "id": "capture-from-other-apps",
+          "question": "Can I save a quote straight from another app?",
+          "answer": "Yes, on iPhone and iPad. Select the text in Safari, Books, Notes, Mail or anywhere else that shares text, tap Share, then choose Quips. The quote arrives in a small editor where you can set the author, tags and collection before saving. If the text includes a link, Quips offers to move it to the Source field instead of leaving it in the quote."
         },
         {
           "id": "favorite-quote",
           "question": "How do I favorite a quote?",
-          "answer": "Tap the heart icon on any quote card to add it to your favorites. You can view all your favorite quotes by tapping the heart icon in the top navigation bar."
+          "answer": "Open the quote and tap the favorite button in its action bar. From a list you can also swipe a quote to the right, and on iPad and Mac right-click it and choose Favorite — or press Command-L with it selected. The marker on the card shows which quotes are favorites; to see only those, choose Favorites in the sidebar, or Only Favorites in the sort menu when the sidebar isn't showing."
         },
         {
           "id": "copy-quote",
           "question": "How do I copy a quote?",
-          "answer": "Press and hold any quote, then tap Copy. The quote is copied to your clipboard as attributed text, including the author and date."
+          "answer": "Swipe or right-click a quote and choose Copy, or press Shift-Command-C with it selected. The quote goes to your clipboard as attributed text — the words in quotation marks, then the author and date on the line below."
         },
         {
           "id": "search-quotes",
           "question": "How do I search for quotes?",
-          "answer": "Use the search bar at the bottom of the main screen. You can search by quote text, author name, tags, or any other content in your quotes."
+          "answer": "On iPhone, the search field is in the bar at the bottom of the screen. On iPad and Mac it's in the toolbar, and Command-F puts the cursor in it. Search covers quote text, authors, tags, sources and notes, and you can narrow the results by scope once you start typing. Search is free — every part of it, on every plan."
+        },
+        {
+          "id": "undo",
+          "question": "I made a mistake. Can I undo it?",
+          "answer": "Yes. Writing, editing, favoriting and deleting a quote are all undoable — Edit > Undo, or Command-Z with a keyboard, and shake to undo on iPhone and iPad. The menu names the step it's about to undo, so you can see what will change before you commit to it. A deleted quote also waits in Recently Deleted for 30 days."
         }
       ]
     },
@@ -34,49 +44,177 @@
       "faqs": [
         {
           "id": "create-collections",
-          "question": "How do I create collections?",
-          "answer": "Open the Collections screen and tap \"Add New Collection.\" Give it a name, color, and icon, then save. You can create collections like \"Inspiration,\" \"Personal,\" or any category you want, and assign quotes to them when creating or editing."
+          "question": "How do I create a collection?",
+          "answer": "In the sidebar, choose Manage Collections at the foot of the Collections section — it reads All Collections… once you have more than five — then tap + in the column that opens. Settings > Collections gets you to the same place. Give the collection a name, a color and an icon, then assign quotes to it while creating or editing them. A free account keeps everything in the built-in Personal collection; Premium adds up to 25 collections of your own."
         },
         {
-          "id": "public-collections",
-          "question": "What are the curated Public Collections?",
-          "answer": "Public Collections are ready-made quote collections curated by Quips — more than 80 of them across topics like Stoicism, literature, film, music, comedy, and history. Open the Collections screen and tap \"Browse Public Collections\" to explore them, then add any collection to your library with one tap. If a quote is already in your library, Smart Duplicate Detection lets you know and shows you the existing copy instead of adding it twice. Every collection is free to browse and add."
+          "id": "discover",
+          "question": "What is Discover?",
+          "answer": "Discover is where Quips' own curated collections live — 80-plus of them across Stoicism, literature, film, music, comedy, history and more. It's a row in the sidebar on iPad and Mac, and a button in the top-left corner on iPhone. Browse by category, search across collections, authors and quotes, and see what's featured this week or what was said on today's date. Everything in Discover is free to browse and read."
         },
         {
-          "id": "source-type",
-          "question": "Can I note where a quote came from?",
-          "answer": "Yes. When creating or editing a quote, tap the source row to choose a source type — book, movie, podcast, speech, comic, and more. Each type shows a matching icon on the quote throughout the app, alongside any free-text source you add."
+          "id": "add-public-quotes",
+          "question": "How do I add quotes from Discover to my library?",
+          "answer": "Tap Add on any quote to save it, or Add All to take a whole collection at once. Saved quotes land in your Public Quotes collection, which keeps them separate from the ones you wrote down yourself. If a quote is already in your library, Quips tells you and shows you the copy you have rather than filing a second one. A free account can add one collection; Premium lifts that."
         },
         {
           "id": "add-tags",
           "question": "How do I add tags to quotes?",
-          "answer": "When creating or editing a quote, you'll see a Tags field. Tap it to add existing tags or create new ones. Tags help you categorize and find quotes quickly. You can manage all your tags in Settings > Tags."
+          "answer": "When creating or editing a quote, tap the Tags field and start typing. Quips offers the tags you already use and creates a new one if there's no match, so you never end up with two spellings of the same tag. Manage them all — rename, recolor, merge, delete — in Settings > Tags, or through Manage Tags at the foot of the sidebar's Tags section."
         },
         {
           "id": "manage-authors",
           "question": "How do I manage authors?",
-          "answer": "Go to Settings > Authors to view, edit, or delete authors. When you add a quote with a new author name, they're automatically added to your authors list. You can also merge duplicate authors from this screen."
+          "answer": "Go to Settings > Authors, or Manage Authors at the foot of the sidebar's Authors section. Typing a new name while editing a quote adds that author automatically; the manage screen is where you edit one, write a short bio, record birth and death dates, merge duplicates, or delete an author you no longer need."
+        },
+        {
+          "id": "record-detail",
+          "question": "Can I see everything by one author, tag or collection?",
+          "answer": "Yes — tap any author, tag, collection or source type to open its own screen. Each one leads with the record itself: its color and glyph, whatever you've written about it, how many quotes it holds and the tags that come up most often in them, with all of its quotes below."
+        },
+        {
+          "id": "source-type",
+          "question": "Can I note where a quote came from?",
+          "answer": "Yes. While creating or editing a quote, tap the source row to choose a type — book, movie, podcast, speech, comic and more — and add the free-text source alongside it. The type shows as a matching icon on the quote throughout the app, and the sidebar can group your library by it."
         }
       ]
     },
     {
       "id": "sharing",
-      "title": "Sharing & Widgets",
+      "title": "Share Studio",
       "faqs": [
         {
           "id": "share-image",
           "question": "How do I share a quote as an image?",
-          "answer": "Tap a quote to open the detail view, then tap the share icon to open Share Studio. Customize the image before sharing — choose from six card styles; square, portrait, story, or wide sizes; light, dark, or saturated backgrounds; your own color and typeface; and toggle the author, date, and source on or off. Premium subscribers can also remove the watermark. When it looks right, tap Share to send it or save it to your photos."
+          "answer": "Open a quote and tap the share icon to open Share Studio. Six templates — Minimal, Framed, Classic, Gradient, Card and Editorial — combine with four sizes and a light, dark or saturated background, and you can set the color, typeface, alignment and text size, then turn the quote marks, author, date and source on or off. The preview updates as you go. When it looks right, tap Share to send it or save it to your photos."
         },
         {
           "id": "share-story",
           "question": "Can I share a quote as a Story?",
-          "answer": "Yes. In Share Studio, choose the Story (9:16) size to create a tall image made for Instagram and other Stories, alongside the classic square format."
+          "answer": "Yes. Choose the Story size for a tall 9:16 image made for Instagram and other Stories. Square, Portrait and Wide are there too, each rendered at the size the platform it's named for expects."
         },
         {
+          "id": "share-watermark",
+          "question": "How do I remove the Quips watermark?",
+          "answer": "Watermark-free sharing is a Premium feature. With a subscription, turn the Quips watermark off under Elements in Share Studio and it stays off for every card you make."
+        },
+        {
+          "id": "share-long-quote",
+          "question": "My quote is too long for the card. What can I do?",
+          "answer": "Quips shrinks the text to fit and says so, with a shortcut to the Story size, which has the most room. Turning off the author, date or quote marks frees up more, and the Minimal and Editorial templates give the words the most space to work with."
+        },
+        {
+          "id": "share-mac",
+          "question": "Where does Share Studio open on a Mac?",
+          "answer": "In a window of its own, with the controls in an inspector down the right-hand side rather than in a tab bar. Everything works the same as it does on iPhone and iPad — there's just room to see the card and its controls at once."
+        }
+      ]
+    },
+    {
+      "id": "widgets",
+      "title": "Widgets",
+      "faqs": [
+        {
           "id": "add-widget",
-          "question": "How do I add a widget to my home screen?",
-          "answer": "Long-press on your home screen and tap the + button in the top corner. Search for \"Quips\" and choose your widget size. The widget displays a random quote, refreshing throughout the day. Medium and large widgets also have a one-tap share button for the quote they're showing. You can configure widgets in Settings > Widgets."
+          "question": "How do I add a widget?",
+          "answer": "On iPhone and iPad, touch and hold the Home Screen, tap Edit > Add Widget, search for Quips and pick a size. On Mac, right-click the desktop or open Notification Center, choose Edit Widgets, and find Quips there. Small, medium and large are available everywhere; iPhone and iPad also offer a Lock Screen widget. Widgets are free on every plan."
+        },
+        {
+          "id": "widget-types",
+          "question": "What can a widget show?",
+          "answer": "There are two. Quote shows a rotating quote, and you choose where it draws from — your whole library, favorites, recently added, a tag, an author, one of your collections, or a public collection you've added. Daily Quote mirrors one of your Daily Quote schedules, so the widget and the notification always agree. Long-press a placed widget and choose Edit Widget to change any of that."
+        },
+        {
+          "id": "widget-studio",
+          "question": "How do I change the way my widgets look?",
+          "answer": "Go to Settings > Widgets > Widget Studio on iPhone or iPad. Pick a template, choose whether the background takes each quote's own color or stays one color you set, shape the gradient, choose the text color, typeface and alignment, and turn the author, source, favorite marker and share button on or off. A live preview shows small, medium and large as you work, and placed widgets repaint when you leave the screen."
+        },
+        {
+          "id": "widget-share-button",
+          "question": "Can I share a quote straight from a widget?",
+          "answer": "Yes. Medium and large widgets can carry a share button for the quote they're showing — turn it on under Details in Widget Studio. Tapping the widget anywhere else opens that quote in Quips."
+        },
+        {
+          "id": "widget-per-device",
+          "question": "Why doesn't my widget look the same on my other device?",
+          "answer": "Widget Studio settings are stored on the device you set them on, so a Mac and an iPhone can look different on purpose. Widget Studio itself is on iPhone and iPad; Mac widgets use the standard look. Your quotes, collections, tags and authors sync as usual — it's only the widget styling that stays put."
+        },
+        {
+          "id": "widget-truncation",
+          "question": "Why does my widget skip long quotes?",
+          "answer": "Smart Quote Filtering matches quote length to widget size, so a small widget favors short quotes instead of cutting a long one off mid-sentence. Turn it off under Options in Settings > Widgets if you'd rather every quote had a turn."
+        }
+      ]
+    },
+    {
+      "id": "daily-quote",
+      "title": "Daily Quote",
+      "faqs": [
+        {
+          "id": "daily-quote-setup",
+          "question": "How do I set up a Daily Quote?",
+          "answer": "On iPhone and iPad, go to Settings > Daily Quote. On Mac, open Settings with Command-comma and choose Daily Quote under Reminders & Widgets. Add a schedule with +, then pick the time, the days it should run, which quotes it draws from, and whether it moves through them in order or shuffles. Your changes save as you make them — there's no Save button. A free account includes one schedule; Premium allows up to 10."
+        },
+        {
+          "id": "daily-quote-separate-devices",
+          "question": "Why don't my schedules appear on my other devices?",
+          "answer": "Daily Quote schedules are set up separately on each device, so you can have a 7am reminder on your phone and a different one on your Mac. Your quotes, collections, tags and authors all sync as usual — it's only the schedules that stay on the device you created them on."
+        },
+        {
+          "id": "daily-quote-not-arriving",
+          "question": "My Daily Quote isn't arriving. What should I check?",
+          "answer": "First, make sure the schedule's Notification switch is on and that today is one of its selected days. Next, check that notifications are allowed for Quips in your device's system settings — if permission was denied, Quips shows a note with a button that takes you straight there. Also check whether a Focus is set to silence Quips; the quote is still delivered, but the banner is held back until you look at Notification Center."
+        },
+        {
+          "id": "daily-quote-mac-asleep",
+          "question": "Why did my Mac's quote arrive late?",
+          "answer": "A Mac that's asleep at the scheduled time doesn't wake up to deliver a notification — it arrives when you next open the lid or wake the machine. Quotes are prepared about a month ahead, so quitting Quips doesn't stop them; opening the app now and then keeps that window topped up."
+        },
+        {
+          "id": "daily-quote-vs-widget",
+          "question": "What's the difference between the Daily Quote notification and the widget?",
+          "answer": "They're two ways of seeing the same thing. Every schedule shows the same quote on a given day whether it reaches you as a notification, on a widget, or through Siri. Turning a schedule's Notification switch off stops the notification but leaves it working as a widget source — useful if you want the quote on your desktop without being interrupted."
+        }
+      ]
+    },
+    {
+      "id": "mac-ipad",
+      "title": "Mac & iPad",
+      "faqs": [
+        {
+          "id": "one-app",
+          "question": "Is Quips a real Mac app?",
+          "answer": "Yes — Quips is built natively for iPhone, iPad and Mac, and one subscription covers all three. Your quotes, collections, tags and authors sync through iCloud, so the library is the same wherever you open it."
+        },
+        {
+          "id": "window-layout",
+          "question": "Why does the app look different on my iPad than on my iPhone?",
+          "answer": "The layout follows the width of the window rather than the name of the device. With room, Quips shows a sidebar beside your library, lays the quotes out as a grid, and opens a quote beside the list instead of on top of it. Drag a Mac window narrower or put an iPad app into a slim split view and it settles back into the phone's single-column layout."
+        },
+        {
+          "id": "sidebar",
+          "question": "What's in the sidebar, and can I change it?",
+          "answer": "The sidebar holds the places in your library: All Quotes, Favorites, Discover and Recently Deleted, then sections for your collections, tags, authors and source types. Each section lists the five you use most, with a row at the foot leading to the full list. It sits beside your library wherever the window is wide enough; on iPhone, tap Back from the library to reach it. Choose Customize Sidebar — from the sidebar itself, or from the View menu — to turn off the sections you don't navigate by."
+        },
+        {
+          "id": "keyboard-shortcuts",
+          "question": "What keyboard shortcuts are there?",
+          "answer": "Command-N for a new quote, Shift-Command-N to start one from the clipboard, Option-Command-N for a new window, Command-F to search, Command-L to favorite, Shift-Command-C to copy, Command-Down to open a quote in its own window, and Command-Delete to delete. On a Mac, Command-comma opens Settings. The full set lives in the menu bar on both Mac and iPad — on iPad, hold the Command key to see it."
+        },
+        {
+          "id": "quote-window",
+          "question": "Can I keep a quote open on its own?",
+          "answer": "On Mac and iPad, select a quote and choose Quote > Open in New Window (Command-Down) to give it a window of its own. Select several first and each one opens in its own window — useful when you're comparing or transcribing."
+        },
+        {
+          "id": "select-multiple",
+          "question": "Can I act on several quotes at once?",
+          "answer": "Yes, where your library shows as a grid. With a pointer, click a quote and Shift- or Command-click to extend the selection; with a keyboard, move through it with the arrow keys. Favorite, copy, share and delete then apply to everything selected, and the menu says how many quotes it's about to act on."
+        },
+        {
+          "id": "platform-differences",
+          "question": "Is anything missing on the Mac?",
+          "answer": "A few things, because they're features of iPhone and iPad themselves: alternate app icons, the share extension that saves text from other apps, the Shortcuts actions screen, and Widget Studio. Everything else — your whole library, Discover, Share Studio, Daily Quote, widgets, import and export — is there. The Mac paywall doesn't offer what the Mac can't deliver."
         }
       ]
     },
@@ -87,27 +225,32 @@
         {
           "id": "siri-add",
           "question": "How do I use Siri to add a quote?",
-          "answer": "Just ask Siri! Try saying: \"Add a quote to Quips,\" \"Save a quote in Quips,\" \"Create a quote with Quips,\" or \"Add a new quote to Quips.\" Siri will guide you through entering your quote."
+          "answer": "Ask Siri: \"Add a quote to Quips,\" \"Save a quote in Quips,\" \"Create a quote with Quips,\" or \"Add a new quote to Quips.\" Siri walks you through entering the quote."
         },
         {
           "id": "siri-random",
           "question": "How do I get a random quote with Siri?",
-          "answer": "Ask Siri: \"Get a random quote from Quips,\" \"Show me a quote from Quips,\" \"Give me inspiration from Quips,\" or simply \"Random quote from Quips.\" Siri will display a random quote from your collection."
+          "answer": "Ask Siri: \"Get a random quote from Quips,\" \"Show me a quote from Quips,\" \"Give me inspiration from Quips,\" or \"Random quote from Quips.\" Ask for \"a quote card from Quips\" instead and you get the quote as an image you can share."
+        },
+        {
+          "id": "siri-daily",
+          "question": "Can Siri tell me today's Daily Quote?",
+          "answer": "Yes. Ask \"Daily Quote from Quips,\" \"Show the quote of the day from Quips,\" or \"What is the Quips quote of the day?\" It's the same quote your schedule sends as a notification and shows on the widget."
         },
         {
           "id": "siri-search",
           "question": "How do I search for quotes using Siri?",
-          "answer": "Say: \"Search quotes in Quips,\" \"Find a quote in Quips,\" or \"Search Quips for quotes.\" Siri will prompt you for a search term and show matching results."
+          "answer": "Say: \"Search quotes in Quips,\" \"Find a quote in Quips,\" or \"Search Quips for quotes.\" Siri asks for a search term and shows what matches."
         },
         {
           "id": "siri-favorites",
           "question": "How do I view my favorites with Siri?",
-          "answer": "Ask Siri: \"Show my favorite quotes from Quips,\" \"Get my favorites from Quips,\" or \"Show favorites in Quips.\" Your favorited quotes will be displayed."
+          "answer": "Ask Siri: \"Show my favorite quotes from Quips,\" \"Get my favorites from Quips,\" or \"Show favorites in Quips.\""
         },
         {
           "id": "shortcuts",
           "question": "Where can I find Quips shortcuts?",
-          "answer": "Open the Shortcuts app on your device and look for Quips under App Shortcuts. You can add these to your home screen, use them in automations, or customize them to fit your workflow."
+          "answer": "Open the Shortcuts app and look for Quips under App Shortcuts, or see the list in Settings > Shortcuts on iPhone and iPad. Beyond the spoken ones, there are actions for adding a quote to a collection, updating or deleting a quote, toggling a favorite and fetching quotes by author, tag or collection — enough to build your own shortcuts and automations without opening Quips."
         }
       ]
     },
@@ -118,22 +261,22 @@
         {
           "id": "change-theme",
           "question": "How do I change the app theme?",
-          "answer": "Go to Settings > Appearance > App Theme to customize colors and appearance. You can choose between light mode, dark mode, or automatic (follows your system setting). Premium subscribers get access to additional theme colors."
+          "answer": "Open Settings and choose App Theme under Appearance. Pick light, dark or automatic, and set the color the app is themed in — on a Mac it can follow your system accent color. The default theme is free; the other colors and the favorite icons come with a subscription."
         },
         {
           "id": "quote-style",
           "question": "How do I change how my quotes look?",
-          "answer": "Go to Settings > Appearance > Quote Style. Quotes show in vibrant color by default — switch between Bold and Subtle looks, recolor the quote text, and choose a typeface. A live example updates as you make changes. The default Bold and Subtle styles are free; additional colors and typefaces are a premium feature."
-        },
-        {
-          "id": "daily-quote",
-          "question": "How do I get a daily quote notification?",
-          "answer": "Go to Settings > Daily Quote and turn it on, then pick the time you'd like to receive it. Each day Quips delivers a quote as a notification at that time — an easy way to build a daily habit of inspiration."
+          "answer": "Open Settings and choose Quote Style under Appearance. Quotes show in vibrant color by default — switch between the Bold and Subtle looks, recolor the quote text, and choose a typeface, with a live example updating as you go. Bold and Subtle are free; the extra colors and typefaces are a Premium feature."
         },
         {
           "id": "change-icon",
           "question": "Can I change the app icon?",
-          "answer": "Yes! Go to Settings > Appearance > App Icon to choose from a variety of icon designs, including the new Salmon icon. This is a premium feature available to subscribers."
+          "answer": "On iPhone and iPad, open Settings and choose App Icon under Appearance. There are nine designs — the default Teal plus Blue, Green, Orange, Purple, Red, Salmon, Violet and Yellow. Alternate icons are a Premium feature."
+        },
+        {
+          "id": "quips-quest",
+          "question": "What is Quips Quest?",
+          "answer": "A short list of first-time things worth trying — saving a quote, tagging one, adding a collection, placing a widget, turning on Daily Quote, sharing a card. Find it in Settings under Help. It's there to show you what the app can do, and nothing is locked behind finishing it."
         }
       ]
     },
@@ -143,18 +286,28 @@
       "faqs": [
         {
           "id": "backup",
-          "question": "How do I backup my quotes?",
-          "answer": "Your quotes are automatically backed up to iCloud if you have iCloud enabled for Quips. You can also manually export your quotes by going to Settings > Import/Export. This creates a file you can save or share."
+          "question": "How do I back up my quotes?",
+          "answer": "Your library syncs to iCloud automatically as long as iCloud is on for Quips, so it's already backed up and already on your other devices. For a copy you keep yourself, open Settings > Import & Export and export to a file — a JSON file holding every quote, author, tag and collection."
         },
         {
           "id": "import",
-          "question": "How do I import quotes from another device?",
-          "answer": "If you're signed into the same iCloud account, your quotes will sync automatically. Otherwise, go to Settings > Import/Export on your old device to export, then import the file on your new device."
+          "question": "How do I move my quotes to a new device?",
+          "answer": "Sign in to the same iCloud account and they arrive on their own. If you're moving between accounts, export to a file on the old device and import it on the new one from Settings > Import & Export. Anything already in your library is skipped, so importing the same file twice is safe."
         },
         {
           "id": "recover-deleted",
-          "question": "I accidentally deleted a quote. Can I recover it?",
-          "answer": "Yes! Go to Settings > Recently Deleted. Deleted quotes are kept for 30 days before being permanently removed. Tap on any quote to restore it."
+          "question": "I deleted a quote by accident. Can I get it back?",
+          "answer": "Yes. Choose Recently Deleted in the sidebar — on iPhone, tap Back from your library to get to it. Deleted quotes wait there for 30 days before they're removed for good; select one and Restore, or use Restore All. If you've only just deleted it, undo (shake, or Command-Z) brings it straight back."
+        },
+        {
+          "id": "spotlight",
+          "question": "Can I find my quotes without opening Quips?",
+          "answer": "Yes — your quotes are indexed for Spotlight, so searching your device by a phrase or an author's name turns them up and tapping one opens it in Quips. The index keeps up as you add, edit and delete."
+        },
+        {
+          "id": "delete-everything",
+          "question": "How do I delete all my data?",
+          "answer": "Settings > Import & Export has Delete All Data, which removes every quote, author and tag permanently. It can't be undone and it isn't in Recently Deleted afterwards, so export a copy first if there's any chance you'll want one."
         }
       ]
     },
@@ -163,19 +316,29 @@
       "title": "Subscription",
       "faqs": [
         {
+          "id": "free-tier",
+          "question": "What do I get without a subscription?",
+          "answer": "A working quote library: up to 100 quotes, the Personal collection, one collection added from Discover, one Daily Quote schedule, every widget, all of Share Studio apart from turning off the watermark, and search — all of it, including searching by author, tag and source."
+        },
+        {
           "id": "premium-features",
-          "question": "What's included in the premium subscription?",
-          "answer": "Premium includes: unlimited quotes (free is limited to 100), all theme colors and favorite icons, additional Quote Style colors and typefaces, watermark-free sharing in Share Studio, custom app icons, and access to all future premium features. Choose monthly ($0.99/month) or annual ($8.99/year)."
+          "question": "What's included in Premium?",
+          "answer": "Unlimited quotes, up to 25 collections of your own and more from Discover, the full set of quote styles, text colors and typefaces, every theme color and favorite icon, watermark-free sharing in Share Studio, alternate app icons, and up to 10 Daily Quote schedules. It's $0.99 a month or $8.99 a year, and it covers iPhone, iPad and Mac. App icons and extra Daily Quote schedules are iPhone and iPad features, so the Mac doesn't offer them."
+        },
+        {
+          "id": "restore-purchases",
+          "question": "I subscribed already, but Quips says I'm on the free plan.",
+          "answer": "Tap the Premium banner at the top of Settings and choose Restore Purchases, making sure you're signed in with the Apple Account you subscribed with. A new device can take a moment to catch up; if it still hasn't after that, email me and I'll sort it out."
         },
         {
           "id": "cancel-subscription",
           "question": "How do I cancel my subscription?",
-          "answer": "Go to Settings > Subscription, or open the Settings app on your device > [Your Name] > Subscriptions > Quips. From there you can cancel auto-renewal. You'll continue to have access until the end of your current billing period."
+          "answer": "Open the Settings app on your device > your name > Subscriptions > Quips, and turn off auto-renewal. You keep Premium until the end of the period you've paid for, and your quotes stay where they are — a library over 100 quotes stays readable, you just can't add more until you're back under the limit or subscribed again."
         },
         {
           "id": "refund",
           "question": "Can I get a refund?",
-          "answer": "Refunds are handled by Apple. Visit reportaproblem.apple.com to request a refund for any App Store purchase."
+          "answer": "Refunds are handled by Apple. Visit reportaproblem.apple.com to request one for any App Store purchase."
         }
       ]
     }
