@@ -2849,18 +2849,6 @@ a {
     background-color: var(--bg-secondary);
 }
 
-.qu-highlight {
-    background-color: var(--bg-secondary);
-    padding: 1.5rem;
-    border-radius: var(--card-radius);
-    border-left: 4px solid var(--accent-primary);
-    margin: 2rem 0;
-}
-
-.qu-section:nth-child(even) .qu-highlight {
-    background-color: var(--bg-primary);
-}
-
 /* Sample edition callout on the landing page */
 .qu-sample {
     background-color: var(--bg-secondary);

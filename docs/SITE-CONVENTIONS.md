@@ -16,7 +16,7 @@ the Email Course nav item, press.html had a different footer encoding, etc.).
 | `collections/<id>.html` | Pre-rendered collection pages | **Generated** by `scripts/build-collections.mjs` — never hand-edit; edit the script's template |
 | `course.html` | 7-day email course landing | |
 | `quote-unquote.html` | Quote Unquote newsletter landing page | Subscribe form + archive list; linked from the homepage newsletter section |
-| `quote-unquote/<n>-<slug>.html` | Individual newsletter editions | Hand-authored (not generated); root-absolute paths like `collections/<id>.html` |
+| `quote-unquote/<n>-<slug>.html` | Individual newsletter editions | Hand-authored (not generated); root-absolute paths like `collections/<id>.html`. See **Quote Unquote editions** below for the per-issue mailto subject and the no-pull-quote rule |
 | `support.html` | Support + FAQ (renders `faqs.json`) | |
 | `releases.html` | What's New / changelog | |
 | `press.html` | Press kit | |
@@ -205,6 +205,28 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
   (limited launch pricing), unlocking unlimited quotes, all Quote Style colors
   and typefaces, and watermark-free Share Studio sharing. Keep faqs.json,
   terms.html, press.html, and the homepage pricing strip in sync.
+
+## Quote Unquote editions (`quote-unquote/<n>-<slug>.html`)
+
+Hand-authored from the Markdown drafts in the `quote-unquote` repo — there is
+no generator, so both conventions below have to be applied by hand on every new
+edition.
+
+- **The feedback mailto carries a per-issue subject.** The closing line of the
+  "One Question for You" section links to
+  `mailto:feedback@quipsapp.com?subject=<encoded>`, where the subject reads
+  `Quote Unquote #<n>: <headline>` — the headline being the `<title>` text
+  before the ` — Quote Unquote — Quips` suffix. Percent-encode the whole value
+  (`#` → `%23`, `:` → `%3A`, space → `%20`, plus any quotes, commas or em
+  dashes in the headline). Without it, replies give no clue which edition they
+  are about; clients that ignore `mailto` params just open a blank compose to
+  the same address, so nothing is lost.
+- **No pull-quote boxes in the prose.** A bolded line standing alone in the
+  Markdown is emphasis, not a callout — render it as `<p><strong>…</strong></p>`
+  inside `.qu-prose`, like any other paragraph. The former `.qu-highlight` box
+  was applied inconsistently (the same page had identical standalone bold lines
+  both boxed and unboxed), so its markup and CSS rule were removed outright.
+  `<blockquote>` remains correct for quoting someone; the box is not.
 
 ## Screenshot gallery (`images/screenshots.json`)
 
