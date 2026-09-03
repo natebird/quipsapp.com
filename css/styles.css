@@ -568,10 +568,12 @@ a {
     margin-bottom: 0.75rem;
 }
 
-/* iPad and Mac shots ship without a device bezel (frameit has no frame for
-   either), so the rounded corner and shadow a bezel would have supplied come
-   from here instead. Never apply this to a framed shot: the PNG's own bezel is
-   already rounded, and a second radius clips its corners off. */
+/* Mac shots ship without a device bezel — frameit refuses to draw one, and its
+   Mac mode composites onto a background instead — so the rounded corner and
+   shadow a bezel would have supplied come from here instead. Applied per the
+   manifest's per-platform "frame" flag, so iPhone and iPad (both framed) never
+   get it: their PNG's own bezel is already rounded, and a second radius would
+   clip its corners off. */
 .gallery-screenshot.is-unframed {
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
@@ -581,9 +583,12 @@ a {
    landscape iPad and Mac shots carry a sidebar and a multi-column grid that
    turn to mush at phone width. The three widths are tuned so a row reads as one
    set — a 4:3 iPad and a 16:9 Mac at these sizes stand about as tall as the
-   phone beside them. */
+   phone beside them. The iPad numbers are the Mac-era ones scaled by 1.07: its
+   PNG now carries a bezel, which pads the image without enlarging the UI, so
+   the width has to grow by the same amount to keep the app itself the size it
+   was (515px of image ≈ 480px of screen). */
 .gallery-screenshot.is-ipad {
-    width: 280px;
+    width: 300px;
 }
 
 .gallery-screenshot.is-mac {
@@ -600,7 +605,7 @@ a {
     }
 
     .gallery-screenshot.is-ipad {
-        width: 380px;
+        width: 410px;
     }
 
     .gallery-screenshot.is-mac {
@@ -614,7 +619,7 @@ a {
     }
 
     .gallery-screenshot.is-ipad {
-        width: 480px;
+        width: 515px;
     }
 
     .gallery-screenshot.is-mac {
