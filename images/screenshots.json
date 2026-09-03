@@ -16,12 +16,13 @@
     {
       "id": "ipad",
       "label": "iPad",
-      "device": "iPad Pro 13-inch (M5)",
+      "device": "iPad Pro (12.9-inch) (6th generation)",
+      "frameName": "ipadPro129",
       "capture": "fastlane",
       "orientation": "landscape",
-      "frame": false,
-      "maxWidth": 1400,
-      "comment": "Landscape, unlike the App Store set: an iPad held long-side-up is how the app is used at that size, and it fills a wide gallery slot instead of leaving a third of it empty. bin/screenshots turns this into TEST_RUNNER_QUIPS_SNAPSHOT_ORIENTATION for the capture run; SnapshotUITests rotates before navigating. Unframed because frameit ships no iPad bezel in the pinned frame set, so these publish as bare screenshots and the site rounds the corners and casts the shadow in CSS (.gallery-screenshot.is-unframed)."
+      "frame": true,
+      "maxWidth": 1500,
+      "comment": "Landscape, unlike the App Store set: an iPad held long-side-up is how the app is used at that size, and it fills a wide gallery slot instead of leaving a third of it empty. bin/screenshots turns this into TEST_RUNNER_QUIPS_SNAPSHOT_ORIENTATION for the capture run; SnapshotUITests rotates before navigating. The 12.9-inch is pinned rather than the newer 13-inch because frameit matches a bezel to a screenshot by exact pixel size: it knows 2732x2048 and has an iPad Pro bezel for it, but a 13-inch capture is 2752x2064 and fails with \"Unsupported screen size\". frameName is what bin/screenshots renames the files to before framing — frameit prefers a device matched by FILENAME over one matched by resolution, and any name containing \"iPad Pro\" matches the 2015 iPad Pro (home button, thick bezels) first; \"ipadPro129\" is the device id shared by the 3rd/4th-generation 12.9-inch, whose higher priority wins. maxWidth is ~7% above the unframed 1400 because the bezel adds that much width around the same screen."
     },
     {
       "id": "mac",
