@@ -28,9 +28,11 @@
       "id": "mac",
       "label": "Mac",
       "capture": "manual",
-      "frame": false,
+      "frame": true,
+      "frameName": "MacBook Air",
+      "frameCanvas": "2560x1664",
       "maxWidth": 1600,
-      "comment": "No simulator: the Mac shots are window captures produced by quotebook-ios/bin/mac-screenshot, which builds and runs the real app. Every mac entry is 'managed': false so bin/screenshots never overwrites them."
+      "comment": "No simulator: the Mac shots are window captures produced by quotebook-ios/bin/mac-screenshot, which builds and runs the real app. Every mac entry is 'managed': false so bin/screenshots never overwrites them. Framed, but not by frameit — it declines a Mac outright (TemplateFinder returns nil for one, and its MacEditor composites onto a background rather than into a bezel). bin/mac-screenshot composites instead, using the MacBook bezel and offsets that ship in the same pinned frameit set the iPhone and iPad bezels come from. frameName is the key in that set's offsets.json, which supplies the paste offset and the aperture width; frameCanvas is the aperture the window is laid onto, and is the MacBook Air's own 2560x1664 display. A window capture is a floating window of arbitrary size, so it is scaled to fit and centred on a plain desktop first — nothing here crops or stretches it."
     }
   ],
   "gallery": [

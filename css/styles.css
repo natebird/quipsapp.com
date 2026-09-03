@@ -568,12 +568,14 @@ a {
     margin-bottom: 0.75rem;
 }
 
-/* Mac shots ship without a device bezel — frameit refuses to draw one, and its
-   Mac mode composites onto a background instead — so the rounded corner and
-   shadow a bezel would have supplied come from here instead. Applied per the
-   manifest's per-platform "frame" flag, so iPhone and iPad (both framed) never
-   get it: their PNG's own bezel is already rounded, and a second radius would
-   clip its corners off. */
+/* The rounded corner and shadow a device bezel would have supplied, for a
+   platform whose PNGs arrive bare. Applied per the manifest's per-platform
+   "frame" flag: a framed PNG must never get it, because its own bezel is
+   already rounded and a second radius clips the corners off.
+   No platform declares frame:false today — iPhone and iPad are framed by
+   frameit, and the Mac by bin/mac-screenshot compositing the MacBook bezel
+   itself — so this is the contract for the next one that does, not dead code
+   for the current three. */
 .gallery-screenshot.is-unframed {
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
@@ -591,8 +593,16 @@ a {
     width: 300px;
 }
 
+/* The Mac numbers carry a bigger correction than the iPad's. Both PNGs gained a
+   bezel, but a Mac screenshot is a *window* on a desktop rather than a
+   full-screen shot, so between the bezel and the desktop margin only about 62-73%
+   of the image is app — against the iPad's 93%. Matching the old on-screen UI
+   size exactly would want ~800px, too wide for the slot, so these recover most
+   of it and stop: 660px of image is about 480px of window, against 580px before.
+   It also leaves the Mac (379px tall) and the iPad (394px) close enough that the
+   row still reads as one set. */
 .gallery-screenshot.is-mac {
-    width: 300px;
+    width: 340px;
 }
 
 @media (min-width: 768px) {
@@ -609,7 +619,7 @@ a {
     }
 
     .gallery-screenshot.is-mac {
-        width: 460px;
+        width: 520px;
     }
 }
 
@@ -623,7 +633,7 @@ a {
     }
 
     .gallery-screenshot.is-mac {
-        width: 580px;
+        width: 660px;
     }
 }
 
