@@ -44,6 +44,7 @@ In this order, after charset/viewport:
 4. Twitter card (mirrors OG):
    ```html
    <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:site" content="@thequipsapp">
    <meta name="twitter:title" content="…">
    <meta name="twitter:description" content="…">
    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
@@ -156,6 +157,26 @@ Brand block, then links **in this order** (raw `&` — not `&amp;amp;`):
 <a href="terms.html">Terms & Conditions</a>
 <a href="press.html">Press Kit</a>
 ```
+
+Then a `.footer-social` block, immediately after `.footer-links`, listing only
+the accounts that are actually operated (the dormant Tier 2 placeholders and the
+defensive `quipsapp` handles are deliberately **not** linked — a dead account
+reads worse than no link):
+
+```html
+<div class="footer-social">
+    <a href="https://www.instagram.com/thequipsapp" target="_blank" rel="me noopener">Instagram</a>
+    <a href="https://www.threads.com/@thequipsapp" target="_blank" rel="me noopener">Threads</a>
+    <a href="https://www.pinterest.com/thequipsapp" target="_blank" rel="me noopener">Pinterest</a>
+    <a href="https://bsky.app/profile/quipsapp.com" target="_blank" rel="me noopener">Bluesky</a>
+    <a href="https://x.com/thequipsapp" target="_blank" rel="me noopener">X</a>
+</div>
+```
+
+These are absolute external URLs, so they are byte-identical in both the
+relative-path and root-absolute footer variants and in both build templates.
+`rel="me"` is deliberate: it is the identity-verification relation, and Mastodon
+uses it for link verification if a Mastodon account is added later.
 
 Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.`
 (year is updated by `js/main.js`).
