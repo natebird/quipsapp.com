@@ -884,6 +884,23 @@ a {
     color: var(--text-primary);
 }
 
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.footer-social a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.footer-social a:hover {
+    color: var(--text-primary);
+}
+
 .footer-copyright {
     font-size: 0.875rem;
     color: var(--text-muted);
