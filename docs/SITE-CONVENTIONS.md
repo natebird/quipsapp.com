@@ -44,7 +44,6 @@ In this order, after charset/viewport:
 4. Twitter card (mirrors OG):
    ```html
    <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:site" content="@thequipsapp">
    <meta name="twitter:title" content="…">
    <meta name="twitter:description" content="…">
    <meta name="twitter:image" content="https://quipsapp.com/images/og-image.png">
@@ -165,13 +164,26 @@ reads worse than no link):
 
 ```html
 <div class="footer-social">
-    <a href="https://www.instagram.com/thequipsapp" target="_blank" rel="me noopener">Instagram</a>
-    <a href="https://www.threads.com/@thequipsapp" target="_blank" rel="me noopener">Threads</a>
-    <a href="https://www.pinterest.com/thequipsapp" target="_blank" rel="me noopener">Pinterest</a>
-    <a href="https://bsky.app/profile/quipsapp.com" target="_blank" rel="me noopener">Bluesky</a>
-    <a href="https://x.com/thequipsapp" target="_blank" rel="me noopener">X</a>
+    <a href="https://www.instagram.com/thequipsapp" target="_blank" rel="me noopener" aria-label="Instagram" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="…"/></svg></a>
+    <a href="https://www.threads.com/@thequipsapp" target="_blank" rel="me noopener" aria-label="Threads" title="Threads"><svg …></svg></a>
+    <a href="https://www.pinterest.com/thequipsapp" target="_blank" rel="me noopener" aria-label="Pinterest" title="Pinterest"><svg …></svg></a>
+    <a href="https://bsky.app/profile/quipsapp.com" target="_blank" rel="me noopener" aria-label="Bluesky" title="Bluesky"><svg …></svg></a>
 </div>
 ```
+
+Each link is a monochrome inline SVG brand glyph (the Simple Icons path for
+that network, `viewBox="0 0 24 24"`, filled with `currentColor` by
+`.footer-social svg` in `css/styles.css`) rather than a text label. The
+`aria-label` and `title` carry the network name for assistive tech and
+tooltips. Copy the full `<path d="…">` from any existing page when adding one.
+
+X is deliberately **not** linked, and should not be re-added: the account is
+still claimed defensively, but the site takes a principled stand against
+supporting it. That decision has since been carried through the rest of the
+site — the `twitter:site` meta tag is gone from every page, and the press-kit
+Social row no longer names the account. The rest of the `twitter:*` card tags
+stay: other platforms read them as Open Graph fallbacks, and only
+`twitter:site` exists purely to credit an X account.
 
 These are absolute external URLs, so they are byte-identical in both the
 relative-path and root-absolute footer variants and in both build templates.
