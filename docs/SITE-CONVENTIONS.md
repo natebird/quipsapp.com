@@ -168,6 +168,7 @@ reads worse than no link):
     <a href="https://www.threads.com/@thequipsapp" target="_blank" rel="me noopener" aria-label="Threads" title="Threads"><svg …></svg></a>
     <a href="https://www.pinterest.com/thequipsapp" target="_blank" rel="me noopener" aria-label="Pinterest" title="Pinterest"><svg …></svg></a>
     <a href="https://bsky.app/profile/quipsapp.com" target="_blank" rel="me noopener" aria-label="Bluesky" title="Bluesky"><svg …></svg></a>
+<a href="https://mastodon.social/@thequipsapp" target="_blank" rel="me noopener" aria-label="Mastodon" title="Mastodon"><svg …></svg></a>
 </div>
 ```
 
@@ -187,8 +188,11 @@ stay: other platforms read them as Open Graph fallbacks, and only
 
 These are absolute external URLs, so they are byte-identical in both the
 relative-path and root-absolute footer variants and in both build templates.
-`rel="me"` is deliberate: it is the identity-verification relation, and Mastodon
-uses it for link verification if a Mastodon account is added later.
+`rel="me"` is deliberate: it is the identity-verification relation. The Mastodon
+link is what makes it load-bearing — Mastodon marks the `quipsapp.com` field on
+`@thequipsapp@mastodon.social` as verified only while this page links back to
+the profile with `rel="me"`. Removing the Mastodon link, or dropping `rel="me"`
+from it, silently un-verifies that profile field.
 
 Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.`
 (year is updated by `js/main.js`).
