@@ -3,19 +3,19 @@
   "lastUpdated": "2026-09-07",
   "highlight": {
     "title": "The Same Quips, Every Screen",
-    "summary": "Version 2.0 is a native Mac app, a full iPad app, and the same Quips on your phone — plus a rebuilt Discover, attribution you can check, and undo for nearly everything.",
+    "summary": "Version 2.0 brings Quips to the Mac and the iPad, with a rebuilt Discover, a way to see how well each quote is sourced, and undo for nearly everything.",
     "points": [
       {
-        "title": "A Native Mac App",
-        "detail": "A sidebar, a toolbar, a menu bar, and windows of its own"
+        "title": "On Your Mac",
+        "detail": "A sidebar, a menu bar, real windows, and the shortcuts to drive them"
       },
       {
-        "title": "One Layout, Every Size",
-        "detail": "The app follows the window, not the device"
+        "title": "Room to Spread Out",
+        "detail": "A bigger window shows more of your library, and tidies up when you shrink it"
       },
       {
-        "title": "Attribution You Can See",
-        "detail": "Every quote in Discover says how well it's sourced"
+        "title": "See Where a Quote Came From",
+        "detail": "Every quote in Discover tells you how solid its attribution is"
       }
     ]
   },
@@ -25,55 +25,55 @@
       "name": "Quips Comes to the Mac and iPad",
       "date": "September 2026",
       "latest": true,
-      "summary": "Quips is a native Mac app now — and on every device the layout follows the window instead of the hardware, so it's the same app whether it's a phone in your hand, an iPad in Split View, or a window on a desktop. Discover became a place of its own, quotes say how well they're attributed, and almost nothing you do is permanent anymore.",
+      "summary": "Keep your library on your Mac, your iPad and your phone, and get the same Quips on each — roomier where there's room, simple where there isn't. Browse a rebuilt Discover, see how solid a quote's attribution is before you save it, and take back almost anything you do.",
       "features": [
         {
-          "title": "A Native Mac App",
-          "detail": "Quips runs natively on the Mac rather than as an iPad app in a window — a sidebar and toolbar of its own, a full menu bar, a Settings window, and as many windows open at once as you like."
+          "title": "Quips on Your Mac",
+          "detail": "Quips is a Mac app in its own right now, rather than an iPad app in a window — with a sidebar, a menu bar, a Settings window, and as many windows open at once as you like."
         },
         {
-          "title": "One Layout, Every Size",
-          "detail": "The sidebar and the detail column appear wherever there's room for them, so the layout is decided by how wide the window is rather than which device you're holding. iPad gets the full split view, in portrait as well as landscape."
+          "title": "Room to Spread Out",
+          "detail": "Give Quips a bigger window and it uses the space: the sidebar comes out, and your library sits beside the quote you're reading. Make it small and it tidies back to a single column. Your iPad gets the full layout in portrait as well as landscape."
         },
         {
           "title": "Everything in the Sidebar",
-          "detail": "Collections, tags, authors and sources are created and managed straight from the sidebar, alongside Favorites, Discover, On This Day and Recently Deleted. It puts what you use most at the top, and you can choose what appears."
+          "detail": "Make a collection, rename a tag or open an author without a trip to Settings — they're all in the sidebar, next to Favorites, Discover, On This Day and Recently Deleted. It keeps what you use most at the top, and you choose what shows."
         },
         {
           "title": "Built for the Keyboard",
-          "detail": "Command-N for a new quote, Command-L to favorite, Command-F to search, arrow keys to move through the grid, and Command-Down to open a quote in a window of its own. Select several quotes at once, and find the full set on the new Keyboard Shortcuts screen."
+          "detail": "Command-N for a new quote, Command-L to favorite, Command-F to search, arrow keys to move through your library, and Command-Down to open a quote in its own window. Select several at once, and find the whole list on the new Keyboard Shortcuts screen."
         },
         {
           "title": "Undo",
-          "detail": "Change your mind. Deleting, writing, editing and favoriting a quote can all be undone — Command-Z on a keyboard, or a shake on iPhone."
+          "detail": "Change your mind. Deleting a quote, writing one, editing one or favoriting one can all be taken back — Command-Z, or a shake on iPhone."
         },
         {
           "title": "Discover, Rebuilt",
-          "detail": "Discover is somewhere you go now, on every platform. Search reaches the quotes themselves rather than just collection names, there's a featured collection each week, and you can share a quote you found without keeping it.",
+          "detail": "Discover is a place you go to now, on every platform. Search finds the words inside the quotes rather than just the collection names, a new collection is featured each week, and you can share something you found without keeping it.",
           "link": {
             "label": "Browse the collections",
             "href": "collections.html"
           }
         },
         {
-          "title": "Attribution You Can See",
-          "detail": "Every quote in Discover says how well its attribution is established — Verified, Widely attributed, Folk wisdom or Unconfirmed — on the card as well as on the quote's own screen."
+          "title": "See Where a Quote Came From",
+          "detail": "Every quote in Discover tells you how solid its attribution is — Verified, Widely attributed, Folk wisdom or Unconfirmed — on the card as well as on the quote's own screen."
         },
         {
-          "title": "Screens for Authors, Tags and Sources",
-          "detail": "Authors, tags, sources and collections each have a detail screen that gathers everything filed under them, and has something to say about them."
+          "title": "Everything by One Author, in One Place",
+          "detail": "Authors, tags, sources and collections each have a screen of their own now, gathering every quote filed under them — with a little about the author or the source at the top."
         },
         {
           "title": "A New Pin Format",
-          "detail": "A 2:3 Pin format joins Square, Portrait, Story and Wide. On the Mac, Share Studio opens in a window of its own with the controls as an inspector."
+          "detail": "A 2:3 Pin format joins Square, Portrait, Story and Wide. On the Mac, Share Studio opens in a window of its own with the controls alongside."
         },
         {
           "title": "Spotlight",
-          "detail": "Your library is indexed for Spotlight, so searching your device by a phrase or an author's name finds what you've saved, and tapping a result opens it in Quips."
+          "detail": "Search your device and quotes from your library turn up with everything else — tap one and it opens in Quips."
         },
         {
           "title": "A New Default Look",
-          "detail": "Quotes render in the Subtle style out of the box, the app is themed Cyan to match the icon, and the icon chooser now holds sixteen designs — including Chevron and Paper, which change more than the color."
+          "detail": "Quotes start in the Subtle style, the app wears Cyan to match its icon, and there are sixteen app icons to choose from — including Chevron and Paper, which change more than the color."
         }
       ]
     },
@@ -85,27 +85,27 @@
       "features": [
         {
           "title": "Widget Studio",
-          "detail": "Design your Home Screen widgets in Settings → Widgets — customize the layout, background color and gradient, typeface, text color and alignment, and which details to show, with a live preview at every size."
+          "detail": "Design your Home Screen widgets in Settings → Widgets: choose the layout, the background color and gradient, the typeface, the text color and alignment, and which details to show, with a live preview at every size."
         },
         {
           "title": "Lock Screen Widget",
-          "detail": "Put a quote on your Lock Screen, from your personal collections or from the Quote of the Day."
+          "detail": "Put a quote on your Lock Screen, drawn from your collections or from the Quote of the Day."
         },
         {
           "title": "Quote of the Day",
-          "detail": "Schedule quote notifications on your schedule. Customize the time, day, and frequency. Schedule one on the free plan; Premium unlocks up to ten."
+          "detail": "Have a quote delivered on your own schedule — pick the time, the days and how often. One schedule on the free plan; Premium raises that to ten."
         },
         {
           "title": "A Brighter Palette",
-          "detail": "All sixteen quote colors were recreated to be more vivid and to read well in both light and dark mode"
+          "detail": "All sixteen quote colors were redrawn to be more vivid and to read well in both light and dark mode."
         },
         {
           "title": "On This Day",
-          "detail": "See which quotes were said on today's date; pin them to your main screen, or use them as your Quote of the Day."
+          "detail": "See which quotes were said on today's date, pin them to your library, or use them as your Quote of the Day."
         },
         {
           "title": "Add a Whole Collection at Once",
-          "detail": "Curated public collections now have an \"Add All to Library\" button. So you can quickly add an entire collection to your library.",
+          "detail": "Curated public collections have an \"Add All to Library\" button, so a whole collection joins your library in one go.",
           "link": {
             "label": "Curated public collections",
             "href": "collections.html"
@@ -113,11 +113,11 @@
         },
         {
           "title": "Quips Quest",
-          "detail": "A fun checklist of first-time milestones that shows you around the app, with a special celebration when you complete them."
+          "detail": "A checklist of first-time milestones that shows you around the app, with a celebration when you finish them."
         },
         {
           "title": "100 Free Quotes",
-          "detail": "The free plan now allows up to 100 quotes in your personal collections, so a full curated collection now fits comfortably."
+          "detail": "The free plan holds up to 100 quotes, so a full curated collection fits comfortably."
         }
       ]
     },
@@ -129,23 +129,23 @@
       "features": [
         {
           "title": "Quote Style",
-          "detail": "Quotes now show in vibrant color by default. Switch between Bold and Subtle looks, recolor the text, and choose a typeface"
+          "detail": "Quotes show in vibrant color by default. Switch between the Bold and Subtle looks, recolor the text, and choose a typeface."
         },
         {
           "title": "Share Studio",
-          "detail": "Customize a quote image before sharing — six card styles, square/portrait/story/wide sizes, light/dark/saturated backgrounds, and toggles for the author, date, and source (Premium can remove the watermark)"
+          "detail": "Style a quote image before you share it — six card styles; Square, Portrait, Story and Wide sizes; light, dark and saturated backgrounds; and toggles for the author, date and source. Premium removes the watermark."
         },
         {
           "title": "Source Types",
-          "detail": "Note where a quote came from — book, movie, podcast, speech, and more — each shown with a matching icon"
+          "detail": "Note where a quote came from — book, movie, podcast, speech and more — each with a matching icon."
         },
         {
           "title": "Copy Any Quote",
-          "detail": "Press and hold a quote to copy it, along with its author and date"
+          "detail": "Press and hold a quote to copy it, along with its author and date."
         },
         {
           "title": "More Personalization",
-          "detail": "New collection icons and colors, plus a new Salmon app icon (Premium)"
+          "detail": "New collection icons and colors, plus a Salmon app icon (Premium)."
         }
       ]
     },
@@ -156,28 +156,28 @@
       "summary": "Build a daily habit with a quote delivered right when you want it, and share your favorites as tall Story images made for social.",
       "features": [
         {
-          "title": "Daily Quote Notification",
-          "detail": "Opt in under Settings to have a quote delivered at a time you pick"
+          "title": "Daily Quote",
+          "detail": "Have a quote delivered at a time you pick. Turn it on in Settings."
         },
         {
           "title": "Share as Stories",
-          "detail": "Share any quote as a tall 9:16 image made for Stories, alongside the classic square image"
+          "detail": "Share any quote as a tall 9:16 image made for Stories, alongside the classic square."
         },
         {
           "title": "Share from a Widget",
-          "detail": "Medium and large home-screen widgets now have a one-tap share button"
+          "detail": "Medium and large Home Screen widgets have a one-tap share button."
         },
         {
           "title": "Welcome Walkthrough",
-          "detail": "New users get a short first-run tour to start capturing quotes right away"
+          "detail": "A short first-run tour, so you can start saving quotes right away."
         },
         {
-          "title": "Smarter Backups",
-          "detail": "Import and export now preserve collection membership and your existing tag colors"
+          "title": "Backups Keep More",
+          "detail": "Import and export now preserve collection membership and your tag colors."
         },
         {
-          "title": "Better Search & Widgets",
-          "detail": "Search now finds quotes by author or tag, and widgets refresh right after you make a change"
+          "title": "Search and Widgets",
+          "detail": "Search finds quotes by author or tag, and widgets refresh right after you make a change."
         }
       ]
     },
@@ -185,23 +185,27 @@
       "version": "1.4",
       "name": "Public Collections",
       "date": "January 2026",
-      "summary": "Discover and add quotes from <a href=\"collections.html\">curated public collections</a>. Browse philosophy, creativity, tech wisdom, and more — all within the app.",
+      "summary": "Discover and add quotes from curated public collections. Browse philosophy, creativity, tech wisdom and more, all inside the app.",
+      "link": {
+        "label": "See all collections",
+        "href": "collections.html"
+      },
       "features": [
         {
           "title": "Browse Public Collections",
-          "detail": "Explore curated quote collections on topics like philosophy, creativity, and tech"
+          "detail": "Explore curated collections on philosophy, creativity, tech and more."
         },
         {
-          "title": "Easy Add",
-          "detail": "Add quotes from public collections to your personal library with a swipe"
+          "title": "Add with a Swipe",
+          "detail": "Add a quote from a public collection to your library with a swipe."
         },
         {
-          "title": "Smart Duplicate Detection",
-          "detail": "Already added a quote? You'll see it and can edit that one instead"
+          "title": "Duplicate Detection",
+          "detail": "Already added a quote? Quips shows you the copy you have, so you can edit that one instead."
         },
         {
-          "title": "Multi-Collection Support",
-          "detail": "Quotes can now belong to multiple collections at once"
+          "title": "Quotes in Several Collections",
+          "detail": "A quote can belong to more than one collection."
         }
       ]
     },
@@ -209,23 +213,23 @@
       "version": "1.3",
       "name": "Collections",
       "date": "December 2025",
-      "summary": "Organize your quotes like never before. Create custom collections to group quotes by theme, mood, or any way you like.",
+      "summary": "Group your quotes by theme, by mood, or any way you like, with collections of your own.",
       "features": [
         {
-          "title": "Custom Collections",
-          "detail": "Create personalized collections like \"Inspiration,\" \"Work Wisdom,\" or \"Daily Motivation\""
+          "title": "Collections of Your Own",
+          "detail": "Create collections like Inspiration, Work Wisdom or Daily Motivation."
         },
         {
-          "title": "Easy Organization",
-          "detail": "Assign quotes to collections when creating or editing"
+          "title": "Assign as You Write",
+          "detail": "Put a quote in a collection while you're writing or editing it."
         },
         {
-          "title": "Quick Filtering",
-          "detail": "Tap the collection dropdown to view quotes from a specific collection"
+          "title": "Filter by Collection",
+          "detail": "Choose a collection to see only its quotes."
         },
         {
-          "title": "Premium Feature",
-          "detail": "Create up to 25 collections with a Premium subscription"
+          "title": "25 Collections with Premium",
+          "detail": "Create up to 25 collections with a Premium subscription."
         }
       ]
     },
@@ -233,47 +237,47 @@
       "version": "1.2",
       "name": "Siri Shortcuts & Share Extension",
       "date": "November 2025",
-      "summary": "Save quotes faster than ever. Capture inspiration from anywhere on your device and use Siri to manage your quotes hands-free.",
+      "summary": "Save a quote from anywhere on your device, and use Siri to add one without opening the app.",
       "features": [
         {
           "title": "Share Extension",
-          "detail": "Save quotes directly from Safari, Notes, Books, and any app that shares text"
+          "detail": "Save quotes straight from Safari, Notes, Books, and any app that shares text."
         },
         {
-          "title": "Siri Integration",
-          "detail": "Say \"Add a quote to Quips\" or \"Get a random quote from Quips\""
+          "title": "Siri",
+          "detail": "Say \"Add a quote to Quips\" or \"Get a random quote from Quips\"."
         },
         {
-          "title": "Shortcuts Support",
-          "detail": "Build automations with Quips in the Shortcuts app"
+          "title": "Shortcuts",
+          "detail": "Build automations with Quips in the Shortcuts app."
         },
         {
-          "title": "Seamless Sync",
-          "detail": "Your Premium status syncs instantly across all your devices"
+          "title": "Premium on Every Device",
+          "detail": "Your Premium status syncs across all your devices."
         }
       ]
     },
     {
       "version": "1.1",
-      "name": "Beautiful Sharing & Widgets",
+      "name": "Sharing & Widgets",
       "date": "November 2025",
-      "summary": "Share your favorite quotes as stunning images. Plus, see daily inspiration right on your Home Screen with our new widgets.",
+      "summary": "Share your favorite quotes as images, and see a quote on your Home Screen with the new widgets.",
       "features": [
         {
-          "title": "4 Sharing Styles",
-          "detail": "Choose from Minimal, Bold, Classic, or Text when sharing quotes"
+          "title": "Four Sharing Styles",
+          "detail": "Choose Minimal, Bold, Classic or Text when you share a quote."
         },
         {
           "title": "Swipe to Share",
-          "detail": "Quickly share any quote with a simple swipe gesture"
+          "detail": "Share any quote with a swipe."
         },
         {
           "title": "Home Screen Widgets",
-          "detail": "Add a widget to see a random favorite quote throughout the day"
+          "detail": "Add a widget to see a random favorite through the day."
         },
         {
-          "title": "Full VoiceOver Support",
-          "detail": "Improved accessibility for all users"
+          "title": "VoiceOver Support",
+          "detail": "Improved accessibility throughout the app."
         }
       ]
     },
@@ -281,19 +285,19 @@
       "version": "1.0.5",
       "name": "Import & Export",
       "date": "November 2025",
-      "summary": "Take your quotes anywhere. Export your collection for backup or import quotes from other sources.",
+      "summary": "Take your quotes anywhere. Export your library for safekeeping, or import quotes from elsewhere.",
       "features": [
         {
           "title": "Export Your Quotes",
-          "detail": "Save your entire collection as a file you can keep forever"
+          "detail": "Save your whole library as a file you can keep."
         },
         {
           "title": "Import Quotes",
-          "detail": "Bring in quotes from backups or other sources"
+          "detail": "Bring in quotes from a backup or another source."
         },
         {
           "title": "Recently Deleted",
-          "detail": "Accidentally delete a quote? Recover it within 30 days"
+          "detail": "Deleted a quote by accident? Recover it within 30 days."
         }
       ]
     },
@@ -301,39 +305,39 @@
       "version": "1.0",
       "name": "Hello, World!",
       "date": "October 2025",
-      "summary": "I'm excited to introduce Quips — your new home for saving and organizing the quotes that inspire you.",
+      "summary": "Say hello to Quips — your new home for the quotes worth keeping.",
       "features": [
         {
-          "title": "Save Unlimited Quotes",
-          "detail": "Capture every moment of inspiration (Premium) or start with 25 free"
+          "title": "Save Your Quotes",
+          "detail": "Start with 25 free, or save as many as you like with Premium."
         },
         {
           "title": "Organize with Tags",
-          "detail": "Add tags to find quotes quickly"
+          "detail": "Tag a quote so you can find it again."
         },
         {
           "title": "Track Authors",
-          "detail": "Keep track of who said what"
+          "detail": "Keep track of who said what."
         },
         {
           "title": "Mark Favorites",
-          "detail": "Heart the quotes you love most"
+          "detail": "Favorite the quotes you love most."
         },
         {
           "title": "Search Everything",
-          "detail": "Find any quote in seconds"
+          "detail": "Search your whole library."
         },
         {
           "title": "iCloud Sync",
-          "detail": "Your quotes on all your devices, automatically"
+          "detail": "Your quotes on all your devices, automatically."
         },
         {
           "title": "Light & Dark Mode",
-          "detail": "Beautiful in any lighting"
+          "detail": "Quips follows your system appearance."
         },
         {
           "title": "Custom App Icons",
-          "detail": "Personalize your Home Screen (Premium)"
+          "detail": "Personalize your Home Screen (Premium)."
         }
       ]
     }

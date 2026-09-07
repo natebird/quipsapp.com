@@ -104,6 +104,14 @@ jobs:
                       if version in seen:
                           errors.append(f"releases.json: duplicate version {version!r}")
                       seen.add(version)
+                      rel_link = r.get("link")
+                      if rel_link is not None:
+                          if not isinstance(rel_link, dict):
+                              errors.append(f"releases.json: release {version!r} 'link' must be an object")
+                          else:
+                              for field in ("label", "href"):
+                                  if not isinstance(rel_link.get(field), str) or not rel_link.get(field):
+                                      errors.append(f"releases.json: release {version!r} link missing/empty '{field}'")
                       feats = r.get("features")
                       if not isinstance(feats, list) or not feats:
                           errors.append(f"releases.json: release {version!r} has no features")

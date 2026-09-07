@@ -336,7 +336,7 @@
                         <span class="release-date">${escapeHTML(release.date)}</span>
                     </div>
                     <h3 class="release-title">${escapeHTML(release.name)}</h3>
-                    <p class="release-description">${escapeHTML(release.summary)}</p>
+                    <p class="release-description">${escapeHTML(release.summary)}${release.link ? ` <a href="${escapeHTML(release.link.href)}">${escapeHTML(release.link.label)}</a>` : ''}</p>
                     <ul class="feature-list">
                         ${(release.features || []).map(featureItem).join('')}
                     </ul>
