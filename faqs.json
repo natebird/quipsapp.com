@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-08-15",
+  "lastUpdated": "2026-09-07",
   "sections": [
     {
       "id": "getting-started",
@@ -55,7 +55,7 @@
         {
           "id": "add-public-quotes",
           "question": "How do I add quotes from Discover to my library?",
-          "answer": "Tap Add on any quote to save it, or Add All to take a whole collection at once. Saved quotes land in your Public Quotes collection, which keeps them separate from the ones you wrote down yourself. If a quote is already in your library, Quips tells you and shows you the copy you have rather than filing a second one. A free account can add one collection; Premium lifts that."
+          "answer": "Tap Add to Library on any quote to save it, or Add All to Library to take a whole collection at once. On the free plan the confirmation says what it costs before you commit — how many of your remaining quotes the collection uses, or, when it doesn't fit, that adding all of it needs Premium. Saved quotes land in your Public Quotes collection, which keeps them separate from the ones you wrote down yourself. If a quote is already in your library, Quips tells you and shows you the copy you have rather than filing a second one. A free account can add one collection; Premium lifts that."
         },
         {
           "id": "add-tags",
@@ -71,6 +71,11 @@
           "id": "record-detail",
           "question": "Can I see everything by one author, tag or collection?",
           "answer": "Yes — tap any author, tag, collection or source type to open its own screen. Each one leads with the record itself: its color and glyph, whatever you've written about it, how many quotes it holds and the tags that come up most often in them, with all of its quotes below."
+        },
+        {
+          "id": "verified-quotes",
+          "question": "How do I know a quote in Discover is really theirs?",
+          "answer": "Every quote in Discover carries its attribution in words rather than leaving you to guess. Verified means the wording is traced to a primary source. Widely attributed means the line is firmly associated with the person but the original hasn't been pinned down. Folk wisdom means it has no single author to credit. Unconfirmed means the attribution is doubted. The label sits on the quote's card as well as on its detail screen, so you can see it while you browse."
         },
         {
           "id": "source-type",
@@ -91,7 +96,7 @@
         {
           "id": "share-story",
           "question": "Can I share a quote as a Story?",
-          "answer": "Yes. Choose the Story size for a tall 9:16 image made for Instagram and other Stories. Square, Portrait and Wide are there too, each rendered at the size the platform it's named for expects."
+          "answer": "Yes. Choose the Story size for a tall 9:16 image made for Instagram and other Stories. Square, Portrait, Pin and Wide are there too, each rendered at the size the platform it's named for expects — Pin is the 2:3 shape Pinterest reads best."
         },
         {
           "id": "share-watermark",
@@ -199,7 +204,7 @@
         {
           "id": "keyboard-shortcuts",
           "question": "What keyboard shortcuts are there?",
-          "answer": "Command-N for a new quote, Shift-Command-N to start one from the clipboard, Option-Command-N for a new window, Command-F to search, Command-L to favorite, Shift-Command-C to copy, Command-Down to open a quote in its own window, and Command-Delete to delete. On a Mac, Command-comma opens Settings. The full set lives in the menu bar on both Mac and iPad — on iPad, hold the Command key to see it."
+          "answer": "Command-N for a new quote, Shift-Command-N to start one from the clipboard, Option-Command-N for a new window, Command-F to search, Command-L to favorite, Shift-Command-C to copy, Command-Down to open a quote in its own window, and Command-Delete to delete. On a Mac, Command-comma opens Settings. Settings has a Keyboard Shortcuts screen listing the full set, and the menu bar carries it too on both Mac and iPad — on iPad, hold the Command key to see it. On a Mac you can also give any menu command a shortcut of your own in System Settings > Keyboard > Keyboard Shortcuts."
         },
         {
           "id": "quote-window",
@@ -261,17 +266,17 @@
         {
           "id": "change-theme",
           "question": "How do I change the app theme?",
-          "answer": "Open Settings and choose App Theme under Appearance. Pick light, dark or automatic, and set the color the app is themed in — on a Mac it can follow your system accent color. The default theme is free; the other colors and the favorite icons come with a subscription."
+          "answer": "Open Settings and choose App Theme under Appearance. Pick light, dark or automatic, and set the color the app is themed in — a new install starts on Cyan, and on a Mac the theme can follow your system accent color instead. Light, dark and automatic are free for everyone, and the color you're already on stays free; moving to a different color, like the favorite icons, comes with a subscription."
         },
         {
           "id": "quote-style",
           "question": "How do I change how my quotes look?",
-          "answer": "Open Settings and choose Quote Style under Appearance. Quotes show in vibrant color by default — switch between the Bold and Subtle looks, recolor the quote text, and choose a typeface, with a live example updating as you go. Bold and Subtle are free; the extra colors and typefaces are a Premium feature."
+          "answer": "Open Settings and choose Quote Style under Appearance. Quotes render in the Subtle style by default; Bold is the fuller, more saturated treatment. You can also recolor the quote text and pick a typeface, with a live example updating as you go. The look you're already on is free — switching to a different style, text color or typeface is a Premium feature."
         },
         {
           "id": "change-icon",
           "question": "Can I change the app icon?",
-          "answer": "On iPhone and iPad, open Settings and choose App Icon under Appearance. There are nine designs — the default Teal plus Blue, Green, Orange, Purple, Red, Salmon, Violet and Yellow. Alternate icons are a Premium feature."
+          "answer": "On iPhone and iPad, open Settings and choose App Icon under Appearance. There are sixteen designs: the default Teal, thirteen more colors — Coral, Rose, Orange, Amber, Yellow, Green, Sky, Blue, Indigo, Violet, Purple, Magenta and Salmon — and two that are more than a recolor. Chevron swaps the quotation mark for a pair of chevrons, and Paper inverts the tile, a cream ground carrying a near-black mark. Alternate icons are a Premium feature."
         },
         {
           "id": "quips-quest",
