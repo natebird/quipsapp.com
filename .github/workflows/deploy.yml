@@ -84,6 +84,45 @@ jobs:
                               if not isinstance(item.get(field), str) or not item.get(field):
                                   errors.append(f"faqs.json: faq in section '{s.get('id')}' missing/empty '{field}'")
 
+          # releases.json - release notes rendered by releases.html and bundled in the
+          # iOS app, so the site and the app describe the same release.
+          rel = load("releases.json")
+          if rel is not None:
+              items = rel.get("releases")
+              if not isinstance(items, list) or not items:
+                  errors.append("releases.json: 'releases' must be a non-empty list")
+              else:
+                  seen = set()
+                  for r in items:
+                      if not isinstance(r, dict):
+                          errors.append(f"releases.json: release is not an object: {r!r}")
+                          continue
+                      for field in ("version", "name", "date", "summary"):
+                          if not isinstance(r.get(field), str) or not r.get(field):
+                              errors.append(f"releases.json: release {r.get('version', r)!r} missing/empty '{field}'")
+                      version = r.get("version")
+                      if version in seen:
+                          errors.append(f"releases.json: duplicate version {version!r}")
+                      seen.add(version)
+                      feats = r.get("features")
+                      if not isinstance(feats, list) or not feats:
+                          errors.append(f"releases.json: release {version!r} has no features")
+                          continue
+                      for feat in feats:
+                          if not isinstance(feat.get("detail"), str) or not feat.get("detail"):
+                              errors.append(f"releases.json: feature in {version!r} missing/empty 'detail'")
+                          link = feat.get("link")
+                          if link is not None:
+                              if not isinstance(link, dict):
+                                  errors.append(f"releases.json: feature link in {version!r} must be an object")
+                              else:
+                                  for field in ("label", "href"):
+                                      if not isinstance(link.get(field), str) or not link.get(field):
+                                          errors.append(f"releases.json: feature link in {version!r} missing/empty '{field}'")
+                  flagged = [r for r in items if isinstance(r, dict) and r.get("latest")]
+                  if len(flagged) != 1:
+                      errors.append(f"releases.json: expected exactly one release flagged 'latest', found {len(flagged)}")
+
           # collections.json - manifest of public collections shown on collections.html
           # and in the iOS app. It is NOT tracked in git: the pinned pull below
           # creates it. Validate only if a local copy happens to exist.
@@ -105,7 +144,7 @@ jobs:
                   print(f"  - {e}")
               sys.exit(1)
 
-          validated = ["announcements.json", "faqs.json"] + (["collections.json"] if cols is not None else [])
+          validated = ["announcements.json", "faqs.json", "releases.json"] + (["collections.json"] if cols is not None else [])
           print(f"JSON validation passed: {', '.join(validated)}")
           PY
 
