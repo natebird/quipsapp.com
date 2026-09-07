@@ -116,7 +116,7 @@ const ORGANIZATION_JSON_LD = jsonLd({
     name: 'Tweeting Birds',
     url: 'https://quipsapp.com/',
     logo: 'https://quipsapp.com/images/app-icon.png',
-    email: 'feedback@quipsapp.com'
+    email: 'nate@quipsapp.com'
 });
 
 function quoteItemHtml(quote) {

@@ -79,7 +79,7 @@ In this order, after charset/viewport:
      "name": "Tweeting Birds",
      "url": "https://quipsapp.com/",
      "logo": "https://quipsapp.com/images/app-icon.png",
-     "email": "feedback@quipsapp.com"
+     "email": "nate@quipsapp.com"
    }
    </script>
    ```
@@ -236,8 +236,10 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
 - Feature names: Share Studio, Quote Style, Daily Quote, Private Collections.
 - Voice: first person singular ("I", indie developer) on support/press/
   collections pages; avoid corporate "we".
-- Public contact email: `feedback@quipsapp.com`. (`nate@quipsapp.com` appears
-  only in the course welcome copy as a personal touch.)
+- Public contact email: `nate@quipsapp.com` everywhere a person is invited to
+  write in — support, press, collections, newsletter, the course. The legal
+  pages (`privacy.html`, `terms.html`, and `legal/*.md` they build from) keep
+  `feedback@quipsapp.com` as the formal contact address.
 - Pricing: free tier = 100 saved quotes; Premium = $0.99/month or $8.99/year
   (limited launch pricing), unlocking unlimited quotes, all Quote Style colors
   and typefaces, and watermark-free Share Studio sharing. Keep faqs.json,
@@ -251,7 +253,7 @@ edition.
 
 - **The feedback mailto carries a per-issue subject.** The closing line of the
   "One Question for You" section links to
-  `mailto:feedback@quipsapp.com?subject=<encoded>`, where the subject reads
+  `mailto:nate@quipsapp.com?subject=<encoded>`, where the subject reads
   `Quote Unquote #<n>: <headline>` — the headline being the `<title>` text
   before the ` — Quote Unquote — Quips` suffix. Percent-encode the whole value
   (`#` → `%23`, `:` → `%3A`, space → `%20`, plus any quotes, commas or em
