@@ -333,7 +333,7 @@ Apple and its subsidiaries are third-party beneficiaries of these Terms and may 
 ### Device Requirements
 
 - Requires a currently supported version of iOS / iPadOS; see the App Store listing for the current minimum requirement
-- Compatible with iPhone and iPad
+- Compatible with iPhone, iPad, and Mac
 - Requires internet connection for iCloud sync and in-app purchases
 
 ## Dispute Resolution

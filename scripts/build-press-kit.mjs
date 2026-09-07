@@ -69,9 +69,17 @@ const factSheet = [
     htmlToText(mainWithoutAssets),
     '',
     '== Included Files ==',
-    'icons/          App icon, light + dark variants (1024px PNG)',
-    'screenshots/    Marketing screenshots, light + dark (iPhone)',
+    'icons/          App icon at 1024 / 512 / 256 px (PNG), light and dark.',
+    '                The dark variant is a separate design — black tile, teal',
+    '                glyph — not a recolour. Use it on dark grounds.',
+    'brand/          Wordmark and icon+wordmark lockup (SVG, outlined —',
+    '                no font needed to render them correctly)',
+    'screenshots/    Marketing screenshots, light + dark, foldered by platform (iphone/, ipad/, mac/)',
     'quips-social-preview.png  1200x630 social/OG image',
+    '',
+    'The wordmark is Libre Baskerville, supplied as outlines rather than live',
+    'text so it renders identically everywhere. Please do not re-set it in',
+    'another face, recolour it, or stretch it.',
     '',
     'For the "Download on the App Store" badge, use Apple\'s official artwork:',
     'https://developer.apple.com/app-store/marketing/guidelines/',
@@ -84,6 +92,7 @@ const factSheet = [
 const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'press-kit-'));
 const kitDir = path.join(stage, KIT_NAME);
 fs.mkdirSync(path.join(kitDir, 'icons'), { recursive: true });
+fs.mkdirSync(path.join(kitDir, 'brand'), { recursive: true });
 fs.mkdirSync(path.join(kitDir, 'screenshots'), { recursive: true });
 
 fs.writeFileSync(path.join(kitDir, 'quips-press-kit.txt'), factSheet);
@@ -95,18 +104,38 @@ function copyAsset(src, dest) {
         skipped.push(src);
         return;
     }
-    fs.copyFileSync(from, path.join(kitDir, dest));
+    // Screenshots are foldered per platform, so the destination directory may
+    // not exist yet — the fixed mkdirs above only create the top-level folders.
+    const to = path.join(kitDir, dest);
+    fs.mkdirSync(path.dirname(to), { recursive: true });
+    fs.copyFileSync(from, to);
 }
 
 copyAsset('app-icon@1024.png', 'icons/quips-app-icon-1024.png');
 copyAsset('app-icon-dark@1024.png', 'icons/quips-app-icon-dark-1024.png');
+// Journalists drop these straight into a layout, where a 1024 master is
+// oversized and gets scaled badly by whatever tool they are using.
+copyAsset('quips-app-icon-512.png', 'icons/quips-app-icon-512.png');
+copyAsset('quips-app-icon-256.png', 'icons/quips-app-icon-256.png');
+copyAsset('quips-app-icon-dark-512.png', 'icons/quips-app-icon-dark-512.png');
+copyAsset('quips-app-icon-dark-256.png', 'icons/quips-app-icon-dark-256.png');
+copyAsset('brand/quips-wordmark.svg', 'brand/quips-wordmark.svg');
+copyAsset('brand/quips-wordmark-reverse.svg', 'brand/quips-wordmark-reverse.svg');
+copyAsset('brand/quips-lockup.svg', 'brand/quips-lockup.svg');
 copyAsset('og-image.png', 'quips-social-preview.png');
 
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'screenshots.json'), 'utf8'));
 for (const screen of manifest.gallery || []) {
+    // Entries predating the multi-platform manifest carry no "platform"; they
+    // were all iPhone, so that is what an absent field means.
+    const platform = screen.platform || 'iphone';
     const slug = (screen.source || screen.label || 'screen').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    copyAsset(screen.light, `screenshots/quips-${slug}-light.png`);
-    copyAsset(screen.dark, `screenshots/quips-${slug}-dark.png`);
+    // Namespaced by platform, and foldered by it too: the same `source` now
+    // appears once per platform ("main" is an iPhone, an iPad, and a Mac shot),
+    // so a name built from the source alone would have the last platform
+    // silently overwrite the others in the kit.
+    copyAsset(screen.light, `screenshots/${platform}/quips-${platform}-${slug}-light.png`);
+    copyAsset(screen.dark, `screenshots/${platform}/quips-${platform}-${slug}-dark.png`);
 }
 
 // Refuse to ship an incomplete kit — and bail BEFORE touching the existing

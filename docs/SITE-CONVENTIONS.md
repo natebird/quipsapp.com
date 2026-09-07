@@ -16,7 +16,7 @@ the Email Course nav item, press.html had a different footer encoding, etc.).
 | `collections/<id>.html` | Pre-rendered collection pages | **Generated** by `scripts/build-collections.mjs` — never hand-edit; edit the script's template |
 | `course.html` | 7-day email course landing | |
 | `quote-unquote.html` | Quote Unquote newsletter landing page | Subscribe form + archive list; linked from the homepage newsletter section |
-| `quote-unquote/<n>-<slug>.html` | Individual newsletter editions | Hand-authored (not generated); root-absolute paths like `collections/<id>.html` |
+| `quote-unquote/<n>-<slug>.html` | Individual newsletter editions | Hand-authored (not generated); root-absolute paths like `collections/<id>.html`. See **Quote Unquote editions** below for the per-issue mailto subject and the no-pull-quote rule |
 | `support.html` | Support + FAQ (renders `faqs.json`) | |
 | `releases.html` | What's New / changelog | |
 | `press.html` | Press kit | |
@@ -157,6 +157,43 @@ Brand block, then links **in this order** (raw `&` — not `&amp;amp;`):
 <a href="press.html">Press Kit</a>
 ```
 
+Then a `.footer-social` block, immediately after `.footer-links`, listing only
+the accounts that are actually operated (the dormant Tier 2 placeholders and the
+defensive `quipsapp` handles are deliberately **not** linked — a dead account
+reads worse than no link):
+
+```html
+<div class="footer-social">
+    <a href="https://www.instagram.com/thequipsapp" target="_blank" rel="me noopener" aria-label="Instagram" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="…"/></svg></a>
+    <a href="https://www.threads.com/@thequipsapp" target="_blank" rel="me noopener" aria-label="Threads" title="Threads"><svg …></svg></a>
+    <a href="https://www.pinterest.com/thequipsapp" target="_blank" rel="me noopener" aria-label="Pinterest" title="Pinterest"><svg …></svg></a>
+    <a href="https://bsky.app/profile/quipsapp.com" target="_blank" rel="me noopener" aria-label="Bluesky" title="Bluesky"><svg …></svg></a>
+<a href="https://mastodon.social/@thequipsapp" target="_blank" rel="me noopener" aria-label="Mastodon" title="Mastodon"><svg …></svg></a>
+</div>
+```
+
+Each link is a monochrome inline SVG brand glyph (the Simple Icons path for
+that network, `viewBox="0 0 24 24"`, filled with `currentColor` by
+`.footer-social svg` in `css/styles.css`) rather than a text label. The
+`aria-label` and `title` carry the network name for assistive tech and
+tooltips. Copy the full `<path d="…">` from any existing page when adding one.
+
+X is deliberately **not** linked, and should not be re-added: the account is
+still claimed defensively, but the site takes a principled stand against
+supporting it. That decision has since been carried through the rest of the
+site — the `twitter:site` meta tag is gone from every page, and the press-kit
+Social row no longer names the account. The rest of the `twitter:*` card tags
+stay: other platforms read them as Open Graph fallbacks, and only
+`twitter:site` exists purely to credit an X account.
+
+These are absolute external URLs, so they are byte-identical in both the
+relative-path and root-absolute footer variants and in both build templates.
+`rel="me"` is deliberate: it is the identity-verification relation. The Mastodon
+link is what makes it load-bearing — Mastodon marks the `quipsapp.com` field on
+`@thequipsapp@mastodon.social` as verified only while this page links back to
+the profile with `rel="me"`. Removing the Mastodon link, or dropping `rel="me"`
+from it, silently un-verifies that profile field.
+
 Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. All rights reserved.`
 (year is updated by `js/main.js`).
 
@@ -205,6 +242,77 @@ Copyright line: `&copy; <span id="copyright-year">2025</span> Tweeting Birds. Al
   (limited launch pricing), unlocking unlimited quotes, all Quote Style colors
   and typefaces, and watermark-free Share Studio sharing. Keep faqs.json,
   terms.html, press.html, and the homepage pricing strip in sync.
+
+## Quote Unquote editions (`quote-unquote/<n>-<slug>.html`)
+
+Hand-authored from the Markdown drafts in the `quote-unquote` repo — there is
+no generator, so both conventions below have to be applied by hand on every new
+edition.
+
+- **The feedback mailto carries a per-issue subject.** The closing line of the
+  "One Question for You" section links to
+  `mailto:feedback@quipsapp.com?subject=<encoded>`, where the subject reads
+  `Quote Unquote #<n>: <headline>` — the headline being the `<title>` text
+  before the ` — Quote Unquote — Quips` suffix. Percent-encode the whole value
+  (`#` → `%23`, `:` → `%3A`, space → `%20`, plus any quotes, commas or em
+  dashes in the headline). Without it, replies give no clue which edition they
+  are about; clients that ignore `mailto` params just open a blank compose to
+  the same address, so nothing is lost.
+- **No pull-quote boxes in the prose.** A bolded line standing alone in the
+  Markdown is emphasis, not a callout — render it as `<p><strong>…</strong></p>`
+  inside `.qu-prose`, like any other paragraph. The former `.qu-highlight` box
+  was applied inconsistently (the same page had identical standalone bold lines
+  both boxed and unboxed), so its markup and CSS rule were removed outright.
+  `<blockquote>` remains correct for quoting someone; the box is not.
+
+## Screenshot gallery (`images/screenshots.json`)
+
+The home page's "See it in action" gallery is data-driven: `js/main.js`
+(`initScreenshotGallery`) reads `images/screenshots.json` and builds the whole
+section, so adding or removing a screen is a JSON edit, never an HTML one. The
+same manifest drives `scripts/build-press-kit.mjs` and, in the app repo,
+`bin/screenshots` / `bin/mac-screenshot` / `bin/widget-screenshot`.
+
+- **`platforms[]`** declares the tabs, in the order they render (iPhone, iPad,
+  Mac). Each carries the `device` to capture on, how it is captured (`fastlane`
+  or `manual`), whether the shot ships with a device bezel (`frame`), and the
+  `maxWidth` the publish step downscales to. Tabs are only drawn when more than
+  one platform has screenshots.
+- **`gallery[]`** is flat, and every entry names its `platform`. An entry with
+  no `platform` means iPhone — that is what the pre-2.0 manifest's entries were,
+  and every consumer still reads them that way.
+- **`source`** is the Fastlane snapshot base name from
+  `UITests/SnapshotUITests.swift` (`main`, `search`, `story-share`, …); the
+  capture step looks for `<device>-<source>-light/-dark.png`. A `source` with no
+  matching test is skipped with a warning, so a screen deleted from the suite
+  leaves a stale image on the site rather than an error — check the run output.
+- **`orientation`** (fastlane platforms) is `portrait` unless stated. iPad is
+  `landscape` — the app is used that way at that size, and a portrait shot
+  leaves a third of a wide gallery slot empty. `bin/screenshots` passes it as
+  `TEST_RUNNER_QUIPS_SNAPSHOT_ORIENTATION`, an environment variable rather than
+  an xcarg: that prefix is how xcodebuild reaches the XCUITest *runner*, and the
+  test is what rotates the device. Passed as an xcarg it becomes an inert build
+  setting and every shot comes out portrait with no error anywhere. Note the App
+  Store set (`quips-marketing/appstore/appstore-assets.json`) is still portrait
+  on iPad and is unaffected by this field.
+- **`managed: false`** means the images are produced outside `bin/screenshots`
+  and must never be overwritten by it: the iOS widget gallery (SpringBoard,
+  captured by `bin/widget-screenshot`) and every Mac entry (captured by
+  `bin/mac-screenshot`).
+- Each entry names a `light` and a `dark` file. Both are rendered and the active
+  theme shows one via CSS, the same pairing the app icons use.
+- Mac shots come from `bin/mac-screenshot`, which has no simulator or UI
+  automation to work with — the `UITests` target is iOS-only. It launches the
+  real Debug app with the marketing seed, reaches each screen by launch argument
+  or `quips://` deep link, and photographs the window with `screencapture -l`.
+  It needs **Screen Recording** permission for the terminal running it. The
+  window it captures is selected by title, so a navigation that silently did
+  nothing fails the screen instead of publishing the library three times.
+- iPhone shots carry a frameit device bezel baked into the PNG. iPad and Mac
+  shots do not — the pinned frameit frame set has no bezel for either — so they
+  get `.is-unframed` and take their rounded corners and shadow from CSS. Never
+  put `.is-unframed` on a framed shot: the bezel is already rounded and a second
+  radius clips its corners.
 
 ## App icon assets
 

@@ -57,6 +57,15 @@
     padding: 0;
 }
 
+/* The `hidden` attribute means hidden, full stop. The UA supplies it as a plain
+   `display: none`, which any component rule setting `display: flex`/`grid`
+   outranks — so an element JS had hidden stayed on screen. That is what showed
+   all three screenshot-gallery panels (.screenshots-row) at once no matter
+   which platform tab was selected. Keep this above the component rules. */
+[hidden] {
+    display: none !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -487,7 +496,57 @@ a {
     background-color: var(--bg-secondary);
 }
 
+/* Outer container: the tab strip stacked over one scrolling row per platform.
+   The row, not this element, is the flex track — see .screenshots-row. */
 .screenshots-gallery {
+    display: block;
+}
+
+/* Platform tabs (iPhone / iPad / Mac), drawn as a segmented control. Rendered
+   by initScreenshotGallery() only when the manifest has more than one platform
+   with screenshots, so a single-platform site shows no chrome at all. */
+.screenshots-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin: 0 auto 1.5rem;
+    padding: 0.25rem;
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--bg-primary);
+}
+
+.screenshots-tab {
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.screenshots-tab:hover {
+    color: var(--text-primary);
+}
+
+.screenshots-tab[aria-selected="true"] {
+    background-color: var(--accent-primary);
+    color: var(--cta-ink);
+}
+
+.screenshots-tab:focus-visible {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 2px;
+}
+
+.screenshots-row {
     display: flex;
     /* "safe center" centers the row when it fits, but falls back to flex-start
        when it overflows — otherwise plain centering pushes the first image off
@@ -509,19 +568,72 @@ a {
     margin-bottom: 0.75rem;
 }
 
+/* The rounded corner and shadow a device bezel would have supplied, for a
+   platform whose PNGs arrive bare. Applied per the manifest's per-platform
+   "frame" flag: a framed PNG must never get it, because its own bezel is
+   already rounded and a second radius clips the corners off.
+   No platform declares frame:false today — iPhone and iPad are framed by
+   frameit, and the Mac by bin/mac-screenshot compositing the MacBook bezel
+   itself — so this is the contract for the next one that does, not dead code
+   for the current three. */
+.gallery-screenshot.is-unframed {
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Wider platforms get more room: an iPhone shot is a tall sliver, while the
+   landscape iPad and Mac shots carry a sidebar and a multi-column grid that
+   turn to mush at phone width. The three widths are tuned so a row reads as one
+   set — a 4:3 iPad and a 16:9 Mac at these sizes stand about as tall as the
+   phone beside them. The iPad numbers are the Mac-era ones scaled by 1.07: its
+   PNG now carries a bezel, which pads the image without enlarging the UI, so
+   the width has to grow by the same amount to keep the app itself the size it
+   was (515px of image ≈ 480px of screen). */
+.gallery-screenshot.is-ipad {
+    width: 300px;
+}
+
+/* The Mac numbers carry a bigger correction than the iPad's. Both PNGs gained a
+   bezel, but a Mac screenshot is a *window* on a desktop rather than a
+   full-screen shot, so between the bezel and the desktop margin only about 62-73%
+   of the image is app — against the iPad's 93%. Matching the old on-screen UI
+   size exactly would want ~800px, too wide for the slot, so these recover most
+   of it and stop: 660px of image is about 480px of window, against 580px before.
+   It also leaves the Mac (379px tall) and the iPad (394px) close enough that the
+   row still reads as one set. */
+.gallery-screenshot.is-mac {
+    width: 340px;
+}
+
 @media (min-width: 768px) {
-    .screenshots-gallery {
+    .screenshots-row {
         gap: 2rem;
     }
 
     .gallery-screenshot {
         width: 220px;
     }
+
+    .gallery-screenshot.is-ipad {
+        width: 410px;
+    }
+
+    .gallery-screenshot.is-mac {
+        width: 520px;
+    }
 }
 
 @media (min-width: 1024px) {
     .gallery-screenshot {
         width: 260px;
+    }
+
+    .gallery-screenshot.is-ipad {
+        width: 515px;
+    }
+
+    .gallery-screenshot.is-mac {
+        width: 660px;
     }
 }
 
@@ -770,6 +882,35 @@ a {
 
 .footer-links a:hover {
     color: var(--text-primary);
+}
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Monochrome brand glyphs: they take the link's text color, so they grey out
+   and darken on hover exactly like the text links beside them. */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.footer-social a:hover {
+    color: var(--text-primary);
+}
+
+.footer-social svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .footer-copyright {
@@ -2085,6 +2226,51 @@ a {
     background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 16%, transparent);
 }
 
+/* ===== New Collections shelf card =====
+   Same rail and tinted card as a quote shelf, but the card leads with the
+   collection's identity — icon and name — and uses a preview quote as the
+   supporting line, since a quote says more about a collection than its
+   description does. */
+.feed-collection-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.feed-collection-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    color: var(--collection-color, var(--accent-ink));
+    background-color: color-mix(in srgb, var(--collection-color, var(--accent-primary)) 14%, transparent);
+}
+
+.feed-collection-icon svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.feed-collection-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* The preview quote is supporting text here, not the subject, so it sits
+   lighter and shorter than the same element on a quote card. */
+.feed-collection-card .feed-card-quote {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
 /* ===== Featured collection (collections.html) =====
    The page's one editorial slot. Same tinted card as a shelf card, given more
    weight: full width, a curator's note, and the week's quote. */
@@ -2690,18 +2876,6 @@ a {
 
 .qu-section:nth-child(even) .qu-prose blockquote {
     background-color: var(--bg-secondary);
-}
-
-.qu-highlight {
-    background-color: var(--bg-secondary);
-    padding: 1.5rem;
-    border-radius: var(--card-radius);
-    border-left: 4px solid var(--accent-primary);
-    margin: 2rem 0;
-}
-
-.qu-section:nth-child(even) .qu-highlight {
-    background-color: var(--bg-primary);
 }
 
 /* Sample edition callout on the landing page */
