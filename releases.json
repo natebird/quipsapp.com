@@ -51,7 +51,7 @@
           "title": "Discover, Rebuilt",
           "detail": "Discover is a place you go to now, on every platform. Search finds the words inside the quotes rather than just the collection names, a new collection is featured each week, and you can share something you found without keeping it.",
           "link": {
-            "label": "Browse the collections",
+            "label": "See all collections",
             "href": "collections.html"
           }
         },
@@ -107,7 +107,7 @@
           "title": "Add a Whole Collection at Once",
           "detail": "Curated public collections have an \"Add All to Library\" button, so a whole collection joins your library in one go.",
           "link": {
-            "label": "Curated public collections",
+            "label": "See all collections",
             "href": "collections.html"
           }
         },
