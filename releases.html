@@ -158,7 +158,13 @@
         .feature-list li strong {
             color: var(--text-primary);
         }
-        .highlight-box {
+        .loading-text, .error-text {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem;
+}
+
+.highlight-box {
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-dark) 100%);
             border-radius: 16px;
             padding: 2rem;
@@ -259,188 +265,12 @@
         <h1>What's New</h1>
         <p class="releases-intro">See what I've been working on to make Quips even better.</p>
 
-        <div class="highlight-box">
-            <h2>Widgets, Made Yours!</h2>
-            <p>Version 1.7 brings a Widget Studio for designing your own widgets, a quote on your Lock Screen, and Quote of the Day on your schedule &mdash; plus a free tier that's four times bigger.</p>
-            <ul class="feature-list">
-                <li><strong>Widget Studio</strong> &mdash; Pick the layout, colors, typeface, and details, with a live preview at every size (free for everyone)</li>
-                <li><strong>Quote of the Day</strong> &mdash; Set up several daily quotes, each with its own time, days, and source</li>
-                <li><strong>100 Free Quotes</strong> &mdash; The free tier is up from 25, so there's a lot more room before Premium</li>
-            </ul>
+        <!-- Rendered from releases.json — the single source of truth the app reads too. -->
+        <div id="release-highlight"></div>
+
+        <div id="release-list">
+            <p class="loading-text">Loading release notes&hellip;</p>
         </div>
-
-        <!-- Version 1.7 - Widget Studio & Quote of the Day -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.7</span>
-                <span class="release-badge badge-latest">Latest</span>
-                <span class="release-date">July 2026</span>
-            </div>
-            <h3 class="release-title">Widget Studio & Quote of the Day</h3>
-            <p class="release-description">
-                Make your widgets your own, put a quote on your Lock Screen, and have quotes delivered exactly when you want them. Plus a lot more room on the free tier.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Widget Studio</strong> &mdash; Design your home screen widgets in Settings &rarr; Widgets &mdash; customize the layout, background color and gradient, typeface, text color and alignment, and which details to show, with a live preview at every size.</li>
-                <li><strong>Lock Screen Widget</strong> &mdash; Put a quote on your Lock Screen, from your personal collections or from the Quote of the Day.</li>
-                <li><strong>Quote of the Day</strong> &mdash; Schedule quote notifications on your schedule. Customize the time, day, and frequency. Schedule one on the free tier; premium unlocks up to ten.</li>
-                <li><strong>A Brighter Palette</strong> &mdash; All sixteen quote colors were recreated to be more vivid and to read well in both light and dark mode</li>
-                <li><strong>On This Day</strong> &mdash; See which quotes were said on today's date; pin them to your main screen, or use them as your Quote of the Day.</li>
-                <li><strong>Add a Whole Collection at Once</strong> &mdash; <a href="collections.html">Curated public collections</a> now have an "Add All to My Quotes" button. So you can quickly add an entire collection to your personal quotes.</li>
-                <li><strong>Quips Quest</strong> &mdash; A fun checklist of first-time milestones that shows you around the app, with a special celebration when you complete them.</li>
-                <li><strong>100 Free Quotes</strong> &mdash; The free tier now allows up to 100 quotes in your personal collections, so a full curated collection now fits comfortably.</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.6 - Quote Style & Share Studio -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.6</span>
-                <span class="release-date">June 2026</span>
-            </div>
-            <h3 class="release-title">Quote Style & Share Studio</h3>
-            <p class="release-description">
-                Make your quotes pop with vibrant color, then share them your way. A redesigned Share Studio gives you full control over how every quote looks.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Quote Style</strong> &mdash; Quotes now show in vibrant color by default. Switch between Bold and Subtle looks, recolor the text, and choose a typeface</li>
-                <li><strong>Share Studio</strong> &mdash; Customize a quote image before sharing &mdash; six card styles, square/portrait/story/wide sizes, light/dark/saturated backgrounds, and toggles for the author, date, and source (premium can remove the watermark)</li>
-                <li><strong>Source Types</strong> &mdash; Note where a quote came from &mdash; book, movie, podcast, speech, and more &mdash; each shown with a matching icon</li>
-                <li><strong>Copy Any Quote</strong> &mdash; Press and hold a quote to copy it, along with its author and date</li>
-                <li><strong>More Personalization</strong> &mdash; New collection icons and colors, plus a new Salmon app icon (premium)</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.5 - Daily Quote & Stories -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.5</span>
-                <span class="release-date">May 2026</span>
-            </div>
-            <h3 class="release-title">Daily Quotes & Story Sharing</h3>
-            <p class="release-description">
-                Build a daily habit with a quote delivered right when you want it, and share your favorites as tall Story images made for social.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Daily Quote Notification</strong> &mdash; Opt in under Settings to have a quote delivered at a time you pick</li>
-                <li><strong>Share as Stories</strong> &mdash; Share any quote as a tall 9:16 image made for Stories, alongside the classic square image</li>
-                <li><strong>Share from a Widget</strong> &mdash; Medium and large home-screen widgets now have a one-tap share button</li>
-                <li><strong>Welcome Walkthrough</strong> &mdash; New users get a short first-run tour to start capturing quotes right away</li>
-                <li><strong>Smarter Backups</strong> &mdash; Import and export now preserve collection membership and your existing tag colors</li>
-                <li><strong>Better Search & Widgets</strong> &mdash; Search now finds quotes by author or tag, and widgets refresh right after you make a change</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.4 - Public Collections -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.4</span>
-                <span class="release-date">January 2026</span>
-            </div>
-            <h3 class="release-title">Public Collections</h3>
-            <p class="release-description">
-                Discover and add quotes from <a href="collections.html">curated public collections</a>. Browse philosophy, creativity, tech wisdom, and more &mdash; all within the app.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Browse Public Collections</strong> &mdash; Explore curated quote collections on topics like philosophy, creativity, and tech</li>
-                <li><strong>Easy Add</strong> &mdash; Add quotes from public collections to your personal library with a swipe</li>
-                <li><strong>Smart Duplicate Detection</strong> &mdash; Already added a quote? You'll see it and can edit that one instead</li>
-                <li><strong>Multi-Collection Support</strong> &mdash; Quotes can now belong to multiple collections at once</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.3 - Collections -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.3</span>
-                <span class="release-date">December 2025</span>
-            </div>
-            <h3 class="release-title">Collections</h3>
-            <p class="release-description">
-                Organize your quotes like never before. Create custom collections to group quotes by theme, mood, or any way you like.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Custom Collections</strong> &mdash; Create personalized collections like "Inspiration," "Work Wisdom," or "Daily Motivation"</li>
-                <li><strong>Easy Organization</strong> &mdash; Assign quotes to collections when creating or editing</li>
-                <li><strong>Quick Filtering</strong> &mdash; Tap the collection dropdown to view quotes from a specific collection</li>
-                <li><strong>Premium Feature</strong> &mdash; Create up to 25 collections with a premium subscription</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.2 - Siri & Share Extension -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.2</span>
-                <span class="release-date">November 2025</span>
-            </div>
-            <h3 class="release-title">Siri Shortcuts & Share Extension</h3>
-            <p class="release-description">
-                Save quotes faster than ever. Capture inspiration from anywhere on your device and use Siri to manage your quotes hands-free.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Share Extension</strong> &mdash; Save quotes directly from Safari, Notes, Books, and any app that shares text</li>
-                <li><strong>Siri Integration</strong> &mdash; Say "Add a quote to Quips" or "Get a random quote from Quips"</li>
-                <li><strong>Shortcuts Support</strong> &mdash; Build automations with Quips in the Shortcuts app</li>
-                <li><strong>Seamless Sync</strong> &mdash; Your premium status syncs instantly across all your devices</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.1 - Beautiful Sharing -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.1</span>
-                <span class="release-date">November 2025</span>
-            </div>
-            <h3 class="release-title">Beautiful Sharing & Widgets</h3>
-            <p class="release-description">
-                Share your favorite quotes as stunning images. Plus, see daily inspiration right on your home screen with our new widgets.
-            </p>
-            <ul class="feature-list">
-                <li><strong>4 Sharing Styles</strong> &mdash; Choose from Minimal, Bold, Classic, or Text when sharing quotes</li>
-                <li><strong>Swipe to Share</strong> &mdash; Quickly share any quote with a simple swipe gesture</li>
-                <li><strong>Home Screen Widgets</strong> &mdash; Add a widget to see a random favorite quote throughout the day</li>
-                <li><strong>Full VoiceOver Support</strong> &mdash; Improved accessibility for all users</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.0.5 - Import/Export -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.0.5</span>
-                <span class="release-date">November 2025</span>
-            </div>
-            <h3 class="release-title">Import & Export</h3>
-            <p class="release-description">
-                Take your quotes anywhere. Export your collection for backup or import quotes from other sources.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Export Your Quotes</strong> &mdash; Save your entire collection as a file you can keep forever</li>
-                <li><strong>Import Quotes</strong> &mdash; Bring in quotes from backups or other sources</li>
-                <li><strong>Recently Deleted</strong> &mdash; Accidentally delete a quote? Recover it within 30 days</li>
-            </ul>
-        </article>
-
-        <!-- Version 1.0 - Launch -->
-        <article class="release">
-            <div class="release-header">
-                <span class="release-version">Version 1.0</span>
-                <span class="release-date">October 2025</span>
-            </div>
-            <h3 class="release-title">Hello, World!</h3>
-            <p class="release-description">
-                I'm excited to introduce Quips &mdash; your new home for saving and organizing the quotes that inspire you.
-            </p>
-            <ul class="feature-list">
-                <li><strong>Save Unlimited Quotes</strong> &mdash; Capture every moment of inspiration (premium) or start with 25 free</li>
-                <li><strong>Organize with Tags</strong> &mdash; Add tags to find quotes quickly</li>
-                <li><strong>Track Authors</strong> &mdash; Keep track of who said what</li>
-                <li><strong>Mark Favorites</strong> &mdash; Heart the quotes you love most</li>
-                <li><strong>Search Everything</strong> &mdash; Find any quote in seconds</li>
-                <li><strong>iCloud Sync</strong> &mdash; Your quotes on all your devices, automatically</li>
-                <li><strong>Light & Dark Mode</strong> &mdash; Beautiful in any lighting</li>
-                <li><strong>Custom App Icons</strong> &mdash; Personalize your home screen (premium)</li>
-            </ul>
-        </article>
     </main>
 
     <footer class="footer">
@@ -466,5 +296,68 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script>
+        // Release notes come from releases.json so the site and the app describe
+        // the same release without either being edited twice.
+        const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (ch) => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[ch]));
+
+        function featureItem(feature) {
+            const title = feature.title
+                ? `<strong>${escapeHTML(feature.title)}</strong> &mdash; `
+                : '';
+            const link = feature.link
+                ? ` <a href="${escapeHTML(feature.link.href)}">${escapeHTML(feature.link.label)}</a>`
+                : '';
+            return `<li>${title}${escapeHTML(feature.detail)}${link}</li>`;
+        }
+
+        function renderHighlight(highlight) {
+            const host = document.getElementById('release-highlight');
+            if (!highlight) { host.innerHTML = ''; return; }
+            host.innerHTML = `
+                <div class="highlight-box">
+                    <h2>${escapeHTML(highlight.title)}</h2>
+                    <p>${escapeHTML(highlight.summary)}</p>
+                    <ul class="feature-list">
+                        ${(highlight.points || []).map(featureItem).join('')}
+                    </ul>
+                </div>`;
+        }
+
+        function renderReleases(releases) {
+            document.getElementById('release-list').innerHTML = releases.map((release) => `
+                <article class="release">
+                    <div class="release-header">
+                        <span class="release-version">Version ${escapeHTML(release.version)}</span>
+                        ${release.latest ? '<span class="release-badge badge-latest">Latest</span>' : ''}
+                        <span class="release-date">${escapeHTML(release.date)}</span>
+                    </div>
+                    <h3 class="release-title">${escapeHTML(release.name)}</h3>
+                    <p class="release-description">${escapeHTML(release.summary)}${release.link ? ` <a href="${escapeHTML(release.link.href)}">${escapeHTML(release.link.label)}</a>` : ''}</p>
+                    <ul class="feature-list">
+                        ${(release.features || []).map(featureItem).join('')}
+                    </ul>
+                </article>`).join('');
+        }
+
+        async function loadReleases() {
+            try {
+                const response = await fetch('releases.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                renderHighlight(data.highlight);
+                renderReleases(data.releases || []);
+            } catch (error) {
+                console.error('Error loading releases:', error);
+                document.getElementById('release-list').innerHTML =
+                    '<p class="error-text">Release notes couldn\'t be loaded. Please try again later.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadReleases);
+    </script>
 </body>
 </html>
